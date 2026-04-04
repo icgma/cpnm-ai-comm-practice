@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI使用伦理规范（学生手册） — AI与传播实践</title>
+<meta name="description" content="「内容生产新方法：AI与传播实践」课程的 AI 使用伦理规范学生手册。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./doc-common.css">
+</head>
+<body>
+<div class="bg-grid"></div>
+<div class="bg-glow bg-glow-1"></div>
+<div class="bg-glow bg-glow-2"></div>
+<div class="bg-glow bg-glow-3"></div>
+
+<nav class="doc-nav">
+  <div class="doc-nav-inner">
+    <a href="./index.html" class="doc-brand">
+      <div class="doc-logo">AI</div>
+      <div class="doc-brand-text">返回课程门户</div>
+    </a>
+    <div class="doc-actions">
+      <a href="./AI使用伦理规范_学生手册.md" class="btn btn-outline">Markdown 原文</a>
+      <button class="theme-toggle" id="themeToggle" aria-label="切换明亮/暗黑模式" aria-pressed="false" title="切换明亮/暗黑模式">
+        <div class="theme-toggle-knob" id="themeIcon">🌙</div>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<main class="doc-shell">
+  <header class="doc-header">
+    <div class="doc-kicker">Course Policy</div>
+    <h1 class="doc-title"><span>AI使用伦理规范</span>（学生手册）</h1>
+    <p class="doc-desc">面向本课程全体学生的 AI 使用边界、标注要求与违规处理规则。核心原则只有一句：智能辅助，责任在人。</p>
+    <div class="doc-meta">
+      <span class="doc-chip">适用对象：本课程全体选课学生</span>
+      <span class="doc-chip">法规依据：生成式人工智能服务管理暂行办法（2023）</span>
+      <span class="doc-chip">最后更新：2026年3月</span>
+    </div>
+  </header>
+
+  <div class="doc-main">
+    <section class="card">
+      <h2>一、总则</h2>
+      <div class="callout blue">
+        本规范旨在帮助学生在课程学习中合理、规范、透明地使用 AI 工具，在享受技术红利的同时坚守学术底线。
+      </div>
+      <ol class="doc-list">
+        <li><strong>鼓励用 AI</strong>：AI 是学习伙伴，可以参与理解、检索、润色和发散。</li>
+        <li><strong>必须标注</strong>：凡是 AI 参与了作业生成、改写、分析或设计，都要说明参与方式。</li>
+        <li><strong>禁止作假</strong>：不能让 AI 替你完成思考、伪造材料或掩盖来源。</li>
+      </ol>
+    </section>
+
+    <section class="card">
+      <h2>二、AI使用三级政策</h2>
+
+      <h3>🟢 鼓励使用（无需特别标注）</h3>
+      <div class="table-wrap">
+        <table class="doc-table">
+          <thead>
+            <tr><th>场景</th><th>说明</th><th>示例</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>学习理解</td><td>用 AI 帮助理解课程概念</td><td>询问“什么是自注意力机制”</td></tr>
+            <tr><td>检索辅助</td><td>用 AI 工具搜索和整理信息</td><td>用秘塔搜索查找新闻素材</td></tr>
+            <tr><td>语法润色</td><td>用 AI 检查语法和拼写</td><td>用 Grammarly 检查英文作业</td></tr>
+            <tr><td>头脑风暴</td><td>用 AI 辅助发散创意</td><td>让 AI 列出 10 个选题方向</td></tr>
+            <tr><td>翻译参考</td><td>用 AI 翻译外文参考文献</td><td>用 DeepL 翻译论文摘要</td></tr>
+            <tr><td>代码调试</td><td>用 AI 辅助解决技术问题</td><td>让 AI 帮忙修改 Python 脚本</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>🟡 需要标注（必须说明 AI 参与方式）</h3>
+      <div class="table-wrap">
+        <table class="doc-table">
+          <thead>
+            <tr><th>场景</th><th>标注要求</th><th>示例</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>AI辅助初稿</td><td>标注“AI辅助生成初稿，经人工修改”</td><td>W10 深度报道作业</td></tr>
+            <tr><td>AI辅助数据分析</td><td>标注“数据由 AI 分析，结论经人工验证”</td><td>W08 结构化提取</td></tr>
+            <tr><td>AI辅助创意优化</td><td>标注“选题受 AI 建议启发，经人工筛选”</td><td>W09 选题策划</td></tr>
+            <tr><td>AI辅助设计</td><td>标注“设计方案由 AI 辅助生成”</td><td>W14 工作流方案</td></tr>
+            <tr><td>大段内容改写</td><td>标注 AI 改写部分，并附原始提示词</td><td>所有写作类作业</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="code-block">
+<pre><code>【AI使用声明】
+本作业使用了以下 AI 工具辅助完成：
+- 工具名称：______（如：ChatGPT-4、DeepSeek-V3）
+- 使用环节：______（如：初稿生成、数据提取、语言润色）
+- AI 贡献占比：约____%
+- 人工修改内容：______（简要说明修改了什么、为什么修改）
+
+所有事实性判断和核心观点均由本人独立完成。</code></pre>
+      </div>
+
+      <h3>🚫 严格禁止</h3>
+      <div class="table-wrap">
+        <table class="doc-table">
+          <thead>
+            <tr><th>禁止行为</th><th>后果</th><th>备注</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>将 AI 生成内容直接提交为自己的作品，且不作任何标注</td><td>该次作业计 0 分</td><td>含改述但不标注</td></tr>
+            <tr><td>使用 AI 伪造采访记录、数据、引用来源</td><td>课程成绩降一级</td><td>严重者报学校处理</td></tr>
+            <tr><td>使用 AI 生成 Deepfake 内容用于欺骗</td><td>课程成绩降一级</td><td>法律红线</td></tr>
+            <tr><td>让他人使用 AI 代完成个人作业</td><td>该次作业计 0 分</td><td>含付费代写</td></tr>
+            <tr><td>在事实核查作业中不核实 AI 输出真伪</td><td>扣分</td><td>需独立验证</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>三、不同作业的AI使用指引</h2>
+      <div class="table-wrap">
+        <table class="doc-table">
+          <thead>
+            <tr><th>作业类型</th><th>允许程度</th><th>重点审查</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>概念题 / 简答题</td><td>🟢 可参考</td><td>需用自己的语言重新表述</td></tr>
+            <tr><td>思维导图 / 信息采集</td><td>🟢 鼓励</td><td>信息源必须真实可追溯</td></tr>
+            <tr><td>提示词设计作业</td><td>🟢 鼓励</td><td>提示词本身就是课程核心能力</td></tr>
+            <tr><td>深度报道 / 写作类</td><td>🟡 需标注</td><td>必须提交 AI 使用记录和人工修改痕迹</td></tr>
+            <tr><td>评测报告</td><td>🟡 需标注</td><td>AI 可执行任务，但不能代写报告</td></tr>
+            <tr><td>伦理辩论 / 反思报告</td><td>⚠️ 限制</td><td>核心观点必须独立思考，AI 仅可辅助检索资料</td></tr>
+            <tr><td>期末项目</td><td>🟡 需标注</td><td>需附完整 AI 使用日志</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>四、期末项目AI使用日志模板</h2>
+      <div class="code-block">
+<pre><code># 期末项目 AI 使用日志
+
+## 基本信息
+- 姓名 / 组别：
+- 项目名称：
+- 使用的 AI 工具清单：
+
+## 使用记录（每次使用都记录一条）
+
+### 记录 #1
+- 日期：YYYY-MM-DD
+- 工具：
+- 目的：（如：辅助选题 / 生成初稿 / 数据分析 / 润色修改）
+- 提示词：粘贴完整提示词
+- AI 输出摘要：（概述 AI 返回了什么）
+- 我的处理：（采纳 / 修改 / 拒绝，理由）
+
+## 总结反思
+- AI 在项目中的整体贡献占比：约____%
+- AI 最有价值的帮助是什么：
+- AI 做不好的是什么：
+- 如果没有 AI，这个项目会有什么不同：</code></pre>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>五、违规处理流程</h2>
+      <div class="callout amber">
+        发现可疑情况 → 教师初步核实 → 视情况处理：
+      </div>
+      <ol class="doc-list">
+        <li>确认为标注遗漏：扣分，并要求补充标注。</li>
+        <li>确认为故意隐瞒：该次作业计 0 分，并提交书面检讨。</li>
+        <li>确认为严重造假：课程成绩降级，并报学校学术委员会。</li>
+      </ol>
+    </section>
+
+    <section class="card">
+      <h2>六、常见疑问 FAQ</h2>
+      <div class="faq-list">
+        <details class="faq-item" open>
+          <summary>Q1：我可以用 AI 帮我写作业吗？</summary>
+          <p>可以，但必须标注。AI 是研究助理，不是枪手。你需要对最终作品的内容、观点和事实负全部责任。</p>
+        </details>
+        <details class="faq-item">
+          <summary>Q2：用 AI 润色算不算 AI 辅助？需要标注吗？</summary>
+          <p>简单语法润色通常不需要标注；如果 AI 重写了段落逻辑或改变了论述结构，就需要标注。</p>
+        </details>
+        <details class="faq-item">
+          <summary>Q3：如果全班都用同一个 AI 工具做同一道题，结果很像怎么办？</summary>
+          <p>关键不在于用了什么工具，而在于你自己加了什么。提示词设计、人工修改和独立判断才是评分重点。</p>
+        </details>
+        <details class="faq-item">
+          <summary>Q4：我让 AI 生成了 5 个方案，选了最好的一个交上去，算不算代写？</summary>
+          <p>不算，只要你标注了这个过程。筛选和判断本身就是你的能力体现。</p>
+        </details>
+        <details class="faq-item">
+          <summary>Q5：期末项目中 AI 贡献占比多少算合理？</summary>
+          <p>没有硬性上限。关键是你能在答辩中解释清楚 AI 做了什么、你做了什么、为什么这样分工。</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>七、声明</h2>
+      <div class="callout green">
+        本规范的目标不是限制你使用 AI，而是帮助你养成负责任、可追溯、可解释地使用 AI 的习惯。会用 AI 只是起点，知道什么时候该用、怎么标注、哪些事绝不能让它代劳，才是这门课真正要训练的能力。
+      </div>
+      <div class="tag-row">
+        <span class="tag blue">透明使用</span>
+        <span class="tag green">责任在己</span>
+        <span class="tag amber">必须核查</span>
+        <span class="tag red">禁止造假</span>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer class="doc-footer">
+  <p>© 2026 汕头大学 · 长江新闻与传播学院 · AI课程建设项目</p>
+  <p style="margin-top:8px"><a href="./index.html">返回课程门户</a> · <a href="./AI使用伦理规范_学生手册.md">查看 Markdown 原文</a></p>
+</footer>
+
+<script src="./theme.js"></script>
+</body>
+</html>

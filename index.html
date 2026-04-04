@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>内容生产新方法：AI与传播实践 — 汕头大学智慧课程</title>
+<meta name="description" content="汕头大学通识课程「内容生产新方法：AI与传播实践」课程门户。16周系统化训练，从灵感到成稿，重新理解内容生产。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root,
+[data-theme="dark"]{
+  --bg:#06080f;--bg2:#0c1020;--bg3:#111830;--bg4:#182040;
+  --border:#1e2a4a;--border2:#2a3a60;
+  --text:#e8ecf4;--text2:#8b97b8;--text3:#5a6888;
+  --blue:#3b82f6;--cyan:#06b6d4;--purple:#8b5cf6;--pink:#ec4899;
+  --green:#10b981;--amber:#f59e0b;--red:#ef4444;--orange:#f97316;
+  --grad1:linear-gradient(135deg,#3b82f6,#8b5cf6);
+  --grad2:linear-gradient(135deg,#06b6d4,#3b82f6);
+  --grad3:linear-gradient(135deg,#8b5cf6,#ec4899);
+  --nav-bg:rgba(6,8,15,.85);
+  --card-shadow:0 20px 40px rgba(0,0,0,.3);
+  --label-bg:rgba(59,130,246,.1);
+  --badge-bg:rgba(6,8,15,.7);
+  --btn-primary-shadow:0 4px 20px rgba(59,130,246,.3);
+  --btn-primary-shadow-hover:0 8px 30px rgba(59,130,246,.4);
+  --agent-main-bg:linear-gradient(180deg,rgba(59,130,246,.08),var(--bg3));
+  --grid-opacity:.03;
+  --glow-opacity:.08;
+}
+[data-theme="light"]{
+  --bg:#f5f7fa;--bg2:#eef1f6;--bg3:#ffffff;--bg4:#f0f2f7;
+  --border:#d8dce6;--border2:#c0c8d8;
+  --text:#1a1f36;--text2:#4a5578;--text3:#6b7a99;
+  --blue:#2563eb;--cyan:#0891b2;--purple:#7c3aed;--pink:#db2777;
+  --green:#059669;--amber:#d97706;--red:#dc2626;--orange:#ea580c;
+  --grad1:linear-gradient(135deg,#2563eb,#7c3aed);
+  --grad2:linear-gradient(135deg,#0891b2,#2563eb);
+  --grad3:linear-gradient(135deg,#7c3aed,#db2777);
+  --nav-bg:rgba(255,255,255,.88);
+  --card-shadow:0 8px 30px rgba(0,0,0,.08);
+  --label-bg:rgba(37,99,235,.08);
+  --badge-bg:rgba(255,255,255,.85);
+  --btn-primary-shadow:0 4px 16px rgba(37,99,235,.25);
+  --btn-primary-shadow-hover:0 8px 24px rgba(37,99,235,.35);
+  --agent-main-bg:linear-gradient(180deg,rgba(37,99,235,.06),var(--bg3));
+  --grid-opacity:.04;
+  --glow-opacity:.06;
+}
+html{scroll-behavior:smooth;font-size:17px}
+body{font-family:'Inter','Noto Sans SC',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
+a{color:var(--cyan);text-decoration:none;transition:color .2s}
+a:hover{color:var(--blue)}
+
+/* ── Animated BG ── */
+.bg-grid{position:fixed;inset:0;z-index:0;opacity:var(--grid-opacity);
+  background-image:linear-gradient(var(--border) 1px,transparent 1px),linear-gradient(90deg,var(--border) 1px,transparent 1px);
+  background-size:60px 60px}
+.bg-glow{position:fixed;z-index:0;border-radius:50%;filter:blur(120px);opacity:var(--glow-opacity);pointer-events:none}
+.bg-glow-1{width:600px;height:600px;background:var(--blue);top:-200px;left:-100px}
+.bg-glow-2{width:500px;height:500px;background:var(--purple);top:40%;right:-150px}
+.bg-glow-3{width:400px;height:400px;background:var(--cyan);bottom:-100px;left:30%}
+
+/* ── Nav ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;
+  background:var(--nav-bg);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);
+  height:56px}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 32px;height:100%;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.nav-brand{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.nav-logo{width:30px;height:30px;border-radius:8px;background:var(--grad1);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:800;color:#fff}
+.nav-title{font-size:15px;font-weight:600}
+.nav-links{display:flex;gap:20px;align-items:center;min-width:0}
+.nav-links a{color:var(--text2);font-size:14px;font-weight:500;transition:color .2s;white-space:nowrap}
+.nav-links a:hover{color:var(--text)}
+.nav-links::-webkit-scrollbar{display:none}
+
+/* ── Theme Toggle ── */
+.theme-toggle{width:44px;height:24px;border-radius:24px;border:1px solid var(--border2);background:var(--bg3);cursor:pointer;position:relative;transition:all .3s;display:flex;align-items:center;padding:0 3px;flex-shrink:0}
+.theme-toggle:hover{border-color:var(--blue)}
+.theme-toggle-knob{width:18px;height:18px;border-radius:50%;background:var(--grad1);display:flex;align-items:center;justify-content:center;transition:transform .35s cubic-bezier(.4,.2,.2,1);font-size:11px;line-height:1;color:#fff}
+[data-theme="light"] .theme-toggle-knob{transform:translateX(20px)}
+
+/* ── Section ── */
+section{position:relative;z-index:1;padding:100px 40px}
+.container{max-width:1200px;margin:0 auto;width:100%}
+.section-label{display:inline-block;padding:4px 14px;border-radius:20px;background:var(--label-bg);color:var(--blue);font-size:13px;font-weight:600;letter-spacing:1px;text-transform:uppercase;margin-bottom:16px}
+.section-title{font-size:38px;font-weight:800;letter-spacing:-1px;margin-bottom:12px;background:var(--grad1);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.section-desc{font-size:17px;color:var(--text2);max-width:640px;line-height:1.8}
+
+/* ── Feature Grid ── */
+.feature-section{padding-top:60px;padding-bottom:60px}
+.feature-section .section-title{font-size:30px;background:none;-webkit-text-fill-color:var(--text);display:flex;align-items:center;gap:8px}
+.feature-section .section-desc{margin-bottom:32px}
+.feature-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.feature-card{background:var(--bg3);border:1px solid var(--border);border-radius:14px;padding:28px 20px;text-align:center;transition:all .3s}
+.feature-card:hover{border-color:var(--border2);transform:translateY(-3px)}
+.feature-card-icon{font-size:40px;margin-bottom:14px;display:block}
+.feature-card-name{font-size:16px;font-weight:700;margin-bottom:6px}
+.feature-card-desc{font-size:13px;color:var(--text2);line-height:1.6}
+@media(max-width:768px){.feature-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.feature-grid{grid-template-columns:1fr}}
+
+/* ── Hero ── */
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;padding-top:56px;text-align:center}
+.hero-content{max-width:860px;margin:0 auto}
+.hero-category{font-size:30px;font-weight:900;color:var(--text);letter-spacing:1px;margin-bottom:8px}
+.hero h1{font-size:52px;font-weight:900;letter-spacing:-1.5px;line-height:1.2;margin-bottom:20px}
+.hero h1 span{background:var(--grad1);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero p{font-size:18px;color:var(--text2);line-height:1.8;margin-bottom:36px;max-width:640px;margin-left:auto;margin-right:auto}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;justify-content:center}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 24px;border-radius:12px;font-size:15px;font-weight:600;font-family:inherit;cursor:pointer;transition:all .25s;border:none}
+.btn-primary{background:var(--grad1);color:#fff;box-shadow:var(--btn-primary-shadow)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:var(--btn-primary-shadow-hover)}
+.btn-outline{background:var(--bg3);color:var(--text);border:1px solid var(--border2)}
+.btn-outline:hover{border-color:var(--blue);background:var(--bg4)}
+.hero-meta{display:flex;gap:32px;justify-content:center;flex-wrap:wrap;margin-top:40px;padding-top:28px;border-top:1px solid var(--border)}
+.hero-meta-item{display:flex;align-items:center;gap:6px;font-size:15px;color:var(--text2)}
+.hero-meta-item .emoji{font-size:17px}
+.hero-stats{display:flex;gap:64px;justify-content:center;flex-wrap:wrap;margin-top:32px;padding-top:28px;border-top:1px solid var(--border);position:relative;width:100vw;left:50%;transform:translateX(-50%);max-width:1200px;padding-left:32px;padding-right:32px;box-sizing:border-box}
+.hero-stat-value{font-size:36px;font-weight:800;background:var(--grad2);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero-stat-label{font-size:13px;color:var(--text3);margin-top:2px}
+
+/* ── Syllabus Timeline ── */
+.timeline{position:relative;padding-left:40px}
+.timeline::before{content:'';position:absolute;left:15px;top:0;bottom:0;width:2px;background:linear-gradient(180deg,var(--blue),var(--purple),var(--cyan),var(--green),var(--amber),var(--red))}
+.timeline-item{position:relative;margin-bottom:28px;padding:20px 24px;background:var(--bg3);border:1px solid var(--border);border-radius:14px;transition:all .3s}
+.timeline-item:hover{border-color:var(--border2);background:var(--bg4);transform:translateX(4px)}
+.timeline-dot{position:absolute;left:-33px;top:24px;width:12px;height:12px;border-radius:50%;border:2px solid var(--bg)}
+.timeline-week{font-size:13px;font-weight:700;color:var(--text3);letter-spacing:1px;margin-bottom:4px}
+.timeline-title{font-size:17px;font-weight:700;margin-bottom:4px}
+.timeline-desc{font-size:14px;color:var(--text2)}
+.timeline-tags{display:flex;gap:6px;margin-top:8px;flex-wrap:wrap}
+.timeline-tag{padding:2px 10px;border-radius:10px;font-size:12px;font-weight:500}
+
+/* ── Tools Grid ── */
+.tools-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:20px;margin-top:40px}
+.tool-card{position:relative;border-radius:16px;overflow:hidden;border:1px solid var(--border);background:var(--bg3);transition:all .35s}
+.tool-card:hover{border-color:var(--border2);transform:translateY(-4px);box-shadow:var(--card-shadow)}
+.tool-card img{width:100%;height:200px;object-fit:cover;object-position:top;display:block;transition:transform .5s}
+.tool-card:hover img{transform:scale(1.03)}
+.tool-card-body{padding:20px}
+.tool-card-title{font-size:17px;font-weight:700;margin-bottom:6px;display:flex;align-items:center;gap:8px}
+.tool-card-desc{font-size:14px;color:var(--text2);line-height:1.6}
+.tool-card-link{display:inline-flex;align-items:center;gap:4px;margin-top:12px;color:var(--cyan);font-size:14px;font-weight:500}
+.tool-card-link:hover{gap:8px}
+.tool-card-badge{position:absolute;top:12px;right:12px;padding:3px 10px;border-radius:8px;font-size:12px;font-weight:600;background:var(--badge-bg);backdrop-filter:blur(8px);color:var(--text2);border:1px solid var(--border)}
+
+/* ── Showcase ── */
+.showcase-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:40px}
+.showcase-card{border-radius:14px;overflow:hidden;border:1px solid var(--border);background:var(--bg3);transition:all .3s;cursor:pointer}
+.showcase-card:hover{border-color:var(--border2);transform:translateY(-3px)}
+.showcase-card-body{padding:16px}
+.showcase-card-cat{font-size:12px;color:var(--purple);font-weight:600;margin-bottom:4px}
+.showcase-card-title{font-size:15px;font-weight:600;margin-bottom:4px}
+.showcase-card-author{font-size:13px;color:var(--text3)}
+
+/* ── Agent Matrix ── */
+.agent-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;margin-top:40px}
+.agent-card{text-align:center;padding:28px 16px;border-radius:16px;border:1px solid var(--border);background:var(--bg3);transition:all .3s}
+.agent-card:hover{border-color:var(--border2);transform:translateY(-3px)}
+.agent-card-icon{font-size:36px;margin-bottom:12px}
+.agent-card-name{font-size:15px;font-weight:700;margin-bottom:4px}
+.agent-card-desc{font-size:13px;color:var(--text2)}
+.agent-card.main{border-color:var(--blue);background:var(--agent-main-bg)}
+
+/* ── Footer ── */
+footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:40px;text-align:center;color:var(--text3);font-size:14px}
+footer a{color:var(--text2)}
+
+/* ── Responsive ── */
+@media(max-width:900px){
+  .hero h1{font-size:32px}
+  .hero-stats{gap:24px}
+  .tools-grid{grid-template-columns:1fr}
+  .showcase-grid{grid-template-columns:repeat(2,1fr)}
+  .agent-grid{grid-template-columns:repeat(2,1fr)}
+  section{padding:60px 20px}
+  .nav-inner{padding:0 20px;gap:12px}
+  .nav-title{display:none}
+  .nav-links{flex:1;justify-content:flex-start;gap:12px;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none;padding:4px 0}
+  .nav-links a{font-size:13px}
+}
+@media(max-width:500px){
+  .showcase-grid{grid-template-columns:1fr}
+  .agent-grid{grid-template-columns:1fr}
+  .nav-inner{padding:0 16px}
+  .nav-links{gap:10px}
+}
+
+/* ── Theme transition ── */
+body,nav,.bg-grid,.bg-glow,.tool-card,.showcase-card,.agent-card,.timeline-item,.hero-badge,.btn,.section-label,.tool-card-badge,.theme-toggle{transition:background .4s,color .4s,border-color .4s,box-shadow .4s,opacity .4s}
+</style>
+</head>
+<body>
+
+<div class="bg-grid"></div>
+<div class="bg-glow bg-glow-1"></div>
+<div class="bg-glow bg-glow-2"></div>
+<div class="bg-glow bg-glow-3"></div>
+
+<!-- Nav -->
+<nav>
+  <div class="nav-inner">
+  <div class="nav-brand">
+    <div class="nav-logo">AI</div>
+    <div class="nav-title">AI与传播实践</div>
+  </div>
+  <div class="nav-links">
+    <a href="#syllabus">教学大纲</a>
+    <a href="#tools">教学工具</a>
+    <a href="#agents">AI智能体</a>
+    <a href="#showcase">学生作品</a>
+    <a href="./ai-trends.html">📡 前沿动态</a>
+    <a href="https://github.com/icgma/cpnm-ai-comm-practice" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+    <button class="theme-toggle" id="themeToggle" aria-label="切换明亮/暗黑模式" aria-pressed="false" title="切换明亮/暗黑模式">
+      <div class="theme-toggle-knob" id="themeIcon">🌙</div>
+    </button>
+  </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-category">内容生产新方法</div>
+      <h1><span>AI与传播实践</span></h1>
+      <p>面向新闻传播专业的AI应用课程 · 以提示词工程为主线 · 16周系统化训练</p>
+      <div class="hero-actions">
+        <a href="#syllabus" class="btn btn-primary">📅 查看教学大纲</a>
+        <a href="#tools" class="btn btn-outline">🧰 教学工具站</a>
+        <a href="https://jou2327a.netlify.app/" target="_blank" rel="noopener noreferrer" class="btn btn-outline">🏆 学生作品展</a>
+      </div>
+      <div class="hero-meta">
+        <div class="hero-meta-item"><span class="emoji">📌</span> 课程代码：JOU2327A</div>
+        <div class="hero-meta-item"><span class="emoji">📚</span> 学分：2</div>
+        <div class="hero-meta-item"><span class="emoji">⏱️</span> 32 课时（理论 16h + 实验 16h）</div>
+        <div class="hero-meta-item"><span class="emoji">🏛️</span> 长江新闻与传播学院</div>
+      </div>
+      <div class="hero-stats">
+        <div><div class="hero-stat-value">16</div><div class="hero-stat-label">教学周</div></div>
+        <div><div class="hero-stat-value">22</div><div class="hero-stat-label">核心知识点</div></div>
+        <div><div class="hero-stat-value">300+</div><div class="hero-stat-label">试题库</div></div>
+        <div><div class="hero-stat-value">6</div><div class="hero-stat-label">教学工具站</div></div>
+        <div><div class="hero-stat-value">5</div><div class="hero-stat-label">AI智能体</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Course Features -->
+<section class="feature-section">
+  <div class="container">
+    <div class="section-title">🌟 课程特色</div>
+    <div class="section-desc">本课程以提示词工程为核心主线，深度融合 AI 辅助内容生产工具，以项目驱动学习。</div>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <span class="feature-card-icon">🎯</span>
+        <div class="feature-card-name">提示词工程主线</div>
+        <div class="feature-card-desc">从 CRISPE 到思维链，系统掌握人机协作方法论</div>
+      </div>
+      <div class="feature-card">
+        <span class="feature-card-icon">📝</span>
+        <div class="feature-card-name">全流程覆盖</div>
+        <div class="feature-card-desc">检索 · 核查 · 摘要 · 写作，贯穿内容生产全链条</div>
+      </div>
+      <div class="feature-card">
+        <span class="feature-card-icon">🔬</span>
+        <div class="feature-card-name">多平台实战</div>
+        <div class="feature-card-desc">GPT / Claude / DeepSeek / 文心，横向对比主流 LLM</div>
+      </div>
+      <div class="feature-card">
+        <span class="feature-card-icon">⚖️</span>
+        <div class="feature-card-name">伦理守则内嵌</div>
+        <div class="feature-card-desc">AI处理三原则贯穿始终，培养负责任的AI使用者</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Syllabus -->
+<section id="syllabus">
+  <div class="container">
+    <div class="section-label">📅 Course Syllabus</div>
+    <div class="section-title">16周教学大纲</div>
+    <div class="section-desc">从AI基础认知到完整项目交付，能力螺旋式递进</div>
+
+    <div class="timeline" style="margin-top:40px">
+      <a href="./weeks/week-01.html" class="timeline-item" style="display:block;text-decoration:none;color:inherit"><div class="timeline-dot" style="background:#3b82f6"></div><div class="timeline-week">WEEK 01</div><div class="timeline-title">课程导论与AI基础</div><div class="timeline-desc">AI发展简史 · 机器学习三种类型 · 深度学习基本原理</div><div class="timeline-tags"><span class="timeline-tag" style="background:rgba(59,130,246,.15);color:#93c5fd">Bloom ②理解</span><span class="timeline-tag" style="background:rgba(16,185,129,.15);color:#6ee7b7">🟢 科技自信</span></div></a>
+
+      <a href="./weeks/week-02.html" class="timeline-item" style="display:block;text-decoration:none;color:inherit"><div class="timeline-dot" style="background:#3b82f6"></div><div class="timeline-week">WEEK 02</div><div class="timeline-title">LLM工作原理与技术基础</div><div class="timeline-desc">Transformer架构 · 自注意力机制 · 大语言模型的涌现能力与局限</div><div class="timeline-tags"><span class="timeline-tag" style="background:rgba(239,68,68,.15);color:#fca5a5">🔴 重点</span><span class="timeline-tag" style="background:rgba(245,158,11,.15);color:#fcd34d">🟡 难点</span></div></a>
+
+      <a href="./weeks/week-03.html" class="timeline-item" style="display:block;text-decoration:none;color:inherit"><div class="timeline-dot" style="background:#8b5cf6"></div><div class="timeline-week">WEEK 03</div><div class="timeline-title">提示词工程基础 — CRISPE框架</div><div class="timeline-desc">角色 · 背景 · 指令 · 风格 · 实验 五要素系统化方法</div><div class="timeline-tags"><span class="timeline-tag" style="background:rgba(59,130,246,.15);color:#93c5fd">Bloom ③应用</span><span class="timeline-tag" style="background:rgba(239,68,68,.15);color:#fca5a5">🔴 重点</span></div></a>
+
+      <a href="./weeks/week-04.html" class="timeline-item" style="display:block;text-decoration:none;color:inherit"><div class="timeline-dot" style="background:#8b5cf6"></div><div class="timeline-week">WEEK 04</div><div class="timeline-title">精确指令与格式控制</div><div class="timeline-desc">动作动词 · 输出规范 · Markdown/JSON控制 · 约束条件组合</div><div class="timeline-tags"><span class="timeline-tag" style="background:rgba(16,185,129,.15);color:#6ee7b7">🟢 AI真实性</span></div></a>
+
+      <a href="./weeks/week-05.html" class="timeline-item" style="display:block;text-decoration:none;color:inherit"><div class="timeline-dot" style="background:#06b6d4"></div><div class="timeline-week">WEEK 05</div><div class="timeline-title">智能信息获取基础</div><div class="timeline-desc">AI辅助检索 · 关键词优化 · 多轮迭代策略</div></a>
+
+      <a href="./weeks/week-06.html" class="timeline-item" style="display:block;text-decoration:none;color:inherit"><div class="timeline-dot" style="background:#06b6d4"></div><div class="timeline-week">WEEK 06</div><div class="timeline-title">Deep Research与事实核查</div><div class="timeline-desc">四阶段深度研究流程 · 多源交叉验证 · 证据清单</div><div class="timeline-tags"><span class="timeline-tag" style="background:rgba(239,68,68,.15);color:#fca5a5">🔴 重点</span><span class="timeline-tag" style="background:rgba(16,185,129,.15);color:#6ee7b7">🟢 媒体责任</span></div></a>
+
+      <a href="./weeks/week-07.html" class="timeline-item" style="display:block;text-decoration:none;color:inherit"><div class="timeline-dot" style="background:#10b981"></div><div class="timeline-week">WEEK 07</div><div class="timeline-title">文本摘要与提炼基础</div><div class="timeline-desc">抽取式vs生成式摘要 · 新闻简报提炼</div></a>
+
+      <a href="./weeks/week-08.html" class="timeline-item" style="display:block;text-decoration:none;color:inherit"><div class="timeline-dot" style="background:#10b981"></div><div class="timeline-week">WEEK 08</div><div class="timeline-title">结构化提取与增强分析</div><div class="timeline-desc">JSON/表格/实体提取 · 数据新闻应用</div></a>
+
+      <a href="./weeks/week-09.html" class="timeline-item" style="display:block;text-decoration:none;color:inherit"><div class="timeline-dot" style="background:#10b981"></div><div class="timeline-week">WEEK 09</div><div class="timeline-title">创意生成与选题策划</div><div class="timeline-desc">SCAMPER技法 · 发散/收敛/系统思维 · AI辅助选题</div><div class="timeline-tags"><span class="timeline-tag" style="background:rgba(59,130,246,.15);color:#93c5fd">Bloom ⑥创造</span></div></a>
+
+      <a href="./weeks/week-10.html" class="timeline-item" style="display:block;text-decoration:none;color:inherit"><div class="timeline-dot" style="background:#10b981"></div><div class="timeline-week">WEEK 10</div><div class="timeline-title">AI辅助写作实践</div><div class="timeline-desc">长文写作策略 · 人机协作流程 · 质量控制</div><div class="timeline-tags"><span class="timeline-tag" style="background:rgba(239,68,68,.15);color:#fca5a5">🔴 重点</span><span class="timeline-tag" style="background:rgba(16,185,129,.15);color:#6ee7b7">🟢 学术诚信</span></div></a>
+
+      <a href="./weeks/week-11.html" class="timeline-item" style="display:block;text-decoration:none;color:inherit"><div class="timeline-dot" style="background:#f59e0b"></div><div class="timeline-week">WEEK 11</div><div class="timeline-title">Few-Shot与角色扮演</div><div class="timeline-desc">少样本学习 · 写作风格克隆 · 专家角色模拟</div></a>
+
+      <a href="./weeks/week-12.html" class="timeline-item" style="display:block;text-decoration:none;color:inherit"><div class="timeline-dot" style="background:#f59e0b"></div><div class="timeline-week">WEEK 12</div><div class="timeline-title">思维链CoT技术</div><div class="timeline-desc">链式推理 · 分步推理策略 · Tree-of-Thought</div><div class="timeline-tags"><span class="timeline-tag" style="background:rgba(245,158,11,.15);color:#fcd34d">🟡 难点</span></div></a>
+
+      <a href="./weeks/week-13.html" class="timeline-item" style="display:block;text-decoration:none;color:inherit"><div class="timeline-dot" style="background:#f59e0b"></div><div class="timeline-week">WEEK 13</div><div class="timeline-title">主流LLM平台对比</div><div class="timeline-desc">GPT/Claude/DeepSeek/通义/文心 能力评测与场景选型</div></a>
+
+      <a href="./weeks/week-14.html" class="timeline-item" style="display:block;text-decoration:none;color:inherit"><div class="timeline-dot" style="background:#ef4444"></div><div class="timeline-week">WEEK 14</div><div class="timeline-title">AI辅助工具集成与伦理</div><div class="timeline-desc">工作流设计 · AI伦理三原则 · 算法偏见</div><div class="timeline-tags"><span class="timeline-tag" style="background:rgba(16,185,129,.15);color:#6ee7b7">🟢 公平包容</span></div></a>
+
+      <a href="./weeks/week-15.html" class="timeline-item" style="display:block;text-decoration:none;color:inherit"><div class="timeline-dot" style="background:#ef4444"></div><div class="timeline-week">WEEK 15</div><div class="timeline-title">期末项目准备与指导</div><div class="timeline-desc">PBL项目设计 · 团队协作 · 交付标准</div><div class="timeline-tags"><span class="timeline-tag" style="background:rgba(59,130,246,.15);color:#93c5fd">Bloom ⑥创造</span></div></a>
+
+      <a href="./weeks/week-16.html" class="timeline-item" style="display:block;text-decoration:none;color:inherit"><div class="timeline-dot" style="background:#ef4444"></div><div class="timeline-week">WEEK 16</div><div class="timeline-title">项目展示与课程总结</div><div class="timeline-desc">PBL项目答辩 · AI时代传媒人的使命反思</div><div class="timeline-tags"><span class="timeline-tag" style="background:rgba(16,185,129,.15);color:#6ee7b7">🟢 使命担当</span></div></a>
+    </div>
+  </div>
+</section>
+
+<!-- Tools -->
+<section id="tools" style="background:var(--bg2)">
+  <div class="container">
+    <div class="section-label">🧰 Teaching Platforms</div>
+    <div class="section-title">自研教学工具矩阵</div>
+    <div class="section-desc">课程独立开发的 6 个在线教学辅助平台，覆盖知识图谱、提示词工程、媒体检索与AI编程</div>
+
+    <div class="tools-grid">
+
+      <a href="./course-kg/index.html" target="_blank" rel="noopener noreferrer" class="tool-card">
+        <img src="./images/tool_course_kg.png" alt="课程知识图谱">
+        <div class="tool-card-badge">NEW · vis.js</div>
+        <div class="tool-card-body">
+          <div class="tool-card-title">🧠 课程知识图谱</div>
+          <div class="tool-card-desc">22个知识点 × 6大模块的交互式力导向图，支持模块筛选、标签过滤与节点详情查看。</div>
+          <div class="tool-card-link">打开图谱 →</div>
+        </div>
+      </a>
+
+      <a href="https://newkg.netlify.app/" target="_blank" rel="noopener noreferrer" class="tool-card">
+        <img src="./images/tool_newkg.png" alt="新闻传播学知识图谱">
+        <div class="tool-card-badge">vis.js · 学术</div>
+        <div class="tool-card-body">
+          <div class="tool-card-title">📰 新闻传播学知识图谱</div>
+          <div class="tool-card-desc">交互式学术全景图，涵盖学者名录、历史时间轴、理论关系网络与核心概念检索。</div>
+          <div class="tool-card-link">访问平台 →</div>
+        </div>
+      </a>
+
+      <a href="http://thebigpromptlibrary.aisbest.eu.cc/" target="_blank" rel="noopener noreferrer" class="tool-card">
+        <img src="./images/tool_bigpromptlib.png" alt="The Big Prompt Library">
+        <div class="tool-card-badge">190+ 提示词</div>
+        <div class="tool-card-body">
+          <div class="tool-card-title">🧩 The Big Prompt Library</div>
+          <div class="tool-card-desc">190+ 系统提示词与 3300+ 自定义指令，覆盖 ChatGPT/Claude/Gemini 等主流 AI 系统。</div>
+          <div class="tool-card-link">浏览案例库 →</div>
+        </div>
+      </a>
+
+      <a href="http://notebooklm-prompts.aisbest.eu.cc/" target="_blank" rel="noopener noreferrer" class="tool-card">
+        <img src="./images/tool_notebooklm.png" alt="NotebookLM 提示词库">
+        <div class="tool-card-badge">即用型</div>
+        <div class="tool-card-body">
+          <div class="tool-card-title">📝 幻灯片提示词库</div>
+          <div class="tool-card-desc">专业即用型提示词集合，助力用 NotebookLM 快速生成高质量演示文稿。</div>
+          <div class="tool-card-link">访问平台 →</div>
+        </div>
+      </a>
+
+      <a href="http://media-directory.aisbest.eu.cc/" target="_blank" rel="noopener noreferrer" class="tool-card">
+        <img src="./images/tool_media_directory.png" alt="全球媒体目录">
+        <div class="tool-card-badge">90+ 媒体</div>
+        <div class="tool-card-body">
+          <div class="tool-card-title">🌐 全球媒体目录</div>
+          <div class="tool-card-desc">收录约 90 家全球主要媒体机构，按地区与媒体类型双维度索引。</div>
+          <div class="tool-card-link">查看目录 →</div>
+        </div>
+      </a>
+
+      <a href="https://lingma.aisbest.eu.cc/" target="_blank" rel="noopener noreferrer" class="tool-card">
+        <img src="./images/tool_lingma.png" alt="Lingma IDE 入门指南">
+        <div class="tool-card-badge">AI 编程</div>
+        <div class="tool-card-body">
+          <div class="tool-card-title">💻 Lingma IDE 入门指南</div>
+          <div class="tool-card-desc">面向零基础文科生的通义灵码 AI 编程环境教学手册，含 5 种 AI 编码模式。</div>
+          <div class="tool-card-link">阅读指南 →</div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- AI Agents -->
+<section id="agents">
+  <div class="container">
+    <div class="section-label">🤖 AI Agent Matrix</div>
+    <div class="section-title">1+4 智能体问答体系</div>
+    <div class="section-desc">基于大语言模型API搭建的全天候 AI 伴学矩阵，覆盖导学、提示词、写作、前沿与伦理五大维度</div>
+
+    <div class="agent-grid">
+      <div class="agent-card main">
+        <div class="agent-card-icon">🎓</div>
+        <div class="agent-card-name">传媒AI导师</div>
+        <div class="agent-card-desc">主入口 · 智能路由 · 学情追踪</div>
+      </div>
+      <div class="agent-card">
+        <div class="agent-card-icon">✍️</div>
+        <div class="agent-card-name">提示词工坊</div>
+        <div class="agent-card-desc">CRISPE框架 · Few-Shot · CoT</div>
+      </div>
+      <div class="agent-card">
+        <div class="agent-card-icon">📰</div>
+        <div class="agent-card-name">新闻写作助手</div>
+        <div class="agent-card-desc">摘要 · 提取 · 创意 · 写作</div>
+      </div>
+      <div class="agent-card">
+        <div class="agent-card-icon">🔭</div>
+        <div class="agent-card-name">传媒前沿观察</div>
+        <div class="agent-card-desc">行业动态 · 技术趋势 · 案例</div>
+      </div>
+      <div class="agent-card">
+        <div class="agent-card-icon">⚖️</div>
+        <div class="agent-card-name">伦理守护者</div>
+        <div class="agent-card-desc">AI伦理 · 学术诚信 · 法规</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Showcase -->
+<section id="showcase" style="background:var(--bg2)">
+  <div class="container">
+    <div class="section-label">🏆 Student Showcase</div>
+    <div class="section-title">学生作品精选</div>
+    <div class="section-desc">2025-2026 学年期末项目产出 <strong>20 件 AI 驱动的传媒作品</strong>，覆盖互动体验、视频动画、播客音乐与数据新闻</div>
+
+    <div class="showcase-grid" style="margin-top:40px">
+      <a href="https://jou2327a.netlify.app/yingge/" target="_blank" rel="noopener noreferrer" class="showcase-card"><div class="showcase-card-body"><div class="showcase-card-cat">🌐 互动体验</div><div class="showcase-card-title">英歌舞角色匹配测试</div><div class="showcase-card-author">第三组 · 潮汕非遗×性格测试</div></div></a>
+      <a href="https://xinlizicha.netlify.app/" target="_blank" rel="noopener noreferrer" class="showcase-card"><div class="showcase-card-body"><div class="showcase-card-cat">🌐 互动体验</div><div class="showcase-card-title">MindCheck 心理自查</div><div class="showcase-card-author">第一组 · 四维度心理评估</div></div></a>
+      <a href="https://jou2327a.netlify.app/yangyuxuan/game/" target="_blank" rel="noopener noreferrer" class="showcase-card"><div class="showcase-card-body"><div class="showcase-card-cat">🎮 互动体验</div><div class="showcase-card-title">最后的人类编辑</div><div class="showcase-card-author">杨宇轩 · 赛博朋克RPG</div></div></a>
+      <a href="https://jou2327a.netlify.app/group2/" target="_blank" rel="noopener noreferrer" class="showcase-card"><div class="showcase-card-body"><div class="showcase-card-cat">🎬 AI视频</div><div class="showcase-card-title">三只小猪AI动画</div><div class="showcase-card-author">第二组 · AI图生视频</div></div></a>
+      <a href="https://jou2327a.netlify.app/yangjiajun/" target="_blank" rel="noopener noreferrer" class="showcase-card"><div class="showcase-card-body"><div class="showcase-card-cat">🎬 AI视频</div><div class="showcase-card-title">生发可乐品牌全案</div><div class="showcase-card-author">杨家俊 · 一人4A公司</div></div></a>
+      <a href="https://jou2327a.netlify.app/group5/" target="_blank" rel="noopener noreferrer" class="showcase-card"><div class="showcase-card-body"><div class="showcase-card-cat">🎧 播客</div><div class="showcase-card-title">粤语体育老师</div><div class="showcase-card-author">第五组 · 双人粤语播客</div></div></a>
+      <a href="https://jou2327a.netlify.app/linhx/" target="_blank" rel="noopener noreferrer" class="showcase-card"><div class="showcase-card-body"><div class="showcase-card-cat">📊 数据报告</div><div class="showcase-card-title">青年情绪消费图鉴</div><div class="showcase-card-author">林海欣 · 300份问卷+14图表</div></div></a>
+      <a href="https://jou2327a.netlify.app/group4/" target="_blank" rel="noopener noreferrer" class="showcase-card"><div class="showcase-card-body"><div class="showcase-card-cat">🌐 互动体验</div><div class="showcase-card-title">甄嬛传人物谱系</div><div class="showcase-card-author">第四组 · 36角色交互图谱</div></div></a>
+    </div>
+
+    <div style="text-align:center;margin-top:32px">
+      <a href="https://jou2327a.netlify.app/" target="_blank" rel="noopener noreferrer" class="btn btn-outline">查看全部 20 件作品 →</a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section style="text-align:center;padding:80px 40px">
+  <div class="container">
+    <div class="section-title" style="max-width:100%">我们选择做什么样的传播者，比我们使用什么工具更重要</div>
+    <p style="color:var(--text2);font-size:16px;margin-top:12px;margin-bottom:32px">16周，从灵感到成稿，重新理解内容生产。</p>
+    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
+      <a href="https://github.com/icgma/cpnm-ai-comm-practice" target="_blank" rel="noopener noreferrer" class="btn btn-primary">⭐ GitHub 仓库</a>
+      <a href="./ai-ethics-handbook.html" class="btn btn-outline">⚖️ AI伦理手册</a>
+      <a href="./obe-matrix.html" class="btn btn-outline">🎯 OBE对标表</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 汕头大学 · 长江新闻与传播学院 · AI课程建设项目</p>
+  <p style="margin-top:8px"><a href="https://github.com/icgma/cpnm-ai-comm-practice">GitHub</a> · <a href="https://jou2327a.netlify.app/">Student Showcase</a> · <a href="./course-kg/index.html">Knowledge Graph</a></p>
+</footer>
+
+<script src="./theme.js"></script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Week 03 · 提示词工程基础 — AI与传播实践</title>
+<meta name="description" content="第3周：掌握CRISPE提示词框架，学会与AI有效沟通的系统方法。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="week-common.css">
+<style>
+.week-hero h1 span{background:linear-gradient(135deg,#8b5cf6,#a78bfa);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.module-icon.m1{background:rgba(139,92,246,.15);color:#a78bfa}
+.module-icon.m2{background:rgba(59,130,246,.15);color:#60a5fa}
+.module-icon.m3{background:rgba(236,72,153,.15);color:#f472b6}
+.module-icon.m4{background:rgba(16,185,129,.15);color:#34d399}
+.cg{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin:16px 0}
+.cc{text-align:center;padding:14px 8px;border-radius:12px;border:1px solid var(--border);background:var(--bg3)}
+.cl{font-size:28px;font-weight:900;margin-bottom:4px}
+.cn{font-size:11px;color:var(--text3);font-weight:600}
+.cz{font-size:12px;color:var(--text2);margin-top:2px}
+</style>
+</head>
+<body>
+<div class="bg-grid"></div><div class="bg-glow bg-glow-1"></div><div class="bg-glow bg-glow-2"></div><div class="bg-glow bg-glow-3"></div>
+<div class="week-nav"><div class="week-nav-inner"><div class="week-nav-left"><a href="../index.html" class="week-nav-home"><div class="week-nav-logo">AI</div> AI与传播实践</a><span class="week-nav-sep">/</span><span class="week-nav-current">Week 03</span></div><div class="week-nav-right"><a href="week-02.html" class="week-nav-btn">← 上一周</a><a href="week-04.html" class="week-nav-btn">下一周 →</a></div></div></div>
+
+<div class="week-hero"><div class="week-hero-inner">
+<div class="week-badge"><span class="week-badge-num">WEEK 03</span> · 基础认知阶段</div>
+<h1>提示词工程基础<br><span>CRISPE框架</span></h1>
+<p class="week-hero-sub">从"随便问问"到"精确控制" — 掌握与AI有效沟通的五要素系统方法论</p>
+<div class="week-hero-tags"><span class="hero-tag" style="background:rgba(59,130,246,.15);color:#93c5fd">Bloom ③应用</span><span class="hero-tag" style="background:rgba(239,68,68,.15);color:#fca5a5">🔴 重点</span></div>
+</div></div>
+
+<div class="week-content">
+<div class="module open" id="mod1"><div class="module-header" onclick="this.parentElement.classList.toggle('open')"><div class="module-header-left"><div class="module-icon m1">🧩</div><div><div class="module-num">MODULE 01</div><div class="module-title">CRISPE五要素框架</div></div></div><div class="module-chevron">▼</div></div>
+<div class="module-body"><div class="content-block"><h3>🎯 框架全景</h3>
+<div class="cg">
+<div class="cc"><div class="cl" style="color:#ef4444">C</div><div class="cn">Capacity & Role</div><div class="cz">能力与角色</div></div>
+<div class="cc"><div class="cl" style="color:#f59e0b">R</div><div class="cn">Insight</div><div class="cz">洞察背景</div></div>
+<div class="cc"><div class="cl" style="color:#10b981">I</div><div class="cn">Statement</div><div class="cz">任务陈述</div></div>
+<div class="cc"><div class="cl" style="color:#3b82f6">S</div><div class="cn">Personality</div><div class="cz">个性风格</div></div>
+<div class="cc"><div class="cl" style="color:#8b5cf6">P</div><div class="cn">Experiment</div><div class="cz">实验迭代</div></div>
+</div>
+<div class="highlight-box blue"><div class="highlight-box-title">类比理解</div><div class="highlight-box-text">把CRISPE想象成"指导演员"：<strong>C</strong> 告诉他演什么角色 · <strong>R</strong> 讲清背景故事 · <strong>I</strong> 给出场景要求 · <strong>S</strong> 设定表演风格 · <strong>P</strong> 持续调整直到满意</div></div>
+</div></div></div>
+
+<div class="module" id="mod2"><div class="module-header" onclick="this.parentElement.classList.toggle('open')"><div class="module-header-left"><div class="module-icon m2">🎭</div><div><div class="module-num">MODULE 02</div><div class="module-title">C·R·I·S 四要素详解</div></div></div><div class="module-chevron">▼</div></div>
+<div class="module-body">
+<div class="content-block"><h3>🎭 C — 角色设定</h3>
+<div class="example-block"><span class="label label-good">✅ 优质</span>
+你是一位有15年经验的调查记者，擅长深度报道和事实核查，在政治和社会议题报道方面有丰富经验。</div>
+<div class="example-block" style="margin-top:8px"><span class="label label-bad">❌ 模糊</span>
+你是一个专家。</div></div>
+<div class="content-block"><h3>🔍 R — 背景洞察</h3><p>提供任务情境：目标受众、发布平台、环境限制。决定AI的"上下文感知能力"。</p></div>
+<div class="content-block"><h3>📋 I — 任务陈述</h3><p>核心三要素：<strong>动作动词</strong>（写/分析/翻译）+ <strong>输出规范</strong>（格式/字数）+ <strong>质量标准</strong></p></div>
+<div class="content-block"><h3>🎨 S — 风格设定</h3>
+<table class="compare-table"><thead><tr><th>维度</th><th>光谱</th><th>场景</th></tr></thead><tbody>
+<tr><td>语调</td><td>正式 ↔ 非正式</td><td>新闻报道 vs 社交媒体</td></tr>
+<tr><td>情感</td><td>热情 ↔ 冷静</td><td>品牌营销 vs 调查报道</td></tr>
+<tr><td>深度</td><td>简洁 ↔ 详细</td><td>快讯 vs 深度长文</td></tr>
+</tbody></table></div>
+</div></div>
+
+<div class="module" id="mod3"><div class="module-header" onclick="this.parentElement.classList.toggle('open')"><div class="module-header-left"><div class="module-icon m3">🔬</div><div><div class="module-num">MODULE 03</div><div class="module-title">完整实战案例</div></div></div><div class="module-chevron">▼</div></div>
+<div class="module-body"><div class="content-block"><h3>📰 案例：科技产品发布新闻稿</h3>
+<div class="example-block"><span class="label label-tip">💡 完整 CRISPE</span>
+【C】你是资深科技记者，10年经验，擅长技术概念通俗化
+【R】AI公司发布智能助手3.0，目标受众：科技爱好者
+【I】写600-800字新闻稿，标准格式，含CEO引用语句
+【S】专业、客观、略带兴奋，适合科技媒体
+【P】初版→评估标题→检查逻辑→调整术语→定稿</div></div></div></div>
+
+<div class="module" id="mod4"><div class="module-header" onclick="this.parentElement.classList.toggle('open')"><div class="module-header-left"><div class="module-icon m4">⚠️</div><div><div class="module-num">MODULE 04</div><div class="module-title">误区与灵活应用</div></div></div><div class="module-chevron">▼</div></div>
+<div class="module-body"><div class="content-block"><h3>🚫 六大误区</h3>
+<div class="key-points">
+<div class="key-point"><div class="key-point-icon">1️⃣</div><div class="key-point-content"><div class="key-point-title">机械套用</div><div class="key-point-desc">应根据任务复杂度灵活精简</div></div></div>
+<div class="key-point"><div class="key-point-icon">2️⃣</div><div class="key-point-content"><div class="key-point-title">内容空洞</div><div class="key-point-desc">"你是专家"等于没说，需量化经验</div></div></div>
+<div class="key-point"><div class="key-point-icon">3️⃣</div><div class="key-point-content"><div class="key-point-title">要素矛盾</div><div class="key-point-desc">角色与风格需逻辑一致</div></div></div>
+<div class="key-point"><div class="key-point-icon">4️⃣</div><div class="key-point-content"><div class="key-point-title">忽视迭代</div><div class="key-point-desc">P是框架闭环的关键</div></div></div>
+<div class="key-point"><div class="key-point-icon">5️⃣</div><div class="key-point-content"><div class="key-point-title">过度复杂</div><div class="key-point-desc">简洁精准优于面面俱到</div></div></div>
+<div class="key-point"><div class="key-point-icon">6️⃣</div><div class="key-point-content"><div class="key-point-title">缺乏定制</div><div class="key-point-desc">应针对场景和受众调整</div></div></div>
+</div></div>
+<div class="content-block"><div class="highlight-box green"><div class="highlight-box-title">💡 核心心法</div><div class="highlight-box-text">CRISPE是<strong>工具箱</strong>而非紧箍咒。简单任务用C-I两要素即可；复杂任务逐步添加R、S、P。</div></div></div>
+</div></div>
+</div>
+
+<div class="week-bottom-nav">
+<a href="week-02.html" class="bottom-nav-card"><div class="bottom-nav-label">← PREV WEEK</div><div class="bottom-nav-title">LLM工作原理与技术基础</div></a>
+<a href="week-04.html" class="bottom-nav-card next"><div class="bottom-nav-label">NEXT WEEK →</div><div class="bottom-nav-title">精确指令与格式控制</div></a>
+</div>
+<div class="week-footer">© 2026 汕头大学 · 长江新闻与传播学院 · AI课程建设项目</div>
+</body></html>

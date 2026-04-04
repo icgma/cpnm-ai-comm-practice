@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Week 08 · 结构化提取与增强分析 — AI与传播实践</title>
+<meta name="description" content="第8周：JSON/表格/实体提取与数据新闻应用。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="week-common.css">
+<style>.week-hero h1 span{background:linear-gradient(135deg,#10b981,#06b6d4);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}.module-icon.m1{background:rgba(16,185,129,.15);color:#34d399}.module-icon.m2{background:rgba(6,182,212,.15);color:#22d3ee}.module-icon.m3{background:rgba(139,92,246,.15);color:#a78bfa}</style>
+</head>
+<body>
+<div class="bg-grid"></div><div class="bg-glow bg-glow-1"></div><div class="bg-glow bg-glow-2"></div><div class="bg-glow bg-glow-3"></div>
+<div class="week-nav"><div class="week-nav-inner"><div class="week-nav-left"><a href="../index.html" class="week-nav-home"><div class="week-nav-logo">AI</div> AI与传播实践</a><span class="week-nav-sep">/</span><span class="week-nav-current">Week 08</span></div><div class="week-nav-right"><a href="week-07.html" class="week-nav-btn">← 上一周</a><a href="week-09.html" class="week-nav-btn">下一周 →</a></div></div></div>
+
+<div class="week-hero"><div class="week-hero-inner">
+<div class="week-badge"><span class="week-badge-num">WEEK 08</span> · 技能应用阶段</div>
+<h1>结构化提取与<span>增强分析</span></h1>
+<p class="week-hero-sub">将非结构化文本转化为JSON、表格、实体关系 — 数据新闻与智能分析的核心技能</p>
+</div></div>
+
+<div class="week-content">
+<div class="module open"><div class="module-header" onclick="this.parentElement.classList.toggle('open')"><div class="module-header-left"><div class="module-icon m1">📊</div><div><div class="module-num">MODULE 01</div><div class="module-title">结构化提取三种模式</div></div></div><div class="module-chevron">▼</div></div>
+<div class="module-body"><div class="content-block">
+<div class="key-points">
+<div class="key-point"><div class="key-point-icon">📋</div><div class="key-point-content"><div class="key-point-title">表格提取</div><div class="key-point-desc">从长文本中提取对比信息，自动填充预设的行列结构</div></div></div>
+<div class="key-point"><div class="key-point-icon">🔧</div><div class="key-point-content"><div class="key-point-title">JSON结构化</div><div class="key-point-desc">按预定义Schema提取字段，适合API对接和数据入库</div></div></div>
+<div class="key-point"><div class="key-point-icon">🔗</div><div class="key-point-content"><div class="key-point-title">实体关系提取</div><div class="key-point-desc">识别人物、机构、事件及其关系，构建知识图谱</div></div></div>
+</div></div></div></div>
+
+<div class="module"><div class="module-header" onclick="this.parentElement.classList.toggle('open')"><div class="module-header-left"><div class="module-icon m2">🧪</div><div><div class="module-num">MODULE 02</div><div class="module-title">提取提示词设计模式</div></div></div><div class="module-chevron">▼</div></div>
+<div class="module-body"><div class="content-block">
+<div class="example-block"><span class="label label-tip">💡 模板驱动提取</span>
+请从以下会议纪要中提取结构化信息：
+{
+  "meeting_date": "",
+  "participants": [],
+  "agenda_items": [
+    {"topic": "", "decision": "", "action_owner": "", "deadline": ""}
+  ],
+  "next_meeting": ""
+}
+严格按此JSON格式输出，缺失字段用null填充。</div></div>
+<div class="content-block"><div class="highlight-box green"><div class="highlight-box-title">💡 设计原则</div><div class="highlight-box-text">① 提供明确的Schema/模板 → AI输出更稳定<br>② 指定缺失值处理方式 → 避免AI"脑补"数据<br>③ 添加输出验证指令 → "请检查所有日期格式是否为YYYY-MM-DD"</div></div></div>
+</div></div>
+
+<div class="module"><div class="module-header" onclick="this.parentElement.classList.toggle('open')"><div class="module-header-left"><div class="module-icon m3">📰</div><div><div class="module-num">MODULE 03</div><div class="module-title">数据新闻应用</div></div></div><div class="module-chevron">▼</div></div>
+<div class="module-body"><div class="content-block"><h3>🔄 非结构化→结构化→可视化 流水线</h3>
+<div class="flow-list">
+<div class="flow-step"><div class="flow-step-num">1</div><div class="flow-step-content"><div class="flow-step-title">原始文本</div><div class="flow-step-desc">政策文件、财报、法院判决书等非结构化文档</div></div></div>
+<div class="flow-step"><div class="flow-step-num">2</div><div class="flow-step-content"><div class="flow-step-title">AI结构化提取</div><div class="flow-step-desc">按预设Schema批量提取关键字段为JSON/CSV</div></div></div>
+<div class="flow-step"><div class="flow-step-num">3</div><div class="flow-step-content"><div class="flow-step-title">数据清洗与验证</div><div class="flow-step-desc">人工校验提取质量，处理异常值和缺失值</div></div></div>
+<div class="flow-step"><div class="flow-step-num">4</div><div class="flow-step-content"><div class="flow-step-title">可视化叙事</div><div class="flow-step-desc">将结构化数据转化为图表和交互式可视化报道</div></div></div>
+</div></div></div></div>
+</div>
+
+<div class="week-bottom-nav">
+<a href="week-07.html" class="bottom-nav-card"><div class="bottom-nav-label">← PREV WEEK</div><div class="bottom-nav-title">文本摘要与提炼基础</div></a>
+<a href="week-09.html" class="bottom-nav-card next"><div class="bottom-nav-label">NEXT WEEK →</div><div class="bottom-nav-title">创意生成与选题策划</div></a>
+</div>
+<div class="week-footer">© 2026 汕头大学 · 长江新闻与传播学院 · AI课程建设项目</div>
+</body></html>

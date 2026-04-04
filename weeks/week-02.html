@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Week 02 · LLM工作原理与技术基础 — AI与传播实践</title>
+<meta name="description" content="第2周：深入理解Transformer架构、自注意力机制与大语言模型的涌现能力。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="week-common.css">
+<style>
+  .week-hero h1 span{background:linear-gradient(135deg,#3b82f6,#6366f1);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+  .module-icon.m1{background:rgba(59,130,246,.15);color:#60a5fa}
+  .module-icon.m2{background:rgba(139,92,246,.15);color:#a78bfa}
+  .module-icon.m3{background:rgba(236,72,153,.15);color:#f472b6}
+  .module-icon.m4{background:rgba(245,158,11,.15);color:#fbbf24}
+</style>
+</head>
+<body>
+<div class="bg-grid"></div>
+<div class="bg-glow bg-glow-1"></div>
+<div class="bg-glow bg-glow-2"></div>
+<div class="bg-glow bg-glow-3"></div>
+
+<div class="week-nav">
+  <div class="week-nav-inner">
+  <div class="week-nav-left">
+    <a href="../index.html" class="week-nav-home"><div class="week-nav-logo">AI</div> AI与传播实践</a>
+    <span class="week-nav-sep">/</span>
+    <span class="week-nav-current">Week 02</span>
+  </div>
+  <div class="week-nav-right">
+    <a href="week-01.html" class="week-nav-btn">← 上一周</a>
+    <a href="week-03.html" class="week-nav-btn">下一周 →</a>
+  </div>
+  </div>
+</div>
+
+<div class="week-hero">
+  <div class="week-hero-inner">
+    <div class="week-badge"><span class="week-badge-num">WEEK 02</span> · 基础认知阶段</div>
+    <h1>LLM工作原理与<span>技术基础</span></h1>
+    <p class="week-hero-sub">深入Transformer核心架构，理解"注意力就是一切"的革命性突破，掌握大语言模型从训练到推理的完整链路</p>
+    <div class="week-hero-tags">
+      <span class="hero-tag" style="background:rgba(239,68,68,.15);color:#fca5a5">🔴 重点</span>
+      <span class="hero-tag" style="background:rgba(245,158,11,.15);color:#fcd34d">🟡 难点</span>
+    </div>
+  </div>
+</div>
+
+<div class="week-content">
+
+  <div class="module open" id="mod1">
+    <div class="module-header" onclick="this.parentElement.classList.toggle('open')">
+      <div class="module-header-left">
+        <div class="module-icon m1">🏗️</div>
+        <div><div class="module-num">MODULE 01</div><div class="module-title">Transformer架构解析</div></div>
+      </div>
+      <div class="module-chevron">▼</div>
+    </div>
+    <div class="module-body">
+      <div class="content-block">
+        <h3>📄 "Attention Is All You Need"（2017）</h3>
+        <p>Google团队发表的这篇论文彻底改变了NLP领域。Transformer抛弃了RNN的序列处理方式，完全基于注意力机制，实现了真正的并行计算。</p>
+        <div class="key-points" style="margin-top:16px">
+          <div class="key-point">
+            <div class="key-point-icon">👁️</div>
+            <div class="key-point-content">
+              <div class="key-point-title">自注意力（Self-Attention）</div>
+              <div class="key-point-desc">每个词都能直接"看到"序列中所有其他词，计算彼此的关联权重。就像阅读一篇文章时，你的大脑会自动将"它"与前文提到的具体事物关联起来</div>
+            </div>
+          </div>
+          <div class="key-point">
+            <div class="key-point-icon">🔀</div>
+            <div class="key-point-content">
+              <div class="key-point-title">多头注意力（Multi-Head Attention）</div>
+              <div class="key-point-desc">同时从多个视角理解序列 — 一个头关注语法关系，一个头关注语义关联，一个头关注指代关系。多维度并行理解</div>
+            </div>
+          </div>
+          <div class="key-point">
+            <div class="key-point-icon">📍</div>
+            <div class="key-point-content">
+              <div class="key-point-title">位置编码（Positional Encoding）</div>
+              <div class="key-point-desc">由于注意力机制本身不关注顺序，位置编码通过正弦函数为每个位置注入序列信息，让模型知道"谁在前谁在后"</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="content-block">
+        <h3>⚡ 为什么Transformer胜出？</h3>
+        <div class="compare-table-wrap" style="overflow-x:auto">
+          <table class="compare-table">
+            <thead><tr><th>对比维度</th><th>RNN / LSTM</th><th>Transformer</th></tr></thead>
+            <tbody>
+              <tr><td>计算方式</td><td>顺序处理，逐词计算</td><td>并行处理，全局关注</td></tr>
+              <tr><td>长距离依赖</td><td>信息衰减严重</td><td>直接连接任意位置</td></tr>
+              <tr><td>训练效率</td><td>无法并行，速度慢</td><td>高度并行，数量级提升</td></tr>
+              <tr><td>可扩展性</td><td>难以扩展到大规模</td><td>支持千亿参数级扩展</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="module" id="mod2">
+    <div class="module-header" onclick="this.parentElement.classList.toggle('open')">
+      <div class="module-header-left">
+        <div class="module-icon m2">📈</div>
+        <div><div class="module-num">MODULE 02</div><div class="module-title">GPT家族演进：从1.17亿到万亿参数</div></div>
+      </div>
+      <div class="module-chevron">▼</div>
+    </div>
+    <div class="module-body">
+      <div class="content-block">
+        <h3>🧬 GPT进化路线</h3>
+        <div class="flow-list">
+          <div class="flow-step"><div class="flow-step-num">1</div><div class="flow-step-content"><div class="flow-step-title">GPT-1（2018）· 1.17亿参数</div><div class="flow-step-desc">首次验证"预训练+微调"范式的有效性，基于BookCorpus数据集训练</div></div></div>
+          <div class="flow-step"><div class="flow-step-num">2</div><div class="flow-step-content"><div class="flow-step-title">GPT-2（2019）· 15亿参数</div><div class="flow-step-desc">远超时代的文本生成能力，因"过于危险"延迟发布，引发AI安全讨论</div></div></div>
+          <div class="flow-step"><div class="flow-step-num">3</div><div class="flow-step-content"><div class="flow-step-title">GPT-3（2020）· 1750亿参数</div><div class="flow-step-desc">展现少样本学习（Few-Shot）能力，商业化API推出，引爆大模型竞赛</div></div></div>
+          <div class="flow-step"><div class="flow-step-num">4</div><div class="flow-step-content"><div class="flow-step-title">GPT-4（2023）· 多模态架构</div><div class="flow-step-desc">支持文本+图像输入，多项基准接近人类水平。ChatGPT Plus / Copilot 落地</div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="module" id="mod3">
+    <div class="module-header" onclick="this.parentElement.classList.toggle('open')">
+      <div class="module-header-left">
+        <div class="module-icon m3">✨</div>
+        <div><div class="module-num">MODULE 03</div><div class="module-title">涌现能力与预训练范式</div></div>
+      </div>
+      <div class="module-chevron">▼</div>
+    </div>
+    <div class="module-body">
+      <div class="content-block">
+        <h3>🌊 什么是涌现能力？</h3>
+        <div class="highlight-box purple">
+          <div class="highlight-box-title">关键概念</div>
+          <div class="highlight-box-text">当模型参数量达到某个临界点后，突然出现训练时未明确教授的新能力 — 如逻辑推理、代码生成、多步骤问题分解。这是量变引起质变的典型案例。</div>
+        </div>
+      </div>
+      <div class="content-block">
+        <h3>🔄 预训练→微调→对齐 三阶段</h3>
+        <div class="key-points">
+          <div class="key-point">
+            <div class="key-point-icon">📚</div>
+            <div class="key-point-content">
+              <div class="key-point-title">预训练（Pre-training）</div>
+              <div class="key-point-desc">在海量文本上进行自监督学习，习得语言的统计规律和世界知识。核心任务：预测下一个词（Next Token Prediction）</div>
+            </div>
+          </div>
+          <div class="key-point">
+            <div class="key-point-icon">🎯</div>
+            <div class="key-point-content">
+              <div class="key-point-title">指令微调（Instruction Fine-tuning）</div>
+              <div class="key-point-desc">使用高质量指令-回答数据集进行有监督微调（SFT），让模型学会"听懂"人类指令</div>
+            </div>
+          </div>
+          <div class="key-point">
+            <div class="key-point-icon">⚖️</div>
+            <div class="key-point-content">
+              <div class="key-point-title">人类偏好对齐（RLHF）</div>
+              <div class="key-point-desc">通过人类反馈的强化学习，使模型输出与人类价值观对齐 — 更有帮助、更真实、更安全</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="module" id="mod4">
+    <div class="module-header" onclick="this.parentElement.classList.toggle('open')">
+      <div class="module-header-left">
+        <div class="module-icon m4">🌐</div>
+        <div><div class="module-num">MODULE 04</div><div class="module-title">全球大模型竞争格局</div></div>
+      </div>
+      <div class="module-chevron">▼</div>
+    </div>
+    <div class="module-body">
+      <div class="content-block">
+        <h3>🏢 主要玩家一览</h3>
+        <div class="compare-table-wrap" style="overflow-x:auto">
+          <table class="compare-table">
+            <thead><tr><th>机构</th><th>代表模型</th><th>特色</th></tr></thead>
+            <tbody>
+              <tr><td>🇺🇸 OpenAI</td><td>GPT-4 / ChatGPT</td><td>多模态、商业化标杆</td></tr>
+              <tr><td>🇺🇸 Google</td><td>Gemini</td><td>多模态融合、搜索集成</td></tr>
+              <tr><td>🇺🇸 Anthropic</td><td>Claude</td><td>安全对齐、长上下文</td></tr>
+              <tr><td>🇨🇳 百度</td><td>文心一言</td><td>中文优化、行业落地</td></tr>
+              <tr><td>🇨🇳 阿里</td><td>通义千问</td><td>开源生态、工具集成</td></tr>
+              <tr><td>🇨🇳 DeepSeek</td><td>DeepSeek-V3</td><td>开源高性价比、推理能力</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="content-block">
+        <h3>🤔 传媒人应如何看待？</h3>
+        <div class="highlight-box green">
+          <div class="highlight-box-title">核心结论</div>
+          <div class="highlight-box-text">LLM不是要取代传媒人，而是成为传媒人的"超级工具"。核心竞争力在于：<br>① 提出正确的问题（批判性思维）<br>② 判断输出的质量（专业素养）<br>③ 承担内容的责任（职业伦理）</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="week-bottom-nav">
+  <a href="week-01.html" class="bottom-nav-card">
+    <div class="bottom-nav-label">← PREV WEEK</div>
+    <div class="bottom-nav-title">课程导论与AI基础</div>
+  </a>
+  <a href="week-03.html" class="bottom-nav-card next">
+    <div class="bottom-nav-label">NEXT WEEK →</div>
+    <div class="bottom-nav-title">提示词工程基础 — CRISPE框架</div>
+  </a>
+</div>
+
+<div class="week-footer">© 2026 汕头大学 · 长江新闻与传播学院 · AI课程建设项目</div>
+</body>
+</html>

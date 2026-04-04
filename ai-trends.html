@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI+传媒 前沿动态 — AI与传播实践</title>
+<meta name="description" content="AI与传媒行业前沿动态周报，涵盖技术趋势、行业变革、学术前沿、政策监管及课堂讨论。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="doc-common.css">
+<style>
+/* ── Trend Cards ── */
+.trend-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:20px;margin-top:28px}
+.trend-card{background:var(--bg3);border:1px solid var(--border);border-radius:16px;padding:28px;transition:all .3s;position:relative;overflow:hidden}
+.trend-card:hover{border-color:var(--accent);transform:translateY(-3px);box-shadow:0 12px 40px rgba(99,102,241,.1)}
+.trend-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--grad1);opacity:0;transition:opacity .3s}
+.trend-card:hover::before{opacity:1}
+.trend-tag{display:inline-block;padding:4px 12px;border-radius:20px;font-size:12px;font-weight:600;margin-bottom:12px}
+.trend-tag.tech{background:rgba(99,102,241,.15);color:#818cf8}
+.trend-tag.industry{background:rgba(14,165,233,.15);color:#38bdf8}
+.trend-tag.academic{background:rgba(168,85,247,.15);color:#c084fc}
+.trend-tag.policy{background:rgba(239,68,68,.15);color:#f87171}
+.trend-tag.tool{background:rgba(34,197,94,.15);color:#4ade80}
+.trend-card h3{font-size:17px;font-weight:700;margin-bottom:10px;line-height:1.5}
+.trend-card p{font-size:14px;color:var(--text2);line-height:1.7}
+.trend-source{margin-top:14px;font-size:12px;color:var(--text3);display:flex;align-items:center;gap:6px}
+
+/* ── Timeline ── */
+.briefing-section{margin-top:48px}
+.briefing-section h2{font-size:22px;font-weight:700;margin-bottom:8px;display:flex;align-items:center;gap:10px}
+.briefing-section h2 .emoji{font-size:24px}
+.briefing-desc{font-size:15px;color:var(--text2);margin-bottom:20px;line-height:1.7}
+
+/* ── Discussion Questions ── */
+.discussion-list{list-style:none;counter-reset:q}
+.discussion-list li{counter-increment:q;padding:20px 24px;background:var(--bg3);border:1px solid var(--border);border-radius:12px;margin-bottom:12px;font-size:15px;line-height:1.7;position:relative;padding-left:56px;transition:border-color .3s}
+.discussion-list li:hover{border-color:var(--accent)}
+.discussion-list li::before{content:counter(q);position:absolute;left:20px;top:20px;width:28px;height:28px;border-radius:50%;background:var(--grad1);color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700}
+
+/* ── Stats Bar ── */
+.stats-bar{display:flex;gap:24px;flex-wrap:wrap;margin:32px 0;padding:24px;background:var(--bg3);border-radius:16px;border:1px solid var(--border)}
+.stat-item{text-align:center;flex:1;min-width:120px}
+.stat-num{font-size:28px;font-weight:800;background:var(--grad1);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.stat-label{font-size:13px;color:var(--text2);margin-top:4px}
+
+/* ── Case Studies ── */
+.case-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px;margin-top:20px}
+.case-card{background:var(--bg3);border:1px solid var(--border);border-radius:16px;padding:24px;transition:all .3s}
+.case-card:hover{border-color:var(--accent);transform:translateY(-2px)}
+.case-org{font-size:13px;font-weight:600;color:var(--accent);margin-bottom:8px;text-transform:uppercase;letter-spacing:1px}
+.case-card h3{font-size:16px;font-weight:700;margin-bottom:10px}
+.case-card p{font-size:14px;color:var(--text2);line-height:1.7}
+.case-tools{margin-top:14px;display:flex;flex-wrap:wrap;gap:6px}
+.case-tool{padding:3px 10px;border-radius:12px;font-size:11px;background:var(--bg4);color:var(--text2);border:1px solid var(--border)}
+
+/* ── Section Divider ── */
+.section-divider{height:1px;background:linear-gradient(90deg,transparent,var(--border),transparent);margin:48px 0}
+
+@media(max-width:700px){
+  .trend-grid,.case-grid{grid-template-columns:1fr}
+  .stats-bar{flex-direction:column;gap:16px}
+}
+</style>
+</head>
+<body>
+
+<!-- Nav -->
+<nav>
+<div class="doc-nav-inner">
+  <a href="index.html" class="doc-nav-home"><div class="doc-nav-logo">AI</div> AI与传播实践</a>
+  <span class="doc-nav-sep">/</span>
+  <span class="doc-nav-title">📡 前沿动态</span>
+</div>
+</nav>
+
+<main class="doc-main">
+
+<!-- Hero -->
+<div style="text-align:center;margin-bottom:40px">
+  <div style="display:inline-block;padding:6px 16px;border-radius:20px;background:rgba(99,102,241,.12);color:#818cf8;font-size:13px;font-weight:600;margin-bottom:16px">WEEKLY BRIEFING · 2026-04-04</div>
+  <h1 style="font-size:32px;font-weight:800;line-height:1.4">AI + 传媒 前沿动态</h1>
+  <p style="color:var(--text2);font-size:16px;margin-top:12px;max-width:640px;margin-left:auto;margin-right:auto;line-height:1.7">
+    追踪 AI 技术与新闻传播行业的交叉前沿，每周更新。<br>涵盖技术趋势、行业变革、学术前沿、政策监管与课堂讨论。
+  </p>
+</div>
+
+<!-- Stats -->
+<div class="stats-bar">
+  <div class="stat-item"><div class="stat-num">6</div><div class="stat-label">RSS 数据源</div></div>
+  <div class="stat-item"><div class="stat-num">58+</div><div class="stat-label">抓取条目</div></div>
+  <div class="stat-item"><div class="stat-num">5</div><div class="stat-label">趋势维度</div></div>
+  <div class="stat-item"><div class="stat-num">12</div><div class="stat-label">落地案例</div></div>
+  <div class="stat-item"><div class="stat-num">5</div><div class="stat-label">讨论问题</div></div>
+</div>
+
+<!-- ════════════ Section 1: 技术趋势 ════════════ -->
+<div class="briefing-section">
+  <h2><span class="emoji">🔬</span> 技术趋势</h2>
+  <p class="briefing-desc">本周与传媒相关的 AI 技术进展与产品动态</p>
+
+  <div class="trend-grid" id="trend-cards-area">
+    <div class="trend-card">
+      <div class="trend-tag tech">技术</div>
+      <h3>OpenAI 关停 Sora — AI 视频生成赛道洗牌</h3>
+      <p>OpenAI 宣布 Sora 将于 4 月 26 日关停 Web/App 端，API 于 9 月关停。标志着早期 AI 视频工具的淘汰，行业转向 PixVerse、HeyGen 等专业化方案。</p>
+      <div class="trend-source">📅 2026-04 · OpenAI 官方公告</div>
+    </div>
+
+    <div class="trend-card">
+      <div class="trend-tag tech">技术</div>
+      <h3>GPT-5.4 mini/nano 轻量化发布</h3>
+      <p>OpenAI 推出 GPT-5.4 系列轻量模型，大幅降低部署成本。地方媒体和小型编辑部首次可负担高性能 AI 写作辅助。</p>
+      <div class="trend-source">📅 2026-04 · OpenAI Blog</div>
+    </div>
+
+    <div class="trend-card">
+      <div class="trend-tag tech">技术</div>
+      <h3>阿里 Qwen3.6-Plus：百万级上下文</h3>
+      <p>支持百万级上下文窗口的国产编程大模型发布，能一次性处理整本书稿或大规模数据集，为研究型新闻和深度调查提供新工具。</p>
+      <div class="trend-source">📅 2026-04 · 新浪科技</div>
+    </div>
+
+    <div class="trend-card">
+      <div class="trend-tag tech">技术</div>
+      <h3>微软三款自研模型发布</h3>
+      <p>MAI-Transcribe-1（语音转写）、MAI-Voice-1（语音合成）、MAI-Image-2（图像生成）——全栈多模态能力意味着媒体 AI 工具链进一步整合。</p>
+      <div class="trend-source">📅 2026-04 · 微软官方</div>
+    </div>
+
+    <div class="trend-card">
+      <div class="trend-tag tool">工具</div>
+      <h3>AI 音乐工具进入专业制作级</h3>
+      <p>Suno v5.5 支持 8 分钟歌曲+声音克隆；MiniMax Music 2.5 可导出分轨（人声/鼓/贝斯）；Google Lyria 3 主打授权训练数据。播客和视频配乐的 AI 化已成熟。</p>
+      <div class="trend-source">📅 2026-04 · wavespeed.ai</div>
+    </div>
+
+    <div class="trend-card">
+      <div class="trend-tag tech">技术</div>
+      <h3>从 AIGC 到 Agent：智能体范式转移</h3>
+      <p>传媒行业从"AI 辅助写稿"升级为以 Agent 为核心的自主工作流。Agent 理解意图、跨应用执行多步任务——信息获取、分析、决策、分发一条龙。</p>
+      <div class="trend-source">📅 2026-04 · 多源综合</div>
+    </div>
+  </div>
+</div>
+
+<div class="section-divider"></div>
+
+<!-- ════════════ Section 2: 行业案例 ════════════ -->
+<div class="briefing-section">
+  <h2><span class="emoji">🏢</span> 行业变革 · 落地案例</h2>
+  <p class="briefing-desc">全球新闻媒体机构的 AI 应用实战案例</p>
+
+  <div class="case-grid" id="case-cards-area">
+    <div class="case-card">
+      <div class="case-org">路透社 Reuters</div>
+      <h3>AI 驱动叙利亚调查报道</h3>
+      <p>调查记者使用自建 AI 基础设施翻译、索引和检索数万份叙利亚安全部队文件，揭露万人坑细节。AI 让原本需数月的文档分析缩短至数天。</p>
+      <div class="case-tools"><span class="case-tool">文档索引</span><span class="case-tool">多语言翻译</span><span class="case-tool">语义检索</span></div>
+    </div>
+
+    <div class="case-card">
+      <div class="case-org">路透社 Reuters</div>
+      <h3>Fact Genie + LEON + AVISTA 工具矩阵</h3>
+      <p>内部 AI 工具栈：Fact Genie（摘要）、LEON（标题辅助）、AVISTA（视频/图像自动标注与归档），赋能 2600 名记者。</p>
+      <div class="case-tools"><span class="case-tool">摘要生成</span><span class="case-tool">标题优化</span><span class="case-tool">视觉归档</span></div>
+    </div>
+
+    <div class="case-card">
+      <div class="case-org">美联社 AP</div>
+      <h3>AI 基础设施嵌入 CMS</h3>
+      <p>将 AI 试点系统直接整合进内容管理系统，把自动化嵌入日常工作流。应对搜索引擎流量下降——转向通讯简报和自有平台。</p>
+      <div class="case-tools"><span class="case-tool">CMS整合</span><span class="case-tool">自动化工作流</span><span class="case-tool">受众直连</span></div>
+    </div>
+
+    <div class="case-card">
+      <div class="case-org">OpenAI</div>
+      <h3>收购流媒体节目 TBPN</h3>
+      <p>科技公司直接介入媒体生产。OpenAI 购买直播节目试图主导 AI 叙事，引发编辑独立性与科技资本影响力的深层讨论。</p>
+      <div class="case-tools"><span class="case-tool">媒体收购</span><span class="case-tool">叙事控制</span><span class="case-tool">编辑独立性</span></div>
+    </div>
+
+    <div class="case-card">
+      <div class="case-org">全球新闻工会</div>
+      <h3>50+ 新闻编辑部签署 AI 劳动条款</h3>
+      <p>NewsGuild 旗下超 50 家工会纳入 AI 保护：知情权、参与权、增强遣散保护。VTDigger 工会率先批准含 AI 条款的合同（2026-04-01）。</p>
+      <div class="case-tools"><span class="case-tool">劳动权益</span><span class="case-tool">AI治理</span><span class="case-tool">合同条款</span></div>
+    </div>
+
+    <div class="case-card">
+      <div class="case-org">新华社</div>
+      <h3>《AI赋能正能量生产传播》九场景</h3>
+      <p>中国网络媒体论坛发布实践参考，涵盖新闻视听、数据可视化、智能问答、沉浸式内容、智能体平台等九大前沿场景。</p>
+      <div class="case-tools"><span class="case-tool">策采编审管</span><span class="case-tool">价值导向</span><span class="case-tool">人机协同</span></div>
+    </div>
+
+    <div class="case-card">
+      <div class="case-org">中国广电联合会</div>
+      <h3>反 AI 换脸声明</h3>
+      <p>演员委员会就 AI 换脸与声纹克隆侵权发声，要求维护演员肖像权和声音权。对数字人主播和历史人物"复活"设定合规红线。</p>
+      <div class="case-tools"><span class="case-tool">肖像权</span><span class="case-tool">声纹保护</span><span class="case-tool">合规红线</span></div>
+    </div>
+
+    <div class="case-card">
+      <div class="case-org">Reuters Institute</div>
+      <h3>2026 新闻业 AI 调查报告</h3>
+      <p>97% 新闻高管认为后台自动化不可或缺；82% 编辑部用 AI 做数据调查分析；81% 用 AI 加速编程开发。"Vibe-Coding"让记者无需编程背景即可做数据新闻。</p>
+      <div class="case-tools"><span class="case-tool">行业调查</span><span class="case-tool">97%采纳率</span><span class="case-tool">Vibe-Coding</span></div>
+    </div>
+
+    <div class="case-card">
+      <div class="case-org">ChatGPT</div>
+      <h3>Agentic Commerce 代理商务协议</h3>
+      <p>ChatGPT 引入沉浸式购物体验——AI 代理完成商品对比和交易。对新闻媒体启示：内容电商融合，"读新闻→AI对比→购买"一站式体验。</p>
+      <div class="case-tools"><span class="case-tool">内容电商</span><span class="case-tool">Agent</span><span class="case-tool">意图经济</span></div>
+    </div>
+
+    <div class="case-card">
+      <div class="case-org">行业趋势</div>
+      <h3>"硅天花板"效应 — 更多 ≠ 更好</h3>
+      <p>行业认识到扩大 AI 内容产量并不等于业务增长。头部媒体从"生成更多"转向"AI辅助决策"（Decision Intelligence），关注编辑判断力而非产出数量。</p>
+      <div class="case-tools"><span class="case-tool">Decision Intelligence</span><span class="case-tool">质量>数量</span></div>
+    </div>
+
+    <div class="case-card">
+      <div class="case-org">内容信任</div>
+      <h3>区块链认证 × C2PA 防伪</h3>
+      <p>AI 低质内容泛滥推动"人类原创"价值回归。媒体机构探索区块链电子版权认证和 C2PA 标准，为真实新闻图片/视频提供"出生证明"。</p>
+      <div class="case-tools"><span class="case-tool">C2PA</span><span class="case-tool">区块链认证</span><span class="case-tool">内容溯源</span></div>
+    </div>
+
+    <div class="case-card">
+      <div class="case-org">中国媒体</div>
+      <h3>数字人成新闻标配</h3>
+      <p>虚拟主播已成主流媒体标配：新闻播报、多语种国际传播、互动服务。多模态模型让配音质量趋近真人，短视频生产成本大降。</p>
+      <div class="case-tools"><span class="case-tool">数字人</span><span class="case-tool">多语种</span><span class="case-tool">低成本</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="section-divider"></div>
+
+<!-- ════════════ Section 3: 政策监管 ════════════ -->
+<div class="briefing-section">
+  <h2><span class="emoji">⚖️</span> 政策监管</h2>
+  <p class="briefing-desc">全球 AI 内容监管与版权最新法规动态</p>
+
+  <div class="trend-grid" id="policy-cards-area">
+    <div class="trend-card">
+      <div class="trend-tag policy">法规</div>
+      <h3>🇪🇺 EU AI Act 强制标注 — 2026年8月生效</h3>
+      <p>Article 50 要求：所有可能被认为是真实内容的 AI 生成内容必须进行双层标注——用户可见标签 + 机器可读水印/元数据。深度伪造内容必须披露 AI 生成属性。</p>
+      <div class="trend-source">📅 2026-08-02 生效 · EU AI Act Art.50</div>
+    </div>
+
+    <div class="trend-card">
+      <div class="trend-tag policy">法规</div>
+      <h3>🇺🇸 TAKE IT DOWN Act + NO FAKES Act</h3>
+      <p>TAKE IT DOWN Act 建立联邦级非自愿合成亲密影像打击框架。NO FAKES Act 拟建立个人声音和肖像的联邦产权保护。加州要求 AI 内容水印标注。</p>
+      <div class="trend-source">📅 2025-2026 · 美国联邦+州级立法</div>
+    </div>
+
+    <div class="trend-card">
+      <div class="trend-tag policy">法规</div>
+      <h3>🇨🇳 中国：四原则 + 九场景框架</h3>
+      <p>新华社发布《AI赋能正能量生产传播》指导文件。四原则：价值导向、人机协同、传播质效、风险控制。覆盖策-采-编-审-管全链条。</p>
+      <div class="trend-source">📅 2026-03 · 中国网络媒体论坛</div>
+    </div>
+
+    <div class="trend-card">
+      <div class="trend-tag policy">法规</div>
+      <h3>版权困局：AI 生成内容不获版权保护</h3>
+      <p>美国版权局维持立场：纯 AI 生成内容无法获得版权。加州《训练数据透明法》要求 AI 开发者公开训练数据详情。创作者的"人类贡献度"成为版权边界。</p>
+      <div class="trend-source">📅 2026 · 美国版权局 + 加州 AB2013</div>
+    </div>
+  </div>
+</div>
+
+<div class="section-divider"></div>
+
+<!-- ════════════ Section 4: 课堂连接 ════════════ -->
+<div class="briefing-section">
+  <h2><span class="emoji">🎓</span> 课堂连接</h2>
+  <p class="briefing-desc">本期趋势与课程教学周次的关联映射</p>
+
+  <div style="overflow-x:auto">
+  <table style="width:100%;border-collapse:collapse;font-size:14px;margin-top:16px">
+    <thead>
+      <tr style="border-bottom:2px solid var(--border)">
+        <th style="text-align:left;padding:12px 16px;color:var(--text2);font-weight:600">本周趋势</th>
+        <th style="text-align:left;padding:12px 16px;color:var(--text2);font-weight:600">关联周次</th>
+        <th style="text-align:left;padding:12px 16px;color:var(--text2);font-weight:600">思考方向</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="border-bottom:1px solid var(--border)">
+        <td style="padding:12px 16px">Agent 范式转移</td>
+        <td style="padding:12px 16px"><a href="weeks/week-05.html">W05-W06</a></td>
+        <td style="padding:12px 16px;color:var(--text2)">Agent 与传统搜索引擎的本质区别</td>
+      </tr>
+      <tr style="border-bottom:1px solid var(--border)">
+        <td style="padding:12px 16px">GPT-5.4 轻量化</td>
+        <td style="padding:12px 16px"><a href="weeks/week-08.html">W07-W08</a></td>
+        <td style="padding:12px 16px;color:var(--text2)">地方媒体如何用得起高性能 AI</td>
+      </tr>
+      <tr style="border-bottom:1px solid var(--border)">
+        <td style="padding:12px 16px">Sora 关停</td>
+        <td style="padding:12px 16px"><a href="weeks/week-09.html">W09-W10</a></td>
+        <td style="padding:12px 16px;color:var(--text2)">AI 工具的生命周期与平台依赖风险</td>
+      </tr>
+      <tr style="border-bottom:1px solid var(--border)">
+        <td style="padding:12px 16px">路透社 AI 调查报道</td>
+        <td style="padding:12px 16px"><a href="weeks/week-06.html">W05-W06</a></td>
+        <td style="padding:12px 16px;color:var(--text2)">数据新闻中的 AI 应用边界</td>
+      </tr>
+      <tr style="border-bottom:1px solid var(--border)">
+        <td style="padding:12px 16px">工会 AI 条款</td>
+        <td style="padding:12px 16px"><a href="weeks/week-14.html">W14</a></td>
+        <td style="padding:12px 16px;color:var(--text2)">记者在 AI 时代的权利保障</td>
+      </tr>
+      <tr style="border-bottom:1px solid var(--border)">
+        <td style="padding:12px 16px">EU AI Act 强制标注</td>
+        <td style="padding:12px 16px"><a href="weeks/week-14.html">W14</a></td>
+        <td style="padding:12px 16px;color:var(--text2)">内容标注义务与新闻自由的平衡</td>
+      </tr>
+      <tr>
+        <td style="padding:12px 16px">九大创新场景</td>
+        <td style="padding:12px 16px"><a href="weeks/week-13.html">W13</a></td>
+        <td style="padding:12px 16px;color:var(--text2)">哪些场景已在国内实际落地？</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+</div>
+
+<div class="section-divider"></div>
+
+<!-- ════════════ Section 5: 讨论问题 ════════════ -->
+<div class="briefing-section">
+  <h2><span class="emoji">💬</span> 课堂讨论问题</h2>
+  <p class="briefing-desc">基于本期动态的深度思考题，适用于小组讨论或书面反思</p>
+
+  <ol class="discussion-list" id="discussion-area">
+    <li><strong>Sora 关停启示：</strong>当一个 AI 创作工具突然下线，你的作品数据面临删除风险。作为内容创作者，应如何建立<em>平台依赖风险管理</em>策略？这对新闻编辑部选择 AI 工具有何警示？</li>
+
+    <li><strong>科技公司 × 媒体所有权：</strong>OpenAI 收购 TBPN，字节跳动拥有今日头条——科技公司直接拥有或控制媒体平台是否构成新型"媒体垄断"？与传统的报业集团垄断有何本质区别？</li>
+
+    <li><strong>"硅天花板"与新闻质量：</strong>路透社调查显示 97% 编辑部采用 AI，但行业同时发现"更多内容 ≠ 更多增长"。那么 AI 在新闻业的核心价值到底是什么——是提升产量，还是提升判断力？</li>
+
+    <li><strong>全球监管碎片化：</strong>EU 要求强制水印标注，中国强调"价值导向"，美国则是州级立法拼图。一个跨国媒体机构（如路透社）如何在这种碎片化监管下运营？你会制定怎样的"全球合规策略"？</li>
+
+    <li><strong>数字人伦理边界：</strong>中国广电联合会反对 AI 换脸，但数字人主播已是媒体标配。请划出你认为的伦理红线：虚拟主播播报新闻是否需要披露？用 AI "复活"已故记者做采访节目是否可接受？</li>
+  </ol>
+</div>
+
+<!-- Footer -->
+<div class="section-divider"></div>
+<div style="text-align:center;padding:32px 0;color:var(--text3);font-size:13px">
+  <p>数据来源：RSS 自动抓取 (sspai / IT之家 / 阮一峰 / OpenAI / Hacker News) + Web 搜索 + 智谱 GLM-4.7</p>
+  <p style="margin-top:8px">生成脚本：<code>mcp_services/servers/news_fetch/server.py</code> · <code>mcp_services/servers/media_trends/server.py</code></p>
+  <p style="margin-top:8px"><a href="index.html" style="color:var(--accent)">← 返回课程首页</a></p>
+</div>
+
+</main>
+
+<script src="theme.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Week 11 · Few-Shot与角色扮演 — AI与传播实践</title>
+<meta name="description" content="第11周：少样本学习、写作风格克隆与专家角色模拟技术。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="week-common.css">
+<style>.week-hero h1 span{background:linear-gradient(135deg,#f59e0b,#fbbf24);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}.module-icon.m1{background:rgba(245,158,11,.15);color:#fbbf24}.module-icon.m2{background:rgba(236,72,153,.15);color:#f472b6}.module-icon.m3{background:rgba(59,130,246,.15);color:#60a5fa}</style>
+</head>
+<body>
+<div class="bg-grid"></div><div class="bg-glow bg-glow-1"></div><div class="bg-glow bg-glow-2"></div><div class="bg-glow bg-glow-3"></div>
+<div class="week-nav"><div class="week-nav-inner"><div class="week-nav-left"><a href="../index.html" class="week-nav-home"><div class="week-nav-logo">AI</div> AI与传播实践</a><span class="week-nav-sep">/</span><span class="week-nav-current">Week 11</span></div><div class="week-nav-right"><a href="week-10.html" class="week-nav-btn">← 上一周</a><a href="week-12.html" class="week-nav-btn">下一周 →</a></div></div></div>
+
+<div class="week-hero"><div class="week-hero-inner">
+<div class="week-badge"><span class="week-badge-num">WEEK 11</span> · 进阶提升阶段</div>
+<h1>Few-Shot与<span>角色扮演</span></h1>
+<p class="week-hero-sub">少样本学习原理 · 写作风格克隆 · 专家角色模拟 — 让AI精准模仿任何风格</p>
+</div></div>
+
+<div class="week-content">
+<div class="module open"><div class="module-header" onclick="this.parentElement.classList.toggle('open')"><div class="module-header-left"><div class="module-icon m1">🎯</div><div><div class="module-num">MODULE 01</div><div class="module-title">Few-Shot学习：用示例教会AI</div></div></div><div class="module-chevron">▼</div></div>
+<div class="module-body"><div class="content-block">
+<div class="highlight-box blue"><div class="highlight-box-title">核心概念</div><div class="highlight-box-text"><strong>Zero-Shot</strong>：不给示例，直接下达指令<br><strong>One-Shot</strong>：给1个示例，AI从中学习模式<br><strong>Few-Shot</strong>：给3-5个示例，AI稳定复现格式和风格<br><br>示例越一致，AI输出越稳定。3个高质量示例通常优于10个低质量示例。</div></div>
+<div class="example-block" style="margin-top:12px"><span class="label label-tip">💡 Few-Shot 模板</span>
+请按以下格式为新闻生成社交媒体文案：
+
+示例1：
+新闻：SpaceX成功发射星舰
+文案：🚀 史诗级时刻！星舰首次完整飞行测试成功 #太空探索
+
+示例2：
+新闻：苹果发布Vision Pro
+文案：🍎 空间计算时代来了！Apple Vision Pro正式开售 #科技前沿
+
+现在请为这条新闻生成文案：
+新闻：[你的新闻内容]</div></div></div></div>
+
+<div class="module"><div class="module-header" onclick="this.parentElement.classList.toggle('open')"><div class="module-header-left"><div class="module-icon m2">🎭</div><div><div class="module-num">MODULE 02</div><div class="module-title">角色扮演：深度专家模拟</div></div></div><div class="module-chevron">▼</div></div>
+<div class="module-body"><div class="content-block"><h3>🧬 角色构建四维度</h3>
+<div class="key-points">
+<div class="key-point"><div class="key-point-icon">👤</div><div class="key-point-content"><div class="key-point-title">身份背景</div><div class="key-point-desc">职业、经验年限、工作机构、专业领域</div></div></div>
+<div class="key-point"><div class="key-point-icon">🧠</div><div class="key-point-content"><div class="key-point-title">思维模式</div><div class="key-point-desc">分析方法、决策逻辑、关注重点</div></div></div>
+<div class="key-point"><div class="key-point-icon">🗣️</div><div class="key-point-content"><div class="key-point-title">表达方式</div><div class="key-point-desc">语言风格、术语使用、修辞习惯</div></div></div>
+<div class="key-point"><div class="key-point-icon">⚖️</div><div class="key-point-content"><div class="key-point-title">价值立场</div><div class="key-point-desc">职业伦理、行业规范、个人倾向</div></div></div>
+</div></div></div></div>
+
+<div class="module"><div class="module-header" onclick="this.parentElement.classList.toggle('open')"><div class="module-header-left"><div class="module-icon m3">📝</div><div><div class="module-num">MODULE 03</div><div class="module-title">风格克隆实战</div></div></div><div class="module-chevron">▼</div></div>
+<div class="module-body"><div class="content-block">
+<div class="flow-list">
+<div class="flow-step"><div class="flow-step-num">1</div><div class="flow-step-content"><div class="flow-step-title">采集样本</div><div class="flow-step-desc">收集目标风格的3-5篇代表性文本作为参照</div></div></div>
+<div class="flow-step"><div class="flow-step-num">2</div><div class="flow-step-content"><div class="flow-step-title">特征分析</div><div class="flow-step-desc">让AI分析样本的句式、用词、修辞、节奏等风格特征</div></div></div>
+<div class="flow-step"><div class="flow-step-num">3</div><div class="flow-step-content"><div class="flow-step-title">风格注入</div><div class="flow-step-desc">将分析结果作为风格指南注入提示词</div></div></div>
+<div class="flow-step"><div class="flow-step-num">4</div><div class="flow-step-content"><div class="flow-step-title">迭代校准</div><div class="flow-step-desc">对比生成文本与原作，调整风格参数</div></div></div>
+</div></div></div></div>
+</div>
+
+<div class="week-bottom-nav">
+<a href="week-10.html" class="bottom-nav-card"><div class="bottom-nav-label">← PREV WEEK</div><div class="bottom-nav-title">AI辅助写作实践</div></a>
+<a href="week-12.html" class="bottom-nav-card next"><div class="bottom-nav-label">NEXT WEEK →</div><div class="bottom-nav-title">思维链CoT技术</div></a>
+</div>
+<div class="week-footer">© 2026 汕头大学 · 长江新闻与传播学院 · AI课程建设项目</div>
+</body></html>

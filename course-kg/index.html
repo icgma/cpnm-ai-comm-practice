@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>课程知识图谱 — 内容生产新方法：AI与传播实践</title>
+<meta name="description" content="汕头大学智慧课程「内容生产新方法：AI与传播实践」22个核心知识点交互式知识图谱可视化">
+<script src="https://unpkg.com/vis-network@9.1.6/standalone/umd/vis-network.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg-primary: #0a0e1a;
+    --bg-secondary: #111827;
+    --bg-card: #1a2236;
+    --bg-card-hover: #1f2a42;
+    --border: #2a3654;
+    --text-primary: #e8ecf4;
+    --text-secondary: #8b97b0;
+    --text-muted: #5c6a82;
+    --accent-blue: #3b82f6;
+    --accent-cyan: #06b6d4;
+    --accent-purple: #8b5cf6;
+    --accent-pink: #ec4899;
+    --accent-amber: #f59e0b;
+    --accent-green: #10b981;
+    --accent-red: #ef4444;
+    --accent-orange: #f97316;
+    --glow-blue: rgba(59,130,246,0.15);
+    --glow-purple: rgba(139,92,246,0.15);
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: 'Inter', 'Noto Sans SC', system-ui, sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    overflow: hidden;
+    height: 100vh;
+  }
+
+  /* ── Header ── */
+  .header {
+    position: fixed; top:0; left:0; right:0; z-index:100;
+    background: linear-gradient(180deg, rgba(10,14,26,0.97) 0%, rgba(10,14,26,0.85) 100%);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+    padding: 12px 24px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .header-left { display:flex; align-items:center; gap:16px; }
+  .header-logo {
+    width:36px; height:36px; border-radius:10px;
+    background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+    display:flex; align-items:center; justify-content:center;
+    font-size:18px; font-weight:700; color:#fff;
+  }
+  .header-title { font-size:16px; font-weight:600; letter-spacing:-0.3px; }
+  .header-subtitle { font-size:12px; color:var(--text-secondary); margin-top:1px; }
+  .header-right { display:flex; align-items:center; gap:10px; }
+
+  /* ── Filter Buttons ── */
+  .filter-bar {
+    display: flex; gap: 6px; flex-wrap: wrap;
+  }
+  .filter-btn {
+    padding: 5px 12px; border-radius: 20px; border: 1px solid var(--border);
+    background: transparent; color: var(--text-secondary); cursor: pointer;
+    font-size: 12px; font-family: inherit; transition: all 0.2s;
+    white-space: nowrap;
+  }
+  .filter-btn:hover { border-color: var(--accent-blue); color: var(--text-primary); }
+  .filter-btn.active { background: var(--accent-blue); border-color: var(--accent-blue); color: #fff; }
+
+  .tag-filters { display:flex; gap:6px; margin-left:12px; }
+  .tag-btn {
+    padding: 4px 10px; border-radius: 12px; border: none;
+    cursor: pointer; font-size: 12px; font-family: inherit;
+    transition: all 0.2s; opacity: 0.5;
+  }
+  .tag-btn.active { opacity: 1; transform: scale(1.05); }
+  .tag-btn.tag-key { background: rgba(239,68,68,0.2); color: #fca5a5; }
+  .tag-btn.tag-diff { background: rgba(245,158,11,0.2); color: #fcd34d; }
+  .tag-btn.tag-exam { background: rgba(59,130,246,0.2); color: #93c5fd; }
+  .tag-btn.tag-sz { background: rgba(16,185,129,0.2); color: #6ee7b7; }
+
+  /* ── Graph Container ── */
+  #graph-container {
+    position: absolute; top: 60px; left: 0; right: 340px; bottom: 0;
+  }
+
+  /* ── Side Panel ── */
+  .side-panel {
+    position: fixed; top: 60px; right: 0; bottom: 0; width: 340px;
+    background: var(--bg-secondary);
+    border-left: 1px solid var(--border);
+    overflow-y: auto;
+    transition: transform 0.3s cubic-bezier(0.4,0,0.2,1);
+  }
+  .side-panel.collapsed { transform: translateX(340px); }
+
+  .panel-placeholder {
+    height: 100%; display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    color: var(--text-muted); text-align: center; padding: 40px;
+  }
+  .panel-placeholder-icon { font-size: 48px; margin-bottom: 16px; opacity: 0.5; }
+  .panel-placeholder-text { font-size: 14px; line-height: 1.6; }
+
+  .node-detail { padding: 24px; animation: fadeIn 0.3s ease; }
+  @keyframes fadeIn { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:translateY(0); } }
+
+  .node-id {
+    display: inline-block; padding: 3px 10px; border-radius: 6px;
+    font-size: 12px; font-weight: 600; letter-spacing: 0.5px;
+    margin-bottom: 8px;
+  }
+  .node-name { font-size: 20px; font-weight: 700; margin-bottom: 6px; letter-spacing: -0.3px; }
+  .node-module-label { font-size: 12px; color: var(--text-secondary); margin-bottom: 16px; }
+
+  .node-desc {
+    font-size: 14px; line-height: 1.7; color: var(--text-secondary);
+    margin-bottom: 20px; padding: 14px; border-radius: 10px;
+    background: var(--bg-card); border: 1px solid var(--border);
+  }
+
+  .meta-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 10px;
+    margin-bottom: 20px;
+  }
+  .meta-item {
+    padding: 12px; border-radius: 10px;
+    background: var(--bg-card); border: 1px solid var(--border);
+  }
+  .meta-label { font-size: 11px; color: var(--text-muted); margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.5px; }
+  .meta-value { font-size: 14px; font-weight: 600; }
+
+  .tags-section { margin-bottom: 20px; }
+  .tags-title { font-size: 12px; color: var(--text-muted); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px; }
+  .tags-list { display: flex; gap: 6px; flex-wrap: wrap; }
+  .tag {
+    padding: 4px 12px; border-radius: 16px; font-size: 12px; font-weight: 500;
+  }
+  .tag-key-detail { background: rgba(239,68,68,0.15); color: #fca5a5; }
+  .tag-diff-detail { background: rgba(245,158,11,0.15); color: #fcd34d; }
+  .tag-exam-detail { background: rgba(59,130,246,0.15); color: #93c5fd; }
+  .tag-sz-detail { background: rgba(16,185,129,0.15); color: #6ee7b7; }
+
+  .relations-section { margin-bottom: 20px; }
+  .relation-item {
+    display: flex; align-items: center; gap: 10px; padding: 10px 14px;
+    border-radius: 8px; background: var(--bg-card); border: 1px solid var(--border);
+    margin-bottom: 6px; cursor: pointer; transition: all 0.2s;
+  }
+  .relation-item:hover { border-color: var(--accent-blue); background: var(--bg-card-hover); }
+  .relation-arrow { color: var(--text-muted); font-size: 14px; }
+  .relation-label { font-size: 11px; color: var(--text-muted); }
+  .relation-name { font-size: 13px; font-weight: 500; }
+
+  .resource-section { margin-bottom: 20px; }
+  .resource-link {
+    display: block; padding: 10px 14px; border-radius: 8px;
+    background: var(--bg-card); border: 1px solid var(--border);
+    color: var(--accent-cyan); font-size: 13px; text-decoration: none;
+    transition: all 0.2s;
+  }
+  .resource-link:hover { border-color: var(--accent-cyan); background: var(--bg-card-hover); }
+
+  /* ── Stats Bar ── */
+  .stats-bar {
+    position: fixed; bottom: 0; left: 0; right: 340px;
+    background: linear-gradient(0deg, rgba(10,14,26,0.95) 0%, rgba(10,14,26,0.7) 100%);
+    backdrop-filter: blur(12px);
+    padding: 10px 24px;
+    display: flex; align-items: center; gap: 20px;
+    border-top: 1px solid var(--border);
+    font-size: 12px; color: var(--text-muted);
+  }
+  .stat-item { display:flex; align-items:center; gap:5px; }
+  .stat-dot { width:8px; height:8px; border-radius:50%; }
+  .stat-value { font-weight:600; color:var(--text-secondary); }
+
+  /* ── Legend ── */
+  .legend {
+    position: fixed; bottom: 50px; left: 20px;
+    background: var(--bg-card); border: 1px solid var(--border);
+    border-radius: 12px; padding: 14px 18px;
+    font-size: 12px; z-index: 50;
+  }
+  .legend-title { font-weight: 600; margin-bottom: 8px; color: var(--text-secondary); }
+  .legend-item { display:flex; align-items:center; gap:8px; margin-bottom: 4px; }
+  .legend-dot { width:12px; height:12px; border-radius:50%; }
+
+  /* ── Responsive ── */
+  @media (max-width: 768px) {
+    #graph-container { right: 0; }
+    .side-panel { width: 100%; top: auto; height: 50vh; border-left: none; border-top: 1px solid var(--border); }
+    .stats-bar { right: 0; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<div class="header">
+  <div class="header-left">
+    <div class="header-logo">K</div>
+    <div>
+      <div class="header-title">课程知识图谱</div>
+      <div class="header-subtitle">内容生产新方法：AI与传播实践 · 22 知识点 · 6 模块</div>
+    </div>
+  </div>
+  <div class="header-right">
+    <div class="filter-bar">
+      <button class="filter-btn active" data-module="all">全部</button>
+      <button class="filter-btn" data-module="B" style="--c:#3b82f6">B 基础</button>
+      <button class="filter-btn" data-module="C" style="--c:#8b5cf6">C 提示词</button>
+      <button class="filter-btn" data-module="D" style="--c:#06b6d4">D 信息</button>
+      <button class="filter-btn" data-module="E" style="--c:#10b981">E 创作</button>
+      <button class="filter-btn" data-module="F" style="--c:#f59e0b">F 高级</button>
+      <button class="filter-btn" data-module="G" style="--c:#ef4444">G 伦理</button>
+    </div>
+    <div class="tag-filters">
+      <button class="tag-btn tag-key active" data-tag="key">🔴 重点</button>
+      <button class="tag-btn tag-diff active" data-tag="diff">🟡 难点</button>
+      <button class="tag-btn tag-exam active" data-tag="exam">🔵 考点</button>
+      <button class="tag-btn tag-sz active" data-tag="sz">🟢 思政</button>
+    </div>
+  </div>
+</div>
+
+<!-- Graph -->
+<div id="graph-container"></div>
+
+<!-- Side Panel -->
+<div class="side-panel" id="sidePanel">
+  <div class="panel-placeholder" id="panelPlaceholder">
+    <div class="panel-placeholder-icon">🧠</div>
+    <div class="panel-placeholder-text">
+      点击图谱中的任意知识点节点<br>查看详细信息与关联关系
+    </div>
+  </div>
+  <div class="node-detail" id="nodeDetail" style="display:none"></div>
+</div>
+
+<!-- Legend -->
+<div class="legend">
+  <div class="legend-title">模块图例</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#3b82f6"></div> B · AI基础与发展</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#8b5cf6"></div> C · 提示词工程</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#06b6d4"></div> D · 智能信息获取</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#10b981"></div> E · 内容创作</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#f59e0b"></div> F · 高级技巧</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#ef4444"></div> G · 工具与伦理</div>
+</div>
+
+<!-- Stats Bar -->
+<div class="stats-bar">
+  <div class="stat-item"><div class="stat-dot" style="background:var(--accent-blue)"></div> 知识点 <span class="stat-value" id="statNodes">22</span></div>
+  <div class="stat-item"><div class="stat-dot" style="background:var(--accent-purple)"></div> 关联边 <span class="stat-value" id="statEdges">24</span></div>
+  <div class="stat-item"><div class="stat-dot" style="background:var(--accent-red)"></div> 🔴重点 <span class="stat-value">18</span></div>
+  <div class="stat-item"><div class="stat-dot" style="background:var(--accent-amber)"></div> 🟡难点 <span class="stat-value">8</span></div>
+  <div class="stat-item"><div class="stat-dot" style="background:var(--accent-cyan)"></div> 🔵考点 <span class="stat-value">22</span></div>
+  <div class="stat-item"><div class="stat-dot" style="background:var(--accent-green)"></div> 🟢思政 <span class="stat-value">5</span></div>
+  <div class="stat-item" style="margin-left:auto">汕头大学 · 智慧课程</div>
+</div>
+
+<script>
+// ════════════════════════════════════════
+//  KNOWLEDGE GRAPH DATA
+// ════════════════════════════════════════
+
+const MODULE_COLORS = {
+  B: { bg: '#3b82f6', border: '#2563eb', highlight: '#60a5fa', name: 'AI基础与发展', weeks: 'W01–W02' },
+  C: { bg: '#8b5cf6', border: '#7c3aed', highlight: '#a78bfa', name: '提示词工程', weeks: 'W03–W04' },
+  D: { bg: '#06b6d4', border: '#0891b2', highlight: '#22d3ee', name: '智能信息获取', weeks: 'W05–W06' },
+  E: { bg: '#10b981', border: '#059669', highlight: '#34d399', name: '内容创作', weeks: 'W07–W10' },
+  F: { bg: '#f59e0b', border: '#d97706', highlight: '#fbbf24', name: '高级技巧', weeks: 'W11–W13' },
+  G: { bg: '#ef4444', border: '#dc2626', highlight: '#f87171', name: '工具与伦理', weeks: 'W14, W16' }
+};
+
+const BLOOM_LABELS = { 2: '②理解', 3: '③应用', 4: '④分析', 5: '⑤评价', 6: '⑥创造' };
+
+const knowledgeNodes = [
+  // Module B
+  { id:'B1', label:'AI发展简史', module:'B', bloom:2, weeks:'W01', resource:'课件W01·P4-P8', tags:['key','exam'],
+    desc:'从1956年达特茅斯会议到2020年代大模型时代的五个发展阶段' },
+  { id:'B2', label:'机器学习三种类型', module:'B', bloom:2, weeks:'W01', resource:'课件W01·P13', tags:['key','exam'],
+    desc:'监督学习、无监督学习、强化学习的定义、区别与传媒应用' },
+  { id:'B3', label:'深度学习基础', module:'B', bloom:2, weeks:'W01', resource:'课件W01·P14-P15', tags:['diff'],
+    desc:'神经网络结构、多层感知器、自动特征提取的基本原理' },
+  { id:'B4', label:'Transformer架构', module:'B', bloom:2, weeks:'W02', resource:'课件W02·Transformer章节', tags:['key','diff','exam'],
+    desc:'自注意力机制、多头注意力、位置编码的核心创新与意义' },
+  { id:'B5', label:'LLM概念与特征', module:'B', bloom:2, weeks:'W02', resource:'课件W02·LLM章节', tags:['key','exam'],
+    desc:'大语言模型的定义、涌现能力、零样本/少样本学习、局限性' },
+  // Module C
+  { id:'C1', label:'CRISPE框架', module:'C', bloom:3, weeks:'W03', resource:'课件W03·P4-P13', tags:['key','diff','exam'],
+    desc:'角色(C)、背景(R)、指令(I)、风格(S)、实验(P)五要素的系统化提示词设计方法' },
+  { id:'C2', label:'精确指令设计', module:'C', bloom:3, weeks:'W04', resource:'课件W04·精确指令章节', tags:['key','exam'],
+    desc:'动作动词选择、输出格式规范、质量标准设定、约束条件表达' },
+  { id:'C3', label:'格式控制技巧', module:'C', bloom:3, weeks:'W04', resource:'课件W04·格式控制章节', tags:['key','exam'],
+    desc:'Markdown、JSON、表格等结构化输出的指令控制方法' },
+  { id:'C4', label:'约束条件设置', module:'C', bloom:3, weeks:'W04', resource:'课件W04·约束条件章节', tags:['exam'],
+    desc:'字数限制、语言风格、禁止列表、多条件组合等约束策略' },
+  // Module D
+  { id:'D1', label:'检索增强方法', module:'D', bloom:3, weeks:'W05', resource:'课件W05·检索增强章节', tags:['key','exam'],
+    desc:'AI辅助信息检索的基本策略、关键词优化、多轮检索迭代' },
+  { id:'D2', label:'Deep Research方法', module:'D', bloom:4, weeks:'W06', resource:'课件W06·P5-P9', tags:['key','diff','exam'],
+    desc:'四阶段深度研究流程（定位→探索→分析→交付）及传媒场景应用' },
+  { id:'D3', label:'事实核查', module:'D', bloom:4, weeks:'W06', resource:'课件W06·P9', tags:['key','exam','sz'],
+    desc:'多源交叉验证、证据清单建立、AI辅助核查方法与局限' },
+  { id:'D4', label:'多源信息整合', module:'D', bloom:4, weeks:'W06', resource:'课件W06·P7-P8', tags:['diff'],
+    desc:'信息源分类（官方/行业/一手/AI辅助）、可信度评估、MECE框架' },
+  // Module E
+  { id:'E1', label:'文本摘要', module:'E', bloom:3, weeks:'W07', resource:'课件W07·全部', tags:['key','exam'],
+    desc:'抽取式与生成式摘要的原理、新闻简报提炼的提示词策略' },
+  { id:'E2', label:'结构化提取', module:'E', bloom:3, weeks:'W08', resource:'课件W08·全部', tags:['key','exam'],
+    desc:'从非结构化文本中提取JSON/表格/关键实体的方法与传媒应用' },
+  { id:'E3', label:'创意生成与选题策划', module:'E', bloom:6, weeks:'W09', resource:'课件W09·全部', tags:['key','diff','exam'],
+    desc:'发散/收敛/系统三种思维模式、SCAMPER技法、AI辅助选题策划流程' },
+  { id:'E4', label:'AI辅助写作', module:'E', bloom:6, weeks:'W10', resource:'课件W10·全部', tags:['key','diff','exam','sz'],
+    desc:'AI辅助长文写作的提示词策略、人机协作写作流程、质量控制方法' },
+  // Module F
+  { id:'F1', label:'Few-Shot学习', module:'F', bloom:3, weeks:'W11', resource:'课件W11·全部', tags:['key','exam'],
+    desc:'少样本学习的原理、示例设计策略、在传媒写作风格克隆中的应用' },
+  { id:'F2', label:'角色扮演技术', module:'F', bloom:3, weeks:'W11', resource:'课件W11·角色扮演章节', tags:['key','exam'],
+    desc:'多角色对话生成、专家角色模拟、在新闻采访模拟中的应用' },
+  { id:'F3', label:'思维链CoT', module:'F', bloom:4, weeks:'W12', resource:'课件W12·全部', tags:['key','diff','exam'],
+    desc:'链式推理提示词设计、复杂传媒分析任务的分步推理策略' },
+  { id:'F4', label:'LLM平台对比', module:'F', bloom:5, weeks:'W13', resource:'课件W13·全部', tags:['key','exam','sz'],
+    desc:'主流大模型（GPT/Claude/DeepSeek/通义/文心）的能力对比与传媒场景选型' },
+  // Module G
+  { id:'G1', label:'AI工具集成', module:'G', bloom:3, weeks:'W14', resource:'课件W14·全部', tags:['exam'],
+    desc:'主流AI辅助工具生态、浏览器插件、工作流自动化平台' },
+  { id:'G2', label:'工作流自动化', module:'G', bloom:6, weeks:'W14', resource:'课件W14·工作流章节', tags:['diff','exam'],
+    desc:'传媒工作全流程AI化设计、多工具串联、效率优化方法' },
+  { id:'G3', label:'AI伦理规范', module:'G', bloom:5, weeks:'W14, W16', resource:'课件W14+W16', tags:['key','exam','sz'],
+    desc:'AI使用的伦理原则（公平/透明/可问责）、新闻伦理与AI合规要求' },
+  { id:'G4', label:'学术诚信', module:'G', bloom:5, weeks:'W10, W16', resource:'课件W10、W16', tags:['key','exam','sz'],
+    desc:'AI辅助创作的标注规范、原创性边界、版权法对AI内容的界定' }
+];
+
+const knowledgeEdges = [
+  // B module internal
+  { from:'B1', to:'B3', label:'演进', type:'evolution' },
+  { from:'B2', to:'B3', label:'分类', type:'taxonomy' },
+  { from:'B3', to:'B4', label:'技术基础', type:'foundation' },
+  { from:'B4', to:'B5', label:'架构基础', type:'foundation' },
+  // C module internal
+  { from:'C1', to:'C2', label:'包含', type:'composition' },
+  { from:'C2', to:'C3', label:'协同', type:'synergy' },
+  { from:'C1', to:'C4', label:'约束层', type:'constraint' },
+  // D module internal
+  { from:'D1', to:'D2', label:'深化', type:'deepening' },
+  { from:'D2', to:'D3', label:'质量保障', type:'quality' },
+  { from:'D2', to:'D4', label:'信息基础', type:'foundation' },
+  // E module internal
+  { from:'E1', to:'E2', label:'反向', type:'reverse' },
+  { from:'E3', to:'E4', label:'产出', type:'output' },
+  { from:'E1', to:'E3', label:'信息处理基础', type:'foundation' },
+  // F module internal
+  { from:'F1', to:'F2', label:'互补', type:'synergy' },
+  { from:'F1', to:'F3', label:'高级策略', type:'advanced' },
+  { from:'F3', to:'F4', label:'工具选择', type:'selection' },
+  // G module internal
+  { from:'G1', to:'G2', label:'深化', type:'deepening' },
+  { from:'G3', to:'G2', label:'约束', type:'constraint' },
+  { from:'G3', to:'G4', label:'合规底线', type:'compliance' },
+  // Cross-module
+  { from:'B5', to:'C1', label:'技术→应用', type:'cross' },
+  { from:'C1', to:'D1', label:'核心技能', type:'cross' },
+  { from:'D3', to:'E1', label:'信息处理', type:'cross' },
+  { from:'E4', to:'G4', label:'伦理约束', type:'cross' },
+  { from:'F3', to:'E4', label:'能力增强', type:'cross' },
+];
+
+// ════════════════════════════════════════
+//  BUILD VIS.JS GRAPH
+// ════════════════════════════════════════
+
+function buildNodeSize(node) {
+  let size = 22;
+  if (node.tags.includes('key')) size += 5;
+  if (node.tags.includes('diff')) size += 3;
+  if (node.bloom >= 5) size += 4;
+  return size;
+}
+
+function buildTagIcons(tags) {
+  let icons = '';
+  if (tags.includes('key')) icons += '🔴';
+  if (tags.includes('diff')) icons += '🟡';
+  if (tags.includes('exam')) icons += '🔵';
+  if (tags.includes('sz')) icons += '🟢';
+  return icons;
+}
+
+const visNodes = new vis.DataSet(knowledgeNodes.map(n => {
+  const mc = MODULE_COLORS[n.module];
+  return {
+    id: n.id,
+    label: `${n.id}\n${n.label}`,
+    title: `${n.label} ${buildTagIcons(n.tags)}`,
+    group: n.module,
+    size: buildNodeSize(n),
+    font: { color: '#e8ecf4', size: 12, face: 'Inter, Noto Sans SC, sans-serif', multi: true },
+    color: {
+      background: mc.bg,
+      border: mc.border,
+      highlight: { background: mc.highlight, border: '#fff' },
+      hover: { background: mc.highlight, border: '#fff' }
+    },
+    borderWidth: 2,
+    borderWidthSelected: 3,
+    shadow: { enabled: true, color: mc.bg + '40', size: 15 },
+    chosen: true,
+    _data: n
+  };
+}));
+
+const visEdges = new vis.DataSet(knowledgeEdges.map((e, i) => {
+  const isCross = e.type === 'cross';
+  return {
+    id: i,
+    from: e.from,
+    to: e.to,
+    label: e.label,
+    arrows: { to: { enabled: true, scaleFactor: 0.6 } },
+    color: {
+      color: isCross ? '#4a5568' : '#3a4a6b',
+      highlight: '#60a5fa',
+      hover: '#60a5fa',
+      opacity: isCross ? 0.4 : 0.6
+    },
+    dashes: isCross ? [8, 6] : false,
+    width: isCross ? 1 : 1.5,
+    font: { color: '#5c6a82', size: 10, strokeWidth: 3, strokeColor: '#0a0e1a', face: 'Inter, Noto Sans SC, sans-serif' },
+    smooth: { type: 'curvedCW', roundness: 0.15 },
+    _data: e
+  };
+}));
+
+const container = document.getElementById('graph-container');
+const network = new vis.Network(container, { nodes: visNodes, edges: visEdges }, {
+  physics: {
+    enabled: true,
+    solver: 'forceAtlas2Based',
+    forceAtlas2Based: {
+      gravitationalConstant: -60,
+      centralGravity: 0.008,
+      springLength: 160,
+      springConstant: 0.06,
+      damping: 0.5
+    },
+    stabilization: { iterations: 200, fit: true }
+  },
+  interaction: {
+    hover: true,
+    tooltipDelay: 200,
+    zoomView: true,
+    dragView: true
+  },
+  layout: { improvedLayout: true },
+  nodes: { shape: 'dot' },
+  edges: { selectionWidth: 2 }
+});
+
+// ════════════════════════════════════════
+//  DETAIL PANEL
+// ════════════════════════════════════════
+
+const TAG_NAMES = { key: '🔴 重点', diff: '🟡 难点', exam: '🔵 考点', sz: '🟢 思政' };
+const TAG_CLASSES = { key: 'tag-key-detail', diff: 'tag-diff-detail', exam: 'tag-exam-detail', sz: 'tag-sz-detail' };
+
+function showNodeDetail(nodeId) {
+  const node = knowledgeNodes.find(n => n.id === nodeId);
+  if (!node) return;
+  const mc = MODULE_COLORS[node.module];
+
+  // Find related edges
+  const related = knowledgeEdges
+    .filter(e => e.from === nodeId || e.to === nodeId)
+    .map(e => {
+      const targetId = e.from === nodeId ? e.to : e.from;
+      const targetNode = knowledgeNodes.find(n => n.id === targetId);
+      const direction = e.from === nodeId ? '→' : '←';
+      return { id: targetId, name: targetNode.label, label: e.label, direction, type: e.type };
+    });
+
+  document.getElementById('panelPlaceholder').style.display = 'none';
+  const detail = document.getElementById('nodeDetail');
+  detail.style.display = 'block';
+
+  detail.innerHTML = `
+    <div class="node-id" style="background:${mc.bg}22; color:${mc.bg}">${node.id}</div>
+    <div class="node-name">${node.label}</div>
+    <div class="node-module-label">${mc.name} · ${mc.weeks}</div>
+    <div class="node-desc">${node.desc}</div>
+    <div class="meta-grid">
+      <div class="meta-item">
+        <div class="meta-label">Bloom层级</div>
+        <div class="meta-value">${BLOOM_LABELS[node.bloom]}</div>
+      </div>
+      <div class="meta-item">
+        <div class="meta-label">教学周次</div>
+        <div class="meta-value">${node.weeks}</div>
+      </div>
+    </div>
+    ${node.tags.length ? `
+    <div class="tags-section">
+      <div class="tags-title">教学标签</div>
+      <div class="tags-list">
+        ${node.tags.map(t => `<span class="tag ${TAG_CLASSES[t]}">${TAG_NAMES[t]}</span>`).join('')}
+      </div>
+    </div>` : ''}
+    ${related.length ? `
+    <div class="relations-section">
+      <div class="tags-title">关联知识点 (${related.length})</div>
+      ${related.map(r => `
+        <div class="relation-item" onclick="network.selectNodes(['${r.id}']); showNodeDetail('${r.id}')">
+          <span class="relation-arrow">${r.direction}</span>
+          <div>
+            <div class="relation-name">${r.id} ${r.name}</div>
+            <div class="relation-label">${r.label}${r.type === 'cross' ? ' (跨模块)' : ''}</div>
+          </div>
+        </div>
+      `).join('')}
+    </div>` : ''}
+    <div class="resource-section">
+      <div class="tags-title">关联资源</div>
+      <div class="resource-link">${node.resource}</div>
+    </div>
+  `;
+}
+
+network.on('click', function(params) {
+  if (params.nodes.length > 0) {
+    showNodeDetail(params.nodes[0]);
+  }
+});
+
+network.on('doubleClick', function(params) {
+  if (params.nodes.length > 0) {
+    network.focus(params.nodes[0], { scale: 1.5, animation: { duration: 600, easingFunction: 'easeInOutQuad' } });
+  }
+});
+
+// ════════════════════════════════════════
+//  MODULE FILTER
+// ════════════════════════════════════════
+
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', function() {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    this.classList.add('active');
+    const mod = this.dataset.module;
+    applyFilters();
+  });
+});
+
+document.querySelectorAll('.tag-btn').forEach(btn => {
+  btn.addEventListener('click', function() {
+    this.classList.toggle('active');
+    applyFilters();
+  });
+});
+
+function applyFilters() {
+  const activeMod = document.querySelector('.filter-btn.active').dataset.module;
+  const activeTags = Array.from(document.querySelectorAll('.tag-btn.active')).map(b => b.dataset.tag);
+
+  knowledgeNodes.forEach(n => {
+    const modMatch = activeMod === 'all' || n.module === activeMod;
+    const tagMatch = activeTags.length === 0 || n.tags.some(t => activeTags.includes(t));
+    const visible = modMatch && tagMatch;
+
+    visNodes.update({ id: n.id, hidden: !visible });
+  });
+
+  // Update stats
+  const visibleNodes = knowledgeNodes.filter(n => {
+    const modMatch = activeMod === 'all' || n.module === activeMod;
+    const tagMatch = activeTags.length === 0 || n.tags.some(t => activeTags.includes(t));
+    return modMatch && tagMatch;
+  });
+  document.getElementById('statNodes').textContent = visibleNodes.length;
+}
+
+// Fit after stabilization
+network.on('stabilizationIterationsDone', function() {
+  network.fit({ animation: { duration: 800, easingFunction: 'easeInOutQuad' } });
+});
+</script>
+</body>
+</html>

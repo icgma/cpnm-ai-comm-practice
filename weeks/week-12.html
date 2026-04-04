@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Week 12 · 思维链CoT技术 — AI与传播实践</title>
+<meta name="description" content="第12周：链式推理、分步推理策略与Tree-of-Thought技术。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="week-common.css">
+<style>.week-hero h1 span{background:linear-gradient(135deg,#f59e0b,#ef4444);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}.module-icon.m1{background:rgba(245,158,11,.15);color:#fbbf24}.module-icon.m2{background:rgba(139,92,246,.15);color:#a78bfa}.module-icon.m3{background:rgba(6,182,212,.15);color:#22d3ee}</style>
+</head>
+<body>
+<div class="bg-grid"></div><div class="bg-glow bg-glow-1"></div><div class="bg-glow bg-glow-2"></div><div class="bg-glow bg-glow-3"></div>
+<div class="week-nav"><div class="week-nav-inner"><div class="week-nav-left"><a href="../index.html" class="week-nav-home"><div class="week-nav-logo">AI</div> AI与传播实践</a><span class="week-nav-sep">/</span><span class="week-nav-current">Week 12</span></div><div class="week-nav-right"><a href="week-11.html" class="week-nav-btn">← 上一周</a><a href="week-13.html" class="week-nav-btn">下一周 →</a></div></div></div>
+
+<div class="week-hero"><div class="week-hero-inner">
+<div class="week-badge"><span class="week-badge-num">WEEK 12</span> · 进阶提升阶段</div>
+<h1>思维链<span>CoT技术</span></h1>
+<p class="week-hero-sub">链式推理 · 分步推理策略 · Tree-of-Thought — 引导AI像人类一样深度思考</p>
+<div class="week-hero-tags"><span class="hero-tag" style="background:rgba(245,158,11,.15);color:#fcd34d">🟡 难点</span></div>
+</div></div>
+
+<div class="week-content">
+<div class="module open"><div class="module-header" onclick="this.parentElement.classList.toggle('open')"><div class="module-header-left"><div class="module-icon m1">🔗</div><div><div class="module-num">MODULE 01</div><div class="module-title">Chain-of-Thought原理</div></div></div><div class="module-chevron">▼</div></div>
+<div class="module-body"><div class="content-block">
+<div class="highlight-box purple"><div class="highlight-box-title">核心思想</div><div class="highlight-box-text">不要直接要求AI给出最终答案，而是要求它<strong>展示推理过程</strong>。<br>"请一步一步思考"这句简单的指令，能让复杂任务的准确率显著提升。<br><br><strong>原理</strong>：迫使模型将中间推理步骤显式化，减少跳步错误，类似人类"在草稿纸上列出思考过程"。</div></div>
+<div class="example-block" style="margin-top:12px"><span class="label label-good">✅ 带CoT的提示</span>
+分析这篇新闻报道是否存在偏见。请一步一步思考：
+1. 首先识别报道中的事实陈述和观点表达
+2. 然后检查信源的多样性和平衡性
+3. 接着分析用词是否带有倾向性
+4. 最后给出综合判断和依据</div></div></div></div>
+
+<div class="module"><div class="module-header" onclick="this.parentElement.classList.toggle('open')"><div class="module-header-left"><div class="module-icon m2">🌳</div><div><div class="module-num">MODULE 02</div><div class="module-title">进阶：Tree-of-Thought</div></div></div><div class="module-chevron">▼</div></div>
+<div class="module-body"><div class="content-block"><h3>🔀 从链条到树状</h3>
+<div class="key-points">
+<div class="key-point"><div class="key-point-icon">🔗</div><div class="key-point-content"><div class="key-point-title">CoT = 线性思维链</div><div class="key-point-desc">A → B → C → D，一条路径走到底</div></div></div>
+<div class="key-point"><div class="key-point-icon">🌳</div><div class="key-point-content"><div class="key-point-title">ToT = 树状思维网</div><div class="key-point-desc">在每个节点探索多个分支，评估后选择最优路径。适合开放性问题和创意任务</div></div></div>
+</div>
+<div class="example-block" style="margin-top:12px"><span class="label label-tip">💡 ToT提示词模板</span>
+请为这个选题设计3种不同的报道角度，
+对每个角度进行可行性评分（1-10），
+然后选择最佳角度并详细展开。</div></div></div></div>
+
+<div class="module"><div class="module-header" onclick="this.parentElement.classList.toggle('open')"><div class="module-header-left"><div class="module-icon m3">📰</div><div><div class="module-num">MODULE 03</div><div class="module-title">传媒场景的CoT应用</div></div></div><div class="module-chevron">▼</div></div>
+<div class="module-body"><div class="content-block">
+<table class="compare-table"><thead><tr><th>场景</th><th>CoT策略</th><th>效果</th></tr></thead><tbody>
+<tr><td>新闻偏见检测</td><td>事实识别→信源分析→用词检查→综合判断</td><td>准确率提升40%+</td></tr>
+<tr><td>选题可行性评估</td><td>市场分析→资源评估→风险识别→决策建议</td><td>评估更全面系统</td></tr>
+<tr><td>复杂事件梳理</td><td>时间线整理→因果链条→影响分析→趋势预测</td><td>逻辑更清晰</td></tr>
+<tr><td>跨文化翻译</td><td>语义理解→文化语境→表达适配→回译检验</td><td>翻译质量显著提升</td></tr>
+</tbody></table></div></div></div>
+</div>
+
+<div class="week-bottom-nav">
+<a href="week-11.html" class="bottom-nav-card"><div class="bottom-nav-label">← PREV WEEK</div><div class="bottom-nav-title">Few-Shot与角色扮演</div></a>
+<a href="week-13.html" class="bottom-nav-card next"><div class="bottom-nav-label">NEXT WEEK →</div><div class="bottom-nav-title">主流LLM平台对比</div></a>
+</div>
+<div class="week-footer">© 2026 汕头大学 · 长江新闻与传播学院 · AI课程建设项目</div>
+</body></html>
