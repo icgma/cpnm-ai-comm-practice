@@ -9,6 +9,31 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="weeks/week-common.css">
 <style>
+/* ── Light Mode Overrides ── */
+[data-theme="light"]{
+  --bg:#f5f7fa;--bg2:#eef1f6;--bg3:#ffffff;--bg4:#f0f2f7;
+  --border:#d8dce6;--border2:#c0c8d8;
+  --text:#1a1f36;--text2:#4a5578;--text3:#6b7a99;
+  --blue:#2563eb;--cyan:#0891b2;--purple:#7c3aed;--pink:#db2777;
+  --green:#059669;--amber:#d97706;--red:#dc2626;--orange:#ea580c;
+  --grad1:linear-gradient(135deg,#2563eb,#7c3aed);
+  --grad2:linear-gradient(135deg,#0891b2,#2563eb);
+}
+[data-theme="light"] .bg-grid{opacity:.04}
+[data-theme="light"] .bg-glow{opacity:.06}
+[data-theme="light"] .week-nav{background:rgba(255,255,255,.9)}
+[data-theme="light"] .trend-tag.tech{background:rgba(99,102,241,.1);color:#6366f1}
+[data-theme="light"] .trend-tag.industry{background:rgba(14,165,233,.1);color:#0284c7}
+[data-theme="light"] .trend-tag.academic{background:rgba(168,85,247,.1);color:#7c3aed}
+[data-theme="light"] .trend-tag.policy{background:rgba(239,68,68,.1);color:#dc2626}
+[data-theme="light"] .trend-tag.tool{background:rgba(34,197,94,.1);color:#059669}
+[data-theme="light"] .trend-card:hover{box-shadow:0 12px 40px rgba(37,99,235,.1)}
+
+/* ── Theme Toggle ── */
+.theme-toggle{width:44px;height:24px;border-radius:24px;border:1px solid var(--border2);background:var(--bg3);cursor:pointer;position:relative;display:flex;align-items:center;padding:0 3px;flex-shrink:0}
+.theme-toggle:hover{border-color:var(--blue)}
+.theme-toggle-knob{width:18px;height:18px;border-radius:50%;background:var(--grad1);display:flex;align-items:center;justify-content:center;transition:transform .35s cubic-bezier(.4,.2,.2,1);font-size:11px;line-height:1;color:#fff}
+[data-theme="light"] .theme-toggle-knob{transform:translateX(20px)}
 /* ── Trend Cards ── */
 .trend-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:20px;margin-top:28px}
 .trend-card{background:var(--bg3);border:1px solid var(--border);border-radius:16px;padding:28px;transition:all .3s;position:relative;overflow:hidden}
@@ -84,6 +109,9 @@
     <span class="week-nav-current">📡 前沿动态</span>
   </div>
   <div class="week-nav-right">
+    <button class="theme-toggle" id="themeToggle" aria-label="切换主题">
+      <div class="theme-toggle-knob" id="themeIcon">🌙</div>
+    </button>
     <a href="index.html" class="week-nav-btn">← 课程首页</a>
   </div>
   </div>
@@ -354,5 +382,6 @@
 </div><!-- /week-content -->
 
 <div class="week-footer">© 2026 汕头大学 · 长江新闻与传播学院 · AI课程建设项目</div>
+<script src="theme.js"></script>
 </body>
 </html>
