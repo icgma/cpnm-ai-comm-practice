@@ -88,6 +88,16 @@
 .trends-table tr:last-child td{border-bottom:none}
 .trends-table tr:hover td{background:rgba(59,130,246,.03)}
 
+/* ── Archive List ── */
+.archive-list{display:grid;gap:8px;margin-top:16px}
+.archive-item{display:flex;align-items:center;gap:16px;padding:14px 20px;
+  background:var(--bg3);border:1px solid var(--border);border-radius:12px;
+  color:var(--text);transition:all .2s;text-decoration:none}
+.archive-item:hover{border-color:var(--blue);transform:translateX(4px)}
+.archive-date{font-size:14px;font-weight:700;font-family:'JetBrains Mono','Fira Code',monospace;
+  color:var(--blue);min-width:110px}
+.archive-label{font-size:14px;color:var(--text2)}
+
 @media(max-width:700px){
   .trend-grid,.case-grid{grid-template-columns:1fr}
   .stats-bar{flex-direction:column;gap:16px}
@@ -369,6 +379,18 @@
 
     <li><strong>数字人伦理边界：</strong>中国广电联合会反对 AI 换脸，但数字人主播已是媒体标配。请划出你认为的伦理红线：虚拟主播播报新闻是否需要披露？用 AI "复活"已故记者做采访节目是否可接受？</li>
   </ol>
+</div>
+
+<div class="section-divider"></div>
+
+<!-- ════════════ Section 6: 往期存档 ════════════ -->
+<div class="briefing-section">
+  <h2><span class="emoji">📚</span> 往期存档</h2>
+  <p class="briefing-desc">过往 AI+传媒动态 Briefing 归档，永久保留</p>
+
+  <div class="archive-list" id="archive-list-area">
+  <p style="color:var(--text3);font-size:14px;text-align:center;padding:20px">归档将在下次自动更新后生成</p>
+  </div>
 </div>
 
 <!-- Footer -->
