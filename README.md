@@ -79,7 +79,7 @@
 </tr>
 <tr>
 <td align="center"><b>AI 趋势追踪</b></td>
-<td align="center"><b>提示词公式</b></td>
+<td align="center"></td>
 </tr>
 <tr>
 <td>
@@ -87,27 +87,7 @@
 ![](images/tool_newkg.png)
 
 </td>
-<td>
-
-![](images/prompt_formula.png)
-
-</td>
-</tr>
-<tr>
-<td align="center"><b>信息提取概念</b></td>
-<td align="center"><b>信息提取流水线</b></td>
-</tr>
-<tr>
-<td>
-
-![](images/information_extraction_concept.png)
-
-</td>
-<td>
-
-![](images/information_extraction_pipeline.png)
-
-</td>
+<td></td>
 </tr>
 </table>
 
