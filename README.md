@@ -6,7 +6,7 @@
 
 **16 周系统化训练** · **课程知识图谱** · **AI 趋势追踪** · **伦理思辨**
 
-汕头大学通识课程，从灵感到成稿，重新理解内容生产。
+汕头大学长江新闻与传播学院基础课程，从灵感到成稿，重新理解内容生产。
 
 [![GitHub license](https://img.shields.io/github/license/icgma/cpnm-ai-comm-practice?style=flat-square&color=blue)](LICENSE)
 [![Pages](https://img.shields.io/badge/GitHub-Pages-222?style=flat-square&logo=github&logoColor=white)](https://icgma.github.io/cpnm-ai-comm-practice/)
