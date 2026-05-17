@@ -84,7 +84,7 @@
 <tr>
 <td>
 
-![](images/tool_newkg.png)
+![](images/ai_trend.png)
 
 </td>
 <td></td>
