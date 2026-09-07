@@ -79,6 +79,18 @@ img{max-width:100%}
 .pnav-links a:hover{color:var(--cinnabar);border-color:rgba(162,64,47,.35);background:rgba(162,64,47,.05)}
 .pnav-links a.here{color:var(--cinnabar);border-color:rgba(162,64,47,.4);
   background:rgba(162,64,47,.07);font-weight:600}
+.lang-switch{display:inline-flex;align-items:stretch;margin-left:6px;
+  border:1px solid var(--line-2);border-radius:4px;overflow:hidden;background:rgba(247,239,218,.55)}
+.lang-switch button{appearance:none;border:0;background:transparent;cursor:pointer;
+  font-family:var(--latin);font-size:12px;font-weight:600;letter-spacing:1px;
+  color:var(--ink-3);padding:5px 9px;line-height:1.2;transition:all .2s}
+.lang-switch button + button{border-left:1px solid var(--line)}
+.lang-switch button:hover{color:var(--cinnabar)}
+.lang-switch button.on{color:var(--cinnabar);background:rgba(162,64,47,.1)}
+html[lang="en"] .hero h1,html[lang="en"] .h-sec,html[lang="en"] .quote-text{
+  font-family:var(--latin);letter-spacing:.04em}
+html[lang="en"] .hero h1{font-size:50px}
+html[lang="en"] .pnav-title{font-family:var(--latin);letter-spacing:.04em}
 
 /* ── 版式骨架 ── */
 .section{position:relative;z-index:1;padding:72px 40px}
@@ -192,6 +204,7 @@ img{max-width:100%}
   .toc-grid{grid-template-columns:repeat(2,1fr)}
   .feat-grid{grid-template-columns:repeat(2,1fr)}
   .hero h1{font-size:38px;letter-spacing:3px}
+  html[lang="en"] .hero h1{font-size:34px}
   .hero-frame{padding:44px 26px 38px}
   .hero-seal{top:20px;right:20px;width:44px;height:44px;font-size:21px}
   .pnav-title{font-size:15px}
@@ -202,6 +215,9 @@ img{max-width:100%}
   .pnav-inner{padding:8px 14px;gap:10px}
   .pnav-links{gap:0}
   .pnav-links a{font-size:12.5px;padding:4px 7px}
+  .lang-switch{margin-left:2px}
+  .lang-switch button{padding:4px 7px;font-size:11px}
+  html[lang="en"] .hero h1{font-size:28px}
   .hero{padding:100px 16px 40px;min-height:auto}
   .hero h1{font-size:30px}
   .toc-grid,.feat-grid{grid-template-columns:1fr}

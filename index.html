@@ -6,10 +6,13 @@
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect x='1.5' y='1.5' width='37' height='37' rx='9' fill='%23F7EFDA' stroke='%23A2402F' stroke-width='3'/%3E%3Cpath fill='%23A2402F' fill-rule='evenodd' %3Cg transform='translate(20 20) scale(0.74) translate(-20 -20)'%3E%3Cpath fill='none' stroke='%23A2402F' stroke-width='2.6' stroke-linejoin='round' stroke-linecap='round' d='M20 36.5 L11.2 16.5 C13.6 13 16.6 11.2 20 10.9 C23.4 11.2 26.4 13 28.8 16.5 Z'/%3E%3Cpath fill='%23A2402F' d='M20 13.6 L21.3 16.9 L24.6 18.2 L21.3 19.5 L20 22.8 L18.7 19.5 L15.4 18.2 L18.7 16.9 Z'/%3E%3Cpath d='M20 23.6 L20 33' stroke='%23A2402F' stroke-width='2.2' stroke-linecap='round' fill='none'/%3E%3C/g%3E/%3E%3C/svg%3E">
 <title>AI驱动的传媒内容制作 — 汕头大学智慧课程</title>
 <meta name="description" content="汕头大学专业课程「AI驱动的传媒内容制作」课程门户。16周系统化训练，从灵感到成稿，重新理解内容生产。">
+<link rel="alternate" hreflang="zh-CN" href="./index.html">
+<link rel="alternate" hreflang="en" href="./index.html?lang=en">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,500;0,600;1,500&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@600;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="./parchment.css">
 <style>
+html[data-i18n-pending] body{visibility:hidden}
 /* 首页微调：加载即浮现 */
 .hero-frame,.stat-cell,.feat-card,.toc-card,.quote-sec .container{opacity:0;animation:inkIn .7s ease forwards}
 .stat-cell:nth-child(2){animation-delay:.08s}.stat-cell:nth-child(3){animation-delay:.16s}
@@ -19,7 +22,11 @@
 .toc-card:nth-child(5){animation-delay:.24s}.toc-card:nth-child(6){animation-delay:.3s}.toc-card:nth-child(7){animation-delay:.36s}.toc-card:nth-child(8){animation-delay:.42s}
 @keyframes inkIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
 </style>
+<script>
+(function(){try{var q=new URLSearchParams(location.search).get('lang');var s=localStorage.getItem('portal-lang');if(q==='en'||(!q&&s==='en'))document.documentElement.setAttribute('data-i18n-pending','');}catch(e){}})();
+</script>
 <script src="analytics.js" defer></script>
+<script src="i18n.js" defer></script>
 </head>
 <body>
 <div class="vignette"></div>
@@ -29,18 +36,22 @@
   <div class="pnav-inner">
     <a href="./index.html" class="pnav-brand">
       <span class="seal"><svg class="seal-mark" viewBox="0 0 40 40" aria-hidden="true"><path fill="none" stroke="#A2402F" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round" d="M20 36.5 L11.2 16.5 C13.6 13 16.6 11.2 20 10.9 C23.4 11.2 26.4 13 28.8 16.5 Z"/><path fill="#A2402F" d="M20 13.6 L21.3 16.9 L24.6 18.2 L21.3 19.5 L20 22.8 L18.7 19.5 L15.4 18.2 L18.7 16.9 Z"/><path fill="none" stroke="#A2402F" stroke-width="2.2" stroke-linecap="round" d="M20 23.6 L20 33.4"/></svg></span>
-      <span><span class="pnav-title">AI驱动的传媒内容制作</span><span class="pnav-sub">AI-Driven Media Content Production</span></span>
+      <span><span class="pnav-title" data-i18n="brandTitle">AI驱动的传媒内容制作</span><span class="pnav-sub">AI-Driven Media Content Production</span></span>
     </a>
     <div class="pnav-links">
-      <a href="./index.html" class="here">首页</a>
-      <a href="./syllabus.html">教学大纲</a>
-      <a href="./tools.html">教学工具</a>
-      <a href="./agents.html">AI智能体</a>
-      <a href="./showcase.html">学生作品</a>
-      <a href="./ai-trends.html">前沿动态</a>
-      <a href="./course-kg/index.html">知识图谱</a>
-      <a href="../course-references/index.html">资料库</a>
+      <a href="./index.html" class="here" data-i18n="navHome">首页</a>
+      <a href="./syllabus.html" data-i18n="navSyllabus">教学大纲</a>
+      <a href="./tools.html" data-i18n="navTools">教学工具</a>
+      <a href="./agents.html" data-i18n="navAgents">AI智能体</a>
+      <a href="./showcase.html" data-i18n="navShowcase">学生作品</a>
+      <a href="./ai-trends.html" data-i18n="navTrends">前沿动态</a>
+      <a href="./course-kg/index.html" data-i18n="navKg">知识图谱</a>
+      <a href="../course-references/index.html" data-i18n="navRefs">资料库</a>
       <a href="https://github.com/icgma/cpnm-ai-comm-practice" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+      <span class="lang-switch" role="group" aria-label="切换语言">
+        <button type="button" data-lang="zh" class="on" aria-pressed="true">中</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </span>
     </div>
   </div>
 </nav>
@@ -51,19 +62,19 @@
     <i class="hero-corner hc-tl"></i><i class="hero-corner hc-tr"></i>
     <i class="hero-corner hc-bl"></i><i class="hero-corner hc-br"></i>
     <span class="seal hero-seal"><svg class="seal-mark" viewBox="0 0 40 40" aria-hidden="true"><path fill="none" stroke="#A2402F" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round" d="M20 36.5 L11.2 16.5 C13.6 13 16.6 11.2 20 10.9 C23.4 11.2 26.4 13 28.8 16.5 Z"/><path fill="#A2402F" d="M20 13.6 L21.3 16.9 L24.6 18.2 L21.3 19.5 L20 22.8 L18.7 19.5 L15.4 18.2 L18.7 16.9 Z"/><path fill="none" stroke="#A2402F" stroke-width="2.2" stroke-linecap="round" d="M20 23.6 L20 33.4"/></svg></span>
-    <div class="hero-kicker">JOU2327A · 汕头大学专业课程</div>
-    <h1>AI驱动的<span class="em">传媒内容制作</span></h1>
-    <p class="hero-sub">面向新闻传播专业的 AI 应用课程 · 以提示词工程为主线 · 十六周系统化训练<br>从灵感到成稿，重新理解内容生产</p>
+    <div class="hero-kicker" data-i18n="heroKicker">JOU2327A · 汕头大学专业课程</div>
+    <h1 data-i18n-html="heroTitle">AI驱动的<span class="em">传媒内容制作</span></h1>
+    <p class="hero-sub" data-i18n-html="heroSub">面向新闻传播专业的 AI 应用课程 · 以提示词工程为主线 · 十六周系统化训练<br>从灵感到成稿，重新理解内容生产</p>
     <div class="hero-actions">
-      <a href="./syllabus.html" class="btn btn-ink">翻阅 · 十六周教学大纲</a>
-      <a href="./tools.html" class="btn btn-seal">教学工具箱</a>
-      <a href="https://jou2327a.netlify.app/" target="_blank" rel="noopener noreferrer" class="btn btn-plain">学生作品展览</a>
+      <a href="./syllabus.html" class="btn btn-ink" data-i18n="heroSyllabus">翻阅 · 十六周教学大纲</a>
+      <a href="./tools.html" class="btn btn-seal" data-i18n="heroTools">教学工具箱</a>
+      <a href="https://jou2327a.netlify.app/" target="_blank" rel="noopener noreferrer" class="btn btn-plain" data-i18n="heroShowcase">学生作品展览</a>
     </div>
     <div class="hero-meta">
-      <div class="hero-meta-item"><span class="mk">课程代码</span> JOU2327A</div>
-      <div class="hero-meta-item"><span class="mk">学分</span> 2</div>
-      <div class="hero-meta-item"><span class="mk">课时</span> 32（理论16 + 实验16）</div>
-      <div class="hero-meta-item"><span class="mk">开课单位</span> 长江新闻与传播学院</div>
+      <div class="hero-meta-item"><span class="mk" data-i18n="metaCode">课程代码</span> JOU2327A</div>
+      <div class="hero-meta-item"><span class="mk" data-i18n="metaCredit">学分</span> 2</div>
+      <div class="hero-meta-item"><span class="mk" data-i18n="metaHours">课时</span> <span data-i18n="metaHoursVal">32（理论16 + 实验16）</span></div>
+      <div class="hero-meta-item"><span class="mk" data-i18n="metaSchool">开课单位</span> <span data-i18n="metaSchoolVal">长江新闻与传播学院</span></div>
     </div>
   </div>
 </header>
@@ -71,11 +82,11 @@
 <!-- ── 卷首数据 ── -->
 <section class="paper-band" style="position:relative;z-index:1;padding:0 20px">
   <div class="container stat-strip">
-    <div class="stat-cell"><div class="stat-value">十六</div><div class="stat-label">教学周</div></div>
-    <div class="stat-cell"><div class="stat-value">廿二</div><div class="stat-label">核心知识点</div></div>
-    <div class="stat-cell"><div class="stat-value">三百+</div><div class="stat-label">试题库</div></div>
-    <div class="stat-cell"><div class="stat-value">六座</div><div class="stat-label">教学工具站</div></div>
-    <div class="stat-cell"><div class="stat-value">五员</div><div class="stat-label">AI智能体</div></div>
+    <div class="stat-cell"><div class="stat-value">十六</div><div class="stat-label" data-i18n="statWeeks">教学周</div></div>
+    <div class="stat-cell"><div class="stat-value">廿二</div><div class="stat-label" data-i18n="statNodes">核心知识点</div></div>
+    <div class="stat-cell"><div class="stat-value">三百+</div><div class="stat-label" data-i18n="statBank">试题库</div></div>
+    <div class="stat-cell"><div class="stat-value">六座</div><div class="stat-label" data-i18n="statTools">教学工具站</div></div>
+    <div class="stat-cell"><div class="stat-value">五员</div><div class="stat-label" data-i18n="statAgents">AI智能体</div></div>
   </div>
 </section>
 
@@ -83,13 +94,13 @@
 <section class="section">
   <div class="container">
     <div class="eyebrow">Course Features</div>
-    <div class="h-sec">课程<span class="em">四事</span></div>
-    <p class="sec-desc">以提示词工程为核心主线，深度融合 AI 辅助内容生产工具，以项目驱动学习。</p>
+    <div class="h-sec" data-i18n-html="featTitle">课程<span class="em">四事</span></div>
+    <p class="sec-desc" data-i18n="featDesc">以提示词工程为核心主线，深度融合 AI 辅助内容生产工具，以项目驱动学习。</p>
     <div class="feat-grid">
-      <div class="feat-card card"><div class="feat-icon">🎯</div><div class="feat-name">提示词工程主线</div><div class="feat-desc">从 CRISPE 到思维链，系统掌握人机协作方法论</div></div>
-      <div class="feat-card card"><div class="feat-icon">📝</div><div class="feat-name">全流程覆盖</div><div class="feat-desc">检索 · 核查 · 摘要 · 写作，贯穿内容生产全链条</div></div>
-      <div class="feat-card card"><div class="feat-icon">🔬</div><div class="feat-name">多平台实战</div><div class="feat-desc">GPT / Claude / DeepSeek / 文心，横向对比主流 LLM</div></div>
-      <div class="feat-card card"><div class="feat-icon">⚖️</div><div class="feat-name">伦理守则内嵌</div><div class="feat-desc">AI处理三原则贯穿始终，培养负责任的AI使用者</div></div>
+      <div class="feat-card card"><div class="feat-icon">🎯</div><div class="feat-name" data-i18n="feat1Name">提示词工程主线</div><div class="feat-desc" data-i18n="feat1Desc">从 CRISPE 到思维链，系统掌握人机协作方法论</div></div>
+      <div class="feat-card card"><div class="feat-icon">📝</div><div class="feat-name" data-i18n="feat2Name">全流程覆盖</div><div class="feat-desc" data-i18n="feat2Desc">检索 · 核查 · 摘要 · 写作，贯穿内容生产全链条</div></div>
+      <div class="feat-card card"><div class="feat-icon">🔬</div><div class="feat-name" data-i18n="feat3Name">多平台实战</div><div class="feat-desc" data-i18n="feat3Desc">GPT / Claude / DeepSeek / 文心，横向对比主流 LLM</div></div>
+      <div class="feat-card card"><div class="feat-icon">⚖️</div><div class="feat-name" data-i18n="feat4Name">伦理守则内嵌</div><div class="feat-desc" data-i18n="feat4Desc">AI处理三原则贯穿始终，培养负责任的AI使用者</div></div>
     </div>
   </div>
 </section>
@@ -98,56 +109,56 @@
 <section class="section paper-band">
   <div class="container">
     <div class="eyebrow">Table of Contents</div>
-    <div class="h-sec">全站<span class="em">目录</span></div>
-    <p class="sec-desc">本站由八个分页组成，各卷独立成页，可由页首导航随时切换。</p>
+    <div class="h-sec" data-i18n-html="tocTitle">全站<span class="em">目录</span></div>
+    <p class="sec-desc" data-i18n="tocDesc">本站由八个分页组成，各卷独立成页，可由页首导航随时切换。</p>
     <div class="toc-grid">
       <a href="./syllabus.html" class="toc-card card">
-        <div class="toc-num">卷一</div><div class="toc-icon">📅</div>
-        <div class="toc-name">教学大纲</div>
-        <div class="toc-desc">十六周逐周讲次，从 AI 基础认知到期末项目交付，能力螺旋递进。</div>
-        <div class="toc-go">翻阅此卷 →</div>
+        <div class="toc-num" data-i18n="vol1Num">卷一</div><div class="toc-icon">📅</div>
+        <div class="toc-name" data-i18n="vol1Name">教学大纲</div>
+        <div class="toc-desc" data-i18n="vol1Desc">十六周逐周讲次，从 AI 基础认知到期末项目交付，能力螺旋递进。</div>
+        <div class="toc-go" data-i18n="vol1Go">翻阅此卷 →</div>
       </a>
       <a href="./tools.html" class="toc-card card">
-        <div class="toc-num">卷二</div><div class="toc-icon">🧰</div>
-        <div class="toc-name">教学工具</div>
-        <div class="toc-desc">课程自研六座在线平台：知识图谱、提示词库、媒体目录与 AI 编程指南。</div>
-        <div class="toc-go">开启工具箱 →</div>
+        <div class="toc-num" data-i18n="vol2Num">卷二</div><div class="toc-icon">🧰</div>
+        <div class="toc-name" data-i18n="vol2Name">教学工具</div>
+        <div class="toc-desc" data-i18n="vol2Desc">课程自研六座在线平台：知识图谱、提示词库、媒体目录与 AI 编程指南。</div>
+        <div class="toc-go" data-i18n="vol2Go">开启工具箱 →</div>
       </a>
       <a href="./agents.html" class="toc-card card">
-        <div class="toc-num">卷三</div><div class="toc-icon">🤖</div>
-        <div class="toc-name">AI智能体</div>
-        <div class="toc-desc">「一导四辅」全天候伴学矩阵：导学、提示词、写作、前沿、伦理。</div>
-        <div class="toc-go">会见智能体 →</div>
+        <div class="toc-num" data-i18n="vol3Num">卷三</div><div class="toc-icon">🤖</div>
+        <div class="toc-name" data-i18n="vol3Name">AI智能体</div>
+        <div class="toc-desc" data-i18n="vol3Desc">「一导四辅」全天候伴学矩阵：导学、提示词、写作、前沿、伦理。</div>
+        <div class="toc-go" data-i18n="vol3Go">会见智能体 →</div>
       </a>
       <a href="./showcase.html" class="toc-card card">
-        <div class="toc-num">卷四</div><div class="toc-icon">🏆</div>
-        <div class="toc-name">学生作品</div>
-        <div class="toc-desc">2025–2026 学年期末项目精选，二十件 AI 驱动的传媒作品。</div>
-        <div class="toc-go">步入展堂 →</div>
+        <div class="toc-num" data-i18n="vol4Num">卷四</div><div class="toc-icon">🏆</div>
+        <div class="toc-name" data-i18n="vol4Name">学生作品</div>
+        <div class="toc-desc" data-i18n="vol4Desc">2025–2026 学年期末项目精选，二十件 AI 驱动的传媒作品。</div>
+        <div class="toc-go" data-i18n="vol4Go">步入展堂 →</div>
       </a>
       <a href="./ai-trends.html" class="toc-card card">
-        <div class="toc-num">卷五</div><div class="toc-icon">📡</div>
-        <div class="toc-name">前沿动态</div>
-        <div class="toc-desc">AI × 传媒行业每日简报，技术、行业、政策与课堂讨论题。</div>
-        <div class="toc-go">阅览日报 →</div>
+        <div class="toc-num" data-i18n="vol5Num">卷五</div><div class="toc-icon">📡</div>
+        <div class="toc-name" data-i18n="vol5Name">前沿动态</div>
+        <div class="toc-desc" data-i18n="vol5Desc">AI × 传媒行业每日简报，技术、行业、政策与课堂讨论题。</div>
+        <div class="toc-go" data-i18n="vol5Go">阅览日报 →</div>
       </a>
       <a href="./course-kg/index.html" class="toc-card card">
-        <div class="toc-num">卷六</div><div class="toc-icon">🧠</div>
-        <div class="toc-name">知识图谱</div>
-        <div class="toc-desc">廿二个核心知识点、六大模块的交互式力导向全景图。</div>
-        <div class="toc-go">观览图谱 →</div>
+        <div class="toc-num" data-i18n="vol6Num">卷六</div><div class="toc-icon">🧠</div>
+        <div class="toc-name" data-i18n="vol6Name">知识图谱</div>
+        <div class="toc-desc" data-i18n="vol6Desc">廿二个核心知识点、六大模块的交互式力导向全景图。</div>
+        <div class="toc-go" data-i18n="vol6Go">观览图谱 →</div>
       </a>
       <a href="./ai-ethics-handbook.html" class="toc-card card">
-        <div class="toc-num">卷七</div><div class="toc-icon">⚖️</div>
-        <div class="toc-name">AI伦理手册</div>
-        <div class="toc-desc">学生手册版 AI 使用伦理规范：透明、负责、诚信三原则。</div>
-        <div class="toc-go">诵读规约 →</div>
+        <div class="toc-num" data-i18n="vol7Num">卷七</div><div class="toc-icon">⚖️</div>
+        <div class="toc-name" data-i18n="vol7Name">AI伦理手册</div>
+        <div class="toc-desc" data-i18n="vol7Desc">学生手册版 AI 使用伦理规范：透明、负责、诚信三原则。</div>
+        <div class="toc-go" data-i18n="vol7Go">诵读规约 →</div>
       </a>
       <a href="./obe-matrix.html" class="toc-card card">
-        <div class="toc-num">卷八</div><div class="toc-icon">🎯</div>
-        <div class="toc-name">OBE对标表</div>
-        <div class="toc-desc">课程目标、毕业要求、教学内容与达成度评估的完整矩阵。</div>
-        <div class="toc-go">查对标表 →</div>
+        <div class="toc-num" data-i18n="vol8Num">卷八</div><div class="toc-icon">🎯</div>
+        <div class="toc-name" data-i18n="vol8Name">OBE对标表</div>
+        <div class="toc-desc" data-i18n="vol8Desc">课程目标、毕业要求、教学内容与达成度评估的完整矩阵。</div>
+        <div class="toc-go" data-i18n="vol8Go">查对标表 →</div>
       </a>
     </div>
   </div>
@@ -157,16 +168,16 @@
 <section class="quote-sec">
   <div class="container">
     <span class="quote-mark">「</span>
-    <p class="quote-text">我们选择做什么样的传播者，<br>比我们使用什么工具更重要。</p>
-    <span class="quote-src">—— 课程结语</span>
+    <p class="quote-text" data-i18n-html="quote">我们选择做什么样的传播者，<br>比我们使用什么工具更重要。</p>
+    <span class="quote-src" data-i18n="quoteSrc">—— 课程结语</span>
   </div>
 </section>
 
 <!-- ── 页脚 ── -->
 <footer class="pfooter">
-  <div class="foot-motto">从灵感到成稿 · 重新理解内容生产</div>
-  <p>© 2026 汕头大学 · 长江新闻与传播学院 · AI课程建设项目</p>
-  <p style="margin-top:8px"><a href="https://github.com/icgma/cpnm-ai-comm-practice" target="_blank" rel="noopener noreferrer">GitHub</a> · <a href="https://jou2327a.netlify.app/" target="_blank" rel="noopener noreferrer">学生作品展</a> · <a href="./course-kg/index.html">知识图谱</a></p>
+  <div class="foot-motto" data-i18n="footMotto">从灵感到成稿 · 重新理解内容生产</div>
+  <p data-i18n="footCopy">© 2026 汕头大学 · 长江新闻与传播学院 · AI课程建设项目</p>
+  <p style="margin-top:8px"><a href="https://github.com/icgma/cpnm-ai-comm-practice" target="_blank" rel="noopener noreferrer">GitHub</a> · <a href="https://jou2327a.netlify.app/" target="_blank" rel="noopener noreferrer" data-i18n="footShow">学生作品展</a> · <a href="./course-kg/index.html" data-i18n="footKg">知识图谱</a></p>
 </footer>
 </body>
 </html>
