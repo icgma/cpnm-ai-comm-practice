@@ -100,6 +100,10 @@ a:hover{color:#7C2F22}
 .trend-card{background:var(--bg3);border:1px solid var(--border2);border-radius:4px;
   padding:24px;transition:all .3s;position:relative;overflow:hidden;box-shadow:0 2px 10px rgba(107,90,68,.12)}
 .trend-card:hover{border-color:var(--gold);transform:translateY(-3px);box-shadow:0 10px 24px rgba(107,90,68,.2)}
+a.trend-card,a.case-card{display:block;color:inherit;text-decoration:none;cursor:pointer}
+a.trend-card:hover,a.case-card:hover{color:inherit}
+.trend-go{margin-left:auto;color:var(--cinnabar);font-size:12px;font-weight:600;letter-spacing:.5px}
+.update-banner,.filter-bar,.theme-toggle{display:none}
 .trend-tag{display:inline-block;padding:3px 12px;border-radius:3px;font-size:12px;
   font-weight:600;margin-bottom:12px;border:1px solid}
 .trend-tag.tech{background:rgba(51,86,124,.08);color:#33567C;border-color:rgba(51,86,124,.35)}
@@ -215,24 +219,24 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">本周与传媒相关的 AI 技术进展与产品动态</p>
 
   <div class="trend-grid" id="trend-cards-area">
-<div class="trend-card">
+<a class="trend-card" href="https://www.bing.com/search?q=site%3Aopenai.com+%E9%95%BF%E5%91%A8%E6%9C%9FAI%E6%A8%A1%E5%9E%8B%E5%AE%89%E5%85%A8%E4%B8%8E%E5%AF%B9%E9%BD%90%E7%A0%94%E7%A9%B6" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag tech">技术</div>
   <h3>长周期AI模型安全与对齐研究</h3>
   <p>OpenAI发布长运行AI模型安全部署实践，揭示新型安全风险及应对策略，推动生成式AI在传媒领域的可信应用</p>
-  <div class="trend-source">📅 2026-07-21 · 来源 openai.com</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-07-21 · 来源 openai.com <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://hn.algolia.com/?q=%E6%99%BA%E8%83%BD%E5%86%85%E5%AE%B9%E7%94%9F%E6%88%90%E5%B7%A5%E5%85%B7%E9%93%BE%E5%8D%87%E7%BA%A7" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag industry">行业</div>
   <h3>智能内容生成工具链升级</h3>
   <p>多家传媒机构引入多模态AI工具，实现从选题策划到内容生产的全流程自动化，效率提升300%以上</p>
-  <div class="trend-source">📅 2026-07-21 · 来源 hnrss.org</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-07-21 · 来源 hnrss.org <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://hn.algolia.com/?q=AI%E9%A9%B1%E5%8A%A8%E7%9A%84%E6%99%BA%E8%83%BD%E4%BC%9A%E8%AE%AE%E7%BA%AA%E8%A6%81%E7%B3%BB%E7%BB%9F" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag tool">工具</div>
   <h3>AI驱动的智能会议纪要系统</h3>
   <p>GetAIAssist等工具支持文件级AI会议记录，自动生成结构化摘要和行动项追踪，已应用于头部媒体</p>
-  <div class="trend-source">📅 2026-07-21 · 来源 hnrss.org</div>
-</div>
+  <div class="trend-source">📅 2026-07-21 · 来源 hnrss.org <span class="trend-go">检索原文 →</span></div>
+</a>
 </div>
 </div>
 
@@ -244,24 +248,24 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">全球新闻媒体机构的 AI 应用实战案例</p>
 
   <div class="case-grid" id="case-cards-area">
-<div class="case-card">
+<a class="case-card" href="https://www.bing.com/search?q=site%3Aopenai.com+OpenAI%E8%AF%AD%E9%9F%B3%E4%BB%A3%E7%90%86%E9%A9%B1%E5%8A%A8%E6%B1%BD%E8%BD%A6%E8%B5%84%E8%AE%AF%E6%9C%8D%E5%8A%A1" target="_blank" rel="noopener noreferrer">
   <div class="case-org">Cars24</div>
   <h3>OpenAI语音代理驱动汽车资讯服务</h3>
   <p>通过AI语音助手处理百万级月均对话量，实现汽车评测、新闻播报等场景的7×24小时智能服务</p>
   <div class="case-tools"><span class="case-tool">语音交互</span><span class="case-tool">内容生成</span></div>
-</div>
-<div class="case-card">
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
+<a class="case-card" href="https://www.bing.com/search?q=%E7%81%B5%E7%8A%80Linx68%E9%94%AE%E7%9B%98AI%E5%88%9B%E4%BD%9C%E5%A5%97%E4%BB%B6" target="_blank" rel="noopener noreferrer">
   <div class="case-org">少数派×AKKO</div>
   <h3>灵犀Linx68键盘AI创作套件</h3>
   <p>整合AI写作、热点分析功能，支持实时生成文章框架与社交媒体文案，预售首日销量破10万台</p>
   <div class="case-tools"><span class="case-tool">硬件集成</span><span class="case-tool">创作工具</span></div>
-</div>
-<div class="case-card">
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
+<a class="case-card" href="https://www.bing.com/search?q=AI%E5%8E%9F%E7%94%9F%E5%AA%92%E4%BD%93%E5%AE%A2%E6%9C%8D%E7%B3%BB%E7%BB%9F" target="_blank" rel="noopener noreferrer">
   <div class="case-org">Deutsche Telekom</div>
   <h3>AI原生媒体客服系统</h3>
   <p>部署OpenAI企业版模型，实现多语种实时翻译、热点事件响应，客户满意度提升至92.3%</p>
   <div class="case-tools"><span class="case-tool">NLP</span><span class="case-tool">客户服务</span></div>
-</div>
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
 </div>
 </div>
 
@@ -273,18 +277,18 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">全球 AI 内容监管与版权最新法规动态</p>
 
   <div class="trend-grid" id="policy-cards-area">
-<div class="trend-card">
+<a class="trend-card" href="https://www.bing.com/search?q=site%3Aopenai.com+%E7%BE%8E%E5%9B%BDAI%E5%AE%89%E5%85%A8%E5%88%86%E7%BA%A7%E6%B3%95%E6%A1%88" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>美国AI安全分级法案</h3>
   <p>通过州级立法建立AI内容分级制度，要求传媒机构对AI生成内容强制标注来源与生成时间</p>
-  <div class="trend-source">📅 2026-07-21 · 来源 openai.com</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-07-21 · 来源 openai.com <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://hn.algolia.com/?q=%E6%AC%A7%E7%9B%9F%E7%94%9F%E6%88%90%E5%BC%8FAI%E5%86%85%E5%AE%B9%E6%A0%87%E8%AF%86%E4%BB%A4" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>欧盟生成式AI内容标识令</h3>
   <p>强制要求所有AI生成新闻、评论等传媒内容必须显示“AI生成”标识，违者最高罚款全球营收5%</p>
-  <div class="trend-source">📅 2026-07-21 · 来源 hnrss.org</div>
-</div>
+  <div class="trend-source">📅 2026-07-21 · 来源 hnrss.org <span class="trend-go">检索原文 →</span></div>
+</a>
 </div>
 </div>
 

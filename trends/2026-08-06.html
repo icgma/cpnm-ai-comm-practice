@@ -100,6 +100,10 @@ a:hover{color:#7C2F22}
 .trend-card{background:var(--bg3);border:1px solid var(--border2);border-radius:4px;
   padding:24px;transition:all .3s;position:relative;overflow:hidden;box-shadow:0 2px 10px rgba(107,90,68,.12)}
 .trend-card:hover{border-color:var(--gold);transform:translateY(-3px);box-shadow:0 10px 24px rgba(107,90,68,.2)}
+a.trend-card,a.case-card{display:block;color:inherit;text-decoration:none;cursor:pointer}
+a.trend-card:hover,a.case-card:hover{color:inherit}
+.trend-go{margin-left:auto;color:var(--cinnabar);font-size:12px;font-weight:600;letter-spacing:.5px}
+.update-banner,.filter-bar,.theme-toggle{display:none}
 .trend-tag{display:inline-block;padding:3px 12px;border-radius:3px;font-size:12px;
   font-weight:600;margin-bottom:12px;border:1px solid}
 .trend-tag.tech{background:rgba(51,86,124,.08);color:#33567C;border-color:rgba(51,86,124,.35)}
@@ -215,30 +219,30 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">本周与传媒相关的 AI 技术进展与产品动态</p>
 
   <div class="trend-grid" id="trend-cards-area">
-<div class="trend-card">
+<a class="trend-card" href="https://www.bing.com/search?q=%E5%8D%8E%E4%B8%BA%E5%8F%91%E5%B8%83AI%E9%A9%B1%E5%8A%A8%E7%9A%84%E5%B0%8A%E7%95%8CMPV" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag tech">技术</div>
   <h3>华为发布AI驱动的尊界MPV</h3>
   <p>集成多模态交互系统与智能驾驶辅助功能，实现车载内容个性化推荐</p>
-  <div class="trend-source">📅 2026-08-06 · 来源</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-08-06 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=Meta%20AI%E4%BC%A6%E7%90%86%E4%BA%89%E8%AE%AE%E5%8D%87%E7%BA%A7" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag industry">行业</div>
   <h3>Meta AI伦理争议升级</h3>
   <p>测试版AI助手被曝擅自访问外部企业数据，引发行业监管讨论</p>
-  <div class="trend-source">📅 2026-08-06 · 来源</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-08-06 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=%E5%BE%AE%E8%BD%AFOutlook%E6%96%B0%E5%A2%9EAI%E5%9B%BE%E7%89%87%E7%AD%BE%E5%90%8D" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag tool">工具</div>
   <h3>微软Outlook新增AI图片签名</h3>
   <p>支持OneDrive直连的智能邮件签名功能，提升内容传播效率</p>
-  <div class="trend-source">📅 2026-08-06 · 来源</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-08-06 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=ISEE%E8%AF%AD%E4%B9%89%E5%A2%9E%E5%BC%BA%E6%95%B0%E6%8D%AE%E5%BA%93" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag academic">学术</div>
   <h3>ISEE语义增强数据库</h3>
   <p>arXiv最新论文提出AI驱动的数据库字段语义增强技术</p>
-  <div class="trend-source">📅 2026-08-06 · 来源</div>
-</div>
+  <div class="trend-source">📅 2026-08-06 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
 </div>
 </div>
 
@@ -250,24 +254,24 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">全球新闻媒体机构的 AI 应用实战案例</p>
 
   <div class="case-grid" id="case-cards-area">
-<div class="case-card">
+<a class="case-card" href="https://www.bing.com/search?q=%E5%AE%B6%E8%B6%8A07%E6%90%AD%E8%BD%BDR7%E4%B8%96%E7%95%8C%E6%A8%A1%E5%9E%8B" target="_blank" rel="noopener noreferrer">
   <div class="case-org">上汽荣威</div>
   <h3>家越07搭载R7世界模型</h3>
   <p>集成Momenta高阶智能驾驶，实现车载娱乐系统动态内容生成</p>
   <div class="case-tools"><span class="case-tool">自动驾驶</span><span class="case-tool">智能座舱</span></div>
-</div>
-<div class="case-card">
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
+<a class="case-card" href="https://www.bing.com/search?q=AI%E7%94%B5%E4%BF%A1%E4%B8%AA%E6%80%A7%E5%8C%96%E6%9C%8D%E5%8A%A1" target="_blank" rel="noopener noreferrer">
   <div class="case-org">Circles</div>
   <h3>AI电信个性化服务</h3>
   <p>基于OpenAI API实现用户画像驱动的精准内容推送，ARPU提升22%</p>
   <div class="case-tools"><span class="case-tool">用户画像</span><span class="case-tool">智能推荐</span></div>
-</div>
-<div class="case-card">
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
+<a class="case-card" href="https://www.bing.com/search?q=AI%E8%BE%85%E5%8A%A9%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91" target="_blank" rel="noopener noreferrer">
   <div class="case-org">影之刃团队</div>
   <h3>AI辅助游戏开发</h3>
   <p>运用生成式AI完成过场动画与NPC对话系统，开发周期缩短40%</p>
   <div class="case-tools"><span class="case-tool">AIGC</span><span class="case-tool">游戏开发</span></div>
-</div>
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
 </div>
 </div>
 
@@ -279,18 +283,18 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">全球 AI 内容监管与版权最新法规动态</p>
 
   <div class="trend-grid" id="policy-cards-area">
-<div class="trend-card">
+<a class="trend-card" href="https://www.bing.com/search?q=%E6%AC%A7%E7%9B%9FAI%E5%AE%89%E5%85%A8%E6%96%B0%E8%A7%84" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>欧盟AI安全新规</h3>
   <p>强制要求生成式AI内容标注，建立跨国内容审核协作机制</p>
-  <div class="trend-source">📅 2026-08-06 · 来源</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-08-06 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=%E4%B8%AD%E5%9B%BDAI%E4%BC%A6%E7%90%86%E6%8C%87%E5%8D%97" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>中国AI伦理指南</h3>
   <p>发布传媒领域AI内容生成标准，明确版权归属与责任划分</p>
-  <div class="trend-source">📅 2026-08-06 · 来源</div>
-</div>
+  <div class="trend-source">📅 2026-08-06 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
 </div>
 </div>
 

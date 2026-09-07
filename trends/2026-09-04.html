@@ -100,6 +100,10 @@ a:hover{color:#7C2F22}
 .trend-card{background:var(--bg3);border:1px solid var(--border2);border-radius:4px;
   padding:24px;transition:all .3s;position:relative;overflow:hidden;box-shadow:0 2px 10px rgba(107,90,68,.12)}
 .trend-card:hover{border-color:var(--gold);transform:translateY(-3px);box-shadow:0 10px 24px rgba(107,90,68,.2)}
+a.trend-card,a.case-card{display:block;color:inherit;text-decoration:none;cursor:pointer}
+a.trend-card:hover,a.case-card:hover{color:inherit}
+.trend-go{margin-left:auto;color:var(--cinnabar);font-size:12px;font-weight:600;letter-spacing:.5px}
+.update-banner,.filter-bar,.theme-toggle{display:none}
 .trend-tag{display:inline-block;padding:3px 12px;border-radius:3px;font-size:12px;
   font-weight:600;margin-bottom:12px;border:1px solid}
 .trend-tag.tech{background:rgba(51,86,124,.08);color:#33567C;border-color:rgba(51,86,124,.35)}
@@ -215,30 +219,30 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">本周与传媒相关的 AI 技术进展与产品动态</p>
 
   <div class="trend-grid" id="trend-cards-area">
-<div class="trend-card">
+<a class="trend-card" href="https://www.bing.com/search?q=site%3Aopenai.com+OpenAI%E5%8F%91%E5%B8%83GPT-6%20Astra%E6%A8%A1%E5%9E%8B" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag tech">技术</div>
   <h3>OpenAI发布GPT-6 Astra模型</h3>
   <p>支持多模态内容生成与专业文档审阅，效率提升超50%。</p>
-  <div class="trend-source">📅 2026-09-04 · 来源</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-09-04 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=Meta%E5%8D%87%E7%BA%A7Muse%20Spark%201.3%E6%A8%A1%E5%9E%8B" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag tech">技术</div>
   <h3>Meta升级Muse Spark 1.3模型</h3>
   <p>优化创意内容生成能力，支持跨平台多语言协作创作。</p>
-  <div class="trend-source">📅 2026-09-04 · 来源</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-09-04 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=%E5%B7%A5%E4%BF%A1%E9%83%A8%E5%90%AF%E5%8A%A8%E5%8D%AB%E6%98%9F%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%B0%83%E8%AF%84%E4%BC%B0" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>工信部启动卫星网络协调评估</h3>
   <p>2026-2027年试行第三方机构裁决频率兼容争议。</p>
-  <div class="trend-source">📅 2026-09-04 · 来源</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-09-04 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=site%3Aopenai.com+OpenAI%E6%94%AF%E6%8C%81%E5%8A%A0%E5%B7%9EAI%E5%AE%89%E5%85%A8%E6%B3%95%E6%A1%88" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag tech">工具</div>
   <h3>OpenAI支持加州AI安全法案</h3>
   <p>推动青少年AI使用年龄分级与安全防护机制。</p>
-  <div class="trend-source">📅 2026-09-04 · 来源</div>
-</div>
+  <div class="trend-source">📅 2026-09-04 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
 </div>
 </div>
 
@@ -250,12 +254,12 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">全球新闻媒体机构的 AI 应用实战案例</p>
 
   <div class="case-grid" id="case-cards-area">
-<div class="case-card">
+<a class="case-card" href="https://www.bing.com/search?q=AI%E6%96%87%E6%A1%A3%E5%AE%A1%E9%98%85%E7%B3%BB%E7%BB%9F" target="_blank" rel="noopener noreferrer">
   <div class="case-org">Legora</div>
   <h3>AI文档审阅系统</h3>
   <p>利用GPT-6 Astra实现41份文档分钟级审查，准确率提升至99.8%。</p>
   <div class="case-tools"><span class="case-tool">文档审核</span><span class="case-tool">效率优化</span></div>
-</div>
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
 <div class="case-card">
   <div class="case-org">ATV Big Air Tour</div>
   <h3>体育营销自动化</h3>
@@ -285,18 +289,18 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">全球 AI 内容监管与版权最新法规动态</p>
 
   <div class="trend-grid" id="policy-cards-area">
-<div class="trend-card">
+<a class="trend-card" href="https://www.bing.com/search?q=%E5%B7%A5%E4%BF%A1%E9%83%A8%E5%8D%AB%E6%98%9F%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%B0%83%E8%AF%84%E4%BC%B0" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>工信部卫星网络协调评估</h3>
   <p>2026-2027年试行第三方机构裁决频率兼容争议，规范5G+6G内容传输。</p>
-  <div class="trend-source">📅 2026-09-04 · 来源</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-09-04 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=site%3Aopenai.com+OpenAI%E6%94%AF%E6%8C%81%E5%8A%A0%E5%B7%9EAI%E6%B3%95%E6%A1%88" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>OpenAI支持加州AI法案</h3>
   <p>推动建立青少年AI使用年龄分级与安全防护标准。</p>
-  <div class="trend-source">📅 2026-09-04 · 来源</div>
-</div>
+  <div class="trend-source">📅 2026-09-04 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
 </div>
 </div>
 

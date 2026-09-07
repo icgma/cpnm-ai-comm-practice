@@ -100,6 +100,10 @@ a:hover{color:#7C2F22}
 .trend-card{background:var(--bg3);border:1px solid var(--border2);border-radius:4px;
   padding:24px;transition:all .3s;position:relative;overflow:hidden;box-shadow:0 2px 10px rgba(107,90,68,.12)}
 .trend-card:hover{border-color:var(--gold);transform:translateY(-3px);box-shadow:0 10px 24px rgba(107,90,68,.2)}
+a.trend-card,a.case-card{display:block;color:inherit;text-decoration:none;cursor:pointer}
+a.trend-card:hover,a.case-card:hover{color:inherit}
+.trend-go{margin-left:auto;color:var(--cinnabar);font-size:12px;font-weight:600;letter-spacing:.5px}
+.update-banner,.filter-bar,.theme-toggle{display:none}
 .trend-tag{display:inline-block;padding:3px 12px;border-radius:3px;font-size:12px;
   font-weight:600;margin-bottom:12px;border:1px solid}
 .trend-tag.tech{background:rgba(51,86,124,.08);color:#33567C;border-color:rgba(51,86,124,.35)}
@@ -215,30 +219,30 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">本周与传媒相关的 AI 技术进展与产品动态</p>
 
   <div class="trend-grid" id="trend-cards-area">
-<div class="trend-card">
+<a class="trend-card" href="https://www.bing.com/search?q=Meta%E5%8F%91%E5%B8%83%E5%BC%80%E6%BA%90%E6%9C%AC%E5%9C%B0AI%E6%99%BA%E8%83%BD%E4%BD%93%E5%A4%A7%E6%A8%A1%E5%9E%8BMuse%20Glimmer" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag tech">技术</div>
   <h3>Meta发布开源本地AI智能体大模型Muse Glimmer</h3>
   <p>Meta推出开源本地AI智能体大模型，支持跨设备协作与多模态交互</p>
-  <div class="trend-source">📅 2026-08-11 · 来源</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-08-11 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=%E9%98%BF%E9%87%8C%E5%8D%83%E9%97%AE%E5%BC%80%E6%94%BE%E5%B9%B3%E5%8F%B0%E4%B8%8A%E7%BA%BF" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag industry">行业</div>
   <h3>阿里千问开放平台上线</h3>
   <p>提供企业级AI模型开发与部署服务，覆盖内容生成、数据分析等场景</p>
-  <div class="trend-source">📅 2026-08-11 · 来源</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-08-11 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=site%3Aopenai.com+OpenAI%E5%8F%91%E5%B8%83GPT-5.6-Cyber%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E6%A8%A1%E5%9E%8B" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag tool">工具</div>
   <h3>OpenAI发布GPT-5.6-Cyber网络安全模型</h3>
   <p>专为防御网络攻击设计，集成威胁检测与应急响应功能</p>
-  <div class="trend-source">📅 2026-08-11 · 来源</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-08-11 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=site%3Aopenai.com+OpenAI%E8%87%B4%E4%BF%A1%E5%BE%97%E5%B7%9E%E5%B7%9E%E9%95%BF%E6%8E%A8%E5%8A%A8AI%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD%E8%A7%84%E8%8C%83" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>OpenAI致信得州州长推动AI基础设施规范</h3>
   <p>提出数据隐私、算法透明度及能源消耗的监管框架建议</p>
-  <div class="trend-source">📅 2026-08-11 · 来源</div>
-</div>
+  <div class="trend-source">📅 2026-08-11 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
 </div>
 </div>
 
@@ -250,24 +254,24 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">全球新闻媒体机构的 AI 应用实战案例</p>
 
   <div class="case-grid" id="case-cards-area">
-<div class="case-card">
+<a class="case-card" href="https://www.bing.com/search?q=AI%E4%BC%98%E5%8C%96%E5%AE%A2%E6%88%B7%E6%97%85%E7%A8%8B" target="_blank" rel="noopener noreferrer">
   <div class="case-org">Virgin Atlantic</div>
   <h3>AI优化客户旅程</h3>
   <p>利用ChatGPT Work加速市场调研与产品规划决策</p>
   <div class="case-tools"><span class="case-tool">客户服务</span><span class="case-tool">数据分析</span></div>
-</div>
-<div class="case-card">
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
+<a class="case-card" href="https://www.bing.com/search?q=AI%E7%A8%8E%E5%8A%A1%E5%92%A8%E8%AF%A2%E6%9C%8D%E5%8A%A1" target="_blank" rel="noopener noreferrer">
   <div class="case-org">HSP GRUPPE</div>
   <h3>AI税务咨询服务</h3>
   <p>通过ChatGPT Enterprise实现税务文件自动化分析与合规审查</p>
   <div class="case-tools"><span class="case-tool">金融科技</span><span class="case-tool">流程优化</span></div>
-</div>
-<div class="case-card">
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
+<a class="case-card" href="https://www.bing.com/search?q=AI%E9%A9%B1%E5%8A%A8%E8%90%A5%E9%94%80%E6%B5%81%E7%A8%8B" target="_blank" rel="noopener noreferrer">
   <div class="case-org">Zapier</div>
   <h3>AI驱动营销流程</h3>
   <p>借助ChatGPT Work减少营销漏斗转化流失率</p>
   <div class="case-tools"><span class="case-tool">营销自动化</span><span class="case-tool">客户运营</span></div>
-</div>
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
 </div>
 </div>
 
@@ -279,18 +283,18 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">全球 AI 内容监管与版权最新法规动态</p>
 
   <div class="trend-grid" id="policy-cards-area">
-<div class="trend-card">
+<a class="trend-card" href="https://www.bing.com/search?q=%E5%BE%97%E5%85%8B%E8%90%A8%E6%96%AF%E5%B7%9EAI%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD%E7%9B%91%E7%AE%A1%E6%A1%86%E6%9E%B6" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>得克萨斯州AI基础设施监管框架</h3>
   <p>OpenAI提出数据本地化存储、算法审计与能耗标准建议</p>
-  <div class="trend-source">📅 2026-08-11 · 来源</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-08-11 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=%E5%A4%AE%E8%A7%86%E6%9B%9D%E5%85%89%E9%85%92%E5%BA%97%E8%AF%84%E7%BA%A7AI%E6%A0%87%E8%AF%86%E4%B9%B1%E8%B1%A1" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>央视曝光酒店评级AI标识乱象</h3>
   <p>部分酒店利用AI生成虚假评分影响消费者决策</p>
-  <div class="trend-source">📅 2026-08-11 · 来源</div>
-</div>
+  <div class="trend-source">📅 2026-08-11 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
 </div>
 </div>
 

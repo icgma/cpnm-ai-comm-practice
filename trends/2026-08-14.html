@@ -100,6 +100,10 @@ a:hover{color:#7C2F22}
 .trend-card{background:var(--bg3);border:1px solid var(--border2);border-radius:4px;
   padding:24px;transition:all .3s;position:relative;overflow:hidden;box-shadow:0 2px 10px rgba(107,90,68,.12)}
 .trend-card:hover{border-color:var(--gold);transform:translateY(-3px);box-shadow:0 10px 24px rgba(107,90,68,.2)}
+a.trend-card,a.case-card{display:block;color:inherit;text-decoration:none;cursor:pointer}
+a.trend-card:hover,a.case-card:hover{color:inherit}
+.trend-go{margin-left:auto;color:var(--cinnabar);font-size:12px;font-weight:600;letter-spacing:.5px}
+.update-banner,.filter-bar,.theme-toggle{display:none}
 .trend-tag{display:inline-block;padding:3px 12px;border-radius:3px;font-size:12px;
   font-weight:600;margin-bottom:12px;border:1px solid}
 .trend-tag.tech{background:rgba(51,86,124,.08);color:#33567C;border-color:rgba(51,86,124,.35)}
@@ -215,30 +219,30 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">本周与传媒相关的 AI 技术进展与产品动态</p>
 
   <div class="trend-grid" id="trend-cards-area">
-<div class="trend-card">
+<a class="trend-card" href="https://www.bing.com/search?q=%E5%BC%80%E6%BA%90AI%20Agent%E6%A1%86%E6%9E%B6%E7%94%9F%E6%80%81%E5%8A%A0%E9%80%9F%E5%8F%91%E5%B1%95" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag tech">技术</div>
   <h3>开源AI Agent框架生态加速发展</h3>
   <p>DeepSeek Harness及配套插件生态上线，阿里千问开放平台推出智能体接口，Brave/Firefox浏览器延续uBlock Origin支持</p>
-  <div class="trend-source">📅 2026-08-14 · 来源</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-08-14 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=%E5%A4%9A%E6%A8%A1%E6%80%81%E6%99%BA%E8%83%BD%E4%BD%93%E8%AE%AD%E7%BB%83%E9%9B%86%E7%BE%A4%E7%AA%81%E7%A0%B4" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag tech">技术</div>
   <h3>多模态智能体训练集群突破</h3>
   <p>SpaceXAI建成全球最强AI训练集群，马斯克宣布2027年规模扩大10倍，覆盖传媒内容生成全流程</p>
-  <div class="trend-source">📅 2026-08-14 · 来源</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-08-14 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=AI%E5%8E%9F%E7%94%9F%E5%B7%A5%E4%BD%9C%E6%B5%81%E9%87%8D%E6%9E%84%E4%BC%A0%E5%AA%92%E7%94%9F%E4%BA%A7" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag industry">行业</div>
   <h3>AI原生工作流重构传媒生产</h3>
   <p>RingCentral应用ChatGPT+Codex开发智能内容生产系统，效率提升300%，覆盖选题策划到分发全链路</p>
-  <div class="trend-source">📅 2026-08-14 · 来源</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-08-14 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=AI%E8%88%86%E6%83%85%E7%9B%91%E6%B5%8B%E7%B3%BB%E7%BB%9F%E5%9B%BD%E4%BA%A7%E5%8C%96%E7%AA%81%E7%A0%B4" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag tool">工具</div>
   <h3>AI舆情监测系统国产化突破</h3>
   <p>杭州警方破获自媒体操控舆论案件，涉账号粉丝量超2000万，暴露AI内容审核工具识别盲区</p>
-  <div class="trend-source">📅 2026-08-14 · 来源</div>
-</div>
+  <div class="trend-source">📅 2026-08-14 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
 </div>
 </div>
 
@@ -250,24 +254,24 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">全球新闻媒体机构的 AI 应用实战案例</p>
 
   <div class="case-grid" id="case-cards-area">
-<div class="case-card">
+<a class="case-card" href="https://www.bing.com/search?q=%E5%85%A8%E7%90%83%E9%A6%96%E4%B8%AAAI%E8%AE%AD%E7%BB%83%E9%9B%86%E7%BE%A4%E5%95%86%E4%B8%9A%E5%8C%96%E8%90%BD%E5%9C%B0" target="_blank" rel="noopener noreferrer">
   <div class="case-org">SpaceXAI</div>
   <h3>全球首个AI训练集群商业化落地</h3>
   <p>为30+传媒机构提供多模态内容生成服务，支持4K级视频剧本实时生成</p>
   <div class="case-tools"><span class="case-tool">多模态</span><span class="case-tool">训练集群</span></div>
-</div>
-<div class="case-card">
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
+<a class="case-card" href="https://www.bing.com/search?q=ChatGPT%20Work%E4%BC%A0%E5%AA%92%E8%A1%8C%E4%B8%9A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88" target="_blank" rel="noopener noreferrer">
   <div class="case-org">OpenAI</div>
   <h3>ChatGPT Work传媒行业解决方案</h3>
   <p>联合10家主流媒体建立AI内容审核模型，错误率从12%降至1.8%</p>
   <div class="case-tools"><span class="case-tool">内容审核</span><span class="case-tool">工作流</span></div>
-</div>
-<div class="case-card">
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
+<a class="case-card" href="https://www.bing.com/search?q=Referee.Chat%E6%99%BA%E8%83%BD%E5%AE%A1%E7%A8%BF%E7%B3%BB%E7%BB%9F" target="_blank" rel="noopener noreferrer">
   <div class="case-org">Hnrss.org</div>
   <h3>Referee.Chat智能审稿系统</h3>
   <p>AI评审团完成12万篇论文初筛，准确率达89%，效率提升50倍</p>
   <div class="case-tools"><span class="case-tool">学术评审</span><span class="case-tool">AI</span></div>
-</div>
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
 </div>
 </div>
 
@@ -279,18 +283,18 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">全球 AI 内容监管与版权最新法规动态</p>
 
   <div class="trend-grid" id="policy-cards-area">
-<div class="trend-card">
+<a class="trend-card" href="https://www.bing.com/search?q=AI%E5%86%85%E5%AE%B9%E7%94%9F%E6%88%90%E7%89%88%E6%9D%83%E5%BD%92%E5%B1%9E%E4%BA%89%E8%AE%AE" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>AI内容生成版权归属争议</h3>
   <p>杭州法院首例判决认定AI生成内容版权归人类创作者，引发行业合规焦虑</p>
-  <div class="trend-source">📅 2026-08-14 · 来源</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-08-14 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=site%3Aopenai.com+OpenAI%E5%BE%97%E5%B7%9EAI%E8%AE%BE%E6%96%BD%E6%89%BF%E8%AF%BA%E4%B9%A6" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>OpenAI得州AI设施承诺书</h3>
   <p>OpenAI向得州政府提交AI算力部署计划，承诺不开发实时人脸识别系统</p>
-  <div class="trend-source">📅 2026-08-14 · 来源</div>
-</div>
+  <div class="trend-source">📅 2026-08-14 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
 </div>
 </div>
 

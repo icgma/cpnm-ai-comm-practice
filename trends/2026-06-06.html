@@ -100,6 +100,10 @@ a:hover{color:#7C2F22}
 .trend-card{background:var(--bg3);border:1px solid var(--border2);border-radius:4px;
   padding:24px;transition:all .3s;position:relative;overflow:hidden;box-shadow:0 2px 10px rgba(107,90,68,.12)}
 .trend-card:hover{border-color:var(--gold);transform:translateY(-3px);box-shadow:0 10px 24px rgba(107,90,68,.2)}
+a.trend-card,a.case-card{display:block;color:inherit;text-decoration:none;cursor:pointer}
+a.trend-card:hover,a.case-card:hover{color:inherit}
+.trend-go{margin-left:auto;color:var(--cinnabar);font-size:12px;font-weight:600;letter-spacing:.5px}
+.update-banner,.filter-bar,.theme-toggle{display:none}
 .trend-tag{display:inline-block;padding:3px 12px;border-radius:3px;font-size:12px;
   font-weight:600;margin-bottom:12px;border:1px solid}
 .trend-tag.tech{background:rgba(51,86,124,.08);color:#33567C;border-color:rgba(51,86,124,.35)}
@@ -215,30 +219,30 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">本周与传媒相关的 AI 技术进展与产品动态</p>
 
   <div class="trend-grid" id="trend-cards-area">
-<div class="trend-card">
+<a class="trend-card" href="https://www.bing.com/search?q=site%3Aopenai.com+OpenAI%E5%8F%91%E5%B8%83GPT-Rosalind%E5%A2%9E%E5%BC%BA%E7%94%9F%E7%89%A9%E5%8C%BB%E5%AD%A6%E7%A0%94%E7%A9%B6" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag tech">技术</div>
   <h3>OpenAI发布GPT-Rosalind增强生物医学研究</h3>
   <p>通过增强的生物学推理和药物化学能力，加速生命科学领域研究突破。</p>
-  <div class="trend-source">📅 2026-06-06 · 来源openai.com</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-06-06 · 来源openai.com <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.ithome.com/search.htm?search=AI%E9%A9%B1%E5%8A%A8%E6%B8%B8%E6%88%8F%E5%86%85%E5%AE%B9%E5%88%9B%E4%BD%9C%E9%9D%A9%E5%91%BD" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag industry">行业</div>
   <h3>AI驱动游戏内容创作革命</h3>
   <p>Remedy工作室《控制：共振》等案例显示AI生成异象曼哈顿等创新游戏场景。</p>
-  <div class="trend-source">📅 2026-06-06 · 来源www.ithome.com</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-06-06 · 来源www.ithome.com <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://hn.algolia.com/?q=EasyTier%E5%8E%BB%E4%B8%AD%E5%BF%83%E5%8C%96%E7%BB%84%E7%BD%91%E5%B9%B3%E5%8F%B0" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag tool">工具</div>
   <h3>EasyTier去中心化组网平台</h3>
   <p>全平台部署的替代方案，提供更灵活的异构设备组网能力。</p>
-  <div class="trend-source">📅 2026-06-06 · 来源hnrss.org</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-06-06 · 来源hnrss.org <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=site%3Aopenai.com+OpenAI%E5%85%A8%E7%90%83AI%E5%AE%89%E5%85%A8%E6%94%BF%E7%AD%96%E6%A1%86%E6%9E%B6" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>OpenAI全球AI安全政策框架</h3>
   <p>涵盖青年保护、劳动力转型等7大领域的治理蓝图。</p>
-  <div class="trend-source">📅 2026-06-06 · 来源openai.com</div>
-</div>
+  <div class="trend-source">📅 2026-06-06 · 来源openai.com <span class="trend-go">检索原文 →</span></div>
+</a>
 </div>
 </div>
 
@@ -250,24 +254,24 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">全球新闻媒体机构的 AI 应用实战案例</p>
 
   <div class="case-grid" id="case-cards-area">
-<div class="case-card">
+<a class="case-card" href="https://www.bing.com/search?q=Travelers%E6%99%BA%E8%83%BD%E7%90%86%E8%B5%94%E7%B3%BB%E7%BB%9F" target="_blank" rel="noopener noreferrer">
   <div class="case-org">OpenAI</div>
   <h3>Travelers智能理赔系统</h3>
   <p>全国范围部署AI理赔助手，提升保险服务效率30%。</p>
   <div class="case-tools"><span class="case-tool">AI agents</span><span class="case-tool">自然语言处理</span></div>
-</div>
-<div class="case-card">
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
+<a class="case-card" href="https://www.bing.com/search?q=%E3%80%8A%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C%EF%BC%9A%E5%9C%B0%E4%B8%8B%E5%9F%8E%E3%80%8BAI%E7%BB%AD%E4%BD%9C" target="_blank" rel="noopener noreferrer">
   <div class="case-org">Hyrule Tech</div>
   <h3>《我的世界：地下城》AI续作</h3>
   <p>利用AI生成10款DLC场景，实现史低定价71元。</p>
   <div class="case-tools"><span class="case-tool">生成式AI</span><span class="case-tool">游戏开发</span></div>
-</div>
-<div class="case-card">
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
+<a class="case-card" href="https://www.bing.com/search?q=%E9%AB%98%E8%80%83%E6%99%BA%E8%83%BD%E6%B8%A9%E6%8E%A7%E9%A4%90%E7%AE%B1" target="_blank" rel="noopener noreferrer">
   <div class="case-org">京东</div>
   <h3>高考智能温控餐箱</h3>
   <p>首次投入AI温控系统，保障15万骑手应急物资配送。</p>
   <div class="case-tools"><span class="case-tool">边缘计算</span><span class="case-tool">物联网</span></div>
-</div>
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
 </div>
 </div>
 
@@ -279,18 +283,18 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">全球 AI 内容监管与版权最新法规动态</p>
 
   <div class="trend-grid" id="policy-cards-area">
-<div class="trend-card">
+<a class="trend-card" href="https://hn.algolia.com/?q=%E7%BE%8E%E5%9B%BD%E5%89%8D%E6%B2%BFAI%E8%81%94%E9%82%A6%E6%A1%86%E6%9E%B6" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>美国前沿AI联邦框架</h3>
   <p>提案设立国家级治理机构，规范ChatGPT等生成式AI应用。</p>
-  <div class="trend-source">📅 2026-06-06 · 来源hnrss.org</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-06-06 · 来源hnrss.org <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=site%3Aruanyifeng.com+%E6%AC%A7%E7%9B%9FAI%E7%89%88%E6%9D%83%E4%BF%9D%E6%8A%A4%E6%96%B0%E8%A7%84" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>欧盟AI版权保护新规</h3>
   <p>要求生成内容明确标注AI参与度，建立创作者身份验证系统。</p>
-  <div class="trend-source">📅 2026-06-06 · 来源www.ruanyifeng.com</div>
-</div>
+  <div class="trend-source">📅 2026-06-06 · 来源www.ruanyifeng.com <span class="trend-go">检索原文 →</span></div>
+</a>
 </div>
 </div>
 

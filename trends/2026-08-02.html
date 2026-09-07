@@ -100,6 +100,10 @@ a:hover{color:#7C2F22}
 .trend-card{background:var(--bg3);border:1px solid var(--border2);border-radius:4px;
   padding:24px;transition:all .3s;position:relative;overflow:hidden;box-shadow:0 2px 10px rgba(107,90,68,.12)}
 .trend-card:hover{border-color:var(--gold);transform:translateY(-3px);box-shadow:0 10px 24px rgba(107,90,68,.2)}
+a.trend-card,a.case-card{display:block;color:inherit;text-decoration:none;cursor:pointer}
+a.trend-card:hover,a.case-card:hover{color:inherit}
+.trend-go{margin-left:auto;color:var(--cinnabar);font-size:12px;font-weight:600;letter-spacing:.5px}
+.update-banner,.filter-bar,.theme-toggle{display:none}
 .trend-tag{display:inline-block;padding:3px 12px;border-radius:3px;font-size:12px;
   font-weight:600;margin-bottom:12px;border:1px solid}
 .trend-tag.tech{background:rgba(51,86,124,.08);color:#33567C;border-color:rgba(51,86,124,.35)}
@@ -215,30 +219,30 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">本周与传媒相关的 AI 技术进展与产品动态</p>
 
   <div class="trend-grid" id="trend-cards-area">
-<div class="trend-card">
+<a class="trend-card" href="https://sspai.com/search/article?q=AI%E7%94%9F%E6%88%90%E4%BC%A0%E7%BB%9F%E6%96%87%E5%8C%96%E6%95%B0%E5%AD%97%E5%9C%B0%E5%9B%BE" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag tech">技术</div>
   <h3>AI生成传统文化数字地图</h3>
   <p>通过AI技术将《诗经》地理信息与现代地图结合，实现古籍内容的可视化呈现。</p>
-  <div class="trend-source">📅 2026-08-02 · 来源sspai.com</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-08-02 · 来源sspai.com <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=site%3Aopenai.com+%E5%AE%9E%E6%97%B6AI%E8%AF%AD%E9%9F%B3%E4%BA%A4%E4%BA%92%E7%B3%BB%E7%BB%9F" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag tool">工具</div>
   <h3>实时AI语音交互系统</h3>
   <p>基于GPT-Realtime的24/7多语言零售客服系统，支持实时语音对话与复杂指令处理。</p>
-  <div class="trend-source">📅 2026-08-02 · 来源openai.com</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-08-02 · 来源openai.com <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.ithome.com/search.htm?search=%E6%B8%B8%E6%88%8F%E7%A7%92%E5%90%AF%E7%A7%92%E5%BC%80%E6%8A%80%E6%9C%AF" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag industry">行业</div>
   <h3>游戏秒启秒开技术</h3>
   <p>HarmonyOS 7通过AI优化游戏启动流程，实现《原神》等游戏毫秒级加载。</p>
-  <div class="trend-source">📅 2026-08-02 · 来源ithome.com</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-08-02 · 来源ithome.com <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.ithome.com/search.htm?search=AI%E5%86%85%E5%AE%B9%E7%89%88%E6%9D%83%E7%9B%91%E7%AE%A1%E5%8D%87%E7%BA%A7" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>AI内容版权监管升级</h3>
   <p>中国电信规范AI生成内容分发渠道，强化原创内容版权保护机制。</p>
-  <div class="trend-source">📅 2026-08-02 · 来源ithome.com</div>
-</div>
+  <div class="trend-source">📅 2026-08-02 · 来源ithome.com <span class="trend-go">检索原文 →</span></div>
+</a>
 </div>
 </div>
 
@@ -250,30 +254,30 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">全球新闻媒体机构的 AI 应用实战案例</p>
 
   <div class="case-grid" id="case-cards-area">
-<div class="case-card">
+<a class="case-card" href="https://www.bing.com/search?q=AI%E3%80%8A%E8%AF%97%E7%BB%8F%E3%80%8B%E5%B1%B1%E6%B2%B3%E5%9B%BE" target="_blank" rel="noopener noreferrer">
   <div class="case-org">少数派社区</div>
   <h3>AI《诗经》山河图</h3>
   <p>利用AI技术复原《诗经》地理信息，生成交互式文化探索地图。</p>
   <div class="case-tools"><span class="case-tool">地理信息AI</span><span class="case-tool">古籍数字化</span></div>
-</div>
-<div class="case-card">
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
+<a class="case-card" href="https://www.bing.com/search?q=24/7%E9%9B%B6%E5%94%AEAI%E5%8A%A9%E6%89%8B" target="_blank" rel="noopener noreferrer">
   <div class="case-org">avatarin</div>
   <h3>24/7零售AI助手</h3>
   <p>基于GPT-Realtime构建的 multilingual 客服系统，支持复杂指令处理。</p>
   <div class="case-tools"><span class="case-tool">实时AI</span><span class="case-tool">多语言支持</span></div>
-</div>
-<div class="case-card">
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
+<a class="case-card" href="https://www.bing.com/search?q=%E9%B8%BF%E8%92%99%E6%B8%B8%E6%88%8F%E4%BC%98%E5%8C%96%E7%B3%BB%E7%BB%9F" target="_blank" rel="noopener noreferrer">
   <div class="case-org">华为</div>
   <h3>鸿蒙游戏优化系统</h3>
   <p>通过AI算法优化游戏启动流程，实现《原神》等游戏秒级加载。</p>
   <div class="case-tools"><span class="case-tool">鸿蒙OS</span><span class="case-tool">游戏AI优化</span></div>
-</div>
-<div class="case-card">
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
+<a class="case-card" href="https://www.bing.com/search?q=%E5%AD%A6%E6%9C%AF%E7%A0%94%E7%A9%B6%E5%8A%A0%E9%80%9F%E8%AE%A1%E5%88%92" target="_blank" rel="noopener noreferrer">
   <div class="case-org">OpenAI</div>
   <h3>学术研究加速计划</h3>
   <p>为100,000名研究人员提供免费ChatGPT高级模型访问权限。</p>
   <div class="case-tools"><span class="case-tool">学术AI</span><span class="case-tool">模型优化</span></div>
-</div>
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
 </div>
 </div>
 
@@ -285,18 +289,18 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">全球 AI 内容监管与版权最新法规动态</p>
 
   <div class="trend-grid" id="policy-cards-area">
-<div class="trend-card">
+<a class="trend-card" href="https://www.ithome.com/search.htm?search=AI%E5%86%85%E5%AE%B9%E7%89%88%E6%9D%83%E7%9B%91%E7%AE%A1%E5%8D%87%E7%BA%A7" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>AI内容版权监管升级</h3>
   <p>中国电信规范AI生成内容分发渠道，强化原创内容版权保护机制。</p>
-  <div class="trend-source">📅 2026-08-02 · 来源ithome.com</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-08-02 · 来源ithome.com <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=site%3Aopenai.com+%E6%AC%A7%E7%9B%9FAI%E8%B4%A3%E4%BB%BB%E6%A1%86%E6%9E%B6" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>欧盟AI责任框架</h3>
   <p>OpenAI公布欧洲版AI安全与透明度标准，涵盖模型溯源与伦理审查。</p>
-  <div class="trend-source">📅 2026-08-02 · 来源openai.com</div>
-</div>
+  <div class="trend-source">📅 2026-08-02 · 来源openai.com <span class="trend-go">检索原文 →</span></div>
+</a>
 </div>
 </div>
 

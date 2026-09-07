@@ -100,6 +100,10 @@ a:hover{color:#7C2F22}
 .trend-card{background:var(--bg3);border:1px solid var(--border2);border-radius:4px;
   padding:24px;transition:all .3s;position:relative;overflow:hidden;box-shadow:0 2px 10px rgba(107,90,68,.12)}
 .trend-card:hover{border-color:var(--gold);transform:translateY(-3px);box-shadow:0 10px 24px rgba(107,90,68,.2)}
+a.trend-card,a.case-card{display:block;color:inherit;text-decoration:none;cursor:pointer}
+a.trend-card:hover,a.case-card:hover{color:inherit}
+.trend-go{margin-left:auto;color:var(--cinnabar);font-size:12px;font-weight:600;letter-spacing:.5px}
+.update-banner,.filter-bar,.theme-toggle{display:none}
 .trend-tag{display:inline-block;padding:3px 12px;border-radius:3px;font-size:12px;
   font-weight:600;margin-bottom:12px;border:1px solid}
 .trend-tag.tech{background:rgba(51,86,124,.08);color:#33567C;border-color:rgba(51,86,124,.35)}
@@ -215,24 +219,24 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">本周与传媒相关的 AI 技术进展与产品动态</p>
 
   <div class="trend-grid" id="trend-cards-area">
-<div class="trend-card">
+<a class="trend-card" href="https://www.bing.com/search?q=site%3Aopenai.com+OpenAI%20Codex%E5%B7%A5%E5%85%B7%E6%89%A9%E5%B1%95%E5%BA%94%E7%94%A8" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag tech">技术</div>
   <h3>OpenAI Codex工具扩展应用</h3>
   <p>OpenAI推出Codex插件生态，覆盖分析师、设计师等职业场景，实现AI辅助全流程生产力工具整合</p>
-  <div class="trend-source">📅 2026-06-04 · 来源</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-06-04 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=%E9%AB%98%E8%B4%A8%E9%87%8FToken%E6%9C%8D%E5%8A%A1%E8%83%BD%E5%8A%9B%E5%BB%BA%E8%AE%BE" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag industry">行业</div>
   <h3>高质量Token服务能力建设</h3>
   <p>中国信通院启动Token服务能力攀登计划，推动AI基础设施与数字金融安全融合</p>
-  <div class="trend-source">📅 2026-06-04 · 来源</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-06-04 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=AI%E5%8E%9F%E7%94%9F%E5%B7%A5%E5%85%B7%E9%9B%86%E5%8F%91%E5%B1%95" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag tool">工具</div>
   <h3>AI原生工具集发展</h3>
   <p>Pixel Text等原生工具通过AI原生交互设计，重构数字内容创作工作流</p>
-  <div class="trend-source">📅 2026-06-04 · 来源</div>
-</div>
+  <div class="trend-source">📅 2026-06-04 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
 </div>
 </div>
 
@@ -244,24 +248,24 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">全球新闻媒体机构的 AI 应用实战案例</p>
 
   <div class="case-grid" id="case-cards-area">
-<div class="case-card">
+<a class="case-card" href="https://www.bing.com/search?q=AI%E7%90%86%E8%B5%94%E5%8A%A9%E6%89%8B%E5%85%A8%E5%9B%BD%E9%83%A8%E7%BD%B2" target="_blank" rel="noopener noreferrer">
   <div class="case-org">Travelers公司</div>
   <h3>AI理赔助手全国部署</h3>
   <p>与OpenAI合作开发智能理赔系统，实现保险服务全流程自动化</p>
   <div class="case-tools"><span class="case-tool">保险科技</span><span class="case-tool">自然语言处理</span></div>
-</div>
-<div class="case-card">
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
+<a class="case-card" href="https://www.bing.com/search?q=Hermes%20Desktop%E6%A1%8C%E9%9D%A2%E7%AB%AF%E5%8F%91%E5%B8%83" target="_blank" rel="noopener noreferrer">
   <div class="case-org">Nous Research</div>
   <h3>Hermes Desktop桌面端发布</h3>
   <p>支持多系统部署的AI对话桌面应用，实现跨平台智能交互</p>
   <div class="case-tools"><span class="case-tool">多模态AI</span><span class="case-tool">跨平台开发</span></div>
-</div>
-<div class="case-card">
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
+<a class="case-card" href="https://www.bing.com/search?q=Y28%E7%94%B5%E7%AB%9E%E6%98%BE%E7%A4%BA%E5%99%A8%E9%87%8F%E4%BA%A7" target="_blank" rel="noopener noreferrer">
   <div class="case-org">微星科技</div>
   <h3>Y28电竞显示器量产</h3>
   <p>搭载第四代W-OLED面板，通过AI动态刷新率调节提升视觉体验</p>
   <div class="case-tools"><span class="case-tool">显示技术</span><span class="case-tool">边缘计算</span></div>
-</div>
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
 </div>
 </div>
 
@@ -273,18 +277,18 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">全球 AI 内容监管与版权最新法规动态</p>
 
   <div class="trend-grid" id="policy-cards-area">
-<div class="trend-card">
+<a class="trend-card" href="https://www.bing.com/search?q=%E6%AC%A7%E7%9B%9F%E4%BA%91%E4%B8%8EAI%E5%8F%91%E5%B1%95%E6%B3%95%E6%A1%88" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>欧盟云与AI发展法案</h3>
   <p>确立AI系统透明化标准，要求公共项目AI训练数据本地化存储</p>
-  <div class="trend-source">📅 2026-06-04 · 来源</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-06-04 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=%E7%BE%8E%E5%9B%BDAI%E8%A1%8C%E6%94%BF%E5%91%BD%E4%BB%A4" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>美国AI行政命令</h3>
   <p>要求企业向政府开放早期AI模型，建立风险预警机制</p>
-  <div class="trend-source">📅 2026-06-04 · 来源</div>
-</div>
+  <div class="trend-source">📅 2026-06-04 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
 </div>
 </div>
 

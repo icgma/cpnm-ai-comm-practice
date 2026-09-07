@@ -100,6 +100,10 @@ a:hover{color:#7C2F22}
 .trend-card{background:var(--bg3);border:1px solid var(--border2);border-radius:4px;
   padding:24px;transition:all .3s;position:relative;overflow:hidden;box-shadow:0 2px 10px rgba(107,90,68,.12)}
 .trend-card:hover{border-color:var(--gold);transform:translateY(-3px);box-shadow:0 10px 24px rgba(107,90,68,.2)}
+a.trend-card,a.case-card{display:block;color:inherit;text-decoration:none;cursor:pointer}
+a.trend-card:hover,a.case-card:hover{color:inherit}
+.trend-go{margin-left:auto;color:var(--cinnabar);font-size:12px;font-weight:600;letter-spacing:.5px}
+.update-banner,.filter-bar,.theme-toggle{display:none}
 .trend-tag{display:inline-block;padding:3px 12px;border-radius:3px;font-size:12px;
   font-weight:600;margin-bottom:12px;border:1px solid}
 .trend-tag.tech{background:rgba(51,86,124,.08);color:#33567C;border-color:rgba(51,86,124,.35)}
@@ -215,30 +219,30 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">本周与传媒相关的 AI 技术进展与产品动态</p>
 
   <div class="trend-grid" id="trend-cards-area">
-<div class="trend-card">
+<a class="trend-card" href="https://www.bing.com/search?q=%E5%8A%A8%E6%80%81%E5%BA%94%E7%94%A8%E7%BD%91%E6%A0%BC%E4%B8%8ELiquid%20Glass%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag tech">技术</div>
   <h3>动态应用网格与Liquid Glass微调技术</h3>
   <p>watchOS 27引入动态应用网格布局和界面材质优化方案</p>
-  <div class="trend-source">📅 2026-06-18 · 来源：具透</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-06-18 · 来源：具透 <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=site%3Aopenai.com+AI%20chemist%E8%8D%AF%E7%89%A9%E7%A0%94%E5%8F%91%E7%AA%81%E7%A0%B4" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag tech">技术</div>
   <h3>AI chemist药物研发突破</h3>
   <p>OpenAI与Molecule.one合作实现AI化学家优化关键药物合成反应</p>
-  <div class="trend-source">📅 2026-06-18 · 来源：OpenAI</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-06-18 · 来源：OpenAI <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.ithome.com/search.htm?search=%E8%8B%B1%E5%9B%BD%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95%E9%80%8F%E6%98%8E%E5%BA%A6%E6%95%B4%E6%94%B9%E4%BB%A4" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>英国搜索算法透明度整改令</h3>
   <p>英国CMA要求谷歌6个月内提升搜索排名算法透明度</p>
-  <div class="trend-source">📅 2026-06-18 · 来源：IT之家</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-06-18 · 来源：IT之家 <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.ithome.com/search.htm?search=%E6%B1%89%E7%8E%8BClear7C%E5%BD%A9%E8%89%B2%E7%94%B5%E7%BA%B8%E4%B9%A6" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag industry">行业</div>
   <h3>汉王Clear7C彩色电纸书</h3>
   <p>7英寸Kaleido3墨水屏支持300PPI分辨率与彩色显示</p>
-  <div class="trend-source">📅 2026-06-18 · 来源：IT之家</div>
-</div>
+  <div class="trend-source">📅 2026-06-18 · 来源：IT之家 <span class="trend-go">检索原文 →</span></div>
+</a>
 </div>
 </div>
 
@@ -250,18 +254,18 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">全球新闻媒体机构的 AI 应用实战案例</p>
 
   <div class="case-grid" id="case-cards-area">
-<div class="case-card">
+<a class="case-card" href="https://www.bing.com/search?q=AI%E5%8C%96%E5%AD%A6%E5%AE%B6%E8%8D%AF%E7%89%A9%E5%90%88%E6%88%90" target="_blank" rel="noopener noreferrer">
   <div class="case-org">OpenAI</div>
   <h3>AI化学家药物合成</h3>
   <p>GPT-5.4优化关键药物合成反应效率</p>
   <div class="case-tools"><span class="case-tool">药物研发</span><span class="case-tool">化学计算</span></div>
-</div>
-<div class="case-card">
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
+<a class="case-card" href="https://www.bing.com/search?q=Clear7C%E7%94%B5%E7%BA%B8%E4%B9%A6" target="_blank" rel="noopener noreferrer">
   <div class="case-org">汉王科技</div>
   <h3>Clear7C电纸书</h3>
   <p>彩色墨水屏实现1949元价位段彩色阅读体验</p>
   <div class="case-tools"><span class="case-tool">电子阅读</span><span class="case-tool">墨水屏技术</span></div>
-</div>
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
 <div class="case-card">
   <div class="case-org">爱立信</div>
   <h3>AI系统升级</h3>
@@ -279,18 +283,18 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">全球 AI 内容监管与版权最新法规动态</p>
 
   <div class="trend-grid" id="policy-cards-area">
-<div class="trend-card">
+<a class="trend-card" href="https://www.ithome.com/search.htm?search=%E8%8B%B1%E5%9B%BD%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95%E6%95%B4%E6%94%B9%E4%BB%A4" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>英国搜索算法整改令</h3>
   <p>要求谷歌6个月内提高搜索排名算法透明度</p>
-  <div class="trend-source">📅 2026-06-18 · 来源：IT之家</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-06-18 · 来源：IT之家 <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=site%3Aopenai.com+%E6%AC%A7%E7%9B%9FAI%E5%86%85%E5%AE%B9%E9%80%8F%E6%98%8E%E5%BA%A6%E6%A0%87%E5%87%86" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>欧盟AI内容透明度标准</h3>
   <p>OpenAI支持欧盟AI内容溯源标准</p>
-  <div class="trend-source">📅 2026-06-18 · 来源：OpenAI</div>
-</div>
+  <div class="trend-source">📅 2026-06-18 · 来源：OpenAI <span class="trend-go">检索原文 →</span></div>
+</a>
 </div>
 </div>
 

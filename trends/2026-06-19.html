@@ -100,6 +100,10 @@ a:hover{color:#7C2F22}
 .trend-card{background:var(--bg3);border:1px solid var(--border2);border-radius:4px;
   padding:24px;transition:all .3s;position:relative;overflow:hidden;box-shadow:0 2px 10px rgba(107,90,68,.12)}
 .trend-card:hover{border-color:var(--gold);transform:translateY(-3px);box-shadow:0 10px 24px rgba(107,90,68,.2)}
+a.trend-card,a.case-card{display:block;color:inherit;text-decoration:none;cursor:pointer}
+a.trend-card:hover,a.case-card:hover{color:inherit}
+.trend-go{margin-left:auto;color:var(--cinnabar);font-size:12px;font-weight:600;letter-spacing:.5px}
+.update-banner,.filter-bar,.theme-toggle{display:none}
 .trend-tag{display:inline-block;padding:3px 12px;border-radius:3px;font-size:12px;
   font-weight:600;margin-bottom:12px;border:1px solid}
 .trend-tag.tech{background:rgba(51,86,124,.08);color:#33567C;border-color:rgba(51,86,124,.35)}
@@ -215,24 +219,24 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">本周与传媒相关的 AI 技术进展与产品动态</p>
 
   <div class="trend-grid" id="trend-cards-area">
-<div class="trend-card">
+<a class="trend-card" href="https://www.ithome.com/search.htm?search=AI%E9%A9%B1%E5%8A%A8%E7%9A%84%E6%B8%B8%E6%88%8F%E5%B8%82%E5%9C%BA%E6%94%B6%E5%85%A5%E5%A2%9E%E9%95%BF" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag tech">技术</div>
   <h3>AI驱动的游戏市场收入增长</h3>
   <p>2025年全球游戏市场收入首次突破2000亿美元，AI优化内容生成与用户行为分析成为主要增长动力。</p>
-  <div class="trend-source">📅 2026-06-19 · 来源：IT之家</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-06-19 · 来源：IT之家 <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=site%3Aopenai.com+OpenAI%E5%8C%BB%E7%96%97%E8%AF%8A%E6%96%ADAI%E7%B3%BB%E7%BB%9F" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag tool">工具</div>
   <h3>OpenAI医疗诊断AI系统</h3>
   <p>基于GPT-5.5 Instant的推理模型协助识别18种罕见儿童遗传病，准确率达92%。</p>
-  <div class="trend-source">📅 2026-06-19 · 来源：OpenAI</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-06-19 · 来源：OpenAI <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.ithome.com/search.htm?search=%E5%AE%89%E5%8D%93%E5%BC%80%E5%8F%91%E8%80%85%E9%AA%8C%E8%AF%81%E8%AE%A1%E5%88%92" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>安卓开发者验证计划</h3>
   <p>谷歌联合6家手机厂商计划9月30日起强制推行恶意App审核机制。</p>
-  <div class="trend-source">📅 2026-06-19 · 来源：IT之家</div>
-</div>
+  <div class="trend-source">📅 2026-06-19 · 来源：IT之家 <span class="trend-go">检索原文 →</span></div>
+</a>
 </div>
 </div>
 
@@ -244,24 +248,24 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">全球新闻媒体机构的 AI 应用实战案例</p>
 
   <div class="case-grid" id="case-cards-area">
-<div class="case-card">
+<a class="case-card" href="https://www.bing.com/search?q=AI%E5%8C%96%E5%AD%A6%E5%AE%B6%E4%BC%98%E5%8C%96%E8%8D%AF%E7%89%A9%E5%90%88%E6%88%90" target="_blank" rel="noopener noreferrer">
   <div class="case-org">OpenAI×Molecule.one</div>
   <h3>AI化学家优化药物合成</h3>
   <p>Near-autonomous AI系统在 medicinal chemistry中完成关键反应优化，效率提升300%。</p>
   <div class="case-tools"><span class="case-tool">AI</span><span class="case-tool">化学工程</span></div>
-</div>
-<div class="case-card">
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
+<a class="case-card" href="https://www.bing.com/search?q=%E5%AE%89%E5%8D%93%E5%BC%80%E5%8F%91%E8%80%85%E9%AA%8C%E8%AF%81%E8%AE%A1%E5%88%92" target="_blank" rel="noopener noreferrer">
   <div class="case-org">谷歌联合手机厂商</div>
   <h3>安卓开发者验证计划</h3>
   <p>针对巴西市场推出强制开发者审核机制，覆盖荣耀、OPPO等6家厂商应用商店。</p>
   <div class="case-tools"><span class="case-tool">安全</span><span class="case-tool">安卓</span></div>
-</div>
-<div class="case-card">
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
+<a class="case-card" href="https://www.bing.com/search?q=AI%E4%B8%AA%E6%80%A7%E5%8C%96%E6%95%99%E5%AD%A6%E7%B3%BB%E7%BB%9F" target="_blank" rel="noopener noreferrer">
   <div class="case-org">Preply</div>
   <h3>AI个性化教学系统</h3>
   <p>集成GPT-5.5的AI助教生成课程摘要，提供实时学习反馈。</p>
   <div class="case-tools"><span class="case-tool">教育科技</span><span class="case-tool">自然语言处理</span></div>
-</div>
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
 </div>
 </div>
 
@@ -273,12 +277,12 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">全球 AI 内容监管与版权最新法规动态</p>
 
   <div class="trend-grid" id="policy-cards-area">
-<div class="trend-card">
+<a class="trend-card" href="https://www.ithome.com/search.htm?search=NASA%E5%8F%AB%E5%81%9CHALO%E6%9C%88%E7%90%83%E6%A8%A1%E5%9D%97" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>NASA叫停HALO月球模块</h3>
   <p>因战略调整暂停诺斯罗普·格鲁曼月球轨道空间站建设计划。</p>
-  <div class="trend-source">📅 2026-06-19 · 来源：IT之家</div>
-</div>
+  <div class="trend-source">📅 2026-06-19 · 来源：IT之家 <span class="trend-go">检索原文 →</span></div>
+</a>
 </div>
 </div>
 

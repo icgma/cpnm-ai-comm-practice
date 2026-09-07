@@ -100,6 +100,10 @@ a:hover{color:#7C2F22}
 .trend-card{background:var(--bg3);border:1px solid var(--border2);border-radius:4px;
   padding:24px;transition:all .3s;position:relative;overflow:hidden;box-shadow:0 2px 10px rgba(107,90,68,.12)}
 .trend-card:hover{border-color:var(--gold);transform:translateY(-3px);box-shadow:0 10px 24px rgba(107,90,68,.2)}
+a.trend-card,a.case-card{display:block;color:inherit;text-decoration:none;cursor:pointer}
+a.trend-card:hover,a.case-card:hover{color:inherit}
+.trend-go{margin-left:auto;color:var(--cinnabar);font-size:12px;font-weight:600;letter-spacing:.5px}
+.update-banner,.filter-bar,.theme-toggle{display:none}
 .trend-tag{display:inline-block;padding:3px 12px;border-radius:3px;font-size:12px;
   font-weight:600;margin-bottom:12px;border:1px solid}
 .trend-tag.tech{background:rgba(51,86,124,.08);color:#33567C;border-color:rgba(51,86,124,.35)}
@@ -215,30 +219,30 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">本周与传媒相关的 AI 技术进展与产品动态</p>
 
   <div class="trend-grid" id="trend-cards-area">
-<div class="trend-card">
+<a class="trend-card" href="https://www.bing.com/search?q=site%3Aopenai.com+OpenAI%E5%8F%91%E5%B8%83GPT-5.6%E7%B3%BB%E5%88%97%E6%A8%A1%E5%9E%8B" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag tech">技术</div>
   <h3>OpenAI发布GPT-5.6系列模型</h3>
   <p>GPT-5.6在多模态生成、逻辑推理和长文本处理能力显著提升，成为微软365 Copilot的核心算力引擎</p>
-  <div class="trend-source">📅 2026-07-10 · 来源</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-07-10 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=SpaceXAI%E6%8E%A8%E5%87%BAGrok%204.5%E7%BC%96%E7%A8%8B%E6%99%BA%E8%83%BD%E4%BD%93" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag tech">技术</div>
   <h3>SpaceXAI推出Grok 4.5编程智能体</h3>
   <p>支持复杂代码生成与调试，在GitHub等开发者平台实现全流程代码工程自动化</p>
-  <div class="trend-source">📅 2026-07-10 · 来源</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-07-10 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=MUFG%E9%83%A8%E7%BD%B2ChatGPT%20Enterprise" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag tool">工具</div>
   <h3>MUFG部署ChatGPT Enterprise</h3>
   <p>日本三菱UFJ银行通过AI原生改造，实现财务报告自动化与智能客户服务</p>
-  <div class="trend-source">📅 2026-07-10 · 来源</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-07-10 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=Verla%20AI%20Humanizer%E5%8F%91%E5%B8%83" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag tool">工具</div>
   <h3>Verla AI Humanizer发布</h3>
   <p>开源AI工具可自动优化社交媒体内容，支持20+平台的内容风格适配</p>
-  <div class="trend-source">📅 2026-07-10 · 来源</div>
-</div>
+  <div class="trend-source">📅 2026-07-10 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
 </div>
 </div>
 
@@ -250,30 +254,30 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">全球新闻媒体机构的 AI 应用实战案例</p>
 
   <div class="case-grid" id="case-cards-area">
-<div class="case-card">
+<a class="case-card" href="https://www.bing.com/search?q=Copilot%E9%9B%86%E6%88%90GPT-5.6" target="_blank" rel="noopener noreferrer">
   <div class="case-org">微软</div>
   <h3>Copilot集成GPT-5.6</h3>
   <p>办公套件实现文档智能编辑与会议纪要自动生成，生产力提升40%</p>
   <div class="case-tools"><span class="case-tool">GPT-5.6</span><span class="case-tool">Copilot</span></div>
-</div>
-<div class="case-card">
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
+<a class="case-card" href="https://www.bing.com/search?q=AI%E5%8E%9F%E7%94%9F%E9%93%B6%E8%A1%8C%E8%BD%AC%E5%9E%8B" target="_blank" rel="noopener noreferrer">
   <div class="case-org">MUFG</div>
   <h3>AI原生银行转型</h3>
   <p>部署智能风控与自动化对账系统，运营成本降低35%</p>
   <div class="case-tools"><span class="case-tool">ChatGPT Enterprise</span><span class="case-tool">金融AI</span></div>
-</div>
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
 <div class="case-card">
   <div class="case-org">Australian Payments Plus</div>
   <h3>支付流程自动化</h3>
   <p>通过ChatGPT+Codex实现支付合同智能审核，处理效率提升60%</p>
   <div class="case-tools"><span class="case-tool">ChatGPT</span><span class="case-tool">Codex</span></div>
 </div>
-<div class="case-card">
+<a class="case-card" href="https://www.bing.com/search?q=Instagram%E5%86%85%E5%AE%B9%E7%AE%A1%E7%90%86" target="_blank" rel="noopener noreferrer">
   <div class="case-org">Muse AI</div>
   <h3>Instagram内容管理</h3>
   <p>自动为百万级账号生成个性化图文内容，互动率提升28%</p>
   <div class="case-tools"><span class="case-tool">AI内容生成</span><span class="case-tool">社交媒体</span></div>
-</div>
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
 </div>
 </div>
 
@@ -285,18 +289,18 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">全球 AI 内容监管与版权最新法规动态</p>
 
   <div class="trend-grid" id="policy-cards-area">
-<div class="trend-card">
+<a class="trend-card" href="https://www.bing.com/search?q=%E5%BE%AE%E8%BD%AFAI%E4%BC%A6%E7%90%86%E6%A1%86%E6%9E%B6%E5%8F%91%E5%B8%83" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>微软AI伦理框架发布</h3>
   <p>建立AI内容审核与用户数据保护标准，覆盖全球200+社交媒体平台</p>
-  <div class="trend-source">📅 2026-07-10 · 来源</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-07-10 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=site%3Aopenai.com+OpenAI%E6%94%BF%E5%BA%9C%E5%90%88%E4%BD%9C%E7%99%BD%E7%9A%AE%E4%B9%A6" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>OpenAI政府合作白皮书</h3>
   <p>规范联邦政府AI项目数据使用边界，要求敏感信息处理需人工复核</p>
-  <div class="trend-source">📅 2026-07-10 · 来源</div>
-</div>
+  <div class="trend-source">📅 2026-07-10 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
 </div>
 </div>
 

@@ -100,6 +100,10 @@ a:hover{color:#7C2F22}
 .trend-card{background:var(--bg3);border:1px solid var(--border2);border-radius:4px;
   padding:24px;transition:all .3s;position:relative;overflow:hidden;box-shadow:0 2px 10px rgba(107,90,68,.12)}
 .trend-card:hover{border-color:var(--gold);transform:translateY(-3px);box-shadow:0 10px 24px rgba(107,90,68,.2)}
+a.trend-card,a.case-card{display:block;color:inherit;text-decoration:none;cursor:pointer}
+a.trend-card:hover,a.case-card:hover{color:inherit}
+.trend-go{margin-left:auto;color:var(--cinnabar);font-size:12px;font-weight:600;letter-spacing:.5px}
+.update-banner,.filter-bar,.theme-toggle{display:none}
 .trend-tag{display:inline-block;padding:3px 12px;border-radius:3px;font-size:12px;
   font-weight:600;margin-bottom:12px;border:1px solid}
 .trend-tag.tech{background:rgba(51,86,124,.08);color:#33567C;border-color:rgba(51,86,124,.35)}
@@ -215,26 +219,26 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">本周与传媒相关的 AI 技术进展与产品动态</p>
 
   <div class="trend-grid" id="trend-cards-area">
-<div class="trend-card">
+<a class="trend-card" href="https://www.bing.com/search?q=site%3Aopenai.com+AI%E5%8C%BB%E7%96%97%E8%AE%B0%E5%BD%95%E6%95%B4%E5%90%88%E5%BA%94%E7%94%A8" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag tech">技术</div>
   <h3>AI医疗记录整合应用</h3>
   <p>OpenAI推出Health in ChatGPT，支持医疗记录与Apple Health安全对接</p>
-  <div class="trend-source">📅 2026-07-27 · 来源 openai.com</div>
-</div>
+  <div class="trend-source">📅 2026-07-27 · 来源 openai.com <span class="trend-go">检索原文 →</span></div>
+</a>
 
-<div class="trend-card">
+<a class="trend-card" href="https://www.bing.com/search?q=site%3Aopenai.com+AI%E9%A9%B1%E5%8A%A8%E6%96%B0%E9%97%BB%E7%94%9F%E4%BA%A7%E9%9D%A9%E6%96%B0" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag tech">技术</div>
   <h3>AI驱动新闻生产革新</h3>
   <p>OpenAI与多家新闻机构合作，通过AI提升报道效率与内容质量</p>
-  <div class="trend-source">📅 2026-07-27 · 来源 openai.com</div>
-</div>
+  <div class="trend-source">📅 2026-07-27 · 来源 openai.com <span class="trend-go">检索原文 →</span></div>
+</a>
 
-<div class="trend-card">
+<a class="trend-card" href="https://sspai.com/search/article?q=%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97AI%E8%8A%AF%E7%89%87%E7%AA%81%E7%A0%B4" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag tech">技术</div>
   <h3>边缘计算AI芯片突破</h3>
   <p>Acrab发布GELIX 1边缘AI芯片，支持实时影像与语音处理</p>
-  <div class="trend-source">📅 2026-07-27 · 来源 sspai.com</div>
-</div>
+  <div class="trend-source">📅 2026-07-27 · 来源 sspai.com <span class="trend-go">检索原文 →</span></div>
+</a>
 </div>
 </div>
 
@@ -246,19 +250,19 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">全球新闻媒体机构的 AI 应用实战案例</p>
 
   <div class="case-grid" id="case-cards-area">
-<div class="case-card">
+<a class="case-card" href="https://www.bing.com/search?q=%E6%96%B0%E9%97%BB%E6%9C%BA%E6%9E%84AI%E5%8D%8F%E4%BD%9C%E9%A1%B9%E7%9B%AE" target="_blank" rel="noopener noreferrer">
   <div class="case-org">OpenAI</div>
   <h3>新闻机构AI协作项目</h3>
   <p>与美联社等媒体合作开发AI辅助报道系统，实现实时数据可视化</p>
   <div class="case-tools"><span class="case-tool">AI报道</span><span class="case-tool">自动化</span></div>
-</div>
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
 
-<div class="case-card">
+<a class="case-card" href="https://www.bing.com/search?q=%E6%BE%B3%E5%A4%A7%E5%88%A9%E4%BA%9AAI%E6%B1%BD%E8%BD%A6%E7%9F%A9%E9%98%B5" target="_blank" rel="noopener noreferrer">
   <div class="case-org">小鹏汽车</div>
   <h3>澳大利亚AI汽车矩阵</h3>
   <p>6个月内推出5款搭载自动驾驶系统的车型，完善本地服务网络</p>
   <div class="case-tools"><span class="case-tool">自动驾驶</span><span class="case-tool">车联网</span></div>
-</div>
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
 </div>
 </div>
 
@@ -270,12 +274,12 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">全球 AI 内容监管与版权最新法规动态</p>
 
   <div class="trend-grid" id="policy-cards-area">
-<div class="trend-card">
+<a class="trend-card" href="https://sspai.com/search/article?q=%E6%AC%A7%E7%9B%9FAI%E6%95%B0%E6%8D%AE%E5%90%88%E8%A7%84%E6%96%B0%E8%A7%84" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>欧盟AI数据合规新规</h3>
   <p>对Google等平台处以8.9亿欧元罚款，强化医疗AI数据使用限制</p>
-  <div class="trend-source">📅 2026-07-27 · 来源 sspai.com</div>
-</div>
+  <div class="trend-source">📅 2026-07-27 · 来源 sspai.com <span class="trend-go">检索原文 →</span></div>
+</a>
 </div>
 </div>
 

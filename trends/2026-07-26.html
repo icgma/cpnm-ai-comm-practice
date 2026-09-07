@@ -100,6 +100,10 @@ a:hover{color:#7C2F22}
 .trend-card{background:var(--bg3);border:1px solid var(--border2);border-radius:4px;
   padding:24px;transition:all .3s;position:relative;overflow:hidden;box-shadow:0 2px 10px rgba(107,90,68,.12)}
 .trend-card:hover{border-color:var(--gold);transform:translateY(-3px);box-shadow:0 10px 24px rgba(107,90,68,.2)}
+a.trend-card,a.case-card{display:block;color:inherit;text-decoration:none;cursor:pointer}
+a.trend-card:hover,a.case-card:hover{color:inherit}
+.trend-go{margin-left:auto;color:var(--cinnabar);font-size:12px;font-weight:600;letter-spacing:.5px}
+.update-banner,.filter-bar,.theme-toggle{display:none}
 .trend-tag{display:inline-block;padding:3px 12px;border-radius:3px;font-size:12px;
   font-weight:600;margin-bottom:12px;border:1px solid}
 .trend-tag.tech{background:rgba(51,86,124,.08);color:#33567C;border-color:rgba(51,86,124,.35)}
@@ -215,30 +219,30 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">本周与传媒相关的 AI 技术进展与产品动态</p>
 
   <div class="trend-grid" id="trend-cards-area">
-<div class="trend-card">
+<a class="trend-card" href="https://www.bing.com/search?q=site%3Aopenai.com+AI%E5%8C%BB%E7%96%97%E6%95%B0%E6%8D%AE%E6%95%B4%E5%90%88%E5%8A%A0%E9%80%9F" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag tech">技术</div>
   <h3>AI医疗数据整合加速</h3>
   <p>OpenAI推出Health in ChatGPT，支持用户安全连接医疗记录与Apple Health，推动医疗信息与AI交互融合</p>
-  <div class="trend-source">📅 2026-07-26 · 来源：OpenAI</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-07-26 · 来源：OpenAI <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.ithome.com/search.htm?search=AI%E6%A8%A1%E5%9E%8B%E5%AE%89%E5%85%A8%E8%81%94%E7%9B%9F%E6%89%A9%E5%A4%A7" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag tech">技术</div>
   <h3>AI模型安全联盟扩大</h3>
   <p>50家科技企业签署开源AI模型发展公开信，推动权重模型开放与安全评估体系构建</p>
-  <div class="trend-source">📅 2026-07-26 · 来源：IT之家</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-07-26 · 来源：IT之家 <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.ithome.com/search.htm?search=%E9%80%82%E8%80%81%E5%8C%96%E6%99%BA%E8%83%BD%E8%AE%BE%E5%A4%87%E6%99%AE%E5%8F%8A" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag industry">行业</div>
   <h3>适老化智能设备普及</h3>
   <p>小米发布《长辈用机随身指南》，全国100万份领取推动老年群体智能设备使用率提升</p>
-  <div class="trend-source">📅 2026-07-26 · 来源：IT之家</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-07-26 · 来源：IT之家 <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.ithome.com/search.htm?search=AI%E4%BC%A6%E7%90%86%E7%9B%91%E7%AE%A1%E5%8D%87%E7%BA%A7" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>AI伦理监管升级</h3>
   <p>国家安全部严正声明AI无法篡改历史真相，日本右翼势力利用AI制作侵华历史修正视频被依法打击</p>
-  <div class="trend-source">📅 2026-07-26 · 来源：IT之家</div>
-</div>
+  <div class="trend-source">📅 2026-07-26 · 来源：IT之家 <span class="trend-go">检索原文 →</span></div>
+</a>
 </div>
 </div>
 
@@ -250,24 +254,24 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">全球新闻媒体机构的 AI 应用实战案例</p>
 
   <div class="case-grid" id="case-cards-area">
-<div class="case-card">
+<a class="case-card" href="https://www.bing.com/search?q=%E3%80%8A%E9%95%BF%E8%BE%88%E7%94%A8%E6%9C%BA%E9%9A%8F%E8%BA%AB%E6%8C%87%E5%8D%97%E3%80%8B%E5%8F%91%E5%B8%83" target="_blank" rel="noopener noreferrer">
   <div class="case-org">小米</div>
   <h3>《长辈用机随身指南》发布</h3>
   <p>针对老年群体推出智能设备使用指南，覆盖全国100万份实体发放</p>
   <div class="case-tools"><span class="case-tool">适老化设计</span><span class="case-tool">用户教育</span></div>
-</div>
-<div class="case-card">
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
+<a class="case-card" href="https://www.bing.com/search?q=%E8%B7%A8%E5%A2%83%E8%BD%A6%E6%9C%BA%E5%AE%89%E5%85%A8%E4%BC%98%E5%8C%96" target="_blank" rel="noopener noreferrer">
   <div class="case-org">极氪</div>
   <h3>跨境车机安全优化</h3>
   <p>上线"跨境守护"快速解锁入口，解决境外自驾车机防盗与体验平衡问题</p>
   <div class="case-tools"><span class="case-tool">车联网</span><span class="case-tool">AI安全</span></div>
-</div>
-<div class="case-card">
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
+<a class="case-card" href="https://www.bing.com/search?q=Pocket%204P%E5%BD%B1%E5%83%8F%E7%B3%BB%E7%BB%9F" target="_blank" rel="noopener noreferrer">
   <div class="case-org">DJI</div>
   <h3>Pocket 4P影像系统</h3>
   <p>集成AI影像算法的一体式云台相机，支持多场景智能拍摄优化</p>
   <div class="case-tools"><span class="case-tool">AI摄影</span><span class="case-tool">便携设备</span></div>
-</div>
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
 </div>
 </div>
 
@@ -279,18 +283,18 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">全球 AI 内容监管与版权最新法规动态</p>
 
   <div class="trend-grid" id="policy-cards-area">
-<div class="trend-card">
+<a class="trend-card" href="https://www.bing.com/search?q=%E6%AC%A7%E7%9B%9FAI%E7%BD%9A%E6%AC%BE%E6%96%B0%E8%A7%84" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>欧盟AI罚款新规</h3>
   <p>欧盟委员会对Google处以8.9亿欧元罚款，重点打击AI模型权重滥用行为</p>
-  <div class="trend-source">📅 2026-07-26 · 来源：派早报</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-07-26 · 来源：派早报 <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.ithome.com/search.htm?search=%E9%AB%98%E6%A0%A1AI%E6%A3%80%E6%B5%8B%E5%B7%A5%E5%85%B7%E5%81%9C%E7%94%A8" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>高校AI检测工具停用</h3>
   <p>美国多所高校因AI检测工具准确性存疑，暂停使用学术诚信审查系统</p>
-  <div class="trend-source">📅 2026-07-26 · 来源：IT之家</div>
-</div>
+  <div class="trend-source">📅 2026-07-26 · 来源：IT之家 <span class="trend-go">检索原文 →</span></div>
+</a>
 </div>
 </div>
 

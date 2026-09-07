@@ -100,6 +100,10 @@ a:hover{color:#7C2F22}
 .trend-card{background:var(--bg3);border:1px solid var(--border2);border-radius:4px;
   padding:24px;transition:all .3s;position:relative;overflow:hidden;box-shadow:0 2px 10px rgba(107,90,68,.12)}
 .trend-card:hover{border-color:var(--gold);transform:translateY(-3px);box-shadow:0 10px 24px rgba(107,90,68,.2)}
+a.trend-card,a.case-card{display:block;color:inherit;text-decoration:none;cursor:pointer}
+a.trend-card:hover,a.case-card:hover{color:inherit}
+.trend-go{margin-left:auto;color:var(--cinnabar);font-size:12px;font-weight:600;letter-spacing:.5px}
+.update-banner,.filter-bar,.theme-toggle{display:none}
 .trend-tag{display:inline-block;padding:3px 12px;border-radius:3px;font-size:12px;
   font-weight:600;margin-bottom:12px;border:1px solid}
 .trend-tag.tech{background:rgba(51,86,124,.08);color:#33567C;border-color:rgba(51,86,124,.35)}
@@ -215,30 +219,30 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">本周与传媒相关的 AI 技术进展与产品动态</p>
 
   <div class="trend-grid" id="trend-cards-area">
-<div class="trend-card">
+<a class="trend-card" href="https://www.bing.com/search?q=site%3Aopenai.com+OpenAI%E5%BC%80%E6%BA%90Codex%20Security%20CLI" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag tech">技术</div>
   <h3>OpenAI开源Codex Security CLI</h3>
   <p>提升AI安全防护能力，支持开发者构建更安全的AI应用</p>
-  <div class="trend-source">📅 2026-07-31 · 来源</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-07-31 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=AI%E7%94%9F%E6%88%90%E5%86%85%E5%AE%B9%E5%8D%A0%E6%AF%94%E8%B6%8525%25%E5%86%B2%E5%87%BB%E4%BD%9C%E5%AE%B6%E6%94%B6%E5%85%A5" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag industry">行业</div>
   <h3>AI生成内容占比超25%冲击作家收入</h3>
   <p>33%畅销书含AI生成内容，引发行业收入分配争议</p>
-  <div class="trend-source">📅 2026-07-31 · 来源</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-07-31 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=%E6%BE%B3%E5%A4%A7%E5%88%A9%E4%BA%9A%E7%A4%BE%E4%BA%A4%E5%AA%92%E4%BD%93%E7%A6%81%E4%BB%A4%E6%95%88%E6%9E%9C%E5%AD%98%E7%96%91" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>澳大利亚社交媒体禁令效果存疑</h3>
   <p>16岁以下用户比例仅小幅下降，监管政策面临调整</p>
-  <div class="trend-source">📅 2026-07-31 · 来源</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-07-31 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=%E7%BD%91%E6%98%93UU%E8%BF%9C%E7%A8%8B%E6%8E%A7%E5%88%B6%E5%8D%87%E7%BA%A7" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag tool">工具</div>
   <h3>网易UU远程控制升级</h3>
   <p>集成终端映射、云电脑等功能的远程协作工具</p>
-  <div class="trend-source">📅 2026-07-31 · 来源</div>
-</div>
+  <div class="trend-source">📅 2026-07-31 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
 </div>
 </div>
 
@@ -250,30 +254,30 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">全球新闻媒体机构的 AI 应用实战案例</p>
 
   <div class="case-grid" id="case-cards-area">
-<div class="case-card">
+<a class="case-card" href="https://www.bing.com/search?q=Health%E5%8A%9F%E8%83%BD%E9%9B%86%E6%88%90ChatGPT" target="_blank" rel="noopener noreferrer">
   <div class="case-org">OpenAI</div>
   <h3>Health功能集成ChatGPT</h3>
   <p>支持医疗记录安全接入，扩展专业领域应用</p>
   <div class="case-tools"><span class="case-tool">医疗AI</span><span class="case-tool">数据安全</span></div>
-</div>
-<div class="case-card">
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
+<a class="case-card" href="https://www.bing.com/search?q=24/7%E9%9B%B6%E5%94%AEAI%E5%8A%A9%E6%89%8B" target="_blank" rel="noopener noreferrer">
   <div class="case-org">avatarin</div>
   <h3>24/7零售AI助手</h3>
   <p>基于GPT-Realtime的多语言客户支持系统</p>
   <div class="case-tools"><span class="case-tool">实时AI</span><span class="case-tool">零售科技</span></div>
-</div>
-<div class="case-card">
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
+<a class="case-card" href="https://www.bing.com/search?q=%E6%99%BA%E8%83%BD%E8%8C%B6%E5%90%A7%E6%9C%BAPro" target="_blank" rel="noopener noreferrer">
   <div class="case-org">小米</div>
   <h3>智能茶吧机Pro</h3>
   <p>集成煮茶消毒功能的AI家电</p>
   <div class="case-tools"><span class="case-tool">AI家电</span><span class="case-tool">健康科技</span></div>
-</div>
-<div class="case-card">
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
+<a class="case-card" href="https://www.bing.com/search?q=%E3%80%8A%E6%9C%80%E7%BB%88%E5%B9%BB%E6%83%B37%E3%80%8B%E5%AE%9E%E4%BD%93%E7%89%88%E8%AE%A1%E5%88%92" target="_blank" rel="noopener noreferrer">
   <div class="case-org">Wccftech</div>
   <h3>《最终幻想7》实体版计划</h3>
   <p>应对游戏容量限制的发行策略</p>
   <div class="case-tools"><span class="case-tool">游戏发行</span><span class="case-tool">数字内容</span></div>
-</div>
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
 </div>
 </div>
 
@@ -285,12 +289,12 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">全球 AI 内容监管与版权最新法规动态</p>
 
   <div class="trend-grid" id="policy-cards-area">
-<div class="trend-card">
+<a class="trend-card" href="https://www.bing.com/search?q=%E5%9B%BD%E5%AE%B6%E5%8F%91%E6%94%B9%E5%A7%94%E5%8A%A0%E5%BF%AB%E3%80%8A%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E6%B3%95%E3%80%8B%E7%AB%8B%E6%B3%95" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>国家发改委加快《人工智能法》立法</h3>
   <p>推动全产业链自主创新突破</p>
-  <div class="trend-source">📅 2026-07-31 · 来源</div>
-</div>
+  <div class="trend-source">📅 2026-07-31 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
 </div>
 </div>
 

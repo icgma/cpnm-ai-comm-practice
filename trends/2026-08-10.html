@@ -100,6 +100,10 @@ a:hover{color:#7C2F22}
 .trend-card{background:var(--bg3);border:1px solid var(--border2);border-radius:4px;
   padding:24px;transition:all .3s;position:relative;overflow:hidden;box-shadow:0 2px 10px rgba(107,90,68,.12)}
 .trend-card:hover{border-color:var(--gold);transform:translateY(-3px);box-shadow:0 10px 24px rgba(107,90,68,.2)}
+a.trend-card,a.case-card{display:block;color:inherit;text-decoration:none;cursor:pointer}
+a.trend-card:hover,a.case-card:hover{color:inherit}
+.trend-go{margin-left:auto;color:var(--cinnabar);font-size:12px;font-weight:600;letter-spacing:.5px}
+.update-banner,.filter-bar,.theme-toggle{display:none}
 .trend-tag{display:inline-block;padding:3px 12px;border-radius:3px;font-size:12px;
   font-weight:600;margin-bottom:12px;border:1px solid}
 .trend-tag.tech{background:rgba(51,86,124,.08);color:#33567C;border-color:rgba(51,86,124,.35)}
@@ -215,24 +219,24 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">本周与传媒相关的 AI 技术进展与产品动态</p>
 
   <div class="trend-grid" id="trend-cards-area">
-<div class="trend-card">
+<a class="trend-card" href="https://www.bing.com/search?q=site%3Aopenai.com+OpenAI%E4%B8%8E%E5%BF%83%E7%90%86%E5%AD%A6%E4%BC%9A%E5%90%88%E4%BD%9C%E9%9D%92%E5%B0%91%E5%B9%B4%E5%BF%83%E7%90%86%E5%81%A5%E5%BA%B7%E7%A0%94%E7%A9%B6" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag academic">学术</div>
   <h3>OpenAI与心理学会合作青少年心理健康研究</h3>
   <p>利用GPT-5.6模型开发心理评估工具，探索AI在心理咨询中的应用边界</p>
-  <div class="trend-source">📅 2026-08-10 · 来源</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-08-10 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=QD-OLED%E5%8A%A8%E6%80%81%E5%BD%B1%E5%83%8F%E7%94%9F%E6%88%90%E6%8A%80%E6%9C%AF%E7%AA%81%E7%A0%B4" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag tech">技术</div>
   <h3>QD-OLED动态影像生成技术突破</h3>
   <p>AOC新型显示器面板实现4K级AI动态补偿，支持实时场景渲染</p>
-  <div class="trend-source">📅 2026-08-10 · 来源</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-08-10 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=AI%E5%8E%9F%E7%94%9F%E9%94%AE%E7%9B%98%E8%AE%BE%E8%AE%A1%E5%B7%A5%E5%85%B7%E5%8D%87%E7%BA%A7" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag tool">工具</div>
   <h3>AI原生键盘设计工具升级</h3>
   <p>YUNZII AL98 PRO键盘集成GPT-5.6驱动，支持语音指令自定义键位</p>
-  <div class="trend-source">📅 2026-08-10 · 来源</div>
-</div>
+  <div class="trend-source">📅 2026-08-10 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
 </div>
 </div>
 
@@ -244,24 +248,24 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">全球新闻媒体机构的 AI 应用实战案例</p>
 
   <div class="case-grid" id="case-cards-area">
-<div class="case-card">
+<a class="case-card" href="https://www.bing.com/search?q=%E3%80%8A%E8%82%96%E7%94%B3%E5%85%8B%E7%9A%84%E6%95%91%E8%B5%8E%E3%80%8B4K%E4%BF%AE%E5%A4%8D%E7%89%88" target="_blank" rel="noopener noreferrer">
   <div class="case-org">华纳兄弟</div>
   <h3>《肖申克的救赎》4K修复版</h3>
   <p>运用AI色彩校正与噪点消除技术，修复率提升至98%</p>
   <div class="case-tools"><span class="case-tool">AI修复</span><span class="case-tool">4K生成</span></div>
-</div>
-<div class="case-card">
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
+<a class="case-card" href="https://www.bing.com/search?q=%E6%99%BA%E8%83%BD%E8%AF%95%E9%A9%BE%E8%90%A5%E9%94%80%E7%B3%BB%E7%BB%9F" target="_blank" rel="noopener noreferrer">
   <div class="case-org">小米汽车</div>
   <h3>智能试驾营销系统</h3>
   <p>集成GPT-4生成个性化试驾方案，转化率提升40%</p>
   <div class="case-tools"><span class="case-tool">GPT-4</span><span class="case-tool">营销自动化</span></div>
-</div>
-<div class="case-card">
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
+<a class="case-card" href="https://www.bing.com/search?q=%E7%A8%8E%E5%8A%A1AI%E9%A1%BE%E9%97%AE%E7%B3%BB%E7%BB%9F" target="_blank" rel="noopener noreferrer">
   <div class="case-org">HSP GRUPPE</div>
   <h3>税务AI顾问系统</h3>
   <p>基于Codex开发智能报税工具，处理效率提升70%</p>
   <div class="case-tools"><span class="case-tool">Codex</span><span class="case-tool">自动化审计</span></div>
-</div>
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
 </div>
 </div>
 
@@ -273,18 +277,18 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">全球 AI 内容监管与版权最新法规动态</p>
 
   <div class="trend-grid" id="policy-cards-area">
-<div class="trend-card">
+<a class="trend-card" href="https://www.bing.com/search?q=AI%E7%94%9F%E6%88%90%E5%86%85%E5%AE%B9%E7%89%88%E6%9D%83%E5%BD%92%E5%B1%9E%E6%B3%95%E6%A1%88" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>AI生成内容版权归属法案</h3>
   <p>欧盟提案明确AI生成物版权归属于训练数据提供方</p>
-  <div class="trend-source">📅 2026-08-10 · 来源</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-08-10 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=%E7%BE%8E%E5%9B%BDAI%E5%AE%89%E5%85%A8%E8%AF%84%E4%BC%B0%E6%96%B0%E8%A7%84" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>美国AI安全评估新规</h3>
   <p>OpenAI需每季度提交第三方安全审计报告</p>
-  <div class="trend-source">📅 2026-08-10 · 来源</div>
-</div>
+  <div class="trend-source">📅 2026-08-10 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
 </div>
 </div>
 

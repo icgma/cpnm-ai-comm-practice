@@ -100,6 +100,10 @@ a:hover{color:#7C2F22}
 .trend-card{background:var(--bg3);border:1px solid var(--border2);border-radius:4px;
   padding:24px;transition:all .3s;position:relative;overflow:hidden;box-shadow:0 2px 10px rgba(107,90,68,.12)}
 .trend-card:hover{border-color:var(--gold);transform:translateY(-3px);box-shadow:0 10px 24px rgba(107,90,68,.2)}
+a.trend-card,a.case-card{display:block;color:inherit;text-decoration:none;cursor:pointer}
+a.trend-card:hover,a.case-card:hover{color:inherit}
+.trend-go{margin-left:auto;color:var(--cinnabar);font-size:12px;font-weight:600;letter-spacing:.5px}
+.update-banner,.filter-bar,.theme-toggle{display:none}
 .trend-tag{display:inline-block;padding:3px 12px;border-radius:3px;font-size:12px;
   font-weight:600;margin-bottom:12px;border:1px solid}
 .trend-tag.tech{background:rgba(51,86,124,.08);color:#33567C;border-color:rgba(51,86,124,.35)}
@@ -215,24 +219,24 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">本周与传媒相关的 AI 技术进展与产品动态</p>
 
   <div class="trend-grid" id="trend-cards-area">
-<div class="trend-card">
+<a class="trend-card" href="https://www.bing.com/search?q=Meta%20%E6%8E%A8%E5%87%BA%20Muse%20%E5%9B%BE%E5%83%8F%E7%94%9F%E6%88%90%E6%A8%A1%E5%9E%8B" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag tech">技术</div>
   <h3>Meta 推出 Muse 图像生成模型</h3>
   <p>Meta 宣布推出基于 AI 的图像生成工具 Muse，支持用户通过自然语言生成高质量图像，扩展了生成式 AI 在传媒内容创作中的应用场景。</p>
-  <div class="trend-source">📅 2026-07-08 · 来源：派早报</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-07-08 · 来源：派早报 <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.ithome.com/search.htm?search=%E6%AC%A7%E7%9B%9F%E6%96%B0%E8%A7%84%E8%A6%81%E6%B1%82%E6%96%B0%E8%BD%A6%E9%85%8D%E5%A4%87%E5%88%86%E5%BF%83%E8%AD%A6%E5%91%8A%E7%B3%BB%E7%BB%9F" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>欧盟新规要求新车配备分心警告系统</h3>
   <p>7 月 7 日起欧盟强制要求新车搭载 AI 驾驶分心监测系统，通过眼球追踪和头部动作识别防范驾驶员注意力分散。</p>
-  <div class="trend-source">📅 2026-07-08 · 来源：IT之家</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-07-08 · 来源：IT之家 <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=site%3Aopenai.com+OpenAI%E6%8E%A8%E5%87%BA%20GeneBench-Pro%20%E5%9F%BA%E5%9B%A0%E7%BB%84%E5%AD%A6%20AI%20%E5%9F%BA%E5%87%86%E6%B5%8B%E8%AF%95" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag tech">工具</div>
   <h3>OpenAI推出 GeneBench-Pro 基因组学 AI 基准测试</h3>
   <p>新工具可评估 AI 在基因组学、生物学等领域的性能，为科研机构提供标准化评估框架。</p>
-  <div class="trend-source">📅 2026-07-08 · 来源：OpenAI</div>
-</div>
+  <div class="trend-source">📅 2026-07-08 · 来源：OpenAI <span class="trend-go">检索原文 →</span></div>
+</a>
 </div>
 </div>
 
@@ -244,24 +248,24 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">全球新闻媒体机构的 AI 应用实战案例</p>
 
   <div class="case-grid" id="case-cards-area">
-<div class="case-card">
+<a class="case-card" href="https://www.bing.com/search?q=AI%20%E9%93%B6%E8%A1%8C%E7%BB%84%E7%BB%87%E6%94%B9%E9%80%A0" target="_blank" rel="noopener noreferrer">
   <div class="case-org">MUFG 银行</div>
   <h3>AI 银行组织改造</h3>
   <p>日本三菱UFJ银行部署 OpenAI 企业版 ChatGPT，重构 2000+ 个业务流程，提升客户服务效率 40%。</p>
   <div class="case-tools"><span class="case-tool">ChatGPT 企业版</span><span class="case-tool">工作流优化</span></div>
-</div>
-<div class="case-card">
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
+<a class="case-card" href="https://www.bing.com/search?q=AI%20%E5%8A%A9%E5%8A%9B%E9%98%B2%E6%B1%9B%E6%95%91%E7%81%BE" target="_blank" rel="noopener noreferrer">
   <div class="case-org">腾讯公益</div>
   <h3>AI 助力防汛救灾</h3>
   <p>通过 AI 预警系统实时分析广西洪涝灾情，精准调配 1000 吨物资并生成动态救援地图。</p>
   <div class="case-tools"><span class="case-tool">灾害预测</span><span class="case-tool">资源调度</span></div>
-</div>
-<div class="case-card">
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
+<a class="case-card" href="https://www.bing.com/search?q=AI%20%E8%B7%A8%E7%95%8C%E4%BA%A7%E5%93%81%E5%BC%80%E5%8F%91" target="_blank" rel="noopener noreferrer">
   <div class="case-org">HP 公司</div>
   <h3>AI 跨界产品开发</h3>
   <p>与 OpenAI 合作推出智能办公套件，集成 GPT-5.6 Sol 模型，实现文档智能生成与多设备协同。</p>
   <div class="case-tools"><span class="case-tool">GPT-5.6 Sol</span><span class="case-tool">办公软件</span></div>
-</div>
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
 </div>
 </div>
 
@@ -273,12 +277,12 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">全球 AI 内容监管与版权最新法规动态</p>
 
   <div class="trend-grid" id="policy-cards-area">
-<div class="trend-card">
+<a class="trend-card" href="https://www.bing.com/search?q=%E4%B8%AD%E5%9B%BD%E7%94%B5%E5%95%86%E6%B3%95%E4%BF%AE%E6%AD%A3%E6%A1%88%E5%BE%81%E6%B1%82%E6%84%8F%E8%A7%81" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>中国电商法修正案征求意见</h3>
   <p>拟新增 AI 生成内容标识与版权归属条款，规范电商平台对 AI 生成商品的责任划分。</p>
-  <div class="trend-source">📅 2026-07-08 · 来源：派早报</div>
-</div>
+  <div class="trend-source">📅 2026-07-08 · 来源：派早报 <span class="trend-go">检索原文 →</span></div>
+</a>
 </div>
 </div>
 

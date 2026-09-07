@@ -100,6 +100,10 @@ a:hover{color:#7C2F22}
 .trend-card{background:var(--bg3);border:1px solid var(--border2);border-radius:4px;
   padding:24px;transition:all .3s;position:relative;overflow:hidden;box-shadow:0 2px 10px rgba(107,90,68,.12)}
 .trend-card:hover{border-color:var(--gold);transform:translateY(-3px);box-shadow:0 10px 24px rgba(107,90,68,.2)}
+a.trend-card,a.case-card{display:block;color:inherit;text-decoration:none;cursor:pointer}
+a.trend-card:hover,a.case-card:hover{color:inherit}
+.trend-go{margin-left:auto;color:var(--cinnabar);font-size:12px;font-weight:600;letter-spacing:.5px}
+.update-banner,.filter-bar,.theme-toggle{display:none}
 .trend-tag{display:inline-block;padding:3px 12px;border-radius:3px;font-size:12px;
   font-weight:600;margin-bottom:12px;border:1px solid}
 .trend-tag.tech{background:rgba(51,86,124,.08);color:#33567C;border-color:rgba(51,86,124,.35)}
@@ -215,30 +219,30 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">本周与传媒相关的 AI 技术进展与产品动态</p>
 
   <div class="trend-grid" id="trend-cards-area">
-<div class="trend-card">
+<a class="trend-card" href="https://www.ithome.com/search.htm?search=%E4%B8%89%E8%8F%B1%E7%94%B5%E6%9C%BA%E4%B8%8E%E7%B4%A2%E5%B0%BC%E6%88%90%E7%AB%8BAI%E8%A7%86%E8%A7%89%E4%BC%A0%E6%84%9F%E5%99%A8%E5%90%88%E8%B5%84%E4%BC%81%E4%B8%9A" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag industry">行业</div>
   <h3>三菱电机与索尼成立AI视觉传感器合资企业</h3>
   <p>双方将共同开发面向制造业的AI视觉传感器技术，推动智能质检升级</p>
-  <div class="trend-source">📅 2026-07-22 · 来源www.ithome.com</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-07-22 · 来源www.ithome.com <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=site%3Aopenai.com+OpenAI%E5%8F%91%E5%B8%83GPT-Red%E8%87%AA%E8%BF%9B%E5%8C%96%E7%B3%BB%E7%BB%9F" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag tech">技术</div>
   <h3>OpenAI发布GPT-Red自进化系统</h3>
   <p>通过自我对抗训练提升AI系统健壮性与安全性</p>
-  <div class="trend-source">📅 2026-07-22 · 来源openai.com</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-07-22 · 来源openai.com <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://hn.algolia.com/?q=Meta%E6%B5%8B%E8%AF%95AI%E5%BA%8A%E5%A4%B4%E6%95%85%E4%BA%8B%E7%94%9F%E6%88%90%E5%BA%94%E7%94%A8" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag tool">工具</div>
   <h3>Meta测试AI床头故事生成应用</h3>
   <p>利用大语言模型为缺乏创造力的用户生成个性化睡前故事</p>
-  <div class="trend-source">📅 2026-07-22 · 来源hnrss.org</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-07-22 · 来源hnrss.org <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.ithome.com/search.htm?search=%E6%B5%B7%E5%85%B3%E6%80%BB%E7%BD%B2%E6%99%BA%E8%83%BD%E6%9F%A5%E9%AA%8C%E8%A3%85%E5%A4%87%E6%8E%A8%E5%B9%BF%E8%AE%A1%E5%88%92" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>海关总署智能查验装备推广计划</h3>
   <p>规划2030年前90%口岸部署AI视觉识别系统</p>
-  <div class="trend-source">📅 2026-07-22 · 来源www.ithome.com</div>
-</div>
+  <div class="trend-source">📅 2026-07-22 · 来源www.ithome.com <span class="trend-go">检索原文 →</span></div>
+</a>
 </div>
 </div>
 
@@ -250,24 +254,24 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">全球新闻媒体机构的 AI 应用实战案例</p>
 
   <div class="case-grid" id="case-cards-area">
-<div class="case-card">
+<a class="case-card" href="https://www.bing.com/search?q=Apple%20Watch%E6%8C%BD%E6%95%91%E5%B1%B1%E5%9C%B0%E9%AA%91%E8%A1%8C%E4%BA%8B%E6%95%85%E6%82%A3%E8%80%85" target="_blank" rel="noopener noreferrer">
   <div class="case-org">苹果公司</div>
   <h3>Apple Watch挽救山地骑行事故患者</h3>
   <p>智能手表SOS功能触发紧急救援，成功避免悲剧</p>
   <div class="case-tools"><span class="case-tool">智能穿戴</span><span class="case-tool">医疗健康</span></div>
-</div>
-<div class="case-card">
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
+<a class="case-card" href="https://www.bing.com/search?q=%E6%B7%B1%E8%93%9DS05%E6%BF%80%E5%85%89%E9%9B%B7%E8%BE%BE%E9%87%8F%E4%BA%A7%E8%BD%A6%E5%9E%8B" target="_blank" rel="noopener noreferrer">
   <div class="case-org">长安深蓝</div>
   <h3>深蓝S05激光雷达量产车型</h3>
   <p>全球首款量产搭载双激光雷达的智能SUV</p>
   <div class="case-tools"><span class="case-tool">智能驾驶</span><span class="case-tool">激光雷达</span></div>
-</div>
-<div class="case-card">
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
+<a class="case-card" href="https://www.bing.com/search?q=Grok%E9%82%AE%E4%BB%B6%E5%A4%84%E7%90%86%E6%8F%92%E4%BB%B6%E5%8F%91%E5%B8%83" target="_blank" rel="noopener noreferrer">
   <div class="case-org">SpaceX</div>
   <h3>Grok邮件处理插件发布</h3>
   <p>AI自动分类总结专业邮件，提升办公效率300%</p>
   <div class="case-tools"><span class="case-tool">邮件处理</span><span class="case-tool">AI办公</span></div>
-</div>
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
 </div>
 </div>
 
@@ -279,18 +283,18 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">全球 AI 内容监管与版权最新法规动态</p>
 
   <div class="trend-grid" id="policy-cards-area">
-<div class="trend-card">
+<a class="trend-card" href="https://www.bing.com/search?q=site%3Aopenai.com+OpenAI-Hugging%20Face%E5%AE%89%E5%85%A8%E5%90%88%E4%BD%9C" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>OpenAI-Hugging Face安全合作</h3>
   <p>建立AI模型评估安全应急响应机制</p>
-  <div class="trend-source">📅 2026-07-22 · 来源openai.com</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-07-22 · 来源openai.com <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=site%3Aopenai.com+%E7%BE%8E%E5%9B%BDAI%E5%AE%89%E5%85%A8%E8%81%94%E9%82%A6%E4%B8%BB%E4%B9%89%E6%94%BF%E7%AD%96" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>美国AI安全联邦主义政策</h3>
   <p>通过州政府立法构建国家级AI治理框架</p>
-  <div class="trend-source">📅 2026-07-22 · 来源openai.com</div>
-</div>
+  <div class="trend-source">📅 2026-07-22 · 来源openai.com <span class="trend-go">检索原文 →</span></div>
+</a>
 </div>
 </div>
 

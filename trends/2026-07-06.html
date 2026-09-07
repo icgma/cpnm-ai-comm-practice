@@ -100,6 +100,10 @@ a:hover{color:#7C2F22}
 .trend-card{background:var(--bg3);border:1px solid var(--border2);border-radius:4px;
   padding:24px;transition:all .3s;position:relative;overflow:hidden;box-shadow:0 2px 10px rgba(107,90,68,.12)}
 .trend-card:hover{border-color:var(--gold);transform:translateY(-3px);box-shadow:0 10px 24px rgba(107,90,68,.2)}
+a.trend-card,a.case-card{display:block;color:inherit;text-decoration:none;cursor:pointer}
+a.trend-card:hover,a.case-card:hover{color:inherit}
+.trend-go{margin-left:auto;color:var(--cinnabar);font-size:12px;font-weight:600;letter-spacing:.5px}
+.update-banner,.filter-bar,.theme-toggle{display:none}
 .trend-tag{display:inline-block;padding:3px 12px;border-radius:3px;font-size:12px;
   font-weight:600;margin-bottom:12px;border:1px solid}
 .trend-tag.tech{background:rgba(51,86,124,.08);color:#33567C;border-color:rgba(51,86,124,.35)}
@@ -215,30 +219,30 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">本周与传媒相关的 AI 技术进展与产品动态</p>
 
   <div class="trend-grid" id="trend-cards-area">
-<div class="trend-card">
+<a class="trend-card" href="https://www.bing.com/search?q=AI%E6%A8%A1%E5%9E%8B%E7%9B%91%E7%AE%A1%E4%B8%8E%E5%90%88%E8%A7%84%E5%8C%96%E8%BF%9B%E7%A8%8B%E5%8A%A0%E9%80%9F" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag tech">技术</div>
   <h3>AI模型监管与合规化进程加速</h3>
   <p>阿里禁用Claude模型、豆包智能体功能下线，显示AI内容生成工具正面临更严格合规审查</p>
-  <div class="trend-source">📅 2026-07-06 · 来源</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-07-06 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=%E5%A4%9A%E6%A8%A1%E6%80%81%E5%86%85%E5%AE%B9%E7%94%9F%E6%88%90%E6%8A%80%E6%9C%AF%E7%AA%81%E7%A0%B4" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag tech">技术</div>
   <h3>多模态内容生成技术突破</h3>
   <p>OpenAI发布GPT-5.6 Sol，HP与OpenAI合作推出AI优化硬件，推动图文音视频一体化生成</p>
-  <div class="trend-source">📅 2026-07-06 · 来源</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-07-06 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=%E6%99%BA%E8%83%BD%E4%BD%93%E5%B7%A5%E5%85%B7%E5%8A%9F%E8%83%BD%E8%BF%AD%E4%BB%A3%E4%B8%8E%E4%B8%8B%E7%BA%BF%E5%B9%B6%E5%AD%98" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag industry">行业</div>
   <h3>智能体工具功能迭代与下线并存</h3>
   <p>豆包停止"应用生成"服务，华为Mate XT 2折叠屏搭载AI原生系统，反映工具生态分化</p>
-  <div class="trend-source">📅 2026-07-06 · 来源</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-07-06 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=AI%E4%BC%A6%E7%90%86%E4%B8%8E%E5%88%9B%E9%80%A0%E5%8A%9B%E5%B9%B3%E8%A1%A1%E7%A0%94%E7%A9%B6%E6%B7%B1%E5%8C%96" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag academic">学术</div>
   <h3>AI伦理与创造力平衡研究深化</h3>
   <p>《Pangram AI-生成文本分类技术报告》发布，Hnrss讨论AI是否侵蚀人类创造力</p>
-  <div class="trend-source">📅 2026-07-06 · 来源</div>
-</div>
+  <div class="trend-source">📅 2026-07-06 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
 </div>
 </div>
 
@@ -250,24 +254,24 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">全球新闻媒体机构的 AI 应用实战案例</p>
 
   <div class="case-grid" id="case-cards-area">
-<div class="case-card">
+<a class="case-card" href="https://www.bing.com/search?q=Mate%20XT%202%E6%8A%98%E5%8F%A0%E5%B1%8F%E6%90%AD%E8%BD%BDAI%E5%8E%9F%E7%94%9F%E7%B3%BB%E7%BB%9F" target="_blank" rel="noopener noreferrer">
   <div class="case-org">华为</div>
   <h3>Mate XT 2折叠屏搭载AI原生系统</h3>
   <p>首款搭载最新AI处理器的三折叠手机，集成内容生成与交互优化功能</p>
   <div class="case-tools"><span class="case-tool">多模态AI</span><span class="case-tool">折叠屏</span></div>
-</div>
-<div class="case-card">
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
+<a class="case-card" href="https://www.bing.com/search?q=%E6%B8%B8%E6%88%8F%E5%85%89%E7%9B%98%E7%94%9F%E4%BA%A7%E8%AE%A1%E5%88%92%E8%B0%83%E6%95%B4" target="_blank" rel="noopener noreferrer">
   <div class="case-org">索尼</div>
   <h3>游戏光盘生产计划调整</h3>
   <p>应对AI生成内容冲击，2028年前继续生产实体游戏光盘</p>
   <div class="case-tools"><span class="case-tool">实体媒体</span><span class="case-tool">AI替代</span></div>
-</div>
-<div class="case-card">
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
+<a class="case-card" href="https://www.bing.com/search?q=%E6%99%BA%E8%83%BD%E4%BD%93%E5%8A%9F%E8%83%BD%E5%88%86%E9%98%B6%E6%AE%B5%E4%B8%8B%E7%BA%BF" target="_blank" rel="noopener noreferrer">
   <div class="case-org">豆包</div>
   <h3>智能体功能分阶段下线</h3>
   <p>停止"应用生成"服务，保留基础对话功能过渡期至2026年底</p>
   <div class="case-tools"><span class="case-tool">智能体</span><span class="case-tool">合规调整</span></div>
-</div>
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
 </div>
 </div>
 
@@ -279,18 +283,18 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">全球 AI 内容监管与版权最新法规动态</p>
 
   <div class="trend-grid" id="policy-cards-area">
-<div class="trend-card">
+<a class="trend-card" href="https://www.bing.com/search?q=AI%E5%86%85%E5%AE%B9%E7%94%9F%E6%88%90%E5%B7%A5%E5%85%B7%E5%90%88%E8%A7%84%E6%96%B0%E8%A7%84" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>AI内容生成工具合规新规</h3>
   <p>欧盟拟强制要求AI生成内容标注，中国网信办加强模型备案审查</p>
-  <div class="trend-source">📅 2026-07-06 · 来源</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-07-06 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=%E6%95%B0%E6%8D%AE%E9%9A%90%E7%A7%81%E4%BF%9D%E6%8A%A4%E5%BC%BA%E5%8C%96" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>数据隐私保护强化</h3>
   <p>美国FBI破获AI数据泄露案，推动GDPR式隐私法规制定</p>
-  <div class="trend-source">📅 2026-07-06 · 来源</div>
-</div>
+  <div class="trend-source">📅 2026-07-06 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
 </div>
 </div>
 

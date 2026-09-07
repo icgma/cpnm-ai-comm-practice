@@ -100,6 +100,10 @@ a:hover{color:#7C2F22}
 .trend-card{background:var(--bg3);border:1px solid var(--border2);border-radius:4px;
   padding:24px;transition:all .3s;position:relative;overflow:hidden;box-shadow:0 2px 10px rgba(107,90,68,.12)}
 .trend-card:hover{border-color:var(--gold);transform:translateY(-3px);box-shadow:0 10px 24px rgba(107,90,68,.2)}
+a.trend-card,a.case-card{display:block;color:inherit;text-decoration:none;cursor:pointer}
+a.trend-card:hover,a.case-card:hover{color:inherit}
+.trend-go{margin-left:auto;color:var(--cinnabar);font-size:12px;font-weight:600;letter-spacing:.5px}
+.update-banner,.filter-bar,.theme-toggle{display:none}
 .trend-tag{display:inline-block;padding:3px 12px;border-radius:3px;font-size:12px;
   font-weight:600;margin-bottom:12px;border:1px solid}
 .trend-tag.tech{background:rgba(51,86,124,.08);color:#33567C;border-color:rgba(51,86,124,.35)}
@@ -215,30 +219,30 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">本周与传媒相关的 AI 技术进展与产品动态</p>
 
   <div class="trend-grid" id="trend-cards-area">
-<div class="trend-card">
+<a class="trend-card" href="https://www.bing.com/search?q=%E8%8B%B9%E6%9E%9CWWDC%2026%E5%8F%91%E5%B8%83AI%E5%8E%9F%E7%94%9F%E7%B3%BB%E7%BB%9F%E5%8A%9F%E8%83%BD" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag tech">技术</div>
   <h3>苹果WWDC 26发布AI原生系统功能</h3>
   <p>iOS 27测试版新增AI驱动的健康提醒与多模态交互功能，首次实现围绝经期智能预警</p>
-  <div class="trend-source">📅 2026-06-13 · 来源</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-06-13 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=%E5%9B%BD%E4%BA%A7%E5%A4%A7%E6%A8%A1%E5%9E%8B%E9%80%82%E9%85%8D%E5%8A%A0%E9%80%9F" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag tech">技术</div>
   <h3>国产大模型适配加速</h3>
   <p>摩尔线程完成MiniMax M3模型全栈适配，实现18核处理器性能突破</p>
-  <div class="trend-source">📅 2026-06-13 · 来源</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-06-13 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=%E6%AC%A7%E7%9B%9FAI%E9%80%8F%E6%98%8E%E5%BA%A6%E6%96%B0%E8%A7%84%E8%90%BD%E5%9C%B0" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>欧盟AI透明度新规落地</h3>
   <p>OpenAI配合制定内容溯源标准，要求AI生成内容强制标注训练数据</p>
-  <div class="trend-source">📅 2026-06-12 · 来源</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-06-12 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=%E9%AB%98%E5%88%B7%E5%B1%8F%E6%8A%80%E6%9C%AF%E4%BA%A7%E4%B8%9A%E5%8D%87%E7%BA%A7" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag industry">行业</div>
   <h3>高刷屏技术产业升级</h3>
   <p>OPPO/vivo/荣耀联合测试144Hz+AI动态刷新率技术，重新定义移动端显示标准</p>
-  <div class="trend-source">📅 2026-06-13 · 来源</div>
-</div>
+  <div class="trend-source">📅 2026-06-13 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
 </div>
 </div>
 
@@ -250,24 +254,24 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">全球新闻媒体机构的 AI 应用实战案例</p>
 
   <div class="case-grid" id="case-cards-area">
-<div class="case-card">
+<a class="case-card" href="https://www.bing.com/search?q=AI%E5%8A%A8%E7%94%BB%E3%80%8A%E5%87%A1%E4%BA%BA%E4%BF%AE%E4%BB%99%E4%BC%A0%E3%80%8B%E7%A0%B4%E7%BA%AA%E5%BD%95" target="_blank" rel="noopener noreferrer">
   <div class="case-org">B站</div>
   <h3>AI动画《凡人修仙传》破纪录</h3>
   <p>新年番首播超77万观看，采用AI动态分镜技术提升制作效率300%</p>
   <div class="case-tools"><span class="case-tool">AIGC</span><span class="case-tool">实时渲染</span></div>
-</div>
-<div class="case-card">
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
+<a class="case-card" href="https://www.bing.com/search?q=BBVA%E9%87%91%E8%9E%8DAI%E7%B3%BB%E7%BB%9F%E5%8D%87%E7%BA%A7" target="_blank" rel="noopener noreferrer">
   <div class="case-org">OpenAI</div>
   <h3>BBVA金融AI系统升级</h3>
   <p>部署100万员工级ChatGPT企业版，实现智能风控与客户服务自动化</p>
   <div class="case-tools"><span class="case-tool">NLP</span><span class="case-tool">RPA</span></div>
-</div>
-<div class="case-card">
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
+<a class="case-card" href="https://www.bing.com/search?q=AI%E8%AF%AD%E8%A8%80%E6%95%99%E5%AD%A6%E9%9D%A9%E6%96%B0" target="_blank" rel="noopener noreferrer">
   <div class="case-org">Preply</div>
   <h3>AI语言教学革新</h3>
   <p>集成Codex生成个性化课程摘要，学员留存率提升45%</p>
   <div class="case-tools"><span class="case-tool">机器学习</span><span class="case-tool">教育科技</span></div>
-</div>
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
 </div>
 </div>
 
@@ -279,18 +283,18 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">全球 AI 内容监管与版权最新法规动态</p>
 
   <div class="trend-grid" id="policy-cards-area">
-<div class="trend-card">
+<a class="trend-card" href="https://www.bing.com/search?q=%E4%B8%AD%E5%9B%BDAI%E5%86%85%E5%AE%B9%E7%9B%91%E7%AE%A1%E6%96%B0%E8%A7%84" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>中国AI内容监管新规</h3>
   <p>要求境外AI模型备案，限制未认证模型在传媒领域的应用</p>
-  <div class="trend-source">📅 2026-06-12 · 来源</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-06-12 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=%E4%BB%BB%E5%A4%A9%E5%A0%82%E6%B8%B8%E6%88%8F%E7%BA%A0%E7%BA%B7%E7%BB%93%E6%A1%88" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>任天堂游戏纠纷结案</h3>
   <p>《幻兽帕鲁》法律争议终审，最高索赔额500万日元</p>
-  <div class="trend-source">📅 2026-06-13 · 来源</div>
-</div>
+  <div class="trend-source">📅 2026-06-13 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
 </div>
 </div>
 

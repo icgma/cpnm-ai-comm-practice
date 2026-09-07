@@ -100,6 +100,10 @@ a:hover{color:#7C2F22}
 .trend-card{background:var(--bg3);border:1px solid var(--border2);border-radius:4px;
   padding:24px;transition:all .3s;position:relative;overflow:hidden;box-shadow:0 2px 10px rgba(107,90,68,.12)}
 .trend-card:hover{border-color:var(--gold);transform:translateY(-3px);box-shadow:0 10px 24px rgba(107,90,68,.2)}
+a.trend-card,a.case-card{display:block;color:inherit;text-decoration:none;cursor:pointer}
+a.trend-card:hover,a.case-card:hover{color:inherit}
+.trend-go{margin-left:auto;color:var(--cinnabar);font-size:12px;font-weight:600;letter-spacing:.5px}
+.update-banner,.filter-bar,.theme-toggle{display:none}
 .trend-tag{display:inline-block;padding:3px 12px;border-radius:3px;font-size:12px;
   font-weight:600;margin-bottom:12px;border:1px solid}
 .trend-tag.tech{background:rgba(51,86,124,.08);color:#33567C;border-color:rgba(51,86,124,.35)}
@@ -215,26 +219,26 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">本周与传媒相关的 AI 技术进展与产品动态</p>
 
   <div class="trend-grid" id="trend-cards-area">
-<div class="trend-card">
+<a class="trend-card" href="https://www.bing.com/search?q=DeepSeek%20V4%20Flash%20%E6%AD%A3%E5%BC%8F%E7%89%88%E5%8F%91%E5%B8%83" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag tech">技术</div>
   <h3>DeepSeek V4 Flash 正式版发布</h3>
   <p>支持上下文窗口达128K tokens，推理速度提升50%，中文问答准确率达92.3%</p>
-  <div class="trend-source">📅 2026-08-03 · 来源</div>
-</div>
+  <div class="trend-source">📅 2026-08-03 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
 
-<div class="trend-card">
+<a class="trend-card" href="https://www.bing.com/search?q=site%3Aopenai.com+OpenAI%E6%AC%A7%E7%9B%9F%E8%B4%A3%E4%BB%BBAI%E6%A1%86%E6%9E%B6%E8%90%BD%E5%9C%B0" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>OpenAI欧盟责任AI框架落地</h3>
   <p>通过透明度审计与偏见检测系统，建立AI生成内容分级标识制度</p>
-  <div class="trend-source">📅 2026-08-03 · 来源</div>
-</div>
+  <div class="trend-source">📅 2026-08-03 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
 
-<div class="trend-card">
+<a class="trend-card" href="https://www.bing.com/search?q=MiniMax%20H3%E8%A7%86%E9%A2%91%E6%A8%A1%E5%9E%8B%E5%BC%80%E6%BA%90" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag tech">技术</div>
   <h3>MiniMax H3视频模型开源</h3>
   <p>支持多模态上下文理解，2K分辨率生成延迟低于200ms</p>
-  <div class="trend-source">📅 2026-08-03 · 来源</div>
-</div>
+  <div class="trend-source">📅 2026-08-03 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
 </div>
 </div>
 
@@ -246,26 +250,26 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">全球新闻媒体机构的 AI 应用实战案例</p>
 
   <div class="case-grid" id="case-cards-area">
-<div class="case-card">
+<a class="case-card" href="https://www.bing.com/search?q=%E5%8D%83%E9%97%AE%E5%8A%9E%E5%85%ACAgent%E4%BA%A7%E5%93%81%E5%85%AC%E6%B5%8B" target="_blank" rel="noopener noreferrer">
   <div class="case-org">阿里巴巴</div>
   <h3>千问办公Agent产品公测</h3>
   <p>集成Qwen3.8模型，实现智能会议纪要生成与任务自动分派</p>
   <div class="case-tools"><span class="case-tool">企业级Agent</span><span class="case-tool">大模型</span></div>
-</div>
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
 
-<div class="case-card">
+<a class="case-card" href="https://www.bing.com/search?q=24/7%E9%9B%B6%E5%94%AE%E5%AE%A2%E6%9C%8D%E7%B3%BB%E7%BB%9F" target="_blank" rel="noopener noreferrer">
   <div class="case-org">avatarin</div>
   <h3>24/7零售客服系统</h3>
   <p>基于GPT-Realtime构建多语言支持系统，响应准确率91.7%</p>
   <div class="case-tools"><span class="case-tool">GPT-Realtime</span><span class="case-tool">多模态</span></div>
-</div>
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
 
-<div class="case-card">
+<a class="case-card" href="https://www.bing.com/search?q=2D%E8%93%9D%E5%9B%BE%E6%99%BA%E8%83%BD%E8%A7%A3%E6%9E%90" target="_blank" rel="noopener noreferrer">
   <div class="case-org">Zenith</div>
   <h3>2D蓝图智能解析</h3>
   <p>AI自动生成3D报价模型，减少80%人工核算时间</p>
   <div class="case-tools"><span class="case-tool">计算机视觉</span><span class="case-tool">工业设计</span></div>
-</div>
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
 </div>
 </div>
 
@@ -277,19 +281,19 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">全球 AI 内容监管与版权最新法规动态</p>
 
   <div class="trend-grid" id="policy-cards-area">
-<div class="trend-card">
+<a class="trend-card" href="https://www.bing.com/search?q=%E6%AC%A7%E7%9B%9FAI%E6%B3%95%E6%A1%88%E5%AE%9E%E6%96%BD%E7%BB%86%E5%88%99" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>欧盟AI法案实施细则</h3>
   <p>明确生成式AI内容标识要求，规定高风险系统备案流程</p>
-  <div class="trend-source">📅 2026-08-03 · 来源</div>
-</div>
+  <div class="trend-source">📅 2026-08-03 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
 
-<div class="trend-card">
+<a class="trend-card" href="https://www.bing.com/search?q=%E4%B8%AD%E5%9B%BD%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%A4%87%E6%A1%88%E6%96%B0%E8%A7%84" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>中国大模型备案新规</h3>
   <p>要求训练数据本地化存储，模型输出实施三级审核</p>
-  <div class="trend-source">📅 2026-08-03 · 来源</div>
-</div>
+  <div class="trend-source">📅 2026-08-03 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
 </div>
 </div>
 

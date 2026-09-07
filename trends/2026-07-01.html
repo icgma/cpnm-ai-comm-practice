@@ -100,6 +100,10 @@ a:hover{color:#7C2F22}
 .trend-card{background:var(--bg3);border:1px solid var(--border2);border-radius:4px;
   padding:24px;transition:all .3s;position:relative;overflow:hidden;box-shadow:0 2px 10px rgba(107,90,68,.12)}
 .trend-card:hover{border-color:var(--gold);transform:translateY(-3px);box-shadow:0 10px 24px rgba(107,90,68,.2)}
+a.trend-card,a.case-card{display:block;color:inherit;text-decoration:none;cursor:pointer}
+a.trend-card:hover,a.case-card:hover{color:inherit}
+.trend-go{margin-left:auto;color:var(--cinnabar);font-size:12px;font-weight:600;letter-spacing:.5px}
+.update-banner,.filter-bar,.theme-toggle{display:none}
 .trend-tag{display:inline-block;padding:3px 12px;border-radius:3px;font-size:12px;
   font-weight:600;margin-bottom:12px;border:1px solid}
 .trend-tag.tech{background:rgba(51,86,124,.08);color:#33567C;border-color:rgba(51,86,124,.35)}
@@ -215,30 +219,30 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">本周与传媒相关的 AI 技术进展与产品动态</p>
 
   <div class="trend-grid" id="trend-cards-area">
-<div class="trend-card">
+<a class="trend-card" href="https://www.bing.com/search?q=AI%E5%8E%9F%E7%94%9F%E7%A1%AC%E4%BB%B6%E5%8A%A0%E9%80%9F%E6%8A%80%E6%9C%AF%E7%AA%81%E7%A0%B4" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag tech">技术</div>
   <h3>AI原生硬件加速技术突破</h3>
   <p>OpenAI与Broadcom联合推出Jalapeño芯片，专为LLM推理优化性能，提升30%能效比</p>
-  <div class="trend-source">📅 2026-07-01 · 来源</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-07-01 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=AI%E5%88%86%E8%BA%AB%E7%B3%BB%E7%BB%9F%E6%99%AE%E5%8F%8A%E5%8C%96" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag tool">工具</div>
   <h3>AI分身系统普及化</h3>
   <p>微信公众号向医院开放AI分身能力，实现7×24小时智能应答</p>
-  <div class="trend-source">📅 2026-07-01 · 来源</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-07-01 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=AI%E5%8E%9F%E7%94%9F%E5%86%85%E5%AE%B9%E7%94%9F%E4%BA%A7%E9%9D%A9%E5%91%BD" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag industry">行业</div>
   <h3>AI原生内容生产革命</h3>
   <p>HP与OpenAI合作推出Frontier战略，覆盖智能客服、个性化推荐等场景</p>
-  <div class="trend-source">📅 2026-07-01 · 来源</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-07-01 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=%E4%BA%A4%E4%BA%92%E5%BC%8FAI%E5%8F%8D%E9%A6%88%E6%9C%BA%E5%88%B6%E7%A0%94%E7%A9%B6" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag academic">学术</div>
   <h3>交互式AI反馈机制研究</h3>
   <p>arXiv最新论文揭示人类反馈对AI持续优化的关键驱动作用</p>
-  <div class="trend-source">📅 2026-07-01 · 来源</div>
-</div>
+  <div class="trend-source">📅 2026-07-01 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
 </div>
 </div>
 
@@ -250,30 +254,30 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">全球新闻媒体机构的 AI 应用实战案例</p>
 
   <div class="case-grid" id="case-cards-area">
-<div class="case-card">
+<a class="case-card" href="https://www.bing.com/search?q=AI%E5%A3%B0%E5%AD%A6%E5%A2%9E%E5%BC%BA%E5%B9%B3%E6%9D%BF%E5%8F%91%E5%B8%83" target="_blank" rel="noopener noreferrer">
   <div class="case-org">iQOO</div>
   <h3>AI声学增强平板发布</h3>
   <p>iQOO Pad5c搭载AI音频处理芯片，支持智能降噪与空间音频</p>
   <div class="case-tools"><span class="case-tool">音频AI</span><span class="case-tool">硬件集成</span></div>
-</div>
-<div class="case-card">
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
+<a class="case-card" href="https://www.bing.com/search?q=Frontier%E6%88%98%E7%95%A5%E8%90%BD%E5%9C%B0" target="_blank" rel="noopener noreferrer">
   <div class="case-org">HP</div>
   <h3>Frontier战略落地</h3>
   <p>与OpenAI合作推出智能办公套件，集成GPT-5.6 Sol模型</p>
   <div class="case-tools"><span class="case-tool">企业服务</span><span class="case-tool">OpenAI</span></div>
-</div>
-<div class="case-card">
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
+<a class="case-card" href="https://www.bing.com/search?q=%E5%8C%BB%E7%96%97AI%E5%88%86%E8%BA%AB%E7%B3%BB%E7%BB%9F" target="_blank" rel="noopener noreferrer">
   <div class="case-org">微信公众号</div>
   <h3>医疗AI分身系统</h3>
   <p>向三甲医院开放AI分身，日均处理问诊请求超10万次</p>
   <div class="case-tools"><span class="case-tool">医疗AI</span><span class="case-tool">低代码</span></div>
-</div>
-<div class="case-card">
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
+<a class="case-card" href="https://www.bing.com/search?q=AI%E6%99%BA%E8%83%BD%E8%80%B3%E5%A1%9E%E5%8F%91%E5%B8%83" target="_blank" rel="noopener noreferrer">
   <div class="case-org">Xiaomi</div>
   <h3>AI智能耳塞发布</h3>
   <p>集成语音识别与空间音频，支持实时环境声场调节</p>
   <div class="case-tools"><span class="case-tool">消费电子</span><span class="case-tool">AI音频</span></div>
-</div>
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
 </div>
 </div>
 
@@ -285,18 +289,18 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">全球 AI 内容监管与版权最新法规动态</p>
 
   <div class="trend-grid" id="policy-cards-area">
-<div class="trend-card">
+<a class="trend-card" href="https://www.bing.com/search?q=%E5%BE%AE%E8%BD%AF%E8%BA%AB%E4%BB%BD%E9%AA%8C%E8%AF%81%E6%94%BF%E7%AD%96%E6%94%B6%E7%B4%A7" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>微软身份验证政策收紧</h3>
   <p>禁止越狱设备使用企业版 Authenticator，影响超200万用户</p>
-  <div class="trend-source">📅 2026-07-01 · 来源</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-07-01 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=%E6%AC%A7%E7%9B%9FAI%E5%B7%A5%E4%BD%9C%E9%87%8D%E5%A1%91%E8%AE%A1%E5%88%92" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>欧盟AI工作重塑计划</h3>
   <p>OpenAI报告建议欧盟每年新增30万个AI相关岗位</p>
-  <div class="trend-source">📅 2026-07-01 · 来源</div>
-</div>
+  <div class="trend-source">📅 2026-07-01 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
 </div>
 </div>
 

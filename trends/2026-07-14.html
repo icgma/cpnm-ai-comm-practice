@@ -100,6 +100,10 @@ a:hover{color:#7C2F22}
 .trend-card{background:var(--bg3);border:1px solid var(--border2);border-radius:4px;
   padding:24px;transition:all .3s;position:relative;overflow:hidden;box-shadow:0 2px 10px rgba(107,90,68,.12)}
 .trend-card:hover{border-color:var(--gold);transform:translateY(-3px);box-shadow:0 10px 24px rgba(107,90,68,.2)}
+a.trend-card,a.case-card{display:block;color:inherit;text-decoration:none;cursor:pointer}
+a.trend-card:hover,a.case-card:hover{color:inherit}
+.trend-go{margin-left:auto;color:var(--cinnabar);font-size:12px;font-weight:600;letter-spacing:.5px}
+.update-banner,.filter-bar,.theme-toggle{display:none}
 .trend-tag{display:inline-block;padding:3px 12px;border-radius:3px;font-size:12px;
   font-weight:600;margin-bottom:12px;border:1px solid}
 .trend-tag.tech{background:rgba(51,86,124,.08);color:#33567C;border-color:rgba(51,86,124,.35)}
@@ -215,30 +219,30 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">本周与传媒相关的 AI 技术进展与产品动态</p>
 
   <div class="trend-grid" id="trend-cards-area">
-<div class="trend-card">
+<a class="trend-card" href="https://www.bing.com/search?q=AI%E7%94%9F%E5%9B%BE%E6%97%B6%E4%BB%A3%E7%9A%84%E4%BF%A1%E6%81%AF%E9%98%B2%E4%BC%AA%E6%8C%91%E6%88%98" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag tech">技术</div>
   <h3>AI生图时代的信息防伪挑战</h3>
   <p>AI生成图像的普及引发真实性验证难题，需结合区块链与数字水印技术建立防伪体系</p>
-  <div class="trend-source">📅 2026-07-14 · 来源</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-07-14 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=%E5%BE%AE%E8%BD%AFPowerPoint%E6%96%B0%E5%A2%9EAI%E6%99%BA%E8%83%BD%E6%8E%92%E7%89%88%E5%8A%9F%E8%83%BD" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag tool">工具</div>
   <h3>微软PowerPoint新增AI智能排版功能</h3>
   <p>新增13类SmartArt模板及智能文件优化，提升内容创作效率与多端协作体验</p>
-  <div class="trend-source">📅 2026-07-14 · 来源</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-07-14 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=%E7%94%A8%E6%88%B7%E6%95%B0%E6%8D%AE%E6%8E%88%E6%9D%83%E4%B8%8EAI%E8%AE%AD%E7%BB%83%E7%9A%84%E5%90%88%E8%A7%84%E8%BE%B9%E7%95%8C" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>用户数据授权与AI训练的合规边界</h3>
   <p>三星健康条款争议揭示用户需在数据备份与AI训练间权衡，引发全球数据治理讨论</p>
-  <div class="trend-source">📅 2026-07-14 · 来源</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-07-14 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=%E5%BE%B7%E6%84%8F%E5%BF%97%E7%94%B5%E4%BF%A1AI%E5%8E%9F%E7%94%9F%E6%9C%8D%E5%8A%A1%E8%BD%AC%E5%9E%8B" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag industry">行业</div>
   <h3>德意志电信AI原生服务转型</h3>
   <p>通过OpenAI技术重构客户服务与网络运维，实现98%服务自动化处理</p>
-  <div class="trend-source">📅 2026-07-14 · 来源</div>
-</div>
+  <div class="trend-source">📅 2026-07-14 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
 </div>
 </div>
 
@@ -250,24 +254,24 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">全球新闻媒体机构的 AI 应用实战案例</p>
 
   <div class="case-grid" id="case-cards-area">
-<div class="case-card">
+<a class="case-card" href="https://www.bing.com/search?q=AI%E6%99%BA%E8%83%BD%E5%8A%9E%E5%85%AC%E5%A5%97%E4%BB%B6%E5%8D%87%E7%BA%A7" target="_blank" rel="noopener noreferrer">
   <div class="case-org">微软</div>
   <h3>AI智能办公套件升级</h3>
   <p>PowerPoint新增AI排版与协作功能，支持实时多用户编辑与智能内容生成</p>
   <div class="case-tools"><span class="case-tool">AI</span><span class="case-tool">办公软件</span></div>
-</div>
-<div class="case-card">
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
+<a class="case-card" href="https://www.bing.com/search?q=AI%E9%A9%B1%E5%8A%A8%E7%9A%84%E7%94%B5%E4%BF%A1%E6%9C%8D%E5%8A%A1%E9%9D%A9%E6%96%B0" target="_blank" rel="noopener noreferrer">
   <div class="case-org">德意志电信</div>
   <h3>AI驱动的电信服务革新</h3>
   <p>部署OpenAI技术优化客服响应与网络运维，客户满意度提升40%</p>
   <div class="case-tools"><span class="case-tool">AI</span><span class="case-tool">客户服务</span></div>
-</div>
-<div class="case-card">
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
+<a class="case-card" href="https://www.bing.com/search?q=%E7%94%A8%E6%88%B7%E6%95%B0%E6%8D%AE%E6%8E%88%E6%9D%83%E6%A8%A1%E5%BC%8F%E4%BA%89%E8%AE%AE" target="_blank" rel="noopener noreferrer">
   <div class="case-org">三星健康</div>
   <h3>用户数据授权模式争议</h3>
   <p>因AI训练条款限制引发用户数据备份权争议，推动GDPR-like法规制定</p>
   <div class="case-tools"><span class="case-tool">数据治理</span><span class="case-tool">AI伦理</span></div>
-</div>
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
 </div>
 </div>
 
@@ -279,18 +283,18 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">全球 AI 内容监管与版权最新法规动态</p>
 
   <div class="trend-grid" id="policy-cards-area">
-<div class="trend-card">
+<a class="trend-card" href="https://www.bing.com/search?q=AI%E6%95%B0%E6%8D%AE%E8%AE%AD%E7%BB%83%E6%8E%88%E6%9D%83%E6%96%B0%E8%A7%84%E8%8D%89%E6%A1%88" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>AI数据训练授权新规草案</h3>
   <p>欧盟拟强制要求AI服务提供商公开训练数据来源，建立用户授权追踪系统</p>
-  <div class="trend-source">📅 2026-07-14 · 来源</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-07-14 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=%E4%B8%AD%E5%9B%BD%E7%AE%97%E5%8A%9B%E7%A1%AC%E4%BB%B6%E8%BF%9B%E5%87%BA%E5%8F%A3%E7%9B%91%E7%AE%A1%E5%BC%BA%E5%8C%96" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>中国算力硬件进出口监管强化</h3>
   <p>海关总署出台新规，要求AI训练数据本地化存储，涉及设备出口需通过安全认证</p>
-  <div class="trend-source">📅 2026-07-14 · 来源</div>
-</div>
+  <div class="trend-source">📅 2026-07-14 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
 </div>
 </div>
 

@@ -100,6 +100,10 @@ a:hover{color:#7C2F22}
 .trend-card{background:var(--bg3);border:1px solid var(--border2);border-radius:4px;
   padding:24px;transition:all .3s;position:relative;overflow:hidden;box-shadow:0 2px 10px rgba(107,90,68,.12)}
 .trend-card:hover{border-color:var(--gold);transform:translateY(-3px);box-shadow:0 10px 24px rgba(107,90,68,.2)}
+a.trend-card,a.case-card{display:block;color:inherit;text-decoration:none;cursor:pointer}
+a.trend-card:hover,a.case-card:hover{color:inherit}
+.trend-go{margin-left:auto;color:var(--cinnabar);font-size:12px;font-weight:600;letter-spacing:.5px}
+.update-banner,.filter-bar,.theme-toggle{display:none}
 .trend-tag{display:inline-block;padding:3px 12px;border-radius:3px;font-size:12px;
   font-weight:600;margin-bottom:12px;border:1px solid}
 .trend-tag.tech{background:rgba(51,86,124,.08);color:#33567C;border-color:rgba(51,86,124,.35)}
@@ -215,24 +219,24 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">本周与传媒相关的 AI 技术进展与产品动态</p>
 
   <div class="trend-grid" id="trend-cards-area">
-<div class="trend-card">
+<a class="trend-card" href="https://www.ithome.com/search.htm?search=%E7%90%86%E6%83%B3%E6%B1%BD%E8%BD%A6%E5%8F%91%E5%B8%83%E8%87%AA%E7%A0%94AI%E8%8A%AF%E7%89%87%E4%B8%8E%E8%B6%85%E7%AE%97%E5%AD%90%E6%9D%BF" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag tech">技术</div>
   <h3>理想汽车发布自研AI芯片与超算子板</h3>
   <p>李想宣布将AI带入物理世界，提供类似苹果的智能体验</p>
-  <div class="trend-source">📅 2026-05-12 · 来源：IT之家</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-05-12 · 来源：IT之家 <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.ithome.com/search.htm?search=%E4%B8%8A%E6%B5%B7AI%E5%AE%9E%E9%AA%8C%E5%AE%A4%E6%94%BB%E5%85%8B%E5%85%89%E5%88%BB%E8%83%B6%E5%88%B6%E5%A4%87%E9%9A%BE%E9%A2%98" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag tech">技术</div>
   <h3>上海AI实验室攻克光刻胶制备难题</h3>
   <p>联合科研团队实现AI决策驱动的芯片材料自动化合成</p>
-  <div class="trend-source">📅 2026-05-12 · 来源：IT之家</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-05-12 · 来源：IT之家 <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=%E6%B9%96%E5%8C%97%E8%AF%95%E7%82%B9%E4%BA%BA%E5%BD%A2%E6%9C%BA%E5%99%A8%E4%BA%BA%E6%95%B0%E5%AD%97%E8%BA%AB%E4%BB%BD%E8%AF%81" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>湖北试点人形机器人数字身份证</h3>
   <p>全国首个全生命周期身份登记系统覆盖机器人全流程管理</p>
-  <div class="trend-source">📅 2026-05-12 · 来源：湖北日报</div>
-</div>
+  <div class="trend-source">📅 2026-05-12 · 来源：湖北日报 <span class="trend-go">检索原文 →</span></div>
+</a>
 </div>
 </div>
 
@@ -244,24 +248,24 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">全球新闻媒体机构的 AI 应用实战案例</p>
 
   <div class="case-grid" id="case-cards-area">
-<div class="case-card">
+<a class="case-card" href="https://www.bing.com/search?q=HarmonyOS%206%E8%AF%AD%E9%9F%B3%E6%8E%A7%E8%BD%A6%E5%8A%9F%E8%83%BD%E4%B8%8A%E7%BA%BF" target="_blank" rel="noopener noreferrer">
   <div class="case-org">鸿蒙智行</div>
   <h3>HarmonyOS 6语音控车功能上线</h3>
   <p>新增AI语音指令支持，实现车载系统全场景语音交互</p>
   <div class="case-tools"><span class="case-tool">HarmonyOS</span><span class="case-tool">AI语音</span></div>
-</div>
-<div class="case-card">
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
+<a class="case-card" href="https://www.bing.com/search?q=%E4%B8%8E%E6%B7%98%E5%AE%9DAI%E5%85%A8%E9%93%BE%E8%B7%AF%E6%89%93%E9%80%9A" target="_blank" rel="noopener noreferrer">
   <div class="case-org">小米</div>
   <h3>与淘宝AI全链路打通</h3>
   <p>实现用户行为分析到个性化推荐的端到端智能服务</p>
   <div class="case-tools"><span class="case-tool">AI推荐</span><span class="case-tool">电商</span></div>
-</div>
-<div class="case-card">
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
+<a class="case-card" href="https://www.bing.com/search?q=ChatGPT%E5%B9%BF%E5%91%8A%E6%B5%8B%E8%AF%95%E5%90%AF%E5%8A%A8" target="_blank" rel="noopener noreferrer">
   <div class="case-org">OpenAI</div>
   <h3>ChatGPT广告测试启动</h3>
   <p>探索AI对话界面商业化路径，采用透明标注机制</p>
   <div class="case-tools"><span class="case-tool">AI广告</span><span class="case-tool">商业化</span></div>
-</div>
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
 </div>
 </div>
 
@@ -273,12 +277,12 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">全球 AI 内容监管与版权最新法规动态</p>
 
   <div class="trend-grid" id="policy-cards-area">
-<div class="trend-card">
+<a class="trend-card" href="https://www.bing.com/search?q=site%3Aopenai.com+OpenAI%E5%B9%BF%E5%91%8A%E5%90%88%E8%A7%84%E6%B5%8B%E8%AF%95" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>OpenAI广告合规测试</h3>
   <p>启动ChatGPT广告功能，通过内容中立性审查与用户知情权保障</p>
-  <div class="trend-source">📅 2026-05-12 · 来源：OpenAI</div>
-</div>
+  <div class="trend-source">📅 2026-05-12 · 来源：OpenAI <span class="trend-go">检索原文 →</span></div>
+</a>
 </div>
 </div>
 

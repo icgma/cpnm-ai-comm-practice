@@ -100,6 +100,10 @@ a:hover{color:#7C2F22}
 .trend-card{background:var(--bg3);border:1px solid var(--border2);border-radius:4px;
   padding:24px;transition:all .3s;position:relative;overflow:hidden;box-shadow:0 2px 10px rgba(107,90,68,.12)}
 .trend-card:hover{border-color:var(--gold);transform:translateY(-3px);box-shadow:0 10px 24px rgba(107,90,68,.2)}
+a.trend-card,a.case-card{display:block;color:inherit;text-decoration:none;cursor:pointer}
+a.trend-card:hover,a.case-card:hover{color:inherit}
+.trend-go{margin-left:auto;color:var(--cinnabar);font-size:12px;font-weight:600;letter-spacing:.5px}
+.update-banner,.filter-bar,.theme-toggle{display:none}
 .trend-tag{display:inline-block;padding:3px 12px;border-radius:3px;font-size:12px;
   font-weight:600;margin-bottom:12px;border:1px solid}
 .trend-tag.tech{background:rgba(51,86,124,.08);color:#33567C;border-color:rgba(51,86,124,.35)}
@@ -215,24 +219,24 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">本周与传媒相关的 AI 技术进展与产品动态</p>
 
   <div class="trend-grid" id="trend-cards-area">
-<div class="trend-card">
+<a class="trend-card" href="https://www.ithome.com/search.htm?search=AI%E7%94%9F%E6%88%90%E5%86%85%E5%AE%B9%EF%BC%88AIGC%EF%BC%89%E5%9C%A8%E5%BD%B1%E8%A7%86%E4%B8%8E%E6%B8%B8%E6%88%8F%E9%A2%86%E5%9F%9F%E7%9A%84%E6%B7%B1%E5%BA%A6%E6%B8%97%E9%80%8F" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag tech">技术</div>
   <h3>AI生成内容（AIGC）在影视与游戏领域的深度渗透</h3>
   <p>AI技术已广泛应用于影视动画制作、游戏开发及IP衍生内容创作，如任天堂通过AI扩展游戏IP至电影领域，格罗夫街工作室运用AI工具开发原创游戏《BeastLink》。</p>
-  <div class="trend-source">📅 2026-07-04 · 来源ithome.com</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-07-04 · 来源ithome.com <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.ithome.com/search.htm?search=AI%E9%A9%B1%E5%8A%A8%E7%9A%84%E4%B8%AA%E6%80%A7%E5%8C%96%E5%86%85%E5%AE%B9%E5%88%86%E5%8F%91%E4%B8%8E%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F%E5%8D%87%E7%BA%A7" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag industry">行业</div>
   <h3>AI驱动的个性化内容分发与推荐系统升级</h3>
   <p>HP与OpenAI合作推出AI优化工具，亚马逊Fire HD 10平板升级至4GB内存并集成AI推荐算法，提升用户体验效率。</p>
-  <div class="trend-source">📅 2026-07-04 · 来源ithome.com</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-07-04 · 来源ithome.com <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://hn.algolia.com/?q=%E5%85%A8%E7%90%83AI%E7%89%88%E6%9D%83%E7%AE%A1%E7%90%86%E6%A1%86%E6%9E%B6%E5%8A%A0%E9%80%9F%E6%9E%84%E5%BB%BA" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>全球AI版权管理框架加速构建</h3>
   <p>Midjourney与好莱坞工作室就AI生成内容版权展开诉讼，推动行业建立AI创作归属与版权分配标准。</p>
-  <div class="trend-source">📅 2026-07-04 · 来源hnrss.org</div>
-</div>
+  <div class="trend-source">📅 2026-07-04 · 来源hnrss.org <span class="trend-go">检索原文 →</span></div>
+</a>
 </div>
 </div>
 
@@ -244,24 +248,24 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">全球新闻媒体机构的 AI 应用实战案例</p>
 
   <div class="case-grid" id="case-cards-area">
-<div class="case-card">
+<a class="case-card" href="https://www.bing.com/search?q=AI%E7%BB%98%E7%94%BB%E7%89%88%E6%9D%83%E7%BA%A0%E7%BA%B7%E6%A1%88" target="_blank" rel="noopener noreferrer">
   <div class="case-org">Midjourney与好莱坞电影工作室</div>
   <h3>AI绘画版权纠纷案</h3>
   <p>Midjourney因未经授权使用AI生成图像被多家电影公司起诉，推动法院介入AI创作版权判定。</p>
   <div class="case-tools"><span class="case-tool">版权管理</span><span class="case-tool">AI生成</span></div>
-</div>
-<div class="case-card">
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
+<a class="case-card" href="https://www.bing.com/search?q=AI%E5%AE%A2%E6%88%B7%E4%BD%93%E9%AA%8C%E4%BC%98%E5%8C%96%E9%A1%B9%E7%9B%AE" target="_blank" rel="noopener noreferrer">
   <div class="case-org">HP Inc.</div>
   <h3>AI客户体验优化项目</h3>
   <p>与OpenAI合作开发AI驱动的智能客服系统，提升消费者服务响应效率30%。</p>
   <div class="case-tools"><span class="case-tool">AI优化</span><span class="case-tool">用户体验</span></div>
-</div>
-<div class="case-card">
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
+<a class="case-card" href="https://www.bing.com/search?q=AI%E5%86%85%E5%AE%B9%E5%88%86%E5%8F%91%E7%AE%97%E6%B3%95%E5%8D%87%E7%BA%A7" target="_blank" rel="noopener noreferrer">
   <div class="case-org">字节跳动</div>
   <h3>AI内容分发算法升级</h3>
   <p>发现新型AI扩展定律，优化TikTok内容推荐准确率至92%，用户日均使用时长增加15分钟。</p>
   <div class="case-tools"><span class="case-tool">算法优化</span><span class="case-tool">内容分发</span></div>
-</div>
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
 </div>
 </div>
 
@@ -273,18 +277,18 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">全球 AI 内容监管与版权最新法规动态</p>
 
   <div class="trend-grid" id="policy-cards-area">
-<div class="trend-card">
+<a class="trend-card" href="https://hn.algolia.com/?q=%E9%98%BF%E6%A0%B9%E5%BB%B7AI%E4%BC%81%E4%B8%9A%E5%90%88%E8%A7%84%E6%B3%95%E6%A1%88%E6%8B%9F%E7%A8%BF" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>阿根廷AI企业合规法案拟稿</h3>
   <p>要求AI企业保留完整用户数据轨迹，并通过人类监督机制确保决策透明性。</p>
-  <div class="trend-source">📅 2026-07-04 · 来源hnrss.org</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-07-04 · 来源hnrss.org <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=site%3Aopenai.com+%E6%AC%A7%E7%9B%9FAI%E5%B0%B1%E4%B8%9A%E5%BD%B1%E5%93%8D%E8%AF%84%E4%BC%B0%E6%8A%A5%E5%91%8A" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>欧盟AI就业影响评估报告</h3>
   <p>预测到2030年AI将重塑欧盟45%内容生产岗位，建议设立专项基金培训传媒行业人员。</p>
-  <div class="trend-source">📅 2026-07-04 · 来源openai.com</div>
-</div>
+  <div class="trend-source">📅 2026-07-04 · 来源openai.com <span class="trend-go">检索原文 →</span></div>
+</a>
 </div>
 </div>
 

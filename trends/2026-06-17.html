@@ -100,6 +100,10 @@ a:hover{color:#7C2F22}
 .trend-card{background:var(--bg3);border:1px solid var(--border2);border-radius:4px;
   padding:24px;transition:all .3s;position:relative;overflow:hidden;box-shadow:0 2px 10px rgba(107,90,68,.12)}
 .trend-card:hover{border-color:var(--gold);transform:translateY(-3px);box-shadow:0 10px 24px rgba(107,90,68,.2)}
+a.trend-card,a.case-card{display:block;color:inherit;text-decoration:none;cursor:pointer}
+a.trend-card:hover,a.case-card:hover{color:inherit}
+.trend-go{margin-left:auto;color:var(--cinnabar);font-size:12px;font-weight:600;letter-spacing:.5px}
+.update-banner,.filter-bar,.theme-toggle{display:none}
 .trend-tag{display:inline-block;padding:3px 12px;border-radius:3px;font-size:12px;
   font-weight:600;margin-bottom:12px;border:1px solid}
 .trend-tag.tech{background:rgba(51,86,124,.08);color:#33567C;border-color:rgba(51,86,124,.35)}
@@ -215,30 +219,30 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">本周与传媒相关的 AI 技术进展与产品动态</p>
 
   <div class="trend-grid" id="trend-cards-area">
-<div class="trend-card">
+<a class="trend-card" href="https://www.ithome.com/search.htm?search=%E8%8B%B1%E4%BC%9F%E8%BE%BERTX%20Remix%201.5%E6%8A%80%E6%9C%AF%E9%9D%A9%E6%96%B0" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag tech">技术</div>
   <h3>英伟达RTX Remix 1.5技术革新</h3>
   <p>新增RTX IO压缩技术，将《半条命2：光追版》游戏体积压缩37.5%至50GB</p>
-  <div class="trend-source">📅 2026-06-17 · 来源：IT之家</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-06-17 · 来源：IT之家 <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=site%3Aopenai.com+OpenAI%E9%83%A8%E7%BD%B2%E6%A8%A1%E6%8B%9F%E7%B3%BB%E7%BB%9F" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag tech">技术</div>
   <h3>OpenAI部署模拟系统</h3>
   <p>通过Deployment Simulation预测模型部署行为，提升AI系统稳定性</p>
-  <div class="trend-source">📅 2026-06-17 · 来源：OpenAI</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-06-17 · 来源：OpenAI <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://hn.algolia.com/?q=AI%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91%E6%96%B0%E8%8C%83%E5%BC%8F" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag industry">行业</div>
   <h3>AI游戏开发新范式</h3>
   <p>Playground Games利用AI工具优化《神鬼寓言》开发流程，提升叙事效率</p>
-  <div class="trend-source">📅 2026-06-17 · 来源：Hacker News</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-06-17 · 来源：Hacker News <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://hn.algolia.com/?q=AI%E8%AE%B0%E5%BF%86%E7%B3%BB%E7%BB%9F%E8%A7%84%E6%A8%A1%E5%8C%96%E6%8C%91%E6%88%98" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag academic">学术</div>
   <h3>AI记忆系统规模化挑战</h3>
   <p>研究揭示当前AI记忆系统在超大规模部署时的数据管理瓶颈</p>
-  <div class="trend-source">📅 2026-06-17 · 来源：Hacker News</div>
-</div>
+  <div class="trend-source">📅 2026-06-17 · 来源：Hacker News <span class="trend-go">检索原文 →</span></div>
+</a>
 </div>
 </div>
 
@@ -250,24 +254,24 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">全球新闻媒体机构的 AI 应用实战案例</p>
 
   <div class="case-grid" id="case-cards-area">
-<div class="case-card">
+<a class="case-card" href="https://www.bing.com/search?q=AR%E5%85%89%E5%AD%A6%E7%B3%BB%E7%BB%9F%E8%81%94%E5%90%88%E7%A0%94%E5%8F%91" target="_blank" rel="noopener noreferrer">
   <div class="case-org">依视路与应用材料</div>
   <h3>AR光学系统联合研发</h3>
   <p>镜业巨头与半导体厂商合作开发下一代智能眼镜光学模组</p>
   <div class="case-tools"><span class="case-tool">AR</span><span class="case-tool">光学</span></div>
-</div>
-<div class="case-card">
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
+<a class="case-card" href="https://www.bing.com/search?q=AI%E9%87%91%E8%9E%8D%E7%B3%BB%E7%BB%9F%E8%A7%84%E6%A8%A1%E5%8C%96" target="_blank" rel="noopener noreferrer">
   <div class="case-org">BBVA</div>
   <h3>AI金融系统规模化</h3>
   <p>通过OpenAI企业版部署，实现10万员工级AI辅助决策系统</p>
   <div class="case-tools"><span class="case-tool">金融</span><span class="case-tool">企业服务</span></div>
-</div>
-<div class="case-card">
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
+<a class="case-card" href="https://www.bing.com/search?q=C919%E5%8F%91%E5%8A%A8%E6%9C%BA%E8%87%AA%E4%B8%BB%E7%BB%B4%E4%BF%AE" target="_blank" rel="noopener noreferrer">
   <div class="case-org">四川国际航空发动机</div>
   <h3>C919发动机自主维修</h3>
   <p>成为全球首家获CFM PremierMRO资质的国产航空维修企业</p>
   <div class="case-tools"><span class="case-tool">航空</span><span class="case-tool">维修</span></div>
-</div>
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
 </div>
 </div>
 
@@ -279,18 +283,18 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">全球 AI 内容监管与版权最新法规动态</p>
 
   <div class="trend-grid" id="policy-cards-area">
-<div class="trend-card">
+<a class="trend-card" href="https://www.bing.com/search?q=site%3Aopenai.com+%E6%AC%A7%E7%9B%9FAI%E5%86%85%E5%AE%B9%E9%80%8F%E6%98%8E%E5%BA%A6%E6%A0%87%E5%87%86" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>欧盟AI内容透明度标准</h3>
   <p>OpenAI宣布支持欧盟AI内容溯源标准，强化生成内容可追溯性</p>
-  <div class="trend-source">📅 2026-06-17 · 来源：OpenAI</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-06-17 · 来源：OpenAI <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.ithome.com/search.htm?search=%E7%B1%B3%E5%93%88%E6%B8%B8%E4%BE%B5%E6%9D%83%E7%BB%88%E5%AE%A1" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>米哈游侵权终审</h3>
   <p>上海知识产权法院维持原判，判令侵权方赔偿298万元</p>
-  <div class="trend-source">📅 2026-06-17 · 来源：IT之家</div>
-</div>
+  <div class="trend-source">📅 2026-06-17 · 来源：IT之家 <span class="trend-go">检索原文 →</span></div>
+</a>
 </div>
 </div>
 

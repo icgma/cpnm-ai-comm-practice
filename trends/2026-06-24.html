@@ -100,6 +100,10 @@ a:hover{color:#7C2F22}
 .trend-card{background:var(--bg3);border:1px solid var(--border2);border-radius:4px;
   padding:24px;transition:all .3s;position:relative;overflow:hidden;box-shadow:0 2px 10px rgba(107,90,68,.12)}
 .trend-card:hover{border-color:var(--gold);transform:translateY(-3px);box-shadow:0 10px 24px rgba(107,90,68,.2)}
+a.trend-card,a.case-card{display:block;color:inherit;text-decoration:none;cursor:pointer}
+a.trend-card:hover,a.case-card:hover{color:inherit}
+.trend-go{margin-left:auto;color:var(--cinnabar);font-size:12px;font-weight:600;letter-spacing:.5px}
+.update-banner,.filter-bar,.theme-toggle{display:none}
 .trend-tag{display:inline-block;padding:3px 12px;border-radius:3px;font-size:12px;
   font-weight:600;margin-bottom:12px;border:1px solid}
 .trend-tag.tech{background:rgba(51,86,124,.08);color:#33567C;border-color:rgba(51,86,124,.35)}
@@ -215,24 +219,24 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">本周与传媒相关的 AI 技术进展与产品动态</p>
 
   <div class="trend-grid" id="trend-cards-area">
-<div class="trend-card">
+<a class="trend-card" href="https://www.ithome.com/search.htm?search=AI%E5%8E%9F%E7%94%9F%E8%AF%AD%E8%A8%80%E4%B8%96%E7%95%8C%E6%A8%A1%E5%9E%8B%E7%AA%81%E7%A0%B4" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag tech">技术</div>
   <h3>AI原生语言世界模型突破</h3>
   <p>阿里巴巴发布Qwen-AgentWorld模型，可在七大领域模拟智能体交互环境</p>
-  <div class="trend-source">📅 2026-06-24 · 来源：www.ithome.com</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-06-24 · 来源：www.ithome.com <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.ithome.com/search.htm?search=AI%E5%86%85%E5%AE%B9%E7%94%9F%E6%88%90%E7%89%88%E6%9D%83%E4%BA%89%E8%AE%AE%E5%8D%87%E7%BA%A7" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag industry">行业</div>
   <h3>AI内容生成版权争议升级</h3>
   <p>Jamendo起诉英伟达使用未经授权音乐训练AI模型，索赔超1780万欧元</p>
-  <div class="trend-source">📅 2026-06-24 · 来源：www.ithome.com</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-06-24 · 来源：www.ithome.com <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://hn.algolia.com/?q=%E6%AC%A7%E7%9B%9FAI%E5%AE%89%E5%85%A8%E5%AE%A1%E6%9F%A5%E5%BC%BA%E5%8C%96" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>欧盟AI安全审查强化</h3>
   <p>欧盟要求Meta同意AI内容安全审查，引发行业合规升级</p>
-  <div class="trend-source">📅 2026-06-23 · 来源：hnrss.org</div>
-</div>
+  <div class="trend-source">📅 2026-06-23 · 来源：hnrss.org <span class="trend-go">检索原文 →</span></div>
+</a>
 </div>
 </div>
 
@@ -244,18 +248,18 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">全球新闻媒体机构的 AI 应用实战案例</p>
 
   <div class="case-grid" id="case-cards-area">
-<div class="case-card">
+<a class="case-card" href="https://www.bing.com/search?q=Qwen-AgentWorld%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B8%83" target="_blank" rel="noopener noreferrer">
   <div class="case-org">阿里巴巴</div>
   <h3>Qwen-AgentWorld模型发布</h3>
   <p>首个原生语言世界模型，覆盖金融/医疗/教育七大领域</p>
   <div class="case-tools"><span class="case-tool">大模型</span><span class="case-tool">交互模拟</span></div>
-</div>
-<div class="case-card">
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
+<a class="case-card" href="https://www.bing.com/search?q=Meta%20Glasses%E6%99%BA%E8%83%BD%E7%9C%BC%E9%95%9C%E9%87%8F%E4%BA%A7" target="_blank" rel="noopener noreferrer">
   <div class="case-org">Meta</div>
   <h3>Meta Glasses智能眼镜量产</h3>
   <p>集成AR内容生成与跨平台交互功能</p>
   <div class="case-tools"><span class="case-tool">AR</span><span class="case-tool">智能眼镜</span></div>
-</div>
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
 <div class="case-card">
   <div class="case-org">Jamendo</div>
   <h3>音乐版权诉讼案</h3>
@@ -273,18 +277,18 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">全球 AI 内容监管与版权最新法规动态</p>
 
   <div class="trend-grid" id="policy-cards-area">
-<div class="trend-card">
+<a class="trend-card" href="https://www.ithome.com/search.htm?search=%E4%B8%AD%E5%9B%BDAI%E4%BC%A6%E7%90%86%E8%A7%84%E8%8C%83%E4%BF%AE%E8%AE%A2" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>中国AI伦理规范修订</h3>
   <p>新增AI内容生成版权归属与用户数据保护条款</p>
-  <div class="trend-source">📅 2026-06-24 · 来源：www.ithome.com</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-06-24 · 来源：www.ithome.com <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://hn.algolia.com/?q=%E6%AC%A7%E7%9B%9FAI%E5%86%85%E5%AE%B9%E5%88%86%E7%BA%A7%E5%88%B6%E5%BA%A6" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>欧盟AI内容分级制度</h3>
   <p>要求所有AI生成内容标注来源与可信度评级</p>
-  <div class="trend-source">📅 2026-06-23 · 来源：hnrss.org</div>
-</div>
+  <div class="trend-source">📅 2026-06-23 · 来源：hnrss.org <span class="trend-go">检索原文 →</span></div>
+</a>
 </div>
 </div>
 

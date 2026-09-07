@@ -100,6 +100,10 @@ a:hover{color:#7C2F22}
 .trend-card{background:var(--bg3);border:1px solid var(--border2);border-radius:4px;
   padding:24px;transition:all .3s;position:relative;overflow:hidden;box-shadow:0 2px 10px rgba(107,90,68,.12)}
 .trend-card:hover{border-color:var(--gold);transform:translateY(-3px);box-shadow:0 10px 24px rgba(107,90,68,.2)}
+a.trend-card,a.case-card{display:block;color:inherit;text-decoration:none;cursor:pointer}
+a.trend-card:hover,a.case-card:hover{color:inherit}
+.trend-go{margin-left:auto;color:var(--cinnabar);font-size:12px;font-weight:600;letter-spacing:.5px}
+.update-banner,.filter-bar,.theme-toggle{display:none}
 .trend-tag{display:inline-block;padding:3px 12px;border-radius:3px;font-size:12px;
   font-weight:600;margin-bottom:12px;border:1px solid}
 .trend-tag.tech{background:rgba(51,86,124,.08);color:#33567C;border-color:rgba(51,86,124,.35)}
@@ -215,33 +219,33 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">本周与传媒相关的 AI 技术进展与产品动态</p>
 
   <div class="trend-grid" id="trend-cards-area">
-<div class="trend-card">
+<a class="trend-card" href="https://sspai.com/search/article?q=%E9%98%BF%E9%87%8C%E5%8F%91%E5%B8%83%E5%AE%9E%E6%97%B6%E8%AF%AD%E9%9F%B3%E6%A8%A1%E5%9E%8BQwen-Audio-3.0-Realtime" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag tech">技术</div>
   <h3>阿里发布实时语音模型Qwen-Audio-3.0-Realtime</h3>
   <p>支持实时语音交互的AI模型，覆盖多场景应用</p>
-  <div class="trend-source">📅 2026-07-16 · 来源sspai.com</div>
-</div>
+  <div class="trend-source">📅 2026-07-16 · 来源sspai.com <span class="trend-go">检索原文 →</span></div>
+</a>
 
-<div class="trend-card">
+<a class="trend-card" href="https://sspai.com/search/article?q=Leitra%E5%9B%BE%E5%83%8F%E7%AD%96%E5%B1%95%E5%B7%A5%E5%85%B7%E6%AD%A3%E5%BC%8F%E5%8F%91%E5%B8%83" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag tool">工具</div>
   <h3>Leitra图像策展工具正式发布</h3>
   <p>基于马格南摄影师工作流，生成接触样张与图像序列</p>
-  <div class="trend-source">📅 2026-07-16 · 来源sspai.com</div>
-</div>
+  <div class="trend-source">📅 2026-07-16 · 来源sspai.com <span class="trend-go">检索原文 →</span></div>
+</a>
 
-<div class="trend-card">
+<a class="trend-card" href="https://www.ithome.com/search.htm?search=%E6%95%99%E8%82%B2%E9%83%A8%E6%96%B0%E5%A2%9E27%E4%B8%AA%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%9B%B8%E5%85%B3%E4%B8%93%E4%B8%9A" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag industry">行业</div>
   <h3>教育部新增27个人工智能相关专业</h3>
   <p>涵盖人形机器人、车联网等AI应用领域</p>
-  <div class="trend-source">📅 2026-07-16 · 来源ithome.com</div>
-</div>
+  <div class="trend-source">📅 2026-07-16 · 来源ithome.com <span class="trend-go">检索原文 →</span></div>
+</a>
 
-<div class="trend-card">
+<a class="trend-card" href="https://www.ithome.com/search.htm?search=%E5%85%A8%E7%90%83%E5%BD%95%E5%88%B6%E9%9F%B3%E4%B9%90%E5%B8%82%E5%9C%BA2030%E5%B9%B4%E5%B0%86%E8%BE%BE560%E4%BA%BF%E7%BE%8E%E5%85%83" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag industry">行业</div>
   <h3>全球录制音乐市场2030年将达560亿美元</h3>
   <p>中国有望成为第二大市场</p>
-  <div class="trend-source">📅 2026-07-16 · 来源ithome.com</div>
-</div>
+  <div class="trend-source">📅 2026-07-16 · 来源ithome.com <span class="trend-go">检索原文 →</span></div>
+</a>
 </div>
 </div>
 
@@ -253,26 +257,26 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">全球新闻媒体机构的 AI 应用实战案例</p>
 
   <div class="case-grid" id="case-cards-area">
-<div class="case-card">
+<a class="case-card" href="https://www.bing.com/search?q=%E5%9B%BE%E5%83%8F%E7%AD%96%E5%B1%95%E5%B7%A5%E5%85%B7Leitra%E6%AD%A3%E5%BC%8F%E4%B8%8A%E7%BA%BF" target="_blank" rel="noopener noreferrer">
   <div class="case-org">Leitra团队</div>
   <h3>图像策展工具Leitra正式上线</h3>
   <p>支持生成接触样张与图像序列，适用于摄影策展</p>
   <div class="case-tools"><span class="case-tool">策展工具</span><span class="case-tool">AI生成</span></div>
-</div>
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
 
-<div class="case-card">
+<a class="case-card" href="https://www.bing.com/search?q=AI%E5%8E%9F%E7%94%9F%E7%94%B5%E4%BF%A1%E6%9C%8D%E5%8A%A1%E5%8D%87%E7%BA%A7" target="_blank" rel="noopener noreferrer">
   <div class="case-org">德意志电信</div>
   <h3>AI原生电信服务升级</h3>
   <p>基于OpenAI技术优化客服与员工协作流程</p>
   <div class="case-tools"><span class="case-tool">OpenAI合作</span><span class="case-tool">客服AI</span></div>
-</div>
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
 
-<div class="case-card">
+<a class="case-card" href="https://www.bing.com/search?q=%E8%81%94%E5%90%88%E6%89%93%E5%87%BBAI%E7%94%9F%E6%88%90%E7%9B%97%E7%89%88%E5%86%85%E5%AE%B9" target="_blank" rel="noopener noreferrer">
   <div class="case-org">淘宝/京东等12家平台</div>
   <h3>联合打击AI生成盗版内容</h3>
   <p>承诺清理侵权AI生成出版物</p>
   <div class="case-tools"><span class="case-tool">版权保护</span><span class="case-tool">AI监管</span></div>
-</div>
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
 </div>
 </div>
 
@@ -284,19 +288,19 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">全球 AI 内容监管与版权最新法规动态</p>
 
   <div class="trend-grid" id="policy-cards-area">
-<div class="trend-card">
+<a class="trend-card" href="https://www.ithome.com/search.htm?search=%E6%95%99%E8%82%B2%E9%83%A8%E6%96%B0%E5%A2%9E27%E4%B8%AA%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%9B%B8%E5%85%B3%E4%B8%93%E4%B8%9A" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>教育部新增27个人工智能相关专业</h3>
   <p>涵盖人形机器人、车联网等AI应用领域，2027年招生</p>
-  <div class="trend-source">📅 2026-07-16 · 来源ithome.com</div>
-</div>
+  <div class="trend-source">📅 2026-07-16 · 来源ithome.com <span class="trend-go">检索原文 →</span></div>
+</a>
 
-<div class="trend-card">
+<a class="trend-card" href="https://www.ithome.com/search.htm?search=12%E5%AE%B6%E7%BD%91%E7%BB%9C%E5%B9%B3%E5%8F%B0%E6%89%BF%E8%AF%BA%E6%B8%85%E7%90%86AI%E7%94%9F%E6%88%90%E7%9B%97%E7%89%88" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>12家网络平台承诺清理AI生成盗版</h3>
   <p>包括淘宝、京东、抖音等平台</p>
-  <div class="trend-source">📅 2026-07-16 · 来源ithome.com</div>
-</div>
+  <div class="trend-source">📅 2026-07-16 · 来源ithome.com <span class="trend-go">检索原文 →</span></div>
+</a>
 </div>
 </div>
 

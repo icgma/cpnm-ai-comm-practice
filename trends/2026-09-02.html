@@ -100,6 +100,10 @@ a:hover{color:#7C2F22}
 .trend-card{background:var(--bg3);border:1px solid var(--border2);border-radius:4px;
   padding:24px;transition:all .3s;position:relative;overflow:hidden;box-shadow:0 2px 10px rgba(107,90,68,.12)}
 .trend-card:hover{border-color:var(--gold);transform:translateY(-3px);box-shadow:0 10px 24px rgba(107,90,68,.2)}
+a.trend-card,a.case-card{display:block;color:inherit;text-decoration:none;cursor:pointer}
+a.trend-card:hover,a.case-card:hover{color:inherit}
+.trend-go{margin-left:auto;color:var(--cinnabar);font-size:12px;font-weight:600;letter-spacing:.5px}
+.update-banner,.filter-bar,.theme-toggle{display:none}
 .trend-tag{display:inline-block;padding:3px 12px;border-radius:3px;font-size:12px;
   font-weight:600;margin-bottom:12px;border:1px solid}
 .trend-tag.tech{background:rgba(51,86,124,.08);color:#33567C;border-color:rgba(51,86,124,.35)}
@@ -215,24 +219,24 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">本周与传媒相关的 AI 技术进展与产品动态</p>
 
   <div class="trend-grid" id="trend-cards-area">
-<div class="trend-card">
+<a class="trend-card" href="https://www.bing.com/search?q=%E9%98%BF%E9%87%8C%E5%8D%83%E9%97%AE3.8-Max%E6%A8%A1%E5%9E%8B%E5%8D%87%E7%BA%A7" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag tech">技术</div>
   <h3>阿里千问3.8-Max模型升级</h3>
   <p>Qwen3.8-Max 0902版本强化编程与办公场景能力，前端编程总榜登顶</p>
-  <div class="trend-source">📅 2026-09-02 · 来源</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-09-02 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=%E5%BE%AE%E8%BD%AFExcel%20AI%E5%8F%98%E6%9B%B4%E8%BF%BD%E8%B8%AA" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag tech">技术</div>
   <h3>微软Excel AI变更追踪</h3>
   <p>新增Change History功能，AI自动记录协作修改轨迹及责任人</p>
-  <div class="trend-source">📅 2026-09-02 · 来源</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-09-02 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=site%3Aopenai.com+OpenAI%E5%8C%BB%E7%96%97%E6%95%B0%E6%8D%AE%E9%9B%86%E6%88%90" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag tech">技术</div>
   <h3>OpenAI医疗数据集成</h3>
   <p>支持医疗机构安全连接电子病历与ChatGPT，提升临床决策效率</p>
-  <div class="trend-source">📅 2026-09-02 · 来源</div>
-</div>
+  <div class="trend-source">📅 2026-09-02 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
 </div>
 </div>
 
@@ -244,24 +248,24 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">全球新闻媒体机构的 AI 应用实战案例</p>
 
   <div class="case-grid" id="case-cards-area">
-<div class="case-card">
+<a class="case-card" href="https://www.bing.com/search?q=Excel%E5%8D%8F%E4%BD%9C%E8%BF%BD%E8%B8%AA%E7%B3%BB%E7%BB%9F" target="_blank" rel="noopener noreferrer">
   <div class="case-org">微软</div>
   <h3>Excel协作追踪系统</h3>
   <p>AI实时记录多人编辑记录，自动生成修改差异报告</p>
   <div class="case-tools"><span class="case-tool">AI协作</span><span class="case-tool">文档管理</span></div>
-</div>
-<div class="case-card">
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
+<a class="case-card" href="https://www.bing.com/search?q=Qwen3.8-Max%E7%BC%96%E7%A8%8B%E5%8A%A9%E6%89%8B" target="_blank" rel="noopener noreferrer">
   <div class="case-org">阿里云</div>
   <h3>Qwen3.8-Max编程助手</h3>
   <p>支持前端开发全流程，代码生成准确率达92%，效率提升300%</p>
   <div class="case-tools"><span class="case-tool">编程模型</span><span class="case-tool">开发工具</span></div>
-</div>
-<div class="case-card">
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
+<a class="case-card" href="https://www.bing.com/search?q=%E5%8C%BB%E7%96%97%E6%95%B0%E6%8D%AEAI%E5%BA%94%E7%94%A8" target="_blank" rel="noopener noreferrer">
   <div class="case-org">OpenAI</div>
   <h3>医疗数据AI应用</h3>
   <p>与梅奥诊所合作开发临床决策支持系统，覆盖15个专科</p>
   <div class="case-tools"><span class="case-tool">医疗AI</span><span class="case-tool">数据安全</span></div>
-</div>
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
 </div>
 </div>
 
@@ -273,12 +277,12 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">全球 AI 内容监管与版权最新法规动态</p>
 
   <div class="trend-grid" id="policy-cards-area">
-<div class="trend-card">
+<a class="trend-card" href="https://www.bing.com/search?q=%E5%8A%A0%E5%B7%9E%E9%9D%92%E5%B0%91%E5%B9%B4AI%E5%AE%89%E5%85%A8%E6%B3%95%E6%A1%88" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>加州青少年AI安全法案</h3>
   <p>OpenAI支持限制未成年人AI使用时长，建立数字成长档案</p>
-  <div class="trend-source">📅 2026-09-02 · 来源</div>
-</div>
+  <div class="trend-source">📅 2026-09-02 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
 </div>
 </div>
 

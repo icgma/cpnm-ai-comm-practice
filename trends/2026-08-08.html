@@ -100,6 +100,10 @@ a:hover{color:#7C2F22}
 .trend-card{background:var(--bg3);border:1px solid var(--border2);border-radius:4px;
   padding:24px;transition:all .3s;position:relative;overflow:hidden;box-shadow:0 2px 10px rgba(107,90,68,.12)}
 .trend-card:hover{border-color:var(--gold);transform:translateY(-3px);box-shadow:0 10px 24px rgba(107,90,68,.2)}
+a.trend-card,a.case-card{display:block;color:inherit;text-decoration:none;cursor:pointer}
+a.trend-card:hover,a.case-card:hover{color:inherit}
+.trend-go{margin-left:auto;color:var(--cinnabar);font-size:12px;font-weight:600;letter-spacing:.5px}
+.update-banner,.filter-bar,.theme-toggle{display:none}
 .trend-tag{display:inline-block;padding:3px 12px;border-radius:3px;font-size:12px;
   font-weight:600;margin-bottom:12px;border:1px solid}
 .trend-tag.tech{background:rgba(51,86,124,.08);color:#33567C;border-color:rgba(51,86,124,.35)}
@@ -215,24 +219,24 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">本周与传媒相关的 AI 技术进展与产品动态</p>
 
   <div class="trend-grid" id="trend-cards-area">
-<div class="trend-card">
+<a class="trend-card" href="https://www.bing.com/search?q=%E5%AE%9E%E6%97%B6%E8%AF%AD%E9%9F%B3AI%E7%B3%BB%E7%BB%9FGPT-Live" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag tech">技术</div>
   <h3>实时语音AI系统GPT-Live</h3>
   <p>OpenAI六个月内研发出低延迟语音交互系统，支持连续对话</p>
-  <div class="trend-source">📅 2026-08-08 · 来源</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-08-08 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=Cloudflare%20Kitesurf%E6%B5%8F%E8%A7%88%E5%99%A8" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag tool">工具</div>
   <h3>Cloudflare Kitesurf浏览器</h3>
   <p>专为AI agents设计的浏览器，优化多AI模型协同工作</p>
-  <div class="trend-source">📅 2026-08-07 · 来源</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-08-07 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=AI%E5%8E%9F%E7%94%9FCRM%20Salestrics" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag industry">行业</div>
   <h3>AI原生CRM Salestrics</h3>
   <p>开源MCP服务器与CRM结合，重构销售团队AI协作流程</p>
-  <div class="trend-source">📅 2026-08-08 · 来源</div>
-</div>
+  <div class="trend-source">📅 2026-08-08 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
 </div>
 </div>
 
@@ -244,24 +248,24 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">全球新闻媒体机构的 AI 应用实战案例</p>
 
   <div class="case-grid" id="case-cards-area">
-<div class="case-card">
+<a class="case-card" href="https://www.bing.com/search?q=AI%E5%8E%9F%E7%94%9FCRM%E7%B3%BB%E7%BB%9F" target="_blank" rel="noopener noreferrer">
   <div class="case-org">Salestrics</div>
   <h3>AI原生CRM系统</h3>
   <p>整合OpenAI API实现销售预测自动化，提升团队协作效率</p>
   <div class="case-tools"><span class="case-tool">AI原生</span><span class="case-tool">CRM</span></div>
-</div>
-<div class="case-card">
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
+<a class="case-card" href="https://www.bing.com/search?q=%E7%A8%8E%E5%8A%A1%E5%92%A8%E8%AF%A2AI%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88" target="_blank" rel="noopener noreferrer">
   <div class="case-org">HSP GRUPPE</div>
   <h3>税务咨询AI解决方案</h3>
   <p>基于ChatGPT Enterprise的智能税务申报系统，准确率提升40%</p>
   <div class="case-tools"><span class="case-tool">ChatGPT</span><span class="case-tool">税务</span></div>
-</div>
-<div class="case-card">
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
+<a class="case-card" href="https://www.bing.com/search?q=%E4%B8%8EAPA%E5%90%88%E4%BD%9C%E5%BF%83%E7%90%86%E5%81%A5%E5%BA%B7%E9%A1%B9%E7%9B%AE" target="_blank" rel="noopener noreferrer">
   <div class="case-org">OpenAI</div>
   <h3>与APA合作心理健康项目</h3>
   <p>开发AI辅助诊断工具，覆盖焦虑症与抑郁症识别</p>
   <div class="case-tools"><span class="case-tool">医疗AI</span><span class="case-tool">心理健康</span></div>
-</div>
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
 </div>
 </div>
 
@@ -273,12 +277,12 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">全球 AI 内容监管与版权最新法规动态</p>
 
   <div class="trend-grid" id="policy-cards-area">
-<div class="trend-card">
+<a class="trend-card" href="https://www.bing.com/search?q=%E5%BE%AE%E8%BD%AFEdge%E6%89%A9%E5%B1%95%E7%A8%8B%E5%BA%8F%E6%94%BF%E7%AD%96%E8%B0%83%E6%95%B4" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>微软Edge扩展程序政策调整</h3>
   <p>2026年8月起逐步停止MV2支持，强制转向MV3标准</p>
-  <div class="trend-source">📅 2026-08-08 · 来源</div>
-</div>
+  <div class="trend-source">📅 2026-08-08 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
 <div class="trend-card">
   <div class="trend-tag policy">法规</div>
   <h3>OpenAI安全评估新规</div>

@@ -100,6 +100,10 @@ a:hover{color:#7C2F22}
 .trend-card{background:var(--bg3);border:1px solid var(--border2);border-radius:4px;
   padding:24px;transition:all .3s;position:relative;overflow:hidden;box-shadow:0 2px 10px rgba(107,90,68,.12)}
 .trend-card:hover{border-color:var(--gold);transform:translateY(-3px);box-shadow:0 10px 24px rgba(107,90,68,.2)}
+a.trend-card,a.case-card{display:block;color:inherit;text-decoration:none;cursor:pointer}
+a.trend-card:hover,a.case-card:hover{color:inherit}
+.trend-go{margin-left:auto;color:var(--cinnabar);font-size:12px;font-weight:600;letter-spacing:.5px}
+.update-banner,.filter-bar,.theme-toggle{display:none}
 .trend-tag{display:inline-block;padding:3px 12px;border-radius:3px;font-size:12px;
   font-weight:600;margin-bottom:12px;border:1px solid}
 .trend-tag.tech{background:rgba(51,86,124,.08);color:#33567C;border-color:rgba(51,86,124,.35)}
@@ -215,30 +219,30 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">本周与传媒相关的 AI 技术进展与产品动态</p>
 
   <div class="trend-grid" id="trend-cards-area">
-<div class="trend-card">
+<a class="trend-card" href="https://www.bing.com/search?q=site%3Aopenai.com+OpenAI%20Codex%20Security%20CLI%E5%BC%80%E6%BA%90" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag tech">技术</div>
   <h3>OpenAI Codex Security CLI开源</h3>
   <p>OpenAI宣布开源Codex Security CLI工具，强化AI安全防护能力</p>
-  <div class="trend-source">📅 2026-07-30 · 来源</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-07-30 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=%E4%B8%AD%E5%9B%BD%E7%BD%91%E7%BB%9C%E6%96%87%E5%AD%A6%E4%BA%A7%E4%B8%9A%E8%A7%84%E6%A8%A1%E7%AA%81%E7%A0%B4" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag industry">行业</div>
   <h3>中国网络文学产业规模突破</h3>
   <p>2025年中国网络文学作品总量超3300万部，读者规模达5亿人</p>
-  <div class="trend-source">📅 2026-07-30 · 来源</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-07-30 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=%E4%B8%89%E6%98%9FAI%E8%8A%AF%E7%89%87%E9%9C%80%E6%B1%82%E6%8C%81%E7%BB%AD%E5%BC%BA%E5%8A%B2" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag tech">技术</div>
   <h3>三星AI芯片需求持续强劲</h3>
   <p>三星预计2026年AI芯片需求增长25%，供应短缺持续</p>
-  <div class="trend-source">📅 2026-07-30 · 来源</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-07-30 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=%E4%B8%AD%E5%9B%BD%E7%94%B5%E4%BF%A1%E6%B8%A0%E9%81%93%E6%94%BF%E7%AD%96%E8%B0%83%E6%95%B4" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>中国电信渠道政策调整</h3>
   <p>中国电信将不再通过第三方互联网渠道提供号卡办理服务</p>
-  <div class="trend-source">📅 2026-07-30 · 来源</div>
-</div>
+  <div class="trend-source">📅 2026-07-30 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
 </div>
 </div>
 
@@ -250,24 +254,24 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">全球新闻媒体机构的 AI 应用实战案例</p>
 
   <div class="case-grid" id="case-cards-area">
-<div class="case-card">
+<a class="case-card" href="https://www.bing.com/search?q=%E6%96%B0%E9%97%BB%E6%9C%BA%E6%9E%84AI%E5%BA%94%E7%94%A8%E5%8D%87%E7%BA%A7" target="_blank" rel="noopener noreferrer">
   <div class="case-org">OpenAI</div>
   <h3>新闻机构AI应用升级</h3>
   <p>OpenAI为多家新闻媒体提供AI辅助报道工具</p>
   <div class="case-tools"><span class="case-tool">内容生成</span><span class="case-tool">数据分析</span></div>
-</div>
-<div class="case-card">
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
+<a class="case-card" href="https://www.bing.com/search?q=Matrix%E7%A4%BE%E5%8C%BA%E5%86%85%E5%AE%B9%E7%94%9F%E6%80%81" target="_blank" rel="noopener noreferrer">
   <div class="case-org">少数派社区</div>
   <h3>Matrix社区内容生态</h3>
   <p>重启Matrix周报机制，新增AI创作工具评测专栏</p>
   <div class="case-tools"><span class="case-tool">社区运营</span><span class="case-tool">AI工具</span></div>
-</div>
-<div class="case-card">
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
+<a class="case-card" href="https://www.bing.com/search?q=%E7%BD%91%E7%BB%9C%E6%96%87%E5%AD%A6%E8%93%9D%E7%9A%AE%E4%B9%A6%E5%8F%91%E5%B8%83" target="_blank" rel="noopener noreferrer">
   <div class="case-org">中国作协</div>
   <h3>网络文学蓝皮书发布</h3>
   <p>发布《2025中国网络文学蓝皮书》揭示产业新趋势</p>
   <div class="case-tools"><span class="case-tool">行业研究</span><span class="case-tool">数据报告</span></div>
-</div>
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
 </div>
 </div>
 
@@ -279,18 +283,18 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">全球 AI 内容监管与版权最新法规动态</p>
 
   <div class="trend-grid" id="policy-cards-area">
-<div class="trend-card">
+<a class="trend-card" href="https://www.bing.com/search?q=AI%E5%86%85%E5%AE%B9%E7%94%9F%E6%88%90%E7%9B%91%E7%AE%A1%E6%94%BF%E7%AD%96" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>AI内容生成监管政策</h3>
   <p>国家网信办发布《生成式AI服务管理暂行办法》实施细则</p>
-  <div class="trend-source">📅 2026-07-28 · 来源</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-07-28 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=%E6%95%B0%E6%8D%AE%E5%AE%89%E5%85%A8%E6%B3%95%E4%BF%AE%E8%AE%A2%E8%8D%89%E6%A1%88" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>数据安全法修订草案</h3>
   <p>新增AI训练数据跨境流动审查条款</p>
-  <div class="trend-source">📅 2026-07-25 · 来源</div>
-</div>
+  <div class="trend-source">📅 2026-07-25 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
 </div>
 </div>
 

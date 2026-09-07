@@ -100,6 +100,10 @@ a:hover{color:#7C2F22}
 .trend-card{background:var(--bg3);border:1px solid var(--border2);border-radius:4px;
   padding:24px;transition:all .3s;position:relative;overflow:hidden;box-shadow:0 2px 10px rgba(107,90,68,.12)}
 .trend-card:hover{border-color:var(--gold);transform:translateY(-3px);box-shadow:0 10px 24px rgba(107,90,68,.2)}
+a.trend-card,a.case-card{display:block;color:inherit;text-decoration:none;cursor:pointer}
+a.trend-card:hover,a.case-card:hover{color:inherit}
+.trend-go{margin-left:auto;color:var(--cinnabar);font-size:12px;font-weight:600;letter-spacing:.5px}
+.update-banner,.filter-bar,.theme-toggle{display:none}
 .trend-tag{display:inline-block;padding:3px 12px;border-radius:3px;font-size:12px;
   font-weight:600;margin-bottom:12px;border:1px solid}
 .trend-tag.tech{background:rgba(51,86,124,.08);color:#33567C;border-color:rgba(51,86,124,.35)}
@@ -215,30 +219,30 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">本周与传媒相关的 AI 技术进展与产品动态</p>
 
   <div class="trend-grid" id="trend-cards-area">
-<div class="trend-card">
+<a class="trend-card" href="https://www.bing.com/search?q=site%3Aopenai.com+OpenAI%E5%8F%91%E5%B8%83GPT-5.6%20Sol" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag tech">技术</div>
   <h3>OpenAI发布GPT-5.6 Sol</h3>
   <p>新一代模型显著提升编码与科学领域能力，支持复杂工作流程</p>
-  <div class="trend-source">📅 2026-06-27 · 来源</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-06-27 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=%E7%B4%A2%E5%B0%BC%E5%AE%9E%E6%97%B6%E6%9C%8D%E5%8A%A1%E6%B8%B8%E6%88%8F%E6%88%98%E7%95%A5" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag industry">行业</div>
   <h3>索尼实时服务游戏战略</h3>
   <p>专注PS5/PC平台，推动游戏服务与AI结合</p>
-  <div class="trend-source">📅 2026-06-27 · 来源</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-06-27 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=%E9%98%BF%E9%87%8C%E5%8D%83%E9%97%AE%E8%BE%93%E5%85%A5%E6%B3%95%E5%85%A8%E5%B9%B3%E5%8F%B0%E4%B8%8A%E7%BA%BF" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag tool">工具</div>
   <h3>阿里千问输入法全平台上线</h3>
   <p>支持AI自动润色，单次输入达300字/分钟</p>
-  <div class="trend-source">📅 2026-06-27 · 来源</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-06-27 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=%E7%BE%8E%E5%9B%BD%E6%89%B9%E5%87%86Anthropic%20Mythos%20AI" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>美国批准Anthropic Mythos AI</h3>
   <p>受限范围内开放企业级AI模型</p>
-  <div class="trend-source">📅 2026-06-27 · 来源</div>
-</div>
+  <div class="trend-source">📅 2026-06-27 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
 </div>
 </div>
 
@@ -250,24 +254,23 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">全球新闻媒体机构的 AI 应用实战案例</p>
 
   <div class="case-grid" id="case-cards-area">
-<div class="case-card">
+<a class="case-card" href="https://www.bing.com/search?q=%E9%B8%BF%E8%92%99%E5%BA%A7%E8%88%B1%E5%86%85%E9%A5%B0%E4%BA%AE%E7%9B%B8" target="_blank" rel="noopener noreferrer">
   <div class="case-org">阿维塔</div>
   <h3>鸿蒙座舱内饰亮相</h3>
   <p>6月29日发布智能汽车交互系统</p>
   <div class="case-tools"><span class="case-tool">鸿蒙</span><span class="case-tool">智能汽车</span></div>
-</div>
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
 <div class="case-card">
   <div class="case-org">京东</div>
   <h3>机器人维修服务</h3>
   <p>欧洲部署"救护车"上门维修</p>
-  <div class="case-tools"><span class="case-tool">物流</span><span class="case-tool">机器人</span></div>
-</div>
-<div class="case-card">
+  <div class="case-tools"><span class="case-tool">物流</span><span class="case-tool">机器人</span></div></div>
+<a class="case-card" href="https://www.bing.com/search?q=%E4%B8%89%E6%98%9F%E4%BC%81%E4%B8%9A%E7%BA%A7AI%E9%83%A8%E7%BD%B2" target="_blank" rel="noopener noreferrer">
   <div class="case-org">OpenAI</div>
   <h3>三星企业级AI部署</h3>
   <p>全球员工接入ChatGPT/Codex</p>
   <div class="case-tools"><span class="case-tool">ChatGPT</span><span class="case-tool">企业服务</span></div>
-</div>
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
 </div>
 </div>
 
@@ -279,18 +282,18 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">全球 AI 内容监管与版权最新法规动态</p>
 
   <div class="trend-grid" id="policy-cards-area">
-<div class="trend-card">
+<a class="trend-card" href="https://www.bing.com/search?q=site%3Aopenai.com+OpenAI%E5%AE%89%E5%85%A8%E6%A0%87%E5%87%86%E6%8E%A8%E8%BF%9B" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>OpenAI安全标准推进</h3>
   <p>参与制定AI安全评估框架</p>
-  <div class="trend-source">📅 2026-06-27 · 来源</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-06-27 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=%E6%AC%A7%E7%9B%9FAI%E6%B3%95%E6%A1%88%E8%BF%9B%E5%B1%95" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>欧盟AI法案进展</h3>
   <p>生成式AI分级监管方案细化</p>
-  <div class="trend-source">📅 2026-06-27 · 来源</div>
-</div>
+  <div class="trend-source">📅 2026-06-27 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
 </div>
 </div>
 

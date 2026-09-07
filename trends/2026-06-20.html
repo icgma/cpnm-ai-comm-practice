@@ -100,6 +100,10 @@ a:hover{color:#7C2F22}
 .trend-card{background:var(--bg3);border:1px solid var(--border2);border-radius:4px;
   padding:24px;transition:all .3s;position:relative;overflow:hidden;box-shadow:0 2px 10px rgba(107,90,68,.12)}
 .trend-card:hover{border-color:var(--gold);transform:translateY(-3px);box-shadow:0 10px 24px rgba(107,90,68,.2)}
+a.trend-card,a.case-card{display:block;color:inherit;text-decoration:none;cursor:pointer}
+a.trend-card:hover,a.case-card:hover{color:inherit}
+.trend-go{margin-left:auto;color:var(--cinnabar);font-size:12px;font-weight:600;letter-spacing:.5px}
+.update-banner,.filter-bar,.theme-toggle{display:none}
 .trend-tag{display:inline-block;padding:3px 12px;border-radius:3px;font-size:12px;
   font-weight:600;margin-bottom:12px;border:1px solid}
 .trend-tag.tech{background:rgba(51,86,124,.08);color:#33567C;border-color:rgba(51,86,124,.35)}
@@ -215,24 +219,24 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">本周与传媒相关的 AI 技术进展与产品动态</p>
 
   <div class="trend-grid" id="trend-cards-area">
-<div class="trend-card">
+<a class="trend-card" href="https://www.bing.com/search?q=site%3Aruanyifeng.com+%E5%8A%A8%E6%80%81%E5%BA%94%E7%94%A8%E7%BD%91%E6%A0%BC%E4%B8%8ELiquid%20Glass%E7%95%8C%E9%9D%A2%E9%9D%A9%E6%96%B0" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag tech">技术</div>
   <h3>动态应用网格与Liquid Glass界面革新</h3>
   <p>watchOS 27引入AI驱动的动态界面布局与自适应玻璃效果，提升交互流畅度</p>
-  <div class="trend-source">📅 2026-06-20 · 来源www.ruanyifeng.com</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-06-20 · 来源www.ruanyifeng.com <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=site%3Aopenai.com+AI%E8%BE%85%E5%8A%A9%E7%BD%95%E8%A7%81%E7%97%85%E8%AF%8A%E6%96%AD%E7%B3%BB%E7%BB%9F" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag tech">技术</div>
   <h3>AI辅助罕见病诊断系统</h3>
   <p>OpenAI推理模型协助识别18种罕见遗传病，准确率达92%</p>
-  <div class="trend-source">📅 2026-06-20 · 来源openai.com</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-06-20 · 来源openai.com <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=site%3Aopenai.com+%E6%AC%A7%E7%9B%9FAI%E5%86%85%E5%AE%B9%E9%80%8F%E6%98%8E%E5%BA%A6%E6%96%B0%E8%A7%84" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>欧盟AI内容透明度新规</h3>
   <p>要求生成式AI内容强制标注来源，OpenAI宣布全面适配</p>
-  <div class="trend-source">📅 2026-06-20 · 来源openai.com</div>
-</div>
+  <div class="trend-source">📅 2026-06-20 · 来源openai.com <span class="trend-go">检索原文 →</span></div>
+</a>
 </div>
 </div>
 
@@ -244,24 +248,24 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">全球新闻媒体机构的 AI 应用实战案例</p>
 
   <div class="case-grid" id="case-cards-area">
-<div class="case-card">
+<a class="case-card" href="https://www.bing.com/search?q=AI%E4%B8%AA%E6%80%A7%E5%8C%96%E8%AF%AD%E8%A8%80%E8%AF%BE%E7%A8%8B%E7%B3%BB%E7%BB%9F" target="_blank" rel="noopener noreferrer">
   <div class="case-org">Preply教育平台</div>
   <h3>AI个性化语言课程系统</h3>
   <p>集成OpenAI模型生成课程摘要，支持20+语种自适应学习</p>
   <div class="case-tools"><span class="case-tool">教育科技</span><span class="case-tool">AI生成</span></div>
-</div>
-<div class="case-card">
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
+<a class="case-card" href="https://www.bing.com/search?q=AI%E9%87%8F%E5%8C%96%E4%BA%A4%E6%98%93%E7%B3%BB%E7%BB%9F" target="_blank" rel="noopener noreferrer">
   <div class="case-org">Jane Street金融公司</div>
   <h3>AI量化交易系统</h3>
   <p>基于GPT-5.5开发高频交易模型，日均处理500万条市场数据</p>
   <div class="case-tools"><span class="case-tool">金融科技</span><span class="case-tool">AI推理</span></div>
-</div>
-<div class="case-card">
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
+<a class="case-card" href="https://www.bing.com/search?q=AI%E9%A9%B1%E5%8A%A8%E7%9A%84%E6%99%BA%E8%83%BD%E5%85%85%E7%94%B5%E7%B3%BB%E7%BB%9F" target="_blank" rel="noopener noreferrer">
   <div class="case-org">绿联科技</div>
   <h3>AI驱动的智能充电系统</h3>
   <p>通过机器学习优化65W充电头功率分配，效率提升18%</p>
   <div class="case-tools"><span class="case-tool">硬件创新</span><span class="case-tool">边缘计算</span></div>
-</div>
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
 </div>
 </div>
 
@@ -273,18 +277,18 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">全球 AI 内容监管与版权最新法规动态</p>
 
   <div class="trend-grid" id="policy-cards-area">
-<div class="trend-card">
+<a class="trend-card" href="https://www.bing.com/search?q=site%3Aruanyifeng.com+%E6%AC%A7%E7%9B%9FAI%E5%86%85%E5%AE%B9%E6%BA%AF%E6%BA%90%E6%96%B0%E8%A7%84" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>欧盟AI内容溯源新规</h3>
   <p>要求所有生成式AI内容强制标注训练数据来源，违规最高罚款1亿欧元</p>
-  <div class="trend-source">📅 2026-06-20 · 来源www.ruanyifeng.com</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-06-20 · 来源www.ruanyifeng.com <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=site%3Aopenai.com+%E7%BE%8E%E5%9B%BDAI%E5%8C%BB%E7%96%97%E8%AF%8A%E6%96%AD%E6%8C%87%E5%8D%97" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>美国AI医疗诊断指南</h3>
   <p>FDA批准首个AI辅助罕见病诊断系统，要求标注置信度评分</p>
-  <div class="trend-source">📅 2026-06-20 · 来源openai.com</div>
-</div>
+  <div class="trend-source">📅 2026-06-20 · 来源openai.com <span class="trend-go">检索原文 →</span></div>
+</a>
 </div>
 </div>
 

@@ -100,6 +100,10 @@ a:hover{color:#7C2F22}
 .trend-card{background:var(--bg3);border:1px solid var(--border2);border-radius:4px;
   padding:24px;transition:all .3s;position:relative;overflow:hidden;box-shadow:0 2px 10px rgba(107,90,68,.12)}
 .trend-card:hover{border-color:var(--gold);transform:translateY(-3px);box-shadow:0 10px 24px rgba(107,90,68,.2)}
+a.trend-card,a.case-card{display:block;color:inherit;text-decoration:none;cursor:pointer}
+a.trend-card:hover,a.case-card:hover{color:inherit}
+.trend-go{margin-left:auto;color:var(--cinnabar);font-size:12px;font-weight:600;letter-spacing:.5px}
+.update-banner,.filter-bar,.theme-toggle{display:none}
 .trend-tag{display:inline-block;padding:3px 12px;border-radius:3px;font-size:12px;
   font-weight:600;margin-bottom:12px;border:1px solid}
 .trend-tag.tech{background:rgba(51,86,124,.08);color:#33567C;border-color:rgba(51,86,124,.35)}
@@ -215,30 +219,30 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">本周与传媒相关的 AI 技术进展与产品动态</p>
 
   <div class="trend-grid" id="trend-cards-area">
-<div class="trend-card">
+<a class="trend-card" href="https://www.bing.com/search?q=site%3Aopenai.com+%E5%AE%9E%E6%97%B6%E8%AF%AD%E9%9F%B3AI%E7%B3%BB%E7%BB%9FGPT-Live%E5%8F%91%E5%B8%83" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag tech">技术</div>
   <h3>实时语音AI系统GPT-Live发布</h3>
   <p>OpenAI推出低延迟实时语音交互系统，采用无回合语音模型</p>
-  <div class="trend-source">📅 2026-08-05 · 来源 openai.com</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-08-05 · 来源 openai.com <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.ithome.com/search.htm?search=AI%E6%95%B0%E6%8D%AE%E4%B8%AD%E5%BF%83%E5%85%A8%E7%90%83%E5%8C%96%E5%B8%83%E5%B1%80%E5%8A%A0%E9%80%9F" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag industry">行业</div>
   <h3>AI数据中心全球化布局加速</h3>
   <p>韩国FuriosaAI与瑞典企业合作建设7000块芯片的AI数据中心</p>
-  <div class="trend-source">📅 2026-08-05 · 来源 ithome.com</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-08-05 · 来源 ithome.com <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=site%3Aopenai.com+%E6%95%B0%E5%AD%A6%E4%B8%8E%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E9%87%8D%E5%A4%A7%E7%AA%81%E7%A0%B4" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag academic">学术</div>
   <h3>数学与计算机科学重大突破</h3>
   <p>OpenAI在10个经典数学难题上取得理论计算机科学进展</p>
-  <div class="trend-source">📅 2026-08-05 · 来源 openai.com</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-08-05 · 来源 openai.com <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=site%3Aopenai.com+%E6%AC%A7%E7%9B%9FAI%E5%AE%89%E5%85%A8%E6%A1%86%E6%9E%B6%E6%AD%A3%E5%BC%8F%E5%AE%9E%E6%96%BD" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>欧盟AI安全框架正式实施</h3>
   <p>OpenAI公布符合欧盟《人工智能法案》的透明度与可追溯性方案</p>
-  <div class="trend-source">📅 2026-08-05 · 来源 openai.com</div>
-</div>
+  <div class="trend-source">📅 2026-08-05 · 来源 openai.com <span class="trend-go">检索原文 →</span></div>
+</a>
 </div>
 </div>
 
@@ -250,24 +254,24 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">全球新闻媒体机构的 AI 应用实战案例</p>
 
   <div class="case-grid" id="case-cards-area">
-<div class="case-card">
+<a class="case-card" href="https://www.bing.com/search?q=AI%E9%A9%B1%E5%8A%A8%E7%9A%84%E7%94%B5%E4%BF%A1%E4%B8%AA%E6%80%A7%E5%8C%96%E6%9C%8D%E5%8A%A1" target="_blank" rel="noopener noreferrer">
   <div class="case-org">Circles</div>
   <h3>AI驱动的电信个性化服务</h3>
   <p>集成OpenAI API与Codex的电信体验系统提升ARPU 22%</p>
   <div class="case-tools"><span class="case-tool">OpenAI API</span><span class="case-tool">Codex</span></div>
-</div>
-<div class="case-card">
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
+<a class="case-card" href="https://www.bing.com/search?q=%E6%96%AF%E5%BE%B7%E5%93%A5%E5%B0%94%E6%91%A9AI%E6%95%B0%E6%8D%AE%E4%B8%AD%E5%BF%83%E8%90%BD%E6%88%90" target="_blank" rel="noopener noreferrer">
   <div class="case-org">FuriosaAI</div>
   <h3>斯德哥尔摩AI数据中心落成</h3>
   <p>部署7000块AI专用芯片构建高性能计算集群</p>
   <div class="case-tools"><span class="case-tool">ASIC芯片</span><span class="case-tool">HPC</span></div>
-</div>
-<div class="case-card">
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
+<a class="case-card" href="https://www.bing.com/search?q=%E5%A4%A7%E6%A8%A1%E5%9E%8B%E8%9E%8D%E8%B5%84500%E4%BA%BF%E5%85%83" target="_blank" rel="noopener noreferrer">
   <div class="case-org">DeepSeek</div>
   <h3>大模型融资500亿元</h3>
   <p>投后估值达5000亿元，加速多模态研发</p>
   <div class="case-tools"><span class="case-tool">大模型</span><span class="case-tool">融资</span></div>
-</div>
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
 </div>
 </div>
 
@@ -279,18 +283,18 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">全球 AI 内容监管与版权最新法规动态</p>
 
   <div class="trend-grid" id="policy-cards-area">
-<div class="trend-card">
+<a class="trend-card" href="https://www.bing.com/search?q=site%3Aopenai.com+%E6%AC%A7%E7%9B%9FAI%E5%AE%89%E5%85%A8%E6%A1%86%E6%9E%B6%E5%AE%9E%E6%96%BD" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>欧盟AI安全框架实施</h3>
   <p>OpenAI公布符合欧盟《人工智能法案》的透明度与可追溯性方案</p>
-  <div class="trend-source">📅 2026-08-05 · 来源 openai.com</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-08-05 · 来源 openai.com <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.ithome.com/search.htm?search=%E5%88%97%E6%94%AF%E6%95%A6%E5%A3%AB%E7%99%BB%E6%95%B0%E6%8D%AE%E6%B3%84%E9%9C%B2%E8%B0%83%E6%9F%A5" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>列支敦士登数据泄露调查</h3>
   <p>3.1万法人实体信息遭黑客窃取启动跨国司法调查</p>
-  <div class="trend-source">📅 2026-08-05 · 来源 ithome.com</div>
-</div>
+  <div class="trend-source">📅 2026-08-05 · 来源 ithome.com <span class="trend-go">检索原文 →</span></div>
+</a>
 </div>
 </div>
 

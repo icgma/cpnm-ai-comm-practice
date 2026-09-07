@@ -100,6 +100,10 @@ a:hover{color:#7C2F22}
 .trend-card{background:var(--bg3);border:1px solid var(--border2);border-radius:4px;
   padding:24px;transition:all .3s;position:relative;overflow:hidden;box-shadow:0 2px 10px rgba(107,90,68,.12)}
 .trend-card:hover{border-color:var(--gold);transform:translateY(-3px);box-shadow:0 10px 24px rgba(107,90,68,.2)}
+a.trend-card,a.case-card{display:block;color:inherit;text-decoration:none;cursor:pointer}
+a.trend-card:hover,a.case-card:hover{color:inherit}
+.trend-go{margin-left:auto;color:var(--cinnabar);font-size:12px;font-weight:600;letter-spacing:.5px}
+.update-banner,.filter-bar,.theme-toggle{display:none}
 .trend-tag{display:inline-block;padding:3px 12px;border-radius:3px;font-size:12px;
   font-weight:600;margin-bottom:12px;border:1px solid}
 .trend-tag.tech{background:rgba(51,86,124,.08);color:#33567C;border-color:rgba(51,86,124,.35)}
@@ -215,30 +219,30 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">本周与传媒相关的 AI 技术进展与产品动态</p>
 
   <div class="trend-grid" id="trend-cards-area">
-<div class="trend-card">
+<a class="trend-card" href="https://www.ithome.com/search.htm?search=%E9%98%BF%E9%87%8C%E5%B7%B4%E5%B7%B4%E5%8F%91%E5%B8%83Qwen-Robot%E5%85%B7%E8%BA%AB%E6%99%BA%E8%83%BD%E5%A4%A7%E6%A8%A1%E5%9E%8B" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag industry">行业</div>
   <h3>阿里巴巴发布Qwen-Robot具身智能大模型</h3>
   <p>推出机器人操作、导航及感知通用底座，赋能智能硬件与工业场景</p>
-  <div class="trend-source">📅 2026-06-16 · 来源：ithome.com</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-06-16 · 来源：ithome.com <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.ithome.com/search.htm?search=%E8%B0%B7%E6%AD%8C%E6%9B%B4%E6%96%B0AI%E6%A8%A1%E5%9E%8B%E6%88%90%E6%9C%AC%E6%95%88%E7%8E%87%E6%A6%9C%E5%8D%95" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag tech">技术</div>
   <h3>谷歌更新AI模型成本效率榜单</h3>
   <p>Gemini 3.5 Flash模型成本达DeepSeek V4的17.5倍，引发行业性能优化讨论</p>
-  <div class="trend-source">📅 2026-06-16 · 来源：ithome.com</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-06-16 · 来源：ithome.com <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://hn.algolia.com/?q=%E6%AC%A7%E7%9B%9FAI%E5%86%85%E5%AE%B9%E7%94%9F%E6%88%90%E6%A0%87%E8%AF%86%E6%96%B0%E8%A7%84" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>欧盟AI内容生成标识新规</h3>
   <p>6月15日发布AI生成内容强制标识标准，要求电商平台实施透明度管理</p>
-  <div class="trend-source">📅 2026-06-16 · 来源：hnrss.org</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-06-16 · 来源：hnrss.org <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=site%3Aopenai.com+OpenAI%E5%90%88%E4%BD%9C%E4%BC%99%E4%BC%B4%E7%BD%91%E7%BB%9C%E5%90%AF%E5%8A%A8" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag tool">工具</div>
   <h3>OpenAI合作伙伴网络启动</h3>
   <p>投入1.5亿美元加速企业级AI应用，覆盖金融、教育等垂直领域</p>
-  <div class="trend-source">📅 2026-06-16 · 来源：openai.com</div>
-</div>
+  <div class="trend-source">📅 2026-06-16 · 来源：openai.com <span class="trend-go">检索原文 →</span></div>
+</a>
 </div>
 </div>
 
@@ -250,24 +254,24 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">全球新闻媒体机构的 AI 应用实战案例</p>
 
   <div class="case-grid" id="case-cards-area">
-<div class="case-card">
+<a class="case-card" href="https://www.bing.com/search?q=BBVA%E9%93%B6%E8%A1%8CAI%E5%8D%87%E7%BA%A7%E9%A1%B9%E7%9B%AE" target="_blank" rel="noopener noreferrer">
   <div class="case-org">OpenAI</div>
   <h3>BBVA银行AI升级项目</h3>
   <p>部署ChatGPT企业版至10万员工，实现智能客服与风险控制自动化</p>
   <div class="case-tools"><span class="case-tool">企业级应用</span><span class="case-tool">自然语言处理</span></div>
-</div>
-<div class="case-card">
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
+<a class="case-card" href="https://www.bing.com/search?q=Qwen-Robot%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%B9%B3%E5%8F%B0" target="_blank" rel="noopener noreferrer">
   <div class="case-org">阿里巴巴</div>
   <h3>Qwen-Robot机器人平台</h3>
   <p>提供操作模型 Manip、导航模型 Nav及世界模型 World，支持工业机器人定制</p>
   <div class="case-tools"><span class="case-tool">具身智能</span><span class="case-tool">垂直行业</span></div>
-</div>
-<div class="case-card">
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
+<a class="case-card" href="https://www.bing.com/search?q=%E5%B8%A6%E5%B1%8F%E9%94%AE%E7%9B%98%E5%85%B1%E5%88%9B%E8%AE%A1%E5%88%92" target="_blank" rel="noopener noreferrer">
   <div class="case-org">少数派×AKKO</div>
   <h3>带屏键盘共创计划</h3>
   <p>联合开发搭载AI语音交互的27系列键盘，用户参与硬件设计测试</p>
   <div class="case-tools"><span class="case-tool">AI交互</span><span class="case-tool">消费电子</span></div>
-</div>
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
 </div>
 </div>
 
@@ -279,18 +283,18 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">全球 AI 内容监管与版权最新法规动态</p>
 
   <div class="trend-grid" id="policy-cards-area">
-<div class="trend-card">
+<a class="trend-card" href="https://hn.algolia.com/?q=%E6%AC%A7%E7%9B%9FAI%E5%86%85%E5%AE%B9%E6%A0%87%E8%AF%86%E6%A0%87%E5%87%86" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>欧盟AI内容标识标准</h3>
   <p>6月15日发布AI生成内容强制标识法规，要求电商平台实施透明度管理</p>
-  <div class="trend-source">📅 2026-06-16 · 来源：hnrss.org</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-06-16 · 来源：hnrss.org <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=site%3Aopenai.com+OpenAI%E6%94%AF%E6%8C%81%E6%AC%A7%E7%9B%9FAI%E6%B2%BB%E7%90%86" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>OpenAI支持欧盟AI治理</h3>
   <p>参与欧盟可信AI标准制定，推动生成内容溯源与责任认定机制</p>
-  <div class="trend-source">📅 2026-06-16 · 来源：openai.com</div>
-</div>
+  <div class="trend-source">📅 2026-06-16 · 来源：openai.com <span class="trend-go">检索原文 →</span></div>
+</a>
 </div>
 </div>
 

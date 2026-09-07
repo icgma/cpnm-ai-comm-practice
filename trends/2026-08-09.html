@@ -100,6 +100,10 @@ a:hover{color:#7C2F22}
 .trend-card{background:var(--bg3);border:1px solid var(--border2);border-radius:4px;
   padding:24px;transition:all .3s;position:relative;overflow:hidden;box-shadow:0 2px 10px rgba(107,90,68,.12)}
 .trend-card:hover{border-color:var(--gold);transform:translateY(-3px);box-shadow:0 10px 24px rgba(107,90,68,.2)}
+a.trend-card,a.case-card{display:block;color:inherit;text-decoration:none;cursor:pointer}
+a.trend-card:hover,a.case-card:hover{color:inherit}
+.trend-go{margin-left:auto;color:var(--cinnabar);font-size:12px;font-weight:600;letter-spacing:.5px}
+.update-banner,.filter-bar,.theme-toggle{display:none}
 .trend-tag{display:inline-block;padding:3px 12px;border-radius:3px;font-size:12px;
   font-weight:600;margin-bottom:12px;border:1px solid}
 .trend-tag.tech{background:rgba(51,86,124,.08);color:#33567C;border-color:rgba(51,86,124,.35)}
@@ -215,24 +219,24 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">本周与传媒相关的 AI 技术进展与产品动态</p>
 
   <div class="trend-grid" id="trend-cards-area">
-<div class="trend-card">
+<a class="trend-card" href="https://www.bing.com/search?q=site%3Aopenai.com+OpenAI%E4%B8%8E%E5%BF%83%E7%90%86%E5%8D%8F%E4%BC%9A%E5%90%88%E4%BD%9C%E5%88%B6%E5%AE%9AAI%E5%BF%83%E7%90%86%E5%81%A5%E5%BA%B7%E6%8C%87%E5%8D%97" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag tech">技术</div>
   <h3>OpenAI与心理协会合作制定AI心理健康指南</h3>
   <p>OpenAI与美国心理协会联合发布基于实证的AI心理健康指导</p>
-  <div class="trend-source">📅 2026-08-09 · 来源</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-08-09 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=HSP%20GRUPPE%E7%A8%8E%E5%8A%A1%E5%92%A8%E8%AF%A2%E6%95%88%E7%8E%87%E6%8F%90%E5%8D%87" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag industry">行业</div>
   <h3>HSP GRUPPE税务咨询效率提升</h3>
   <p>通过ChatGPT Enterprise实现税务服务流程自动化</p>
-  <div class="trend-source">📅 2026-08-09 · 来源</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-08-09 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=%E5%BE%AE%E8%BD%AFWin11%E7%B3%BB%E7%BB%9F%E5%8A%9F%E8%83%BD%E6%94%B9%E8%BF%9B" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>微软Win11系统功能改进</h3>
   <p>优化运行速度并减少系统广告推送</p>
-  <div class="trend-source">📅 2026-08-09 · 来源</div>
-</div>
+  <div class="trend-source">📅 2026-08-09 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
 </div>
 </div>
 
@@ -244,24 +248,24 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">全球新闻媒体机构的 AI 应用实战案例</p>
 
   <div class="case-grid" id="case-cards-area">
-<div class="case-card">
+<a class="case-card" href="https://www.bing.com/search?q=%E6%9D%A5%E9%85%B7%E5%B9%B3%E6%9D%BF%20Mini%E5%8F%91%E5%B8%83" target="_blank" rel="noopener noreferrer">
   <div class="case-org">联想</div>
   <h3>来酷平板 Mini发布</h3>
   <p>8英寸4G通信平板定价899元</p>
   <div class="case-tools"><span class="case-tool">4G通信</span><span class="case-tool">便携设备</span></div>
-</div>
-<div class="case-card">
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
+<a class="case-card" href="https://www.bing.com/search?q=%E5%A2%A8%E6%B0%B4%E5%B1%8F%E6%89%8B%E6%9C%BAA10%E7%B3%BB%E5%88%97" target="_blank" rel="noopener noreferrer">
   <div class="case-org">海信</div>
   <h3>墨水屏手机A10系列</h3>
   <p>磁吸双屏设计支持一键切换</p>
   <div class="case-tools"><span class="case-tool">墨水屏技术</span><span class="case-tool">智能交互</span></div>
-</div>
-<div class="case-card">
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
+<a class="case-card" href="https://www.bing.com/search?q=%E5%85%B7%E8%BA%AB%E6%99%BA%E8%83%BD%E9%83%A8%E9%97%A8%E6%88%90%E7%AB%8B" target="_blank" rel="noopener noreferrer">
   <div class="case-org">小米</div>
   <h3>具身智能部门成立</h3>
   <p>前字节机器人负责人孔涛挂帅</p>
   <div class="case-tools"><span class="case-tool">机器人技术</span><span class="case-tool">AI应用</span></div>
-</div>
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
 </div>
 </div>
 
@@ -273,12 +277,12 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">全球 AI 内容监管与版权最新法规动态</p>
 
   <div class="trend-grid" id="policy-cards-area">
-<div class="trend-card">
+<a class="trend-card" href="https://www.bing.com/search?q=%E5%BE%AE%E8%BD%AF%E7%B3%BB%E7%BB%9F%E6%94%B9%E8%BF%9B%E6%94%BF%E7%AD%96" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>微软系统改进政策</h3>
   <p>Win11推送运行速度优化及广告管控更新</p>
-  <div class="trend-source">📅 2026-08-09 · 来源</div>
-</div>
+  <div class="trend-source">📅 2026-08-09 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
 </div>
 </div>
 

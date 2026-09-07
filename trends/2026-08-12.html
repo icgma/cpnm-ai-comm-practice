@@ -100,6 +100,10 @@ a:hover{color:#7C2F22}
 .trend-card{background:var(--bg3);border:1px solid var(--border2);border-radius:4px;
   padding:24px;transition:all .3s;position:relative;overflow:hidden;box-shadow:0 2px 10px rgba(107,90,68,.12)}
 .trend-card:hover{border-color:var(--gold);transform:translateY(-3px);box-shadow:0 10px 24px rgba(107,90,68,.2)}
+a.trend-card,a.case-card{display:block;color:inherit;text-decoration:none;cursor:pointer}
+a.trend-card:hover,a.case-card:hover{color:inherit}
+.trend-go{margin-left:auto;color:var(--cinnabar);font-size:12px;font-weight:600;letter-spacing:.5px}
+.update-banner,.filter-bar,.theme-toggle{display:none}
 .trend-tag{display:inline-block;padding:3px 12px;border-radius:3px;font-size:12px;
   font-weight:600;margin-bottom:12px;border:1px solid}
 .trend-tag.tech{background:rgba(51,86,124,.08);color:#33567C;border-color:rgba(51,86,124,.35)}
@@ -215,26 +219,26 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">本周与传媒相关的 AI 技术进展与产品动态</p>
 
   <div class="trend-grid" id="trend-cards-area">
-<div class="trend-card">
+<a class="trend-card" href="https://sspai.com/search/article?q=%E5%BE%AE%E8%BD%AF%E4%B8%8A%E8%B0%83%20Windows%2011%20OEM%E6%8E%88%E6%9D%83%E8%B4%B9%E7%94%A8" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag tech">技术</div>
   <h3>微软上调 Windows 11 OEM授权费用</h3>
   <p>2026年8月12日，微软宣布对Windows 11 OEM授权费用实施调整，影响硬件厂商成本结构。</p>
-  <div class="trend-source">📅 2026-08-12 · 来源sspai.com</div>
-</div>
+  <div class="trend-source">📅 2026-08-12 · 来源sspai.com <span class="trend-go">检索原文 →</span></div>
+</a>
 
-<div class="trend-card">
+<a class="trend-card" href="https://sspai.com/search/article?q=Claude%E9%9A%90%E6%B0%B4%E5%8D%B0%E6%8A%80%E6%9C%AF%E8%90%BD%E5%9C%B0" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag tech">技术</div>
   <h3>Claude隐水印技术落地</h3>
   <p>Anthropic推出内容生成隐水印方案，计划2026年内覆盖所有生成式AI产品。</p>
-  <div class="trend-source">📅 2026-08-12 · 来源sspai.com</div>
-</div>
+  <div class="trend-source">📅 2026-08-12 · 来源sspai.com <span class="trend-go">检索原文 →</span></div>
+</a>
 
-<div class="trend-card">
+<a class="trend-card" href="https://sspai.com/search/article?q=%E9%B8%BF%E8%92%99%E5%BA%94%E7%94%A8%E4%B8%8A%E6%9E%B6%E6%8C%87%E5%8D%97%E5%8D%87%E7%BA%A7" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag tech">技术</div>
   <h3>鸿蒙应用上架指南升级</h3>
   <p>HarmonyOS NEXT生态接入指南发布，支持AI辅助编程工具集成开发流程。</p>
-  <div class="trend-source">📅 2026-08-12 · 来源sspai.com</div>
-</div>
+  <div class="trend-source">📅 2026-08-12 · 来源sspai.com <span class="trend-go">检索原文 →</span></div>
+</a>
 </div>
 </div>
 
@@ -246,26 +250,26 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">全球新闻媒体机构的 AI 应用实战案例</p>
 
   <div class="case-grid" id="case-cards-area">
-<div class="case-card">
+<a class="case-card" href="https://www.bing.com/search?q=Daybreak%E6%A8%A1%E5%9E%8BAWS%E5%95%86%E4%B8%9A%E5%8C%96" target="_blank" rel="noopener noreferrer">
   <div class="case-org">OpenAI</div>
   <h3>Daybreak模型AWS商业化</h3>
   <p>与AWS合作推出网络安全专用模型，服务覆盖200+企业客户。</p>
   <div class="case-tools"><span class="case-tool">AWS</span><span class="case-tool">Daybreak</span></div>
-</div>
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
 
-<div class="case-card">
+<a class="case-card" href="https://www.bing.com/search?q=ChatGPT%20Work%E8%90%A5%E9%94%80%E6%B5%81%E7%A8%8B%E6%94%B9%E9%80%A0" target="_blank" rel="noopener noreferrer">
   <div class="case-org">Zapier</div>
   <h3>ChatGPT Work营销流程改造</h3>
   <p>实现营销漏斗转化率提升40%，减少30%人工审核环节。</p>
   <div class="case-tools"><span class="case-tool">ChatGPT Work</span><span class="case-tool">营销自动化</span></div>
-</div>
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
 
-<div class="case-card">
+<a class="case-card" href="https://www.bing.com/search?q=AI%E5%AE%A2%E6%88%B7%E6%97%85%E7%A8%8B%E4%BC%98%E5%8C%96" target="_blank" rel="noopener noreferrer">
   <div class="case-org">Virgin Atlantic</div>
   <h3>AI客户旅程优化</h3>
   <p>通过AI助手实现预订响应时间缩短至15秒，客户满意度提升22%。</p>
   <div class="case-tools"><span class="case-tool">ChatGPT Work</span><span class="case-tool">客户服务</span></div>
-</div>
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
 </div>
 </div>
 
@@ -277,12 +281,12 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">全球 AI 内容监管与版权最新法规动态</p>
 
   <div class="trend-grid" id="policy-cards-area">
-<div class="trend-card">
+<a class="trend-card" href="https://www.ithome.com/search.htm?search=AI%E6%99%BA%E8%83%BD%E4%BD%93%E4%BA%8B%E6%95%85%E8%BF%BD%E8%B8%AA%E5%80%A1%E8%AE%AE" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>AI智能体事故追踪倡议</h3>
   <p>120家科技企业联合推动AI事故报告标准化框架，预计2027年实施。</p>
-  <div class="trend-source">📅 2026-08-12 · 来源ithome.com</div>
-</div>
+  <div class="trend-source">📅 2026-08-12 · 来源ithome.com <span class="trend-go">检索原文 →</span></div>
+</a>
 </div>
 </div>
 

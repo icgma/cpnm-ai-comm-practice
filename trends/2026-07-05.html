@@ -100,6 +100,10 @@ a:hover{color:#7C2F22}
 .trend-card{background:var(--bg3);border:1px solid var(--border2);border-radius:4px;
   padding:24px;transition:all .3s;position:relative;overflow:hidden;box-shadow:0 2px 10px rgba(107,90,68,.12)}
 .trend-card:hover{border-color:var(--gold);transform:translateY(-3px);box-shadow:0 10px 24px rgba(107,90,68,.2)}
+a.trend-card,a.case-card{display:block;color:inherit;text-decoration:none;cursor:pointer}
+a.trend-card:hover,a.case-card:hover{color:inherit}
+.trend-go{margin-left:auto;color:var(--cinnabar);font-size:12px;font-weight:600;letter-spacing:.5px}
+.update-banner,.filter-bar,.theme-toggle{display:none}
 .trend-tag{display:inline-block;padding:3px 12px;border-radius:3px;font-size:12px;
   font-weight:600;margin-bottom:12px;border:1px solid}
 .trend-tag.tech{background:rgba(51,86,124,.08);color:#33567C;border-color:rgba(51,86,124,.35)}
@@ -215,30 +219,30 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">本周与传媒相关的 AI 技术进展与产品动态</p>
 
   <div class="trend-grid" id="trend-cards-area">
-<div class="trend-card">
+<a class="trend-card" href="https://www.bing.com/search?q=site%3Aopenai.com+HP%E4%B8%8EOpenAI%E6%B7%B1%E5%8C%96%E6%88%98%E7%95%A5%E5%90%88%E4%BD%9C%E4%BC%99%E4%BC%B4%E5%85%B3%E7%B3%BB" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag tech">技术</div>
   <h3>HP与OpenAI深化战略合作伙伴关系</h3>
   <p>HP Inc.宣布扩展与OpenAI的Frontier合作，将AI技术整合至客户体验和软件开发流程中。</p>
-  <div class="trend-source">📅 2026-07-05 · 来源</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-07-05 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=%E4%B8%B0%E7%94%B0AI%E6%9C%AF%E8%AF%AD%E7%B2%BE%E7%AE%80%E8%AE%A1%E5%88%92" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag industry">行业</div>
   <h3>丰田AI术语精简计划</h3>
   <p>丰田通过AI统一4.5万个专业术语至5000个，优化生产流程效率。</p>
-  <div class="trend-source">📅 2026-07-05 · 来源</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-07-05 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=Damo%20Academy%E8%B6%85%E5%AF%BC%E4%BD%93%E5%8F%91%E7%8E%B0AI" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag academic">学术</div>
   <h3>Damo Academy超导体发现AI</h3>
   <p>阿里达摩院AI系统在轨完成超导体新材料发现。</p>
-  <div class="trend-source">📅 2026-07-05 · 来源</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-07-05 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=%E5%A4%96%E5%8C%85%E6%95%B0%E6%8D%AE%E5%90%88%E8%A7%84%E6%96%B0%E8%A6%81%E6%B1%82" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>外包数据合规新要求</h3>
   <p>国安部通报外包运维泄露核心科研数据案例，强调合规管理。</p>
-  <div class="trend-source">📅 2026-07-05 · 来源</div>
-</div>
+  <div class="trend-source">📅 2026-07-05 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
 </div>
 </div>
 
@@ -250,24 +254,24 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">全球新闻媒体机构的 AI 应用实战案例</p>
 
   <div class="case-grid" id="case-cards-area">
-<div class="case-card">
+<a class="case-card" href="https://www.bing.com/search?q=Mac%E6%88%AA%E5%9B%BE%E5%B7%A5%E5%85%B71Capture%E5%8A%9F%E8%83%BD%E5%8D%87%E7%BA%A7" target="_blank" rel="noopener noreferrer">
   <div class="case-org">1Capture团队</div>
   <h3>Mac截图工具1Capture功能升级</h3>
   <p>新增团队协作截图、产品演示优化功能，适配AI标注需求。</p>
   <div class="case-tools"><span class="case-tool">协作工具</span><span class="case-tool">AI集成</span></div>
-</div>
-<div class="case-card">
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
+<a class="case-card" href="https://www.bing.com/search?q=%E4%B9%BE%E5%B4%91%E6%99%BA%E9%A9%BE%E7%B3%BB%E7%BB%9F%E7%AA%81%E7%A0%B4" target="_blank" rel="noopener noreferrer">
   <div class="case-org">华为</div>
   <h3>乾崑智驾系统突破</h3>
   <p>搭载AI驾驶辅助的车辆超190万辆，优化传媒内容分发算法。</p>
   <div class="case-tools"><span class="case-tool">智能驾驶</span><span class="case-tool">内容推荐</span></div>
-</div>
-<div class="case-card">
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
+<a class="case-card" href="https://www.bing.com/search?q=GeneBench-Pro%E5%8F%91%E5%B8%83" target="_blank" rel="noopener noreferrer">
   <div class="case-org">OpenAI</div>
   <h3>GeneBench-Pro发布</h3>
   <p>首款AI基因组学基准测试工具，提升生物科技内容研发效率。</p>
   <div class="case-tools"><span class="case-tool">生物计算</span><span class="case-tool">AI研究</span></div>
-</div>
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
 </div>
 </div>
 
@@ -279,18 +283,18 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">全球 AI 内容监管与版权最新法规动态</p>
 
   <div class="trend-grid" id="policy-cards-area">
-<div class="trend-card">
+<a class="trend-card" href="https://www.bing.com/search?q=%E5%B7%A5%E4%BF%A1%E9%83%A8%E6%99%BA%E8%83%BD%E7%BD%91%E8%81%94%E6%B1%BD%E8%BD%A6%E6%96%B0%E5%9B%BD%E6%A0%87" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>工信部智能网联汽车新国标</h3>
   <p>GB 47955—2026强制标准将于2027年实施，规范AI驾驶辅助系统。</p>
-  <div class="trend-source">📅 2026-07-05 · 来源</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-07-05 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=%E4%B8%89%E6%98%9FSDI%E6%89%A9%E4%BA%A7%E9%92%A0%E7%94%B5%E6%B1%A0" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>三星SDI扩产钠电池</h3>
   <p>投资1100亿人民币推进全固态钠电池量产，符合环保法规要求。</p>
-  <div class="trend-source">📅 2026-07-05 · 来源</div>
-</div>
+  <div class="trend-source">📅 2026-07-05 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
 </div>
 </div>
 

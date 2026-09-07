@@ -100,6 +100,10 @@ a:hover{color:#7C2F22}
 .trend-card{background:var(--bg3);border:1px solid var(--border2);border-radius:4px;
   padding:24px;transition:all .3s;position:relative;overflow:hidden;box-shadow:0 2px 10px rgba(107,90,68,.12)}
 .trend-card:hover{border-color:var(--gold);transform:translateY(-3px);box-shadow:0 10px 24px rgba(107,90,68,.2)}
+a.trend-card,a.case-card{display:block;color:inherit;text-decoration:none;cursor:pointer}
+a.trend-card:hover,a.case-card:hover{color:inherit}
+.trend-go{margin-left:auto;color:var(--cinnabar);font-size:12px;font-weight:600;letter-spacing:.5px}
+.update-banner,.filter-bar,.theme-toggle{display:none}
 .trend-tag{display:inline-block;padding:3px 12px;border-radius:3px;font-size:12px;
   font-weight:600;margin-bottom:12px;border:1px solid}
 .trend-tag.tech{background:rgba(51,86,124,.08);color:#33567C;border-color:rgba(51,86,124,.35)}
@@ -215,24 +219,24 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">本周与传媒相关的 AI 技术进展与产品动态</p>
 
   <div class="trend-grid" id="trend-cards-area">
-<div class="trend-card">
+<a class="trend-card" href="https://www.bing.com/search?q=GPT-5.6%E7%B3%BB%E5%88%97%E6%A8%A1%E5%9E%8B%E5%85%A8%E9%9D%A2%E8%B5%8B%E8%83%BD%E4%BC%81%E4%B8%9A%E7%94%9F%E4%BA%A7%E5%8A%9B" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag tech">技术</div>
   <h3>GPT-5.6系列模型全面赋能企业生产力</h3>
   <p>OpenAI推出GPT-5.6系列模型，集成到Microsoft 365 Copilot中，显著提升文档处理、数据分析等场景的智能化水平，支持多模态交互与实时数据调用。</p>
-  <div class="trend-source">📅 2026-07-12 · 来源</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-07-12 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=AI%E5%8E%9F%E7%94%9F%E6%99%BA%E8%83%BD%E4%BD%93%E9%87%8D%E6%9E%84%E7%BB%88%E7%AB%AF%E4%BA%A4%E4%BA%92" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag industry">行业</div>
   <h3>AI原生智能体重构终端交互</h3>
   <p>努比亚倪飞提出AI手机将进入原生智能体阶段，实现从功能叠加到系统级AI融合，重构人机交互逻辑与生态闭环。</p>
-  <div class="trend-source">📅 2026-07-12 · 来源</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-07-12 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=%E4%BC%81%E4%B8%9A%E7%BA%A7AI%20agents%E5%8D%8F%E5%90%8C%E5%8A%9E%E5%85%AC%E7%B3%BB%E7%BB%9F" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag tech">技术</div>
   <h3>企业级AI agents协同办公系统</h3>
   <p>OpenAI推出GPT-Live语音模型，支持自然人类-AI实时语音交互，已在MUFG等金融机构实现智能流程自动化。</p>
-  <div class="trend-source">📅 2026-07-12 · 来源</div>
-</div>
+  <div class="trend-source">📅 2026-07-12 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
 </div>
 </div>
 
@@ -244,24 +248,24 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">全球新闻媒体机构的 AI 应用实战案例</p>
 
   <div class="case-grid" id="case-cards-area">
-<div class="case-card">
+<a class="case-card" href="https://www.bing.com/search?q=Cybercab%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6%E5%87%BA%E7%A7%9F%E8%BD%A6%E9%87%8F%E4%BA%A7%E8%AE%A1%E5%88%92" target="_blank" rel="noopener noreferrer">
   <div class="case-org">特斯拉</div>
   <h3>Cybercab自动驾驶出租车量产计划</h3>
   <p>2025年发布Cybercab超高效动力总成方案，集成4680电池与低压电气架构，目标构建全自动驾驶出租车网络。</p>
   <div class="case-tools"><span class="case-tool">自动驾驶</span><span class="case-tool">电池回收</span></div>
-</div>
-<div class="case-card">
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
+<a class="case-card" href="https://www.bing.com/search?q=%E6%99%BA%E7%95%8CR7%E7%BA%AF%E7%94%B5%E7%89%88%E6%99%BA%E8%83%BD%E5%BA%A7%E8%88%B1%E5%8D%87%E7%BA%A7" target="_blank" rel="noopener noreferrer">
   <div class="case-org">鸿蒙智行</div>
   <h3>智界R7纯电版智能座舱升级</h3>
   <p>申报车型采用双联屏与B柱侧向摄像头，集成鸿蒙智行AI系统，实现多模态交互与自动驾驶决策融合。</p>
   <div class="case-tools"><span class="case-tool">车联网</span><span class="case-tool">多模态AI</span></div>
-</div>
-<div class="case-card">
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
+<a class="case-card" href="https://www.bing.com/search?q=AI%E5%8E%9F%E7%94%9F%E9%80%9A%E4%BF%A1%E7%BD%91%E7%BB%9C%E6%94%B9%E9%80%A0" target="_blank" rel="noopener noreferrer">
   <div class="case-org">德电</div>
   <h3>AI原生通信网络改造</h3>
   <p>与OpenAI合作部署AI-native电信架构，利用GPT-5.6优化客户服务与网络运维，提升问题响应效率300%。</p>
   <div class="case-tools"><span class="case-tool">5G网络</span><span class="case-tool">智能客服</span></div>
-</div>
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
 </div>
 </div>
 
@@ -273,12 +277,12 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">全球 AI 内容监管与版权最新法规动态</p>
 
   <div class="trend-grid" id="policy-cards-area">
-<div class="trend-card">
+<a class="trend-card" href="https://www.bing.com/search?q=site%3Aopenai.com+OpenAI%E4%B8%8E%E8%8B%B9%E6%9E%9C%E5%8A%B3%E5%8A%A8%E7%BA%A0%E7%BA%B7%E5%8F%B8%E6%B3%95%E8%BF%9B%E5%B1%95" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>OpenAI与苹果劳动纠纷司法进展</h3>
   <p>苹果起诉OpenAI窃取员工及机密文件案进入司法程序，可能影响AI企业跨平台人才流动与知识产权界定。</p>
-  <div class="trend-source">📅 2026-07-12 · 来源</div>
-</div>
+  <div class="trend-source">📅 2026-07-12 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
 </div>
 </div>
 

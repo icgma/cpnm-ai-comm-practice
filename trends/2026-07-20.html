@@ -100,6 +100,10 @@ a:hover{color:#7C2F22}
 .trend-card{background:var(--bg3);border:1px solid var(--border2);border-radius:4px;
   padding:24px;transition:all .3s;position:relative;overflow:hidden;box-shadow:0 2px 10px rgba(107,90,68,.12)}
 .trend-card:hover{border-color:var(--gold);transform:translateY(-3px);box-shadow:0 10px 24px rgba(107,90,68,.2)}
+a.trend-card,a.case-card{display:block;color:inherit;text-decoration:none;cursor:pointer}
+a.trend-card:hover,a.case-card:hover{color:inherit}
+.trend-go{margin-left:auto;color:var(--cinnabar);font-size:12px;font-weight:600;letter-spacing:.5px}
+.update-banner,.filter-bar,.theme-toggle{display:none}
 .trend-tag{display:inline-block;padding:3px 12px;border-radius:3px;font-size:12px;
   font-weight:600;margin-bottom:12px;border:1px solid}
 .trend-tag.tech{background:rgba(51,86,124,.08);color:#33567C;border-color:rgba(51,86,124,.35)}
@@ -215,30 +219,30 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">本周与传媒相关的 AI 技术进展与产品动态</p>
 
   <div class="trend-grid" id="trend-cards-area">
-<div class="trend-card">
+<a class="trend-card" href="https://www.bing.com/search?q=%E7%99%BE%E5%BA%A6%E6%98%86%E4%BB%91%E8%8A%AFM100%E8%8A%AF%E7%89%87%E4%BC%98%E5%8C%96%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%8E%A8%E7%90%86" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag tech">技术</div>
   <h3>百度昆仑芯M100芯片优化大模型推理</h3>
   <p>面向大模型推理针对性优化，延续自研XPU理念</p>
-  <div class="trend-source">📅 2026-07-20 · 来源央视新闻</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-07-20 · 来源央视新闻 <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.ithome.com/search.htm?search=%E9%B8%BF%E8%92%99%E7%B3%BB%E7%BB%9FAI%E5%8A%9F%E8%83%BD%E5%8D%87%E7%BA%A7%E8%90%BD%E5%9C%B0" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag industry">行业</div>
   <h3>鸿蒙系统AI功能升级落地</h3>
   <p>华为Pura 80系列率先实现AI修图与单应用音量调节</p>
-  <div class="trend-source">📅 2026-07-20 · 来源IT之家</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-07-20 · 来源IT之家 <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=%E5%B7%A5%E4%BF%A1%E9%83%A8%E5%8F%91%E5%B8%83%E4%BA%BA%E5%BD%A2%E6%9C%BA%E5%99%A8%E4%BA%BA%E4%BA%A7%E4%B8%9A%E6%94%BF%E7%AD%96" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>工信部发布人形机器人产业政策</h3>
   <p>我国人形机器人整机产品占全球超50%市场份额</p>
-  <div class="trend-source">📅 2026-07-20 · 来源国务院新闻办</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-07-20 · 来源国务院新闻办 <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=%E5%BE%AE%E8%BD%AFOneDrive%E6%95%8F%E6%84%9FPDF%E6%88%AA%E5%9B%BE%E9%99%90%E5%88%B6" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag tool">工具</div>
   <h3>微软OneDrive敏感PDF截图限制</h3>
   <p>仅限Edge浏览器阻止敏感PDF截图功能</p>
-  <div class="trend-source">📅 2026-07-20 · 来源Windowslatest</div>
-</div>
+  <div class="trend-source">📅 2026-07-20 · 来源Windowslatest <span class="trend-go">检索原文 →</span></div>
+</a>
 </div>
 </div>
 
@@ -250,36 +254,36 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">全球新闻媒体机构的 AI 应用实战案例</p>
 
   <div class="case-grid" id="case-cards-area">
-<div class="case-card">
+<a class="case-card" href="https://www.bing.com/search?q=%E6%98%86%E4%BB%91%E8%8A%AFM100%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%8E%A8%E7%90%86%E8%8A%AF%E7%89%87" target="_blank" rel="noopener noreferrer">
   <div class="case-org">百度</div>
   <h3>昆仑芯M100大模型推理芯片</h3>
   <p>首次在WAIC 2026展示，针对大模型优化</p>
   <div class="case-tools"><span class="case-tool">大模型推理</span><span class="case-tool">XPU架构</span></div>
-</div>
-<div class="case-card">
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
+<a class="case-card" href="https://www.bing.com/search?q=%E9%B8%BF%E8%92%996.1.0.135%20SP8%E7%B3%BB%E7%BB%9F%E5%8D%87%E7%BA%A7" target="_blank" rel="noopener noreferrer">
   <div class="case-org">华为</div>
   <h3>鸿蒙6.1.0.135 SP8系统升级</h3>
   <p>新增图库AI修图与单应用音量调节功能</p>
   <div class="case-tools"><span class="case-tool">鸿蒙系统</span><span class="case-tool">AI修图</span></div>
-</div>
-<div class="case-card">
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
+<a class="case-card" href="https://www.bing.com/search?q=OneDrive%E6%95%8F%E6%84%9F%E6%96%87%E6%A1%A3%E4%BF%9D%E6%8A%A4" target="_blank" rel="noopener noreferrer">
   <div class="case-org">微软</div>
   <h3>OneDrive敏感文档保护</h3>
   <p>Edge浏览器独家实现截图限制功能</p>
   <div class="case-tools"><span class="case-tool">Edge浏览器</span><span class="case-tool">文档安全</span></div>
-</div>
-<div class="case-card">
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
+<a class="case-card" href="https://www.bing.com/search?q=52U%E9%AB%98%E5%AF%86AI%E6%9C%BA%E6%9F%9C" target="_blank" rel="noopener noreferrer">
   <div class="case-org">神雲科技</div>
   <h3>52U高密AI机柜</h3>
   <p>集成96颗MI355X GPU，密度提升50%</p>
   <div class="case-tools"><span class="case-tool">GPU集群</span><span class="case-tool">AI算力</span></div>
-</div>
-<div class="case-card">
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
+<a class="case-card" href="https://www.bing.com/search?q=Robot%20Phone%E4%B8%96%E7%95%8C%E6%9D%AF%E5%BA%94%E7%94%A8" target="_blank" rel="noopener noreferrer">
   <div class="case-org">荣耀</div>
   <h3>Robot Phone世界杯应用</h3>
   <p>YOYO助手成功预测西班牙夺冠</p>
   <div class="case-tools"><span class="case-tool">AI助手</span><span class="case-tool">体育预测</span></div>
-</div>
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
 </div>
 </div>
 
@@ -291,18 +295,18 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">全球 AI 内容监管与版权最新法规动态</p>
 
   <div class="trend-grid" id="policy-cards-area">
-<div class="trend-card">
+<a class="trend-card" href="https://www.bing.com/search?q=%E5%B7%A5%E4%BF%A1%E9%83%A8%E4%BA%BA%E5%BD%A2%E6%9C%BA%E5%99%A8%E4%BA%BA%E4%BA%A7%E4%B8%9A%E8%A7%84%E5%88%92" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>工信部人形机器人产业规划</h3>
   <p>明确全球市场份额与技术创新路径</p>
-  <div class="trend-source">📅 2026-07-20 · 来源工信部</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-07-20 · 来源工信部 <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=AI%E8%8A%AF%E7%89%87%E5%AE%89%E5%85%A8%E5%AE%A1%E6%9F%A5%E5%8A%9E%E6%B3%95" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>AI芯片安全审查办法</h3>
   <p>百度昆仑芯通过国家信息安全认证</p>
-  <div class="trend-source">📅 2026-07-20 · 来源央视新闻</div>
-</div>
+  <div class="trend-source">📅 2026-07-20 · 来源央视新闻 <span class="trend-go">检索原文 →</span></div>
+</a>
 </div>
 </div>
 

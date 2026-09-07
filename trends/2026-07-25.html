@@ -100,6 +100,10 @@ a:hover{color:#7C2F22}
 .trend-card{background:var(--bg3);border:1px solid var(--border2);border-radius:4px;
   padding:24px;transition:all .3s;position:relative;overflow:hidden;box-shadow:0 2px 10px rgba(107,90,68,.12)}
 .trend-card:hover{border-color:var(--gold);transform:translateY(-3px);box-shadow:0 10px 24px rgba(107,90,68,.2)}
+a.trend-card,a.case-card{display:block;color:inherit;text-decoration:none;cursor:pointer}
+a.trend-card:hover,a.case-card:hover{color:inherit}
+.trend-go{margin-left:auto;color:var(--cinnabar);font-size:12px;font-weight:600;letter-spacing:.5px}
+.update-banner,.filter-bar,.theme-toggle{display:none}
 .trend-tag{display:inline-block;padding:3px 12px;border-radius:3px;font-size:12px;
   font-weight:600;margin-bottom:12px;border:1px solid}
 .trend-tag.tech{background:rgba(51,86,124,.08);color:#33567C;border-color:rgba(51,86,124,.35)}
@@ -215,30 +219,30 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">本周与传媒相关的 AI 技术进展与产品动态</p>
 
   <div class="trend-grid" id="trend-cards-area">
-<div class="trend-card">
+<a class="trend-card" href="https://www.bing.com/search?q=site%3Aopenai.com+OpenAI%E4%B8%8E%E6%96%B0%E9%97%BB%E6%9C%BA%E6%9E%84%E5%90%88%E4%BD%9C%E5%BC%BA%E5%8C%96AI%E6%8A%A5%E9%81%93" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag tech">技术</div>
   <h3>OpenAI与新闻机构合作强化AI报道</h3>
   <p>OpenAI推出Health功能帮助媒体安全整合医疗数据，提升健康新闻报道精准度</p>
-  <div class="trend-source">📅 2026-07-25 · 来源</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-07-25 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=AI%E9%A9%B1%E5%8A%A8%E6%B5%81%E5%AA%92%E4%BD%93%E5%B9%BF%E5%91%8A%E6%8A%80%E6%9C%AF%E9%9D%A9%E6%96%B0" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag tech">技术</div>
   <h3>AI驱动流媒体广告技术革新</h3>
   <p>Agentic AI Workflows技术优化广告投放效率，实现动态内容生成与用户行为预测</p>
-  <div class="trend-source">📅 2026-07-25 · 来源</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-07-25 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=AI%E9%87%8D%E6%9E%84%E5%BD%B1%E8%A7%86%E5%86%85%E5%AE%B9%E7%94%9F%E4%BA%A7%E9%93%BE" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag industry">行业</div>
   <h3>AI重构影视内容生产链</h3>
   <p>《帝国时代3》DLC开发通过AI工具缩短30%制作周期，实现多版本内容自动生成</p>
-  <div class="trend-source">📅 2026-07-25 · 来源</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-07-25 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=%E6%AC%A7%E7%9B%9FAI%E5%86%85%E5%AE%B9%E7%9B%91%E7%AE%A1%E6%96%B0%E8%A7%84%E8%90%BD%E5%9C%B0" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>欧盟AI内容监管新规落地</h3>
   <p>针对生成式AI的《数字服务法案》实施细则明确平台内容审核责任与用户知情权</p>
-  <div class="trend-source">📅 2026-07-25 · 来源</div>
-</div>
+  <div class="trend-source">📅 2026-07-25 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
 </div>
 </div>
 
@@ -250,24 +254,24 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">全球新闻媒体机构的 AI 应用实战案例</p>
 
   <div class="case-grid" id="case-cards-area">
-<div class="case-card">
+<a class="case-card" href="https://www.bing.com/search?q=%E3%80%8A%E9%80%86%E6%B0%B4%E5%AF%92%EF%BC%9A%E6%96%B0%E4%B8%96%E7%95%8C%E3%80%8BAI%E8%81%94%E5%8A%A8%E4%B8%89%E4%B8%BD%E9%B8%A5" target="_blank" rel="noopener noreferrer">
   <div class="case-org">网易</div>
   <h3>《逆水寒：新世界》AI联动三丽鸥</h3>
   <p>运用AI生成动态角色皮肤与剧情互动，实现IP价值提升300%</p>
   <div class="case-tools"><span class="case-tool">AIGC</span><span class="case-tool">NLP</span></div>
-</div>
-<div class="case-card">
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
+<a class="case-card" href="https://www.bing.com/search?q=AI%E9%A9%B1%E5%8A%A8%E7%9A%84%E7%94%A8%E6%88%B7%E8%A1%8C%E4%B8%BA%E5%88%86%E6%9E%90%E7%B3%BB%E7%BB%9F" target="_blank" rel="noopener noreferrer">
   <div class="case-org">携程</div>
   <h3>AI驱动的用户行为分析系统</h3>
   <p>通过AI预测用户决策路径，优化旅游产品推荐准确率至92%</p>
   <div class="case-tools"><span class="case-tool">机器学习</span><span class="case-tool">大数据</span></div>
-</div>
-<div class="case-card">
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
+<a class="case-card" href="https://www.bing.com/search?q=AI%E5%B9%B4%E9%BE%84%E9%AA%8C%E8%AF%81%E7%B3%BB%E7%BB%9F%E4%B8%8A%E7%BA%BF" target="_blank" rel="noopener noreferrer">
   <div class="case-org">暴雪战网</div>
   <h3>AI年龄验证系统上线</h3>
   <p>利用计算机视觉与行为分析技术实现18岁以下用户内容过滤，合规率100%</p>
   <div class="case-tools"><span class="case-tool">CV</span><span class="case-tool">联邦学习</span></div>
-</div>
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
 </div>
 </div>
 
@@ -279,18 +283,18 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">全球 AI 内容监管与版权最新法规动态</p>
 
   <div class="trend-grid" id="policy-cards-area">
-<div class="trend-card">
+<a class="trend-card" href="https://www.bing.com/search?q=%E4%B8%AD%E5%9B%BDAI%E5%86%85%E5%AE%B9%E6%A0%87%E8%AF%86%E6%96%B0%E8%A7%84" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>中国AI内容标识新规</h3>
   <p>要求电商平台强制标注AI生成商品，违者最高处货值50%罚款</p>
-  <div class="trend-source">📅 2026-07-25 · 来源</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-07-25 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=%E6%AC%A7%E7%9B%9FAI%E4%BC%A6%E7%90%86%E5%87%86%E5%88%99%E5%AE%9E%E6%96%BD" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>欧盟AI伦理准则实施</h3>
   <p>规定生成式AI内容需附加数字水印，明确版权归属与修正机制</p>
-  <div class="trend-source">📅 2026-07-25 · 来源</div>
-</div>
+  <div class="trend-source">📅 2026-07-25 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
 </div>
 </div>
 

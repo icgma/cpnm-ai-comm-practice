@@ -100,6 +100,10 @@ a:hover{color:#7C2F22}
 .trend-card{background:var(--bg3);border:1px solid var(--border2);border-radius:4px;
   padding:24px;transition:all .3s;position:relative;overflow:hidden;box-shadow:0 2px 10px rgba(107,90,68,.12)}
 .trend-card:hover{border-color:var(--gold);transform:translateY(-3px);box-shadow:0 10px 24px rgba(107,90,68,.2)}
+a.trend-card,a.case-card{display:block;color:inherit;text-decoration:none;cursor:pointer}
+a.trend-card:hover,a.case-card:hover{color:inherit}
+.trend-go{margin-left:auto;color:var(--cinnabar);font-size:12px;font-weight:600;letter-spacing:.5px}
+.update-banner,.filter-bar,.theme-toggle{display:none}
 .trend-tag{display:inline-block;padding:3px 12px;border-radius:3px;font-size:12px;
   font-weight:600;margin-bottom:12px;border:1px solid}
 .trend-tag.tech{background:rgba(51,86,124,.08);color:#33567C;border-color:rgba(51,86,124,.35)}
@@ -215,33 +219,33 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">本周与传媒相关的 AI 技术进展与产品动态</p>
 
   <div class="trend-grid" id="trend-cards-area">
-<div class="trend-card">
+<a class="trend-card" href="https://www.ithome.com/search.htm?search=%E5%BE%AE%E8%BD%AFEdge%E6%B5%8F%E8%A7%88%E5%99%A8%E5%8F%8C%E5%91%A8%E6%9B%B4%E6%96%B0%E5%8A%A0%E9%80%9FAI%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag tech">技术</div>
   <h3>微软Edge浏览器双周更新加速AI应用开发</h3>
   <p>微软宣布调整Edge浏览器更新节奏至双周，提升开发者适配效率</p>
-  <div class="trend-source">📅 2026-06-12 · 来源ithome.com</div>
-</div>
+  <div class="trend-source">📅 2026-06-12 · 来源ithome.com <span class="trend-go">检索原文 →</span></div>
+</a>
 
-<div class="trend-card">
+<a class="trend-card" href="https://www.bing.com/search?q=site%3Aopenai.com+OpenAI%E4%B8%8EBBVA%E6%B7%B1%E5%8C%96AI%E9%87%91%E8%9E%8D%E5%90%88%E4%BD%9C" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag tool">工具</div>
   <h3>OpenAI与BBVA深化AI金融合作</h3>
   <p>BBVA将ChatGPT Enterprise扩展至10万员工，加速银行业务智能化</p>
-  <div class="trend-source">📅 2026-06-12 · 来源openai.com</div>
-</div>
+  <div class="trend-source">📅 2026-06-12 · 来源openai.com <span class="trend-go">检索原文 →</span></div>
+</a>
 
-<div class="trend-card">
+<a class="trend-card" href="https://www.ithome.com/search.htm?search=%E4%B8%AD%E5%9B%BDAI%E5%A4%A7%E5%8E%82%E7%A7%91%E7%A0%94%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag academic">学术</div>
   <h3>中国AI大厂科研应用实践</h3>
   <p>阿里云王坚揭示AI对科研质变影响，强调人机协同必要性</p>
-  <div class="trend-source">📅 2026-06-12 · 来源ithome.com</div>
-</div>
+  <div class="trend-source">📅 2026-06-12 · 来源ithome.com <span class="trend-go">检索原文 →</span></div>
+</a>
 
-<div class="trend-card">
+<a class="trend-card" href="https://arxiv.org/search/?query=ToolSense%E6%A1%86%E6%9E%B6%E5%AE%A1%E8%AE%A1AI%E8%AF%8A%E6%96%AD&amp;searchtype=all" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag tech">技术</div>
   <h3>ToolSense框架审计AI诊断</h3>
   <p>arXiv发布诊断框架用于审计AI系统可靠性</p>
-  <div class="trend-source">📅 2026-06-12 · 来源rss.arxiv.org</div>
-</div>
+  <div class="trend-source">📅 2026-06-12 · 来源rss.arxiv.org <span class="trend-go">检索原文 →</span></div>
+</a>
 </div>
 </div>
 
@@ -253,33 +257,33 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">全球新闻媒体机构的 AI 应用实战案例</p>
 
   <div class="case-grid" id="case-cards-area">
-<div class="case-card">
+<a class="case-card" href="https://www.bing.com/search?q=%E9%A6%96%E6%AC%BE%E6%89%8B%E6%8C%81%E4%BA%91%E5%8F%B0%E7%9B%B8%E6%9C%BALuna%20Ultra%E5%8F%91%E5%B8%83" target="_blank" rel="noopener noreferrer">
   <div class="case-org">Insta360</div>
   <h3>首款手持云台相机Luna Ultra发布</h3>
   <p>集成AI防抖技术，支持4K/120帧智能拍摄</p>
   <div class="case-tools"><span class="case-tool">影像AI</span><span class="case-tool">硬件创新</span></div>
-</div>
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
 
-<div class="case-card">
+<a class="case-card" href="https://www.bing.com/search?q=AI%E7%BC%96%E7%A8%8B%E5%8A%A9%E6%89%8BMiMo%20Code%E4%B8%8A%E7%BA%BF" target="_blank" rel="noopener noreferrer">
   <div class="case-org">小米</div>
   <h3>AI编程助手MiMo Code上线</h3>
   <p>基于Codex框架实现代码生成与调试</p>
   <div class="case-tools"><span class="case-tool">编程AI</span><span class="case-tool">开发者工具</span></div>
-</div>
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
 
-<div class="case-card">
+<a class="case-card" href="https://www.bing.com/search?q=%E4%BC%81%E4%B8%9A%E7%BA%A7AI%E9%83%A8%E7%BD%B2%E6%A1%88%E4%BE%8B" target="_blank" rel="noopener noreferrer">
   <div class="case-org">BBVA</div>
   <h3>企业级AI部署案例</h3>
   <p>通过OpenAI平台实现客服、风控等场景自动化</p>
   <div class="case-tools"><span class="case-tool">金融科技</span><span class="case-tool">大模型应用</span></div>
-</div>
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
 
-<div class="case-card">
+<a class="case-card" href="https://www.bing.com/search?q=%E4%B8%80%E7%AB%99%E5%BC%8FAI%E5%B7%A5%E4%BD%9C%E5%8F%B0%E5%8F%91%E5%B8%83" target="_blank" rel="noopener noreferrer">
   <div class="case-org">Fylun.ai</div>
   <h3>一站式AI工作台发布</h3>
   <p>整合聊天、笔记、自动化等AI功能</p>
   <div class="case-tools"><span class="case-tool">AI生产力</span><span class="case-tool">协作工具</span></div>
-</div>
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
 </div>
 </div>
 
@@ -291,19 +295,19 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">全球 AI 内容监管与版权最新法规动态</p>
 
   <div class="trend-grid" id="policy-cards-area">
-<div class="trend-card">
+<a class="trend-card" href="https://www.bing.com/search?q=site%3Aopenai.com+OpenAI%E6%94%AF%E6%8C%81%E6%AC%A7%E7%9B%9FAI%E9%80%8F%E6%98%8E%E6%80%A7%E6%A0%87%E5%87%86" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>OpenAI支持欧盟AI透明性标准</h3>
   <p>推动AI内容可追溯性规范实施</p>
-  <div class="trend-source">📅 2026-06-12 · 来源openai.com</div>
-</div>
+  <div class="trend-source">📅 2026-06-12 · 来源openai.com <span class="trend-go">检索原文 →</span></div>
+</a>
 
-<div class="trend-card">
+<a class="trend-card" href="https://www.ithome.com/search.htm?search=%E5%BE%AE%E8%BD%AF%E6%B5%8F%E8%A7%88%E5%99%A8%E6%9B%B4%E6%96%B0%E6%94%BF%E7%AD%96%E8%B0%83%E6%95%B4" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>微软浏览器更新政策调整</h3>
   <p>强化开发者生态AI适配支持</p>
-  <div class="trend-source">📅 2026-06-12 · 来源ithome.com</div>
-</div>
+  <div class="trend-source">📅 2026-06-12 · 来源ithome.com <span class="trend-go">检索原文 →</span></div>
+</a>
 </div>
 </div>
 

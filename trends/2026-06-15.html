@@ -100,6 +100,10 @@ a:hover{color:#7C2F22}
 .trend-card{background:var(--bg3);border:1px solid var(--border2);border-radius:4px;
   padding:24px;transition:all .3s;position:relative;overflow:hidden;box-shadow:0 2px 10px rgba(107,90,68,.12)}
 .trend-card:hover{border-color:var(--gold);transform:translateY(-3px);box-shadow:0 10px 24px rgba(107,90,68,.2)}
+a.trend-card,a.case-card{display:block;color:inherit;text-decoration:none;cursor:pointer}
+a.trend-card:hover,a.case-card:hover{color:inherit}
+.trend-go{margin-left:auto;color:var(--cinnabar);font-size:12px;font-weight:600;letter-spacing:.5px}
+.update-banner,.filter-bar,.theme-toggle{display:none}
 .trend-tag{display:inline-block;padding:3px 12px;border-radius:3px;font-size:12px;
   font-weight:600;margin-bottom:12px;border:1px solid}
 .trend-tag.tech{background:rgba(51,86,124,.08);color:#33567C;border-color:rgba(51,86,124,.35)}
@@ -215,24 +219,24 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">本周与传媒相关的 AI 技术进展与产品动态</p>
 
   <div class="trend-grid" id="trend-cards-area">
-<div class="trend-card">
+<a class="trend-card" href="https://www.bing.com/search?q=site%3Aopenai.com+OpenAI%E6%8E%A8%E5%87%BA%E4%BC%81%E4%B8%9A%E7%BA%A7AI%E5%90%88%E4%BD%9C%E4%BC%99%E4%BC%B4%E7%BD%91%E7%BB%9C" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag tech">技术</div>
   <h3>OpenAI推出企业级AI合作伙伴网络</h3>
   <p>OpenAI宣布成立合作伙伴网络，投入1.5亿美元加速企业AI应用开发</p>
-  <div class="trend-source">📅 2026-06-15 · 来源</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-06-15 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=AI%E7%94%9F%E6%88%90%E6%95%99%E5%AD%A6%E6%91%98%E8%A6%81%E5%BA%94%E7%94%A8%E8%90%BD%E5%9C%B0" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag tool">工具</div>
   <h3>AI生成教学摘要应用落地</h3>
   <p>Preply结合AI生成个性化课程摘要并实现教学反馈自动化</p>
-  <div class="trend-source">📅 2026-06-15 · 来源</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-06-15 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=%E6%AC%A7%E7%9B%9FAI%E5%86%85%E5%AE%B9%E9%80%8F%E6%98%8E%E5%BA%A6%E6%96%B0%E8%A7%84" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>欧盟AI内容透明度新规</h3>
   <p>OpenAI支持欧盟制定AI内容溯源标准</p>
-  <div class="trend-source">📅 2026-06-15 · 来源</div>
-</div>
+  <div class="trend-source">📅 2026-06-15 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
 </div>
 </div>
 
@@ -244,24 +248,24 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">全球新闻媒体机构的 AI 应用实战案例</p>
 
   <div class="case-grid" id="case-cards-area">
-<div class="case-card">
+<a class="case-card" href="https://www.bing.com/search?q=AI%E9%87%8D%E6%9E%84%E9%93%B6%E8%A1%8C%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B" target="_blank" rel="noopener noreferrer">
   <div class="case-org">BBVA</div>
   <h3>AI重构银行业务流程</h3>
   <p>将ChatGPT企业版扩展至10万员工，优化金融内容生成与审核</p>
   <div class="case-tools"><span class="case-tool">ChatGPT</span><span class="case-tool">金融AI</span></div>
-</div>
-<div class="case-card">
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
+<a class="case-card" href="https://www.bing.com/search?q=AI%E4%B8%AA%E6%80%A7%E5%8C%96%E8%AF%AD%E8%A8%80%E6%95%99%E5%AD%A6" target="_blank" rel="noopener noreferrer">
   <div class="case-org">Preply</div>
   <h3>AI个性化语言教学</h3>
   <p>通过AI生成课程摘要并提供动态反馈系统</p>
   <div class="case-tools"><span class="case-tool">自然语言处理</span><span class="case-tool">教育科技</span></div>
-</div>
-<div class="case-card">
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
+<a class="case-card" href="https://www.bing.com/search?q=Dream%20Server%E7%A7%81%E6%9C%89AI%E6%9C%8D%E5%8A%A1%E5%99%A8" target="_blank" rel="noopener noreferrer">
   <div class="case-org">Light-Heart-Labs</div>
   <h3>Dream Server私有AI服务器</h3>
   <p>将个人设备改造为本地化AI计算节点</p>
   <div class="case-tools"><span class="case-tool">边缘计算</span><span class="case-tool">开源AI</span></div>
-</div>
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
 </div>
 </div>
 
@@ -273,18 +277,18 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">全球 AI 内容监管与版权最新法规动态</p>
 
   <div class="trend-grid" id="policy-cards-area">
-<div class="trend-card">
+<a class="trend-card" href="https://www.bing.com/search?q=%E7%BE%8E%E5%9B%BD%E6%B3%95%E9%99%A2%E5%88%B6%E8%A3%81AI%E9%94%99%E8%AF%AF%E5%BC%95%E7%94%A8" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>美国法院制裁AI错误引用</h3>
   <p>最高法院判决AI生成内容标注不当需承担法律责任</p>
-  <div class="trend-source">📅 2026-06-12 · 来源</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-06-12 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=%E6%AC%A7%E7%9B%9FAI%E5%86%85%E5%AE%B9%E9%80%8F%E6%98%8E%E5%BA%A6%E6%B3%95%E6%A1%88" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>欧盟AI内容透明度法案</h3>
   <p>要求生成式AI必须标注训练数据与算法偏差</p>
-  <div class="trend-source">📅 2026-06-15 · 来源</div>
-</div>
+  <div class="trend-source">📅 2026-06-15 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
 </div>
 </div>
 

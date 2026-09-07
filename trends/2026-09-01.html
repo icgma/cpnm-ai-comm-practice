@@ -100,6 +100,10 @@ a:hover{color:#7C2F22}
 .trend-card{background:var(--bg3);border:1px solid var(--border2);border-radius:4px;
   padding:24px;transition:all .3s;position:relative;overflow:hidden;box-shadow:0 2px 10px rgba(107,90,68,.12)}
 .trend-card:hover{border-color:var(--gold);transform:translateY(-3px);box-shadow:0 10px 24px rgba(107,90,68,.2)}
+a.trend-card,a.case-card{display:block;color:inherit;text-decoration:none;cursor:pointer}
+a.trend-card:hover,a.case-card:hover{color:inherit}
+.trend-go{margin-left:auto;color:var(--cinnabar);font-size:12px;font-weight:600;letter-spacing:.5px}
+.update-banner,.filter-bar,.theme-toggle{display:none}
 .trend-tag{display:inline-block;padding:3px 12px;border-radius:3px;font-size:12px;
   font-weight:600;margin-bottom:12px;border:1px solid}
 .trend-tag.tech{background:rgba(51,86,124,.08);color:#33567C;border-color:rgba(51,86,124,.35)}
@@ -215,24 +219,24 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">本周与传媒相关的 AI 技术进展与产品动态</p>
 
   <div class="trend-grid" id="trend-cards-area">
-<div class="trend-card">
+<a class="trend-card" href="https://www.bing.com/search?q=site%3Aopenai.com+Polimill%E6%9E%84%E5%BB%BA%E6%97%A5%E6%9C%AC%E5%85%AC%E5%85%B1AI%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD" target="_blank" rel="noopener noreferrer">
      <div class="trend-tag tech">技术</div>
      <h3>Polimill构建日本公共AI基础设施</h3>
      <p>Polimill利用OpenAI GPT模型和Codex帮助地方政府搜索和利用行政知识，提升公共信息处理效率。</p>
-     <div class="trend-source">📅 2026-09-01 · 来源 openai.com</div>
-   </div>
-   <div class="trend-card">
+     <div class="trend-source">📅 2026-09-01 · 来源 openai.com <span class="trend-go">检索原文 →</span></div>
+   </a>
+   <a class="trend-card" href="https://www.ithome.com/search.htm?search=%E7%81%AB%E7%8B%90Firefox%20155%E5%8D%87%E7%BA%A7%E9%9A%90%E7%A7%81%E6%8F%90%E7%A4%BA" target="_blank" rel="noopener noreferrer">
      <div class="trend-tag tech">技术</div>
      <h3>火狐Firefox 155升级隐私提示</h3>
      <p>火狐浏览器155版本新增并行优选连接路径和隐私提示功能，优化用户数据安全与网络体验。</p>
-     <div class="trend-source">📅 2026-09-01 · 来源 ithome.com</div>
-   </div>
-   <div class="trend-card">
+     <div class="trend-source">📅 2026-09-01 · 来源 ithome.com <span class="trend-go">检索原文 →</span></div>
+   </a>
+   <a class="trend-card" href="https://www.ithome.com/search.htm?search=Kernel.org%E5%BA%94%E5%AF%B9%E5%A4%A7%E8%A7%84%E6%A8%A1%E7%88%AC%E8%99%AB%E6%B5%81%E9%87%8F" target="_blank" rel="noopener noreferrer">
      <div class="trend-tag tech">技术</div>
      <h3>Kernel.org应对大规模爬虫流量</h3>
      <p>Linux内核项目维护者称约98%流量来自爬虫，采取技术措施缓解服务器压力。</p>
-     <div class="trend-source">📅 2026-09-01 · 来源 ithome.com</div>
-   </div>
+     <div class="trend-source">📅 2026-09-01 · 来源 ithome.com <span class="trend-go">检索原文 →</span></div>
+   </a>
 </div>
 </div>
 
@@ -244,18 +248,18 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">全球新闻媒体机构的 AI 应用实战案例</p>
 
   <div class="case-grid" id="case-cards-area">
-<div class="case-card">
+<a class="case-card" href="https://www.bing.com/search?q=%E6%9E%84%E5%BB%BAAI-powered%E6%97%85%E8%A1%8C%E7%BD%91%E7%BB%9C" target="_blank" rel="noopener noreferrer">
      <div class="case-org">Seatlr</div>
      <h3>构建AI-powered旅行网络</h3>
      <p>基于AI实时构建旅行聊天网络，整合多平台信息提升用户体验。</p>
      <div class="case-tools"><span class="case-tool">AI/Travel</span></div>
-   </div>
-   <div class="case-card">
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
+   <a class="case-card" href="https://www.bing.com/search?q=%E5%88%A9%E7%94%A8Codex%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%8A%A8%E5%8C%96%E5%BC%80%E5%8F%91" target="_blank" rel="noopener noreferrer">
      <div class="case-org">爱彼迎</div>
      <h3>利用Codex实现自动化开发</h3>
      <p>爱彼迎通过OpenAI Codex降低软件开发门槛，提升效率。</p>
      <div class="case-tools"><span class="case-tool">Codex/AI</span></div>
-   </div>
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
 </div>
 </div>
 
@@ -267,12 +271,12 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">全球 AI 内容监管与版权最新法规动态</p>
 
   <div class="trend-grid" id="policy-cards-area">
-<div class="trend-card">
+<a class="trend-card" href="https://www.ithome.com/search.htm?search=%E4%B8%AD%E5%A4%AE%E7%BD%91%E4%BF%A1%E5%8A%9E%E9%80%9A%E6%8A%A5AI%E5%AE%89%E5%85%A8%E9%A3%8E%E9%99%A9" target="_blank" rel="noopener noreferrer">
      <div class="trend-tag policy">法规</div>
      <h3>中央网信办通报AI安全风险</h3>
      <p>指出AI领域面临数据滥用、算法偏见等5大安全挑战，呼吁加强监管。</p>
-     <div class="trend-source">📅 2026-09-01 · 来源 ithome.com</div>
-   </div>
+     <div class="trend-source">📅 2026-09-01 · 来源 ithome.com <span class="trend-go">检索原文 →</span></div>
+   </a>
 </div>
 </div>
 

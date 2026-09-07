@@ -100,6 +100,10 @@ a:hover{color:#7C2F22}
 .trend-card{background:var(--bg3);border:1px solid var(--border2);border-radius:4px;
   padding:24px;transition:all .3s;position:relative;overflow:hidden;box-shadow:0 2px 10px rgba(107,90,68,.12)}
 .trend-card:hover{border-color:var(--gold);transform:translateY(-3px);box-shadow:0 10px 24px rgba(107,90,68,.2)}
+a.trend-card,a.case-card{display:block;color:inherit;text-decoration:none;cursor:pointer}
+a.trend-card:hover,a.case-card:hover{color:inherit}
+.trend-go{margin-left:auto;color:var(--cinnabar);font-size:12px;font-weight:600;letter-spacing:.5px}
+.update-banner,.filter-bar,.theme-toggle{display:none}
 .trend-tag{display:inline-block;padding:3px 12px;border-radius:3px;font-size:12px;
   font-weight:600;margin-bottom:12px;border:1px solid}
 .trend-tag.tech{background:rgba(51,86,124,.08);color:#33567C;border-color:rgba(51,86,124,.35)}
@@ -215,30 +219,30 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">本周与传媒相关的 AI 技术进展与产品动态</p>
 
   <div class="trend-grid" id="trend-cards-area">
-<div class="trend-card">
+<a class="trend-card" href="https://www.ithome.com/search.htm?search=AI%E9%A9%B1%E5%8A%A8%E7%9A%84%E5%BD%B1%E8%A7%86%E5%86%85%E5%AE%B9%E7%94%9F%E6%88%90%E6%8A%80%E6%9C%AF%E7%AA%81%E7%A0%B4" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag tech">技术</div>
   <h3>AI驱动的影视内容生成技术突破</h3>
   <p>微软XBOX确认推进《盗贼之海》影视化项目，结合AI生成技术优化剧本创作与场景渲染流程</p>
-  <div class="trend-source">📅 2026-06-23 · 来源ithome.com</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-06-23 · 来源ithome.com <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://sspai.com/search/article?q=AI%2B%E7%A1%AC%E4%BB%B6%E5%8D%8F%E5%90%8C%E5%85%B1%E5%88%9B%E6%A8%A1%E5%BC%8F" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag industry">行业</div>
   <h3>AI+硬件协同共创模式</h3>
   <p>少数派×AKKO联合推出带屏键盘功能共创计划，通过AI工具实现用户需求与硬件设计的实时交互优化</p>
-  <div class="trend-source">📅 2026-06-23 · 来源sspai.com</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-06-23 · 来源sspai.com <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://hn.algolia.com/?q=AI%E5%B7%A5%E4%BD%9C%E6%B5%81%E5%AE%89%E5%85%A8%E5%A2%9E%E5%BC%BA%E6%96%B9%E6%A1%88" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag tool">工具</div>
   <h3>AI工作流安全增强方案</h3>
   <p>AWS推出Lambda MicroVMs服务，实现用户生成AI代码与商业系统的物理隔离执行</p>
-  <div class="trend-source">📅 2026-06-23 · 来源hnrss.org</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-06-23 · 来源hnrss.org <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://hn.algolia.com/?q=AI%E4%BC%A6%E7%90%86%E5%86%B3%E7%AD%96%E6%A8%A1%E5%9E%8B%E7%A0%94%E7%A9%B6" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag academic">学术</div>
   <h3>AI伦理决策模型研究</h3>
   <p>英国国王学院发现AI在模拟核危机中95%选择非暴力解决方案，挑战人类决策逻辑</p>
-  <div class="trend-source">📅 2026-06-23 · 来源hnrss.org</div>
-</div>
+  <div class="trend-source">📅 2026-06-23 · 来源hnrss.org <span class="trend-go">检索原文 →</span></div>
+</a>
 </div>
 </div>
 
@@ -250,24 +254,24 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">全球新闻媒体机构的 AI 应用实战案例</p>
 
   <div class="case-grid" id="case-cards-area">
-<div class="case-card">
+<a class="case-card" href="https://www.bing.com/search?q=%E3%80%8A%E7%9B%97%E8%B4%BC%E4%B9%8B%E6%B5%B7%E3%80%8BAI%E5%BD%B1%E8%A7%86%E5%8C%96%E9%A1%B9%E7%9B%AE" target="_blank" rel="noopener noreferrer">
   <div class="case-org">微软</div>
   <h3>《盗贼之海》AI影视化项目</h3>
   <p>利用AI生成技术优化剧本创作与场景渲染，预计2027年推出交互式影视体验</p>
   <div class="case-tools"><span class="case-tool">影视AI</span><span class="case-tool">生成式AI</span></div>
-</div>
-<div class="case-card">
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
+<a class="case-card" href="https://www.bing.com/search?q=%E5%B8%A6%E5%B1%8F%E9%94%AE%E7%9B%98%E5%8A%9F%E8%83%BD%E5%85%B1%E5%88%9B%E8%AE%A1%E5%88%92" target="_blank" rel="noopener noreferrer">
   <div class="case-org">少数派</div>
   <h3>带屏键盘功能共创计划</h3>
   <p>通过AI工具实现用户需求与硬件设计的实时交互优化，已招募200名体验用户</p>
   <div class="case-tools"><span class="case-tool">UGC</span><span class="case-tool">AI设计</span></div>
-</div>
-<div class="case-card">
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
+<a class="case-card" href="https://www.bing.com/search?q=MicroVMs%E5%AE%89%E5%85%A8%E6%89%A7%E8%A1%8C%E6%9C%8D%E5%8A%A1" target="_blank" rel="noopener noreferrer">
   <div class="case-org">AWS</div>
   <h3>MicroVMs安全执行服务</h3>
   <p>为AI生成内容提供物理隔离执行环境，支持实时代码审计与权限控制</p>
   <div class="case-tools"><span class="case-tool">安全执行</span><span class="case-tool">云原生</span></div>
-</div>
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
 </div>
 </div>
 
@@ -279,18 +283,18 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">全球 AI 内容监管与版权最新法规动态</p>
 
   <div class="trend-grid" id="policy-cards-area">
-<div class="trend-card">
+<a class="trend-card" href="https://hn.algolia.com/?q=%E8%8B%B1%E5%9B%BDAI%E6%B3%95%E5%BE%8B%E5%AE%9E%E8%B7%B5%E7%AA%81%E7%A0%B4" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>英国AI法律实践突破</h3>
   <p>HR咨询公司首次在英语法院胜诉，使用AI律师完成法律文件生成与策略制定</p>
-  <div class="trend-source">📅 2026-06-23 · 来源hnrss.org</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-06-23 · 来源hnrss.org <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://hn.algolia.com/?q=%E6%BE%B3%E5%A4%A7%E5%88%A9%E4%BA%9AAI%E6%95%B0%E6%8D%AE%E4%B8%AD%E5%BF%83%E4%BA%89%E8%AE%AE" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>澳大利亚AI数据中心争议</h3>
   <p>塔斯马尼亚州通过法案限制AI数据中心建设，要求企业公开算力消耗与碳排放数据</p>
-  <div class="trend-source">📅 2026-06-23 · 来源hnrss.org</div>
-</div>
+  <div class="trend-source">📅 2026-06-23 · 来源hnrss.org <span class="trend-go">检索原文 →</span></div>
+</a>
 </div>
 </div>
 

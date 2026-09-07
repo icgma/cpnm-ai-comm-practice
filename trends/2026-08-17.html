@@ -100,6 +100,10 @@ a:hover{color:#7C2F22}
 .trend-card{background:var(--bg3);border:1px solid var(--border2);border-radius:4px;
   padding:24px;transition:all .3s;position:relative;overflow:hidden;box-shadow:0 2px 10px rgba(107,90,68,.12)}
 .trend-card:hover{border-color:var(--gold);transform:translateY(-3px);box-shadow:0 10px 24px rgba(107,90,68,.2)}
+a.trend-card,a.case-card{display:block;color:inherit;text-decoration:none;cursor:pointer}
+a.trend-card:hover,a.case-card:hover{color:inherit}
+.trend-go{margin-left:auto;color:var(--cinnabar);font-size:12px;font-weight:600;letter-spacing:.5px}
+.update-banner,.filter-bar,.theme-toggle{display:none}
 .trend-tag{display:inline-block;padding:3px 12px;border-radius:3px;font-size:12px;
   font-weight:600;margin-bottom:12px;border:1px solid}
 .trend-tag.tech{background:rgba(51,86,124,.08);color:#33567C;border-color:rgba(51,86,124,.35)}
@@ -215,30 +219,30 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">本周与传媒相关的 AI 技术进展与产品动态</p>
 
   <div class="trend-grid" id="trend-cards-area">
-<div class="trend-card">
+<a class="trend-card" href="https://www.bing.com/search?q=site%3Aopenai.com+OpenAI%E5%8F%91%E5%B8%83GPT-5.6%20Ultrafast%E6%A8%A1%E5%BC%8F" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag tech">技术</div>
   <h3>OpenAI发布GPT-5.6 Ultrafast模式</h3>
   <p>支持14倍速度提升的GPT-5.6 Sol模型正式上线，显著降低企业AI应用成本</p>
-  <div class="trend-source">📅 2026-08-17 · 来源：openai.com</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-08-17 · 来源：openai.com <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=site%3Aopenai.com+%E4%BC%81%E4%B8%9A%E7%BA%A7agentic%20AI%E5%8A%A0%E9%80%9F%E8%90%BD%E5%9C%B0" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag industry">行业</div>
   <h3>企业级agentic AI加速落地</h3>
   <p>OpenAI研究显示80%企业已部署智能体系统，实现从辅助到执行的全流程自动化</p>
-  <div class="trend-source">📅 2026-08-17 · 来源：openai.com</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-08-17 · 来源：openai.com <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://hn.algolia.com/?q=TikTok%20Shop%E8%A7%86%E9%A2%91AI%E5%AE%A1%E6%A0%B8%E5%B7%A5%E5%85%B7" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag tool">工具</div>
   <h3>TikTok Shop视频AI审核工具</h3>
   <p>BanProof推出AI审核工具，可预判短视频内容违规风险，准确率达92%</p>
-  <div class="trend-source">📅 2026-08-17 · 来源：hnrss.org</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-08-17 · 来源：hnrss.org <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://sspai.com/search/article?q=%E5%BC%80%E6%BA%90Agent%E6%A1%86%E6%9E%B6%E7%94%9F%E6%80%81%E6%89%A9%E5%B1%95" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag tech">技术</div>
   <h3>开源Agent框架生态扩展</h3>
   <p>DeepSeek Harness开源框架获阿里千问平台支持，配套插件生态突破200个</p>
-  <div class="trend-source">📅 2026-08-17 · 来源：sspai.com</div>
-</div>
+  <div class="trend-source">📅 2026-08-17 · 来源：sspai.com <span class="trend-go">检索原文 →</span></div>
+</a>
 </div>
 </div>
 
@@ -250,24 +254,24 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">全球新闻媒体机构的 AI 应用实战案例</p>
 
   <div class="case-grid" id="case-cards-area">
-<div class="case-card">
+<a class="case-card" href="https://www.bing.com/search?q=%E8%B4%A2%E5%8A%A1%E5%B7%A5%E4%BD%9C%E5%85%A8%E6%B5%81%E7%A8%8BAI%E5%8C%96" target="_blank" rel="noopener noreferrer">
   <div class="case-org">Model ML</div>
   <h3>财务工作全流程AI化</h3>
   <p>基于GPT-5.6 Sol实现从数据分析到报告生成的端到端自动化</p>
   <div class="case-tools"><span class="case-tool">GPT-5.6 Sol</span><span class="case-tool">财务自动化</span></div>
-</div>
-<div class="case-card">
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
+<a class="case-card" href="https://www.bing.com/search?q=Daybreak%E5%AE%89%E5%85%A8%E6%A8%A1%E5%9E%8B%E5%95%86%E7%94%A8" target="_blank" rel="noopener noreferrer">
   <div class="case-org">OpenAI</div>
   <h3>Daybreak安全模型商用</h3>
   <p>与AWS合作推出网络安全AI模型，误报率降低至0.3%以下</p>
   <div class="case-tools"><span class="case-tool">Daybreak</span><span class="case-tool">AWS</span></div>
-</div>
-<div class="case-card">
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
+<a class="case-card" href="https://www.bing.com/search?q=AI%E4%B8%AD%E9%97%B4%E4%BB%B6%E5%B9%B3%E5%8F%B0%E6%94%B6%E8%B4%AD" target="_blank" rel="noopener noreferrer">
   <div class="case-org">Stripe</div>
   <h3>AI中间件平台收购</h3>
   <p>以70亿美元收购OpenRouter，构建AI服务分发基础设施</p>
   <div class="case-tools"><span class="case-tool">OpenRouter</span><span class="case-tool">AI平台</span></div>
-</div>
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
 </div>
 </div>
 
@@ -279,18 +283,18 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">全球 AI 内容监管与版权最新法规动态</p>
 
   <div class="trend-grid" id="policy-cards-area">
-<div class="trend-card">
+<a class="trend-card" href="https://sspai.com/search/article?q=%E4%B8%AD%E7%BE%8EAI%E7%AB%9E%E8%B5%9B%E7%AB%8B%E5%9C%BA%E8%A6%81%E6%B1%82" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>中美AI竞赛立场要求</h3>
   <p>美国政府要求AI合作方在中美竞争中明确技术路线与数据边界</p>
-  <div class="trend-source">📅 2026-08-17 · 来源：sspai.com</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-08-17 · 来源：sspai.com <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=site%3Aopenai.com+%E5%BE%97%E5%B7%9EAI%E5%9F%BA%E5%BB%BA%E8%B4%A3%E4%BB%BB%E5%80%A1%E8%AE%AE" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>得州AI基建责任倡议</h3>
   <p>OpenAI致信得州州长，承诺AI训练数据本地化存储与能耗优化方案</p>
-  <div class="trend-source">📅 2026-08-17 · 来源：openai.com</div>
-</div>
+  <div class="trend-source">📅 2026-08-17 · 来源：openai.com <span class="trend-go">检索原文 →</span></div>
+</a>
 </div>
 </div>
 

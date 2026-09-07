@@ -100,6 +100,10 @@ a:hover{color:#7C2F22}
 .trend-card{background:var(--bg3);border:1px solid var(--border2);border-radius:4px;
   padding:24px;transition:all .3s;position:relative;overflow:hidden;box-shadow:0 2px 10px rgba(107,90,68,.12)}
 .trend-card:hover{border-color:var(--gold);transform:translateY(-3px);box-shadow:0 10px 24px rgba(107,90,68,.2)}
+a.trend-card,a.case-card{display:block;color:inherit;text-decoration:none;cursor:pointer}
+a.trend-card:hover,a.case-card:hover{color:inherit}
+.trend-go{margin-left:auto;color:var(--cinnabar);font-size:12px;font-weight:600;letter-spacing:.5px}
+.update-banner,.filter-bar,.theme-toggle{display:none}
 .trend-tag{display:inline-block;padding:3px 12px;border-radius:3px;font-size:12px;
   font-weight:600;margin-bottom:12px;border:1px solid}
 .trend-tag.tech{background:rgba(51,86,124,.08);color:#33567C;border-color:rgba(51,86,124,.35)}
@@ -215,30 +219,30 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">本周与传媒相关的 AI 技术进展与产品动态</p>
 
   <div class="trend-grid" id="trend-cards-area">
-<div class="trend-card">
+<a class="trend-card" href="https://www.bing.com/search?q=site%3Aopenai.com+OpenAI%E5%8F%91%E5%B8%83GPT-5.6%20Sol" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag tech">技术</div>
   <h3>OpenAI发布GPT-5.6 Sol</h3>
   <p>增强编程与科学能力，支持Azure云服务部署</p>
-  <div class="trend-source">📅 2026-06-30 · 来源</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-06-30 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=site%3Aopenai.com+HP%E4%B8%8EOpenAI%E6%88%98%E7%95%A5%E5%8D%87%E7%BA%A7" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag industry">行业</div>
   <h3>HP与OpenAI战略升级</h3>
   <p>部署AI优化客户体验与软件开发</p>
-  <div class="trend-source">📅 2026-06-30 · 来源</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-06-30 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=Meta%E5%AE%9A%E5%88%B6AI%E8%8A%AF%E7%89%87Vistara" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag tech">技术</div>
   <h3>Meta定制AI芯片Vistara</h3>
   <p>推理服务器需求减少25%的硬件方案</p>
-  <div class="trend-source">📅 2026-06-30 · 来源</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-06-30 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=%E6%AC%A7%E7%9B%9FAI%20workforce%E7%A0%94%E7%A9%B6%E6%8A%A5%E5%91%8A" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>欧盟AI workforce研究报告</h3>
   <p>揭示AI对欧盟就业市场的重塑路径</p>
-  <div class="trend-source">📅 2026-06-30 · 来源</div>
-</div>
+  <div class="trend-source">📅 2026-06-30 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
 </div>
 </div>
 
@@ -250,30 +254,30 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">全球新闻媒体机构的 AI 应用实战案例</p>
 
   <div class="case-grid" id="case-cards-area">
-<div class="case-card">
+<a class="case-card" href="https://www.bing.com/search?q=AI%E5%AE%A2%E6%88%B7%E4%BD%93%E9%AA%8C%E5%8D%87%E7%BA%A7%E9%A1%B9%E7%9B%AE" target="_blank" rel="noopener noreferrer">
   <div class="case-org">HP</div>
   <h3>AI客户体验升级项目</h3>
   <p>整合OpenAI技术优化软件与硬件服务</p>
   <div class="case-tools"><span class="case-tool">HP</span><span class="case-tool">OpenAI</span></div>
-</div>
-<div class="case-card">
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
+<a class="case-card" href="https://www.bing.com/search?q=%E6%8E%A8%E7%90%86%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%A1%AC%E4%BB%B6%E5%88%9B%E6%96%B0" target="_blank" rel="noopener noreferrer">
   <div class="case-org">Meta</div>
   <h3>推理服务器硬件创新</h3>
   <p>通过Vistara芯片复用拆机内存</p>
   <div class="case-tools"><span class="case-tool">Meta</span><span class="case-tool">Vistara</span></div>
-</div>
-<div class="case-card">
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
+<a class="case-card" href="https://www.bing.com/search?q=Claude%E6%A8%A1%E5%9E%8B%E4%BA%91%E6%9C%8D%E5%8A%A1%E8%90%BD%E5%9C%B0" target="_blank" rel="noopener noreferrer">
   <div class="case-org">微软</div>
   <h3>Claude模型云服务落地</h3>
   <p>基于NVIDIA GB300芯片的Azure部署</p>
   <div class="case-tools"><span class="case-tool">微软</span><span class="case-tool">Azure</span></div>
-</div>
-<div class="case-card">
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
+<a class="case-card" href="https://www.bing.com/search?q=%E5%8C%BB%E5%AD%A6%E9%9A%BE%E9%A2%98AI%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88" target="_blank" rel="noopener noreferrer">
   <div class="case-org">OpenAI</div>
   <h3>医学难题AI解决方案</h3>
   <p>通过GPT-5 Pro破解3年免疫学谜题</p>
   <div class="case-tools"><span class="case-tool">OpenAI</span><span class="case-tool">医学</span></div>
-</div>
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
 </div>
 </div>
 
@@ -285,18 +289,18 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">全球 AI 内容监管与版权最新法规动态</p>
 
   <div class="trend-grid" id="policy-cards-area">
-<div class="trend-card">
+<a class="trend-card" href="https://www.bing.com/search?q=%E6%AC%A7%E7%9B%9FAI%20workforce%E7%99%BD%E7%9A%AE%E4%B9%A6" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>欧盟AI workforce白皮书</h3>
   <p>提出AI岗位转型与技能重塑路线图</p>
-  <div class="trend-source">📅 2026-06-30 · 来源</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-06-30 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=%E4%B8%AD%E5%9B%BD%E7%BD%91%E7%BB%9C%E8%A1%A8%E6%BC%94%E8%A1%8C%E4%B8%9A%E8%A7%84%E8%8C%83" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>中国网络表演行业规范</h3>
   <p>2025年市场规模达2213.6亿元</p>
-  <div class="trend-source">📅 2026-06-30 · 来源</div>
-</div>
+  <div class="trend-source">📅 2026-06-30 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
 </div>
 </div>
 

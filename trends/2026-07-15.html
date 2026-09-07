@@ -100,6 +100,10 @@ a:hover{color:#7C2F22}
 .trend-card{background:var(--bg3);border:1px solid var(--border2);border-radius:4px;
   padding:24px;transition:all .3s;position:relative;overflow:hidden;box-shadow:0 2px 10px rgba(107,90,68,.12)}
 .trend-card:hover{border-color:var(--gold);transform:translateY(-3px);box-shadow:0 10px 24px rgba(107,90,68,.2)}
+a.trend-card,a.case-card{display:block;color:inherit;text-decoration:none;cursor:pointer}
+a.trend-card:hover,a.case-card:hover{color:inherit}
+.trend-go{margin-left:auto;color:var(--cinnabar);font-size:12px;font-weight:600;letter-spacing:.5px}
+.update-banner,.filter-bar,.theme-toggle{display:none}
 .trend-tag{display:inline-block;padding:3px 12px;border-radius:3px;font-size:12px;
   font-weight:600;margin-bottom:12px;border:1px solid}
 .trend-tag.tech{background:rgba(51,86,124,.08);color:#33567C;border-color:rgba(51,86,124,.35)}
@@ -215,30 +219,30 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">本周与传媒相关的 AI 技术进展与产品动态</p>
 
   <div class="trend-grid" id="trend-cards-area">
-<div class="trend-card">
+<a class="trend-card" href="https://www.bing.com/search?q=%E8%8B%B9%E6%9E%9C%E8%AF%84%E4%BC%B0PrismML%E9%87%8F%E5%8C%96AI%E6%8A%80%E6%9C%AF%E4%BC%98%E5%8C%96%E6%A8%A1%E5%9E%8B%E8%BF%90%E8%A1%8C" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag tech">技术</div>
   <h3>苹果评估PrismML量化AI技术优化模型运行</h3>
   <p>苹果正测试PrismML的AI模型量化技术，可将iPhone 15运行27B大模型内存占用从54GB降至3.9GB</p>
-  <div class="trend-source">📅 2026-07-15 · 来源</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-07-15 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=Meta%E4%B8%8EGoogle%E9%9D%A2%E4%B8%B4AI%E8%AE%AD%E7%BB%83%E7%89%88%E6%9D%83%E8%AF%89%E8%AE%BC" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>Meta与Google面临AI训练版权诉讼</h3>
   <p>Meta被指控利用AI违规裁员，Google被诉使用版权内容训练Gemini模型，引发行业合规争议</p>
-  <div class="trend-source">📅 2026-07-15 · 来源</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-07-15 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=%E6%94%AF%E4%BB%98%E5%AE%9D%E4%B8%8EOPPO%E5%AE%9E%E7%8E%B0%E6%99%BA%E8%83%BD%E4%BD%93%E8%B7%A8%E7%AB%AF%E4%BA%92%E8%81%94" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag tool">工具</div>
   <h3>支付宝与OPPO实现智能体跨端互联</h3>
   <p>OPPO用户可通过系统级AI助手"小布"直接调用支付宝AI助手"阿宝"，实现多场景自然语言交互</p>
-  <div class="trend-source">📅 2026-07-15 · 来源</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-07-15 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=Spotify%E5%BC%80%E5%90%AF%E8%AF%AD%E9%9F%B3%E4%BA%A4%E4%BA%92%E5%8A%9F%E8%83%BD%E5%86%85%E6%B5%8B" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag industry">行业</div>
   <h3>Spotify开启语音交互功能内测</h3>
   <p>音乐流媒体平台Spotify启动基于AI的语音交互内测，支持自然语言点歌和场景化音乐推荐</p>
-  <div class="trend-source">📅 2026-07-15 · 来源</div>
-</div>
+  <div class="trend-source">📅 2026-07-15 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
 </div>
 </div>
 
@@ -250,24 +254,24 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">全球新闻媒体机构的 AI 应用实战案例</p>
 
   <div class="case-grid" id="case-cards-area">
-<div class="case-card">
+<a class="case-card" href="https://www.bing.com/search?q=PrismML%E6%8A%80%E6%9C%AF%E4%BC%98%E5%8C%96AI%E6%A8%A1%E5%9E%8B%E8%BF%90%E8%A1%8C%E6%95%88%E7%8E%87" target="_blank" rel="noopener noreferrer">
   <div class="case-org">苹果</div>
   <h3>PrismML技术优化AI模型运行效率</h3>
   <p>与PrismML合作开发AI模型量化技术，显著降低iPhone 15运行27B大模型的内存需求</p>
   <div class="case-tools"><span class="case-tool">AI优化</span><span class="case-tool">移动端</span></div>
-</div>
-<div class="case-card">
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
+<a class="case-card" href="https://www.bing.com/search?q=Gemini%E6%A8%A1%E5%9E%8B%E8%AE%AD%E7%BB%83%E5%BC%95%E5%8F%91%E7%89%88%E6%9D%83%E4%BA%89%E8%AE%AE" target="_blank" rel="noopener noreferrer">
   <div class="case-org">Google</div>
   <h3>Gemini模型训练引发版权争议</h3>
   <p>被指控使用未经授权的版权内容训练Gemini AI模型，面临法律诉讼与行业监管压力</p>
   <div class="case-tools"><span class="case-tool">版权管理</span><span class="case-tool">大模型</span></div>
-</div>
-<div class="case-card">
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
+<a class="case-card" href="https://www.bing.com/search?q=%E6%99%BA%E8%83%BD%E4%BD%93%E8%B7%A8%E7%AB%AF%E4%BA%92%E8%81%94%E5%8A%9F%E8%83%BD%E4%B8%8A%E7%BA%BF" target="_blank" rel="noopener noreferrer">
   <div class="case-org">OPPO</div>
   <h3>智能体跨端互联功能上线</h3>
   <p>与支付宝合作实现系统级AI助手"小布"与"阿宝"的跨端调用，覆盖话费充值、电影票购买等场景</p>
   <div class="case-tools"><span class="case-tool">AI助手</span><span class="case-tool">跨平台</span></div>
-</div>
+  <div class="trend-source"><span class="trend-go">检索原文 →</span></div></a>
 </div>
 </div>
 
@@ -279,18 +283,18 @@ a:hover{color:#7C2F22}
   <p class="briefing-desc">全球 AI 内容监管与版权最新法规动态</p>
 
   <div class="trend-grid" id="policy-cards-area">
-<div class="trend-card">
+<a class="trend-card" href="https://www.bing.com/search?q=%E7%BE%8E%E5%9B%BD%E7%99%BD%E5%AE%AB%E6%88%90%E7%AB%8BAI%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%80%A1%E8%AE%AE" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>美国白宫成立AI网络安全倡议</h3>
   <p>建立AI网络安全信息共享中心，推动企业建立AI系统漏洞披露与应急响应机制</p>
-  <div class="trend-source">📅 2026-07-14 · 来源CNN</div>
-</div>
-<div class="trend-card">
+  <div class="trend-source">📅 2026-07-14 · 来源CNN <span class="trend-go">检索原文 →</span></div>
+</a>
+<a class="trend-card" href="https://www.bing.com/search?q=Meta%E8%A2%AB%E8%AF%89AI%E8%A3%81%E5%91%98%E7%A8%8B%E5%BA%8F%E8%BF%9D%E8%A7%84" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
   <h3>Meta被诉AI裁员程序违规</h3>
   <p>美国劳工部指控Meta利用AI系统不当处理裁员流程，涉嫌违反《公平劳动标准法》</p>
-  <div class="trend-source">📅 2026-07-15 · 来源</div>
-</div>
+  <div class="trend-source">📅 2026-07-15 · 来源 <span class="trend-go">检索原文 →</span></div>
+</a>
 </div>
 </div>
 
