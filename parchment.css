@@ -159,9 +159,13 @@ html[lang="en"] .pnav-title{font-family:var(--latin);letter-spacing:.04em}
 .hero-sub{font-size:17px;color:var(--ink-2);line-height:2;margin-bottom:32px}
 .hero-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
 .hero-meta{display:flex;gap:28px;justify-content:center;flex-wrap:wrap;margin-top:36px;
-  padding-top:24px;border-top:1px solid var(--line)}
-.hero-meta-item{display:flex;align-items:center;gap:7px;font-size:14.5px;color:var(--ink-2)}
-.hero-meta-item .mk{font-family:var(--kai);color:var(--gold)}
+  padding-top:24px;border-top:1px solid var(--line);
+  /* 标签/数值同一栈：Noto Serif（西文数字）+ Noto Serif SC（汉字），避免掉进正文 --hei */
+  font-family:'Noto Serif','Noto Serif SC','EB Garamond','Songti SC','STSong','SimSun',serif}
+.hero-meta-item{display:flex;align-items:baseline;gap:8px;font-family:inherit;
+  font-size:14.5px;font-weight:500;letter-spacing:.04em;color:var(--ink-2)}
+.hero-meta-item .mk,.hero-meta-item .mv{font-family:inherit;font-weight:inherit;letter-spacing:inherit}
+.hero-meta-item .mk{color:var(--gold)}
 
 /* ── 卷首数据 ── */
 .stat-strip{display:flex;gap:0;justify-content:center;flex-wrap:wrap;margin-top:0}
