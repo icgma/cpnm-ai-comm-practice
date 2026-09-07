@@ -198,7 +198,7 @@
   <div id="graph-container"></div>
   <aside class="kg-drawer" id="sidePanel" aria-live="polite">
     <div class="panel-placeholder" id="panelPlaceholder">
-      <p>点选图中知识点，查看定义、周次课文与关联。<br>双击节点可拉近；空白处或 Esc 关闭侧栏。</p>
+      <p>点选知识点看定义与课文。可拖节点排位置，拖空白平移，滚轮缩放。<br>双击拉近；复位全图会回到六簇开局；Esc 关闭侧栏。</p>
     </div>
     <div class="node-detail" id="nodeDetail" hidden></div>
   </aside>
@@ -369,7 +369,8 @@ MODULE_ORDER.forEach(function (mod) {
     title: mc.name + ' · ' + mc.weeks,
     group: mod,
     x: a.x, y: a.y,
-    fixed: { x: true, y: true },
+    _x0: a.x, _y0: a.y,
+    fixed: true,
     size: 22,
     shape: 'hexagon',
     font: { color: '#F7EFDA', size: 16, face: 'Noto Serif SC, Kaiti SC, KaiTi, serif', vadjust: 0 },
@@ -395,7 +396,9 @@ knowledgeNodes.forEach(function (n, idxInAll) {
     group: n.module,
     x: a.x + Math.cos(ang) * r,
     y: a.y + Math.sin(ang) * r,
-    fixed: { x: true, y: true },
+    _x0: a.x + Math.cos(ang) * r,
+    _y0: a.y + Math.sin(ang) * r,
+    fixed: true,
     size: buildNodeSize(n),
     shape: 'dot',
     font: { color: '#3A2E20', size: 13, face: 'Noto Serif SC, Kaiti SC, KaiTi, serif', multi: true, vadjust: 2 },
@@ -444,9 +447,9 @@ knowledgeEdges.forEach(function (e, i) {
 const container = document.getElementById('graph-container');
 const network = new vis.Network(container, { nodes: visNodes, edges: visEdges }, {
   physics: { enabled: false },
-  interaction: { hover: true, tooltipDelay: 160, zoomView: true, dragView: true },
+  interaction: { hover: true, tooltipDelay: 160, zoomView: true, dragView: true, dragNodes: true, navigationButtons: false },
   layout: { improvedLayout: false, randomSeed: 7 },
-  nodes: { chosen: true },
+  nodes: { chosen: true, fixed: false },
   edges: { selectionWidth: 2 }
 });
 
@@ -637,6 +640,10 @@ function resetView() {
   closePanel();
   applyFilters();
   clearEmphasis();
+  visNodes.getIds().forEach(function (id) {
+    var n = visNodes.get(id);
+    if (n && n._x0 != null) network.moveNode(id, n._x0, n._y0);
+  });
   network.fit({ animation: { duration: 500, easingFunction: 'easeInOutQuad' } });
 }
 
@@ -702,6 +709,7 @@ document.addEventListener('keydown', function (e) {
 network.setOptions({ physics: { enabled: true, stabilization: { iterations: 1 } } });
 network.stabilize(8);
 network.setOptions({ physics: { enabled: false } });
+visNodes.update(visNodes.getIds().map(function (id) { return { id: id, fixed: false }; }));
 setTimeout(function () {
   network.fit({ animation: false, padding: 40 });
 }, 40);
