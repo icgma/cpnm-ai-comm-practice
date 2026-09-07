@@ -198,12 +198,12 @@
   <div id="graph-container"></div>
   <aside class="kg-drawer" id="sidePanel" aria-live="polite">
     <div class="panel-placeholder" id="panelPlaceholder">
-      <p>点选知识点看定义与课文。可拖节点排位置，拖空白平移，滚轮缩放。<br>双击拉近；复位全图会回到六簇开局；Esc 关闭侧栏。</p>
+      <p>点选知识点看定义与课文。拖节点时全图会跟着动，拖空白平移，滚轮缩放。<br>双击拉近；复位全图重新力导向；Esc 关闭侧栏。</p>
     </div>
     <div class="node-detail" id="nodeDetail" hidden></div>
   </aside>
   <div class="legend">
-    <div class="legend-title">六簇 · 按教学周顺时针</div>
+    <div class="legend-title">模块图例</div>
     <div class="legend-item"><div class="legend-dot" style="background:#33567C"></div> B · AI基础 W01–W02</div>
     <div class="legend-item"><div class="legend-dot" style="background:#A2402F"></div> C · 提示词 W03–W04</div>
     <div class="legend-item"><div class="legend-dot" style="background:#51724B"></div> D · 信息获取 W05–W06</div>
@@ -233,7 +233,6 @@ const MODULE_COLORS = {
 };
 
 const BLOOM_LABELS = { 2: '②理解', 3: '③应用', 4: '④分析', 5: '⑤评价', 6: '⑥创造' };
-const MODULE_ORDER = ['B', 'C', 'D', 'E', 'F', 'G'];
 
 const knowledgeNodes = [
   { id:'B1', label:'AI发展简史', module:'B', bloom:2, weeks:'W01', resource:'课件W01·P4-P8', tags:['key','exam'],
@@ -339,69 +338,22 @@ function buildNodeSize(node) {
   return size;
 }
 
-function clusterAnchors() {
-  var anchors = {};
-  var radius = 360;
-  MODULE_ORDER.forEach(function (mod, i) {
-    var ang = -Math.PI / 2 + i * (Math.PI * 2 / 6);
-    anchors[mod] = { x: Math.cos(ang) * radius, y: Math.sin(ang) * radius };
-  });
-  return anchors;
-}
-
-const ANCHORS = clusterAnchors();
-
 if (typeof vis === 'undefined') {
   document.getElementById('graph-container').innerHTML =
     '<p style="padding:48px;text-align:center;color:#6E5B41">图谱脚本未能加载，请刷新或检查网络。</p>';
   throw new Error('vis-network missing');
 }
 
-const visNodes = new vis.DataSet([]);
-const visEdges = new vis.DataSet([]);
-
-MODULE_ORDER.forEach(function (mod) {
-  var mc = MODULE_COLORS[mod];
-  var a = ANCHORS[mod];
-  visNodes.add({
-    id: 'hub-' + mod,
-    label: mod,
-    title: mc.name + ' · ' + mc.weeks,
-    group: mod,
-    x: a.x, y: a.y,
-    _x0: a.x, _y0: a.y,
-    fixed: true,
-    size: 22,
-    shape: 'hexagon',
-    font: { color: '#F7EFDA', size: 16, face: 'Noto Serif SC, Kaiti SC, KaiTi, serif', vadjust: 0 },
-    color: { background: mc.bg, border: mc.border, highlight: { background: mc.highlight, border: '#F7EFDA' }, hover: { background: mc.highlight, border: '#F7EFDA' } },
-    borderWidth: 2,
-    mass: 4,
-    _hub: true,
-    _module: mod
-  });
-});
-
-knowledgeNodes.forEach(function (n, idxInAll) {
+const visNodes = new vis.DataSet(knowledgeNodes.map(function (n) {
   var mc = MODULE_COLORS[n.module];
-  var siblings = knowledgeNodes.filter(function (x) { return x.module === n.module; });
-  var j = siblings.indexOf(n);
-  var ang = (j / siblings.length) * Math.PI * 2 - Math.PI / 2;
-  var r = 148;
-  var a = ANCHORS[n.module];
-  visNodes.add({
+  return {
     id: n.id,
     label: n.id + '\n' + n.label,
     title: n.label + ' · ' + n.weeks,
     group: n.module,
-    x: a.x + Math.cos(ang) * r,
-    y: a.y + Math.sin(ang) * r,
-    _x0: a.x + Math.cos(ang) * r,
-    _y0: a.y + Math.sin(ang) * r,
-    fixed: true,
     size: buildNodeSize(n),
     shape: 'dot',
-    font: { color: '#3A2E20', size: 13, face: 'Noto Serif SC, Kaiti SC, KaiTi, serif', multi: true, vadjust: 2 },
+    font: { color: '#3A2E20', size: 12, face: 'Noto Serif SC, Kaiti SC, KaiTi, serif', multi: true },
     color: {
       background: mc.bg,
       border: mc.border,
@@ -410,46 +362,45 @@ knowledgeNodes.forEach(function (n, idxInAll) {
     },
     borderWidth: 2,
     borderWidthSelected: 3,
-    mass: 1,
-    _hub: false,
-    _module: n.module
-  });
-  visEdges.add({
-    id: 'spoke-' + n.id,
-    from: 'hub-' + n.module,
-    to: n.id,
-    arrows: { to: { enabled: false } },
-    color: { color: mc.bg, opacity: 0.22 },
-    width: 1,
-    dashes: [3, 5],
-    smooth: false,
-    _spoke: true
-  });
-});
+    shadow: { enabled: true, color: mc.bg + '40', size: 15 },
+    chosen: true
+  };
+}));
 
-knowledgeEdges.forEach(function (e, i) {
+const visEdges = new vis.DataSet(knowledgeEdges.map(function (e, i) {
   var isCross = e.type === 'cross';
-  visEdges.add({
+  return {
     id: 'e-' + i,
     from: e.from,
     to: e.to,
     label: e.label,
-    arrows: { to: { enabled: true, scaleFactor: 0.55 } },
-    color: { color: isCross ? '#A2402F' : '#C7B189', highlight: '#33567C', hover: '#33567C', opacity: isCross ? 0.55 : 0.7 },
-    dashes: isCross ? [7, 5] : false,
-    width: isCross ? 1.4 : 1.6,
-    font: { color: '#6E5B41', size: 11, strokeWidth: 4, strokeColor: '#F0E6CF', face: 'Noto Serif SC, KaiTi, serif' },
-    smooth: { type: 'curvedCW', roundness: 0.18 },
-    _spoke: false
-  });
-});
+    arrows: { to: { enabled: true, scaleFactor: 0.6 } },
+    color: { color: isCross ? '#A2402F' : '#C7B189', highlight: '#33567C', hover: '#33567C', opacity: isCross ? 0.45 : 0.65 },
+    dashes: isCross ? [8, 6] : false,
+    width: isCross ? 1 : 1.5,
+    font: { color: '#6E5B41', size: 10, strokeWidth: 3, strokeColor: '#F0E6CF', face: 'Noto Serif SC, KaiTi, serif' },
+    smooth: { type: 'curvedCW', roundness: 0.15 }
+  };
+}));
 
 const container = document.getElementById('graph-container');
 const network = new vis.Network(container, { nodes: visNodes, edges: visEdges }, {
-  physics: { enabled: false },
-  interaction: { hover: true, tooltipDelay: 160, zoomView: true, dragView: true, dragNodes: true, navigationButtons: false },
-  layout: { improvedLayout: false, randomSeed: 7 },
-  nodes: { chosen: true, fixed: false },
+  physics: {
+    enabled: true,
+    solver: 'forceAtlas2Based',
+    forceAtlas2Based: {
+      gravitationalConstant: -60,
+      centralGravity: 0.008,
+      springLength: 160,
+      springConstant: 0.06,
+      damping: 0.5,
+      avoidOverlap: 0.6
+    },
+    stabilization: { iterations: 200, fit: true }
+  },
+  interaction: { hover: true, tooltipDelay: 200, zoomView: true, dragView: true, dragNodes: true },
+  layout: { improvedLayout: true, randomSeed: 7 },
+  nodes: { shape: 'dot', chosen: true, fixed: false },
   edges: { selectionWidth: 2 }
 });
 
@@ -533,50 +484,20 @@ function showNodeDetail(nodeId) {
   openPanel();
 }
 
-function showModuleDetail(mod) {
-  var mc = MODULE_COLORS[mod];
-  var kids = knowledgeNodes.filter(function (n) { return n.module === mod; });
-  document.getElementById('panelPlaceholder').hidden = true;
-  var detail = document.getElementById('nodeDetail');
-  detail.hidden = false;
-  detail.innerHTML =
-    '<button type="button" class="drawer-close" id="drawerClose" aria-label="关闭">×</button>' +
-    '<div class="node-id" style="background:' + mc.bg + '22;color:' + mc.bg + '">' + mod + '</div>' +
-    '<div class="node-name">' + escapeHtml(mc.name) + '</div>' +
-    '<div class="node-module-label">' + escapeHtml(mc.weeks) + ' · ' + kids.length + ' 个知识点</div>' +
-    '<div class="node-desc">本簇按教学周聚集。点下方条目进入具体知识点，或继续在图上点选。</div>' +
-    kids.map(function (n) {
-      return '<div class="relation-item" data-goto="' + n.id + '"><span class="relation-arrow">→</span><div><div class="relation-name">' + escapeHtml(n.id + ' ' + n.label) + '</div><div class="relation-label">' + escapeHtml(n.weeks) + '</div></div></div>';
-    }).join('');
-  document.getElementById('drawerClose').onclick = closePanel;
-  detail.querySelectorAll('[data-goto]').forEach(function (el) {
-    el.addEventListener('click', function () {
-      var id = el.getAttribute('data-goto');
-      network.selectNodes([id]);
-      showNodeDetail(id);
-      emphasize(id);
-      network.focus(id, { scale: 1.25, animation: { duration: 420, easingFunction: 'easeInOutQuad' } });
-    });
-  });
-  openPanel();
-}
-
 function connectedSet(id) {
   var set = {};
   set[id] = true;
-  if (String(id).indexOf('hub-') === 0) {
-    var mod = id.slice(4);
-    set[id] = true;
-    knowledgeNodes.forEach(function (n) { if (n.module === mod) set[n.id] = true; });
-    return set;
-  }
-  var node = knowledgeNodes.find(function (n) { return n.id === id; });
-  if (node) set['hub-' + node.module] = true;
   knowledgeEdges.forEach(function (e) {
     if (e.from === id) set[e.to] = true;
     if (e.to === id) set[e.from] = true;
   });
   return set;
+}
+
+function edgeBaseOpacity(e) {
+  var idx = parseInt(String(e.id).replace('e-', ''), 10);
+  var raw = knowledgeEdges[idx];
+  return raw && raw.type === 'cross' ? 0.45 : 0.65;
 }
 
 function emphasize(id) {
@@ -586,18 +507,14 @@ function emphasize(id) {
   });
   visEdges.forEach(function (e) {
     var on = keep[e.from] && keep[e.to];
-    visEdges.update({ id: e.id, hidden: !on && e._spoke ? true : false, color: Object.assign({}, e.color, { opacity: on ? (e._spoke ? 0.35 : 0.85) : 0.08 }) });
+    visEdges.update({ id: e.id, color: Object.assign({}, e.color, { opacity: on ? 0.85 : 0.08 }) });
   });
 }
 
 function clearEmphasis() {
   visNodes.forEach(function (n) { visNodes.update({ id: n.id, opacity: 1 }); });
   visEdges.forEach(function (e) {
-    visEdges.update({
-      id: e.id,
-      hidden: false,
-      color: Object.assign({}, e.color, { opacity: e._spoke ? 0.22 : (String(e.id).indexOf('e-') === 0 && knowledgeEdges[parseInt(e.id.slice(2), 10)] && knowledgeEdges[parseInt(e.id.slice(2), 10)].type === 'cross' ? 0.55 : 0.7) })
-    });
+    visEdges.update({ id: e.id, color: Object.assign({}, e.color, { opacity: edgeBaseOpacity(e) }) });
   });
 }
 
@@ -613,18 +530,11 @@ function nodeVisible(n) {
 }
 
 function applyFilters() {
-  var activeMod = document.querySelector('.filter-btn.active').dataset.module;
   var visible = [];
   knowledgeNodes.forEach(function (n) {
     var show = nodeVisible(n);
     visNodes.update({ id: n.id, hidden: !show, opacity: 1 });
-    visEdges.update({ id: 'spoke-' + n.id, hidden: !show });
     if (show) visible.push(n);
-  });
-  MODULE_ORDER.forEach(function (mod) {
-    var showHub = activeMod === 'all' || activeMod === mod;
-    if (showHub) showHub = knowledgeNodes.some(function (n) { return n.module === mod && nodeVisible(n); });
-    visNodes.update({ id: 'hub-' + mod, hidden: !showHub, opacity: 1 });
   });
   document.getElementById('statNodes').textContent = visible.length;
   document.getElementById('statKey').textContent = visible.filter(function (n) { return n.tags.indexOf('key') >= 0; }).length;
@@ -640,11 +550,9 @@ function resetView() {
   closePanel();
   applyFilters();
   clearEmphasis();
-  visNodes.getIds().forEach(function (id) {
-    var n = visNodes.get(id);
-    if (n && n._x0 != null) network.moveNode(id, n._x0, n._y0);
-  });
-  network.fit({ animation: { duration: 500, easingFunction: 'easeInOutQuad' } });
+  network.setOptions({ physics: { enabled: true } });
+  network.stabilize(120);
+  network.fit({ animation: { duration: 600, easingFunction: 'easeInOutQuad' } });
 }
 
 document.querySelectorAll('.filter-btn').forEach(function (btn) {
@@ -675,14 +583,8 @@ document.getElementById('kgSearch').addEventListener('keydown', function (e) {
 
 network.on('click', function (params) {
   if (params.nodes.length) {
-    var id = params.nodes[0];
-    if (String(id).indexOf('hub-') === 0) {
-      showModuleDetail(id.slice(4));
-      emphasize(id);
-    } else {
-      showNodeDetail(id);
-      emphasize(id);
-    }
+    showNodeDetail(params.nodes[0]);
+    emphasize(params.nodes[0]);
     return;
   }
   closePanel();
@@ -706,13 +608,9 @@ document.addEventListener('keydown', function (e) {
   }
 });
 
-network.setOptions({ physics: { enabled: true, stabilization: { iterations: 1 } } });
-network.stabilize(8);
-network.setOptions({ physics: { enabled: false } });
-visNodes.update(visNodes.getIds().map(function (id) { return { id: id, fixed: false }; }));
-setTimeout(function () {
-  network.fit({ animation: false, padding: 40 });
-}, 40);
+network.on('stabilizationIterationsDone', function () {
+  network.fit({ animation: { duration: 800, easingFunction: 'easeInOutQuad' } });
+});
 
 window.addEventListener('resize', resizeGraph);
 document.getElementById('statEdges').textContent = String(knowledgeEdges.length);
