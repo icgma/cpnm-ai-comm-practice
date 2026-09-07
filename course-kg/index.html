@@ -5,290 +5,237 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect x='1.5' y='1.5' width='37' height='37' rx='9' fill='%23F7EFDA' stroke='%23A2402F' stroke-width='3'/%3E%3Cpath fill='%23A2402F' fill-rule='evenodd' %3Cg transform='translate(20 20) scale(0.74) translate(-20 -20)'%3E%3Cpath fill='none' stroke='%23A2402F' stroke-width='2.6' stroke-linejoin='round' stroke-linecap='round' d='M20 36.5 L11.2 16.5 C13.6 13 16.6 11.2 20 10.9 C23.4 11.2 26.4 13 28.8 16.5 Z'/%3E%3Cpath fill='%23A2402F' d='M20 13.6 L21.3 16.9 L24.6 18.2 L21.3 19.5 L20 22.8 L18.7 19.5 L15.4 18.2 L18.7 16.9 Z'/%3E%3Cpath d='M20 23.6 L20 33' stroke='%23A2402F' stroke-width='2.2' stroke-linecap='round' fill='none'/%3E%3C/g%3E/%3E%3C/svg%3E">
 <title>课程知识图谱 — AI驱动的传媒内容制作</title>
-<meta name="description" content="汕头大学智慧课程「AI驱动的传媒内容制作」22个核心知识点交互式知识图谱可视化">
-<script src="https://unpkg.com/vis-network@9.1.6/standalone/umd/vis-network.min.js"></script>
+<meta name="description" content="汕头大学智慧课程「AI驱动的传媒内容制作」25个核心知识点交互式知识图谱">
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,500;0,600;1,500&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../parchment.css">
 <style>
-  :root {
-    --bg-primary: #EFE4C6;
-    --bg-secondary: #F0E6CF;
-    --bg-card: #E8DCBC;
-    --bg-card-hover: #E2D4AE;
-    --border: #C7B189;
-    --text-primary: #3A2E20;
-    --text-secondary: #6E5B41;
-    --text-muted: #9C8964;
-    --accent-blue: #33567C;
-    --accent-cyan: #51724B;
-    --accent-purple: #A2402F;
-    --accent-pink: #ec4899;
-    --accent-amber: #6E5B41;
-    --accent-green: #8C6A2F;
-    --accent-red: #3A2E20;
-    --accent-orange: #f97316;
-    --glow-blue: rgba(162,64,47,0.10);
-    --glow-purple: rgba(140,106,47,0.10);
-  }
-  * { margin:0; padding:0; box-sizing:border-box; }
-  body {
-    font-family: 'Noto Sans SC', 'Microsoft YaHei', 'PingFang SC', sans-serif;
-    background: var(--bg-primary);
-    color: var(--text-primary);
-    overflow: hidden;
-    height: 100vh;
-  }
+  html, body { height: 100%; overflow: hidden; font-size: 16px; }
+  body { display: flex; flex-direction: column; }
+  .pnav { flex-shrink: 0; }
+  .pnav-inner { max-width: none; padding: 8px 22px; }
 
-  /* ── Header ── */
-  .header {
-    position: fixed; top:0; left:0; right:0; z-index:100;
-    background: linear-gradient(180deg, rgba(240,230,207,0.97) 0%, rgba(240,230,207,0.88) 100%);
-    backdrop-filter: blur(20px);
-    border-bottom: 1px solid var(--border);
-    padding: 12px 24px;
-    display: flex; align-items: center; justify-content: space-between;
+  .kg-toolbar {
+    position: relative; z-index: 2; flex-shrink: 0;
+    display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px;
+    padding: 8px 22px;
+    background: rgba(247,239,218,.82);
+    border-bottom: 1px solid var(--line-2);
   }
-  .header-left { display:flex; align-items:center; gap:16px; }
-  .header-logo {
-    width:36px; height:36px; border-radius:6px;
-    background: rgba(162,64,47,.06);
-    border: 2px solid #A2402F;
-    box-shadow: inset 0 0 0 1px rgba(162,64,47,.25);
-    display:flex; align-items:center; justify-content:center;
-    font-family:'Kaiti SC','STKaiti','KaiTi','Noto Serif SC',serif;
-    font-size:19px; font-weight:700; color:#A2402F;
-    transform: rotate(-4deg);
+  .kg-search {
+    width: min(240px, 100%);
+    padding: 6px 12px;
+    border: 1px solid var(--line-2);
+    border-radius: 4px;
+    background: var(--paper-hi);
+    color: var(--ink);
+    font: 13px/1.4 var(--hei);
   }
-  .header-logo svg{ width:64%; height:64%; display:block; }
-  .header-title { font-family:'Kaiti SC','STKaiti','KaiTi','Noto Serif SC',serif; font-size:17px; font-weight:700; letter-spacing:2px; }
-  .header-subtitle { font-size:12px; color:var(--text-secondary); margin-top:1px; }
-  .header-right { display:flex; align-items:center; gap:10px; }
-
-  /* ── Filter Buttons ── */
-  .filter-bar {
-    display: flex; gap: 6px; flex-wrap: wrap;
-  }
-  .filter-btn {
-    padding: 5px 12px; border-radius: 20px; border: 1px solid var(--border);
-    background: transparent; color: var(--text-secondary); cursor: pointer;
-    font-size: 12px; font-family: inherit; transition: all 0.2s;
+  .kg-search:focus { outline: 2px solid rgba(162,64,47,.28); outline-offset: 1px; }
+  .kg-search::placeholder { color: var(--ink-3); }
+  .filter-bar, .tag-filters { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+  .filter-btn, .tag-btn, .kg-reset {
+    padding: 5px 11px; border-radius: 4px; border: 1px solid var(--line-2);
+    background: transparent; color: var(--ink-2); cursor: pointer;
+    font-size: 12.5px; font-family: inherit; line-height: 1.3;
+    transition: color .2s, background .2s, border-color .2s, transform .15s;
     white-space: nowrap;
   }
-  .filter-btn:hover { border-color: var(--c, #A2402F); color: var(--text-primary); }
-  .filter-btn.active { background: var(--c, #A2402F); border-color: var(--c, #A2402F); color: #F7EFDA; }
+  .filter-btn:hover, .tag-btn:hover, .kg-reset:hover { color: var(--cinnabar); border-color: rgba(162,64,47,.4); }
+  .filter-btn:active, .tag-btn:active, .kg-reset:active { transform: scale(.96); }
+  .filter-btn.active { background: var(--c, var(--cinnabar)); border-color: var(--c, var(--cinnabar)); color: var(--paper-hi); }
+  .tag-btn { opacity: .45; }
+  .tag-btn.active { opacity: 1; }
+  .tag-btn.tag-key { color: #A2402F; }
+  .tag-btn.tag-diff { color: #8C6A2F; }
+  .tag-btn.tag-exam { color: #33567C; }
+  .tag-btn.tag-sz { color: #51724B; }
+  .kg-reset { margin-left: auto; }
 
-  .tag-filters { display:flex; gap:6px; margin-left:12px; }
-  .tag-btn {
-    padding: 4px 10px; border-radius: 12px; border: none;
-    cursor: pointer; font-size: 12px; font-family: inherit;
-    transition: all 0.2s; opacity: 0.5;
-  }
-  .tag-btn.active { opacity: 1; transform: scale(1.05); }
-  .tag-btn.tag-key { background: rgba(162,64,47,0.1); color: #A2402F; }
-  .tag-btn.tag-diff { background: rgba(140,106,47,0.12); color: #8C6A2F; }
-  .tag-btn.tag-exam { background: rgba(51,86,124,0.1); color: #33567C; }
-  .tag-btn.tag-sz { background: rgba(81,114,75,0.12); color: #51724B; }
+  .kg-stage { position: relative; flex: 1; min-height: 0; z-index: 1; }
+  #graph-container { position: absolute; inset: 0; right: 0; transition: right .28s cubic-bezier(.2,0,0,1); }
+  body.panel-open #graph-container { right: 360px; }
 
-  /* ── Graph Container ── */
-  #graph-container {
-    position: absolute; top: 60px; left: 0; right: 340px; bottom: 0;
-  }
-
-  /* ── Side Panel ── */
-  .side-panel {
-    position: fixed; top: 60px; right: 0; bottom: 0; width: 340px;
-    background: var(--bg-secondary);
-    border-left: 1px solid var(--border);
+  .kg-drawer {
+    position: absolute; top: 0; right: 0; bottom: 0; width: 360px;
+    background: rgba(240,230,207,.96);
+    border-left: 1px solid var(--line-2);
     overflow-y: auto;
-    transition: transform 0.3s cubic-bezier(0.4,0,0.2,1);
+    transform: translateX(100%);
+    transition: transform .28s cubic-bezier(.2,0,0,1);
+    z-index: 6;
   }
-  .side-panel.collapsed { transform: translateX(340px); }
+  body.panel-open .kg-drawer { transform: translateX(0); }
 
+  .panel-placeholder, .node-detail { padding: 22px 22px 28px; }
   .panel-placeholder {
-    height: 100%; display: flex; flex-direction: column;
-    align-items: center; justify-content: center;
-    color: var(--text-muted); text-align: center; padding: 40px;
+    min-height: 100%; display: flex; flex-direction: column;
+    justify-content: center; color: var(--ink-3); text-align: center;
   }
-  .panel-placeholder-icon { font-size: 48px; margin-bottom: 16px; opacity: 0.5; }
-  .panel-placeholder-text { font-size: 14px; line-height: 1.6; }
-
-  .node-detail { padding: 24px; animation: fadeIn 0.3s ease; }
-  @keyframes fadeIn { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:translateY(0); } }
+  .panel-placeholder p { font-size: 14px; line-height: 1.7; }
+  .drawer-close {
+    position: sticky; top: 10px; float: right;
+    width: 28px; height: 28px; border: 1px solid var(--line-2);
+    background: var(--paper-hi); color: var(--ink-2); border-radius: 4px;
+    cursor: pointer; font-size: 16px; line-height: 1;
+  }
+  .drawer-close:hover { color: var(--cinnabar); }
 
   .node-id {
-    display: inline-block; padding: 3px 10px; border-radius: 6px;
-    font-size: 12px; font-weight: 600; letter-spacing: 0.5px;
-    margin-bottom: 8px;
+    display: inline-block; padding: 2px 9px; border-radius: 4px;
+    font-size: 12px; font-weight: 700; letter-spacing: .4px; margin-bottom: 8px;
   }
-  .node-name { font-family:'Kaiti SC','STKaiti','KaiTi','Noto Serif SC',serif; font-size: 21px; font-weight: 700; margin-bottom: 6px; letter-spacing: 1px; }
-  .node-module-label { font-size: 12px; color: var(--text-secondary); margin-bottom: 16px; }
-
+  .node-name { font-family: var(--kai); font-size: 22px; font-weight: 700; letter-spacing: 1px; line-height: 1.35; text-wrap: balance; }
+  .node-module-label { font-size: 12.5px; color: var(--ink-2); margin: 6px 0 14px; }
   .node-desc {
-    font-size: 14px; line-height: 1.7; color: var(--text-secondary);
-    margin-bottom: 20px; padding: 14px; border-radius: 10px;
-    background: var(--bg-card); border: 1px solid var(--border);
+    font-size: 14px; line-height: 1.75; color: var(--ink-2);
+    margin-bottom: 18px; padding: 12px 14px; border-radius: 6px;
+    background: var(--paper-3); border: 1px solid var(--line-2);
+    text-wrap: pretty;
   }
+  .meta-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 18px; }
+  .meta-item { padding: 10px 12px; border-radius: 6px; background: var(--paper-3); border: 1px solid var(--line-2); }
+  .meta-label { font-size: 11px; color: var(--ink-3); letter-spacing: .4px; margin-bottom: 3px; }
+  .meta-value { font-size: 14px; font-weight: 600; font-variant-numeric: tabular-nums; }
+  .tags-title { font-size: 12px; color: var(--ink-3); margin-bottom: 8px; letter-spacing: .4px; }
+  .tags-list { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 18px; }
+  .tag { padding: 3px 10px; border-radius: 4px; font-size: 12px; font-weight: 600; border: 1px solid; }
+  .tag-key-detail { background: rgba(162,64,47,.07); color: #A2402F; border-color: rgba(162,64,47,.3); }
+  .tag-diff-detail { background: rgba(140,106,47,.1); color: #8C6A2F; border-color: rgba(140,106,47,.3); }
+  .tag-exam-detail { background: rgba(51,86,124,.08); color: #33567C; border-color: rgba(51,86,124,.28); }
+  .tag-sz-detail { background: rgba(81,114,75,.1); color: #51724B; border-color: rgba(81,114,75,.28); }
+  .relation-item, .resource-link, .week-link {
+    display: flex; align-items: center; gap: 10px; padding: 9px 12px;
+    border-radius: 6px; background: var(--paper-3); border: 1px solid var(--line-2);
+    margin-bottom: 6px; color: inherit; text-decoration: none; cursor: pointer;
+    transition: border-color .2s, background .2s;
+  }
+  .relation-item:hover, .resource-link:hover, .week-link:hover { border-color: var(--cinnabar); background: var(--paper-hi); }
+  .relation-arrow { color: var(--ink-3); font-size: 14px; }
+  .relation-label { font-size: 11px; color: var(--ink-3); }
+  .relation-name { font-size: 13px; font-weight: 600; }
+  .resource-link, .week-link { color: var(--cinnabar); font-size: 13px; }
 
-  .meta-grid {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 10px;
-    margin-bottom: 20px;
-  }
-  .meta-item {
-    padding: 12px; border-radius: 10px;
-    background: var(--bg-card); border: 1px solid var(--border);
-  }
-  .meta-label { font-size: 11px; color: var(--text-muted); margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.5px; }
-  .meta-value { font-size: 14px; font-weight: 600; }
-
-  .tags-section { margin-bottom: 20px; }
-  .tags-title { font-size: 12px; color: var(--text-muted); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px; }
-  .tags-list { display: flex; gap: 6px; flex-wrap: wrap; }
-  .tag {
-    padding: 4px 12px; border-radius: 16px; font-size: 12px; font-weight: 500;
-  }
-  .tag-key-detail { background: rgba(162,64,47,0.08); color: #A2402F; }
-  .tag-diff-detail { background: rgba(140,106,47,0.1); color: #8C6A2F; }
-  .tag-exam-detail { background: rgba(162,64,47,0.10); color: #33567C; }
-  .tag-sz-detail { background: rgba(81,114,75,0.1); color: #51724B; }
-
-  .relations-section { margin-bottom: 20px; }
-  .relation-item {
-    display: flex; align-items: center; gap: 10px; padding: 10px 14px;
-    border-radius: 8px; background: var(--bg-card); border: 1px solid var(--border);
-    margin-bottom: 6px; cursor: pointer; transition: all 0.2s;
-  }
-  .relation-item:hover { border-color: var(--accent-blue); background: var(--bg-card-hover); }
-  .relation-arrow { color: var(--text-muted); font-size: 14px; }
-  .relation-label { font-size: 11px; color: var(--text-muted); }
-  .relation-name { font-size: 13px; font-weight: 500; }
-
-  .resource-section { margin-bottom: 20px; }
-  .resource-link {
-    display: block; padding: 10px 14px; border-radius: 8px;
-    background: var(--bg-card); border: 1px solid var(--border);
-    color: var(--accent-cyan); font-size: 13px; text-decoration: none;
-    transition: all 0.2s;
-  }
-  .resource-link:hover { border-color: var(--accent-cyan); background: var(--bg-card-hover); }
-
-  /* ── Stats Bar ── */
-  .stats-bar {
-    position: fixed; bottom: 0; left: 0; right: 340px;
-    background: linear-gradient(0deg, rgba(232,220,188,0.96) 0%, rgba(232,220,188,0.85) 100%);
-    backdrop-filter: blur(12px);
-    padding: 10px 24px;
-    display: flex; align-items: center; gap: 20px;
-    border-top: 1px solid var(--border);
-    font-size: 12px; color: var(--text-muted);
-  }
-  .stat-item { display:flex; align-items:center; gap:5px; }
-  .stat-dot { width:8px; height:8px; border-radius:50%; }
-  .stat-value { font-weight:600; color:var(--text-secondary); }
-
-  /* ── Legend ── */
   .legend {
-    position: fixed; bottom: 50px; left: 20px;
-    background: var(--bg-card); border: 1px solid var(--border);
-    border-radius: 4px; padding: 14px 18px;
-    font-size: 12px; z-index: 50;
+    position: absolute; bottom: 46px; left: 16px;
+    background: rgba(232,220,188,.94); border: 1px solid var(--line-2);
+    border-radius: 6px; padding: 12px 14px; font-size: 12px; z-index: 4;
   }
-  .legend-title { font-weight: 600; margin-bottom: 8px; color: var(--text-secondary); }
-  .legend-item { display:flex; align-items:center; gap:8px; margin-bottom: 4px; }
-  .legend-dot { width:12px; height:12px; border-radius:50%; }
+  .legend-title { font-family: var(--kai); font-weight: 700; margin-bottom: 6px; color: var(--ink-2); }
+  .legend-item { display: flex; align-items: center; gap: 8px; margin-bottom: 3px; color: var(--ink-2); }
+  .legend-dot { width: 10px; height: 10px; border-radius: 50%; }
 
-  /* ── Responsive ── */
-  @media (max-width: 768px) {
-    #graph-container { right: 0; }
-    .side-panel { width: 100%; top: auto; height: 50vh; border-left: none; border-top: 1px solid var(--border); }
-    .stats-bar { right: 0; }
+  .stats-bar {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    background: rgba(232,220,188,.94);
+    padding: 8px 18px;
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+    border-top: 1px solid var(--line-2);
+    font-size: 12px; color: var(--ink-3); z-index: 4;
+    pointer-events: none;
+  }
+  body.panel-open .stats-bar { right: 360px; }
+  .stat-item { display: flex; align-items: center; gap: 5px; }
+  .stat-dot { width: 7px; height: 7px; border-radius: 50%; }
+  .stat-value { font-weight: 700; color: var(--ink-2); font-variant-numeric: tabular-nums; }
+  .stats-bar .tail { margin-left: auto; }
+
+  @media (max-width: 860px) {
+    .kg-reset { margin-left: 0; }
+    body.panel-open #graph-container { right: 0; bottom: 48%; }
+    .kg-drawer { width: 100%; height: 48%; top: auto; transform: translateY(100%); }
+    body.panel-open .kg-drawer { transform: translateY(0); border-left: none; border-top: 1px solid var(--line-2); }
+    .legend { display: none; }
   }
 </style>
+<script src="./vis-network.min.js"></script>
 <script src="../analytics.js" defer></script>
 </head>
 <body>
+<div class="vignette"></div>
 
-<!-- Header -->
-<div class="header">
-  <div class="header-left">
-    <div class="header-logo"><svg class="seal-mark" viewBox="0 0 40 40" aria-hidden="true"><path fill="none" stroke="#A2402F" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round" d="M20 36.5 L11.2 16.5 C13.6 13 16.6 11.2 20 10.9 C23.4 11.2 26.4 13 28.8 16.5 Z"/><path fill="#A2402F" d="M20 13.6 L21.3 16.9 L24.6 18.2 L21.3 19.5 L20 22.8 L18.7 19.5 L15.4 18.2 L18.7 16.9 Z"/><path fill="none" stroke="#A2402F" stroke-width="2.2" stroke-linecap="round" d="M20 23.6 L20 33.4"/></svg></div>
-    <div>
-      <div class="header-title">课程知识图谱</div>
-      <div class="header-subtitle">AI驱动的传媒内容制作 · 22 知识点 · 6 模块</div>
+<nav class="pnav">
+  <div class="pnav-inner">
+    <a href="../index.html" class="pnav-brand">
+      <span class="seal"><svg class="seal-mark" viewBox="0 0 40 40" aria-hidden="true"><path fill="none" stroke="#A2402F" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round" d="M20 36.5 L11.2 16.5 C13.6 13 16.6 11.2 20 10.9 C23.4 11.2 26.4 13 28.8 16.5 Z"/><path fill="#A2402F" d="M20 13.6 L21.3 16.9 L24.6 18.2 L21.3 19.5 L20 22.8 L18.7 19.5 L15.4 18.2 L18.7 16.9 Z"/><path fill="none" stroke="#A2402F" stroke-width="2.2" stroke-linecap="round" d="M20 23.6 L20 33.4"/></svg></span>
+      <span><span class="pnav-title">AI驱动的传媒内容制作</span><span class="pnav-sub">Knowledge Atlas</span></span>
+    </a>
+    <div class="pnav-links">
+      <a href="../index.html">首页</a>
+      <a href="../syllabus.html">教学大纲</a>
+      <a href="../tools.html">教学工具</a>
+      <a href="../agents.html">AI智能体</a>
+      <a href="../showcase.html">学生作品</a>
+      <a href="../ai-trends.html">前沿动态</a>
+      <a href="./index.html" class="here">知识图谱</a>
+      <a href="../library.html">资料库</a>
     </div>
   </div>
-  <div class="header-right">
-    <a class="filter-btn" style="text-decoration:none" href="../index.html">← 返回门户</a>
-    <div class="filter-bar">
-      <button class="filter-btn active" data-module="all">全部</button>
-      <button class="filter-btn" data-module="B" style="--c:#33567C">B 基础</button>
-      <button class="filter-btn" data-module="C" style="--c:#A2402F">C 提示词</button>
-      <button class="filter-btn" data-module="D" style="--c:#51724B">D 信息</button>
-      <button class="filter-btn" data-module="E" style="--c:#8C6A2F">E 创作</button>
-      <button class="filter-btn" data-module="F" style="--c:#6E5B41">F 高级</button>
-      <button class="filter-btn" data-module="G" style="--c:#3A2E20">G 伦理</button>
-    </div>
-    <div class="tag-filters">
-      <button class="tag-btn tag-key active" data-tag="key">🔴 重点</button>
-      <button class="tag-btn tag-diff active" data-tag="diff">🟡 难点</button>
-      <button class="tag-btn tag-exam active" data-tag="exam">🔵 考点</button>
-      <button class="tag-btn tag-sz active" data-tag="sz">🟢 思政</button>
-    </div>
+</nav>
+
+<div class="kg-toolbar">
+  <label class="sr-only" for="kgSearch" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)">检索知识点</label>
+  <input id="kgSearch" class="kg-search" type="search" placeholder="检索知识点、编号或周次…" autocomplete="off">
+  <div class="filter-bar" role="group" aria-label="模块筛选">
+    <button type="button" class="filter-btn active" data-module="all">全部</button>
+    <button type="button" class="filter-btn" data-module="B" style="--c:#33567C">B 基础</button>
+    <button type="button" class="filter-btn" data-module="C" style="--c:#A2402F">C 提示词</button>
+    <button type="button" class="filter-btn" data-module="D" style="--c:#51724B">D 信息</button>
+    <button type="button" class="filter-btn" data-module="E" style="--c:#8C6A2F">E 创作</button>
+    <button type="button" class="filter-btn" data-module="F" style="--c:#6E5B41">F 高级</button>
+    <button type="button" class="filter-btn" data-module="G" style="--c:#6B3F2A">G 伦理</button>
   </div>
-</div>
-
-<!-- Graph -->
-<div id="graph-container"></div>
-
-<!-- Side Panel -->
-<div class="side-panel" id="sidePanel">
-  <div class="panel-placeholder" id="panelPlaceholder">
-    <div class="panel-placeholder-icon">🧠</div>
-    <div class="panel-placeholder-text">
-      点击图谱中的任意知识点节点<br>查看详细信息与关联关系
-    </div>
+  <div class="tag-filters" role="group" aria-label="教学标签">
+    <button type="button" class="tag-btn tag-key active" data-tag="key">重点</button>
+    <button type="button" class="tag-btn tag-diff active" data-tag="diff">难点</button>
+    <button type="button" class="tag-btn tag-exam active" data-tag="exam">考点</button>
+    <button type="button" class="tag-btn tag-sz active" data-tag="sz">思政</button>
   </div>
-  <div class="node-detail" id="nodeDetail" style="display:none"></div>
+  <button type="button" class="kg-reset" id="kgReset">复位全图</button>
 </div>
 
-<!-- Legend -->
-<div class="legend">
-  <div class="legend-title">模块图例</div>
-  <div class="legend-item"><div class="legend-dot" style="background:#33567C"></div> B · AI基础与发展</div>
-  <div class="legend-item"><div class="legend-dot" style="background:#A2402F"></div> C · 提示词工程</div>
-  <div class="legend-item"><div class="legend-dot" style="background:#51724B"></div> D · 智能信息获取</div>
-  <div class="legend-item"><div class="legend-dot" style="background:#8C6A2F"></div> E · 内容创作</div>
-  <div class="legend-item"><div class="legend-dot" style="background:#6E5B41"></div> F · 高级技巧</div>
-  <div class="legend-item"><div class="legend-dot" style="background:#3A2E20"></div> G · 工具与伦理</div>
-</div>
-
-<!-- Stats Bar -->
-<div class="stats-bar">
-  <div class="stat-item"><div class="stat-dot" style="background:var(--accent-blue)"></div> 知识点 <span class="stat-value" id="statNodes">22</span></div>
-  <div class="stat-item"><div class="stat-dot" style="background:var(--accent-purple)"></div> 关联边 <span class="stat-value" id="statEdges">24</span></div>
-  <div class="stat-item"><div class="stat-dot" style="background:var(--accent-red)"></div> 🔴重点 <span class="stat-value">18</span></div>
-  <div class="stat-item"><div class="stat-dot" style="background:var(--accent-amber)"></div> 🟡难点 <span class="stat-value">8</span></div>
-  <div class="stat-item"><div class="stat-dot" style="background:var(--accent-cyan)"></div> 🔵考点 <span class="stat-value">22</span></div>
-  <div class="stat-item"><div class="stat-dot" style="background:var(--accent-green)"></div> 🟢思政 <span class="stat-value">5</span></div>
-  <div class="stat-item" style="margin-left:auto">汕头大学 · 智慧课程</div>
+<div class="kg-stage">
+  <div id="graph-container"></div>
+  <aside class="kg-drawer" id="sidePanel" aria-live="polite">
+    <div class="panel-placeholder" id="panelPlaceholder">
+      <p>点选图中知识点，查看定义、周次课文与关联。<br>双击节点可拉近；空白处或 Esc 关闭侧栏。</p>
+    </div>
+    <div class="node-detail" id="nodeDetail" hidden></div>
+  </aside>
+  <div class="legend">
+    <div class="legend-title">六簇 · 按教学周顺时针</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#33567C"></div> B · AI基础 W01–W02</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#A2402F"></div> C · 提示词 W03–W04</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#51724B"></div> D · 信息获取 W05–W06</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#8C6A2F"></div> E · 内容创作 W07–W10</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#6E5B41"></div> F · 高级技巧 W11–W13</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#6B3F2A"></div> G · 工具与伦理 W14–W16</div>
+  </div>
+  <div class="stats-bar">
+    <div class="stat-item"><div class="stat-dot" style="background:#33567C"></div> 知识点 <span class="stat-value" id="statNodes">25</span></div>
+    <div class="stat-item"><div class="stat-dot" style="background:#A2402F"></div> 关联 <span class="stat-value" id="statEdges">24</span></div>
+    <div class="stat-item"><div class="stat-dot" style="background:#A2402F"></div> 重点 <span class="stat-value" id="statKey">0</span></div>
+    <div class="stat-item"><div class="stat-dot" style="background:#8C6A2F"></div> 难点 <span class="stat-value" id="statDiff">0</span></div>
+    <div class="stat-item"><div class="stat-dot" style="background:#33567C"></div> 考点 <span class="stat-value" id="statExam">0</span></div>
+    <div class="stat-item"><div class="stat-dot" style="background:#51724B"></div> 思政 <span class="stat-value" id="statSz">0</span></div>
+    <div class="tail">汕头大学 · 智慧课程</div>
+  </div>
 </div>
 
 <script>
-// ════════════════════════════════════════
-//  KNOWLEDGE GRAPH DATA
-// ════════════════════════════════════════
-
 const MODULE_COLORS = {
   B: { bg: '#33567C', border: '#274563', highlight: '#4E76A5', name: 'AI基础与发展', weeks: 'W01–W02' },
   C: { bg: '#A2402F', border: '#7C2F22', highlight: '#C05E4B', name: '提示词工程', weeks: 'W03–W04' },
   D: { bg: '#51724B', border: '#3E5A39', highlight: '#6F9466', name: '智能信息获取', weeks: 'W05–W06' },
   E: { bg: '#8C6A2F', border: '#6B511F', highlight: '#B08A46', name: '内容创作', weeks: 'W07–W10' },
   F: { bg: '#6E5B41', border: '#55462F', highlight: '#907A58', name: '高级技巧', weeks: 'W11–W13' },
-  G: { bg: '#3A2E20', border: '#241C11', highlight: '#6E5B41', name: '工具与伦理', weeks: 'W14, W16' }
+  G: { bg: '#6B3F2A', border: '#4A2A1C', highlight: '#8A5A3E', name: '工具与伦理', weeks: 'W14–W16' }
 };
 
 const BLOOM_LABELS = { 2: '②理解', 3: '③应用', 4: '④分析', 5: '⑤评价', 6: '⑥创造' };
+const MODULE_ORDER = ['B', 'C', 'D', 'E', 'F', 'G'];
 
 const knowledgeNodes = [
-  // Module B
   { id:'B1', label:'AI发展简史', module:'B', bloom:2, weeks:'W01', resource:'课件W01·P4-P8', tags:['key','exam'],
     desc:'从1956年达特茅斯会议到2020年代大模型时代的五个发展阶段' },
   { id:'B2', label:'机器学习三种类型', module:'B', bloom:2, weeks:'W01', resource:'课件W01·P13', tags:['key','exam'],
@@ -299,7 +246,6 @@ const knowledgeNodes = [
     desc:'自注意力机制、多头注意力、位置编码的核心创新与意义' },
   { id:'B5', label:'LLM概念与特征', module:'B', bloom:2, weeks:'W02', resource:'课件W02·LLM章节', tags:['key','exam'],
     desc:'大语言模型的定义、涌现能力、零样本/少样本学习、局限性' },
-  // Module C
   { id:'C1', label:'CRISPE框架', module:'C', bloom:3, weeks:'W03', resource:'课件W03·P4-P13', tags:['key','diff','exam'],
     desc:'角色(C)、背景(R)、指令(I)、风格(S)、实验(P)五要素的系统化提示词设计方法' },
   { id:'C2', label:'精确指令设计', module:'C', bloom:3, weeks:'W04', resource:'课件W04·精确指令章节', tags:['key','exam'],
@@ -308,7 +254,6 @@ const knowledgeNodes = [
     desc:'Markdown、JSON、表格等结构化输出的指令控制方法' },
   { id:'C4', label:'约束条件设置', module:'C', bloom:3, weeks:'W04', resource:'课件W04·约束条件章节', tags:['exam'],
     desc:'字数限制、语言风格、禁止列表、多条件组合等约束策略' },
-  // Module D
   { id:'D1', label:'检索增强方法', module:'D', bloom:3, weeks:'W05', resource:'课件W05·检索增强章节', tags:['key','exam'],
     desc:'AI辅助信息检索的基本策略、关键词优化、多轮检索迭代' },
   { id:'D2', label:'Deep Research方法', module:'D', bloom:4, weeks:'W06', resource:'课件W06·P5-P9', tags:['key','diff','exam'],
@@ -317,7 +262,6 @@ const knowledgeNodes = [
     desc:'多源交叉验证、证据清单建立、AI辅助核查方法与局限' },
   { id:'D4', label:'多源信息整合', module:'D', bloom:4, weeks:'W06', resource:'课件W06·P7-P8', tags:['diff'],
     desc:'信息源分类（官方/行业/一手/AI辅助）、可信度评估、MECE框架' },
-  // Module E
   { id:'E1', label:'文本摘要', module:'E', bloom:3, weeks:'W07', resource:'课件W07·全部', tags:['key','exam'],
     desc:'抽取式与生成式摘要的原理、新闻简报提炼的提示词策略' },
   { id:'E2', label:'结构化提取', module:'E', bloom:3, weeks:'W08', resource:'课件W08·全部', tags:['key','exam'],
@@ -326,7 +270,6 @@ const knowledgeNodes = [
     desc:'发散/收敛/系统三种思维模式、SCAMPER技法、AI辅助选题策划流程' },
   { id:'E4', label:'AI辅助写作', module:'E', bloom:6, weeks:'W10', resource:'课件W10·全部', tags:['key','diff','exam','sz'],
     desc:'AI辅助长文写作的提示词策略、人机协作写作流程、质量控制方法' },
-  // Module F
   { id:'F1', label:'Few-Shot学习', module:'F', bloom:3, weeks:'W11', resource:'课件W11·全部', tags:['key','exam'],
     desc:'少样本学习的原理、示例设计策略、在传媒写作风格克隆中的应用' },
   { id:'F2', label:'角色扮演技术', module:'F', bloom:3, weeks:'W11', resource:'课件W11·角色扮演章节', tags:['key','exam'],
@@ -335,7 +278,6 @@ const knowledgeNodes = [
     desc:'链式推理提示词设计、复杂传媒分析任务的分步推理策略' },
   { id:'F4', label:'LLM平台对比', module:'F', bloom:5, weeks:'W13', resource:'课件W13·全部', tags:['key','exam','sz'],
     desc:'主流大模型（GPT/Claude/DeepSeek/通义/文心）的能力对比与传媒场景选型' },
-  // Module G
   { id:'G1', label:'AI工具集成', module:'G', bloom:3, weeks:'W14', resource:'课件W14·全部', tags:['exam'],
     desc:'主流AI辅助工具生态、浏览器插件、工作流自动化平台' },
   { id:'G2', label:'工作流自动化', module:'G', bloom:6, weeks:'W14', resource:'课件W14·工作流章节', tags:['diff','exam'],
@@ -347,255 +289,426 @@ const knowledgeNodes = [
 ];
 
 const knowledgeEdges = [
-  // B module internal
   { from:'B1', to:'B3', label:'演进', type:'evolution' },
   { from:'B2', to:'B3', label:'分类', type:'taxonomy' },
   { from:'B3', to:'B4', label:'技术基础', type:'foundation' },
   { from:'B4', to:'B5', label:'架构基础', type:'foundation' },
-  // C module internal
   { from:'C1', to:'C2', label:'包含', type:'composition' },
   { from:'C2', to:'C3', label:'协同', type:'synergy' },
   { from:'C1', to:'C4', label:'约束层', type:'constraint' },
-  // D module internal
   { from:'D1', to:'D2', label:'深化', type:'deepening' },
   { from:'D2', to:'D3', label:'质量保障', type:'quality' },
   { from:'D2', to:'D4', label:'信息基础', type:'foundation' },
-  // E module internal
   { from:'E1', to:'E2', label:'反向', type:'reverse' },
   { from:'E3', to:'E4', label:'产出', type:'output' },
   { from:'E1', to:'E3', label:'信息处理基础', type:'foundation' },
-  // F module internal
   { from:'F1', to:'F2', label:'互补', type:'synergy' },
   { from:'F1', to:'F3', label:'高级策略', type:'advanced' },
   { from:'F3', to:'F4', label:'工具选择', type:'selection' },
-  // G module internal
   { from:'G1', to:'G2', label:'深化', type:'deepening' },
   { from:'G3', to:'G2', label:'约束', type:'constraint' },
   { from:'G3', to:'G4', label:'合规底线', type:'compliance' },
-  // Cross-module
   { from:'B5', to:'C1', label:'技术→应用', type:'cross' },
   { from:'C1', to:'D1', label:'核心技能', type:'cross' },
   { from:'D3', to:'E1', label:'信息处理', type:'cross' },
   { from:'E4', to:'G4', label:'伦理约束', type:'cross' },
-  { from:'F3', to:'E4', label:'能力增强', type:'cross' },
+  { from:'F3', to:'E4', label:'能力增强', type:'cross' }
 ];
 
-// ════════════════════════════════════════
-//  BUILD VIS.JS GRAPH
-// ════════════════════════════════════════
+function weekIds(weeks) {
+  return Array.from(String(weeks).matchAll(/W(\d+)/g), function (m) {
+    return m[1].padStart(2, '0');
+  }).filter(function (id, i, arr) { return arr.indexOf(id) === i; });
+}
+
+function weekHref(id) {
+  return '../weeks/week-' + id + '.html';
+}
+
+function escapeHtml(s) {
+  return String(s).replace(/[&<>"']/g, function (ch) {
+    return ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' })[ch];
+  });
+}
 
 function buildNodeSize(node) {
-  let size = 22;
-  if (node.tags.includes('key')) size += 5;
-  if (node.tags.includes('diff')) size += 3;
-  if (node.bloom >= 5) size += 4;
+  var size = 20;
+  if (node.tags.indexOf('key') >= 0) size += 4;
+  if (node.tags.indexOf('diff') >= 0) size += 2;
+  if (node.bloom >= 5) size += 3;
   return size;
 }
 
-function buildTagIcons(tags) {
-  let icons = '';
-  if (tags.includes('key')) icons += '🔴';
-  if (tags.includes('diff')) icons += '🟡';
-  if (tags.includes('exam')) icons += '🔵';
-  if (tags.includes('sz')) icons += '🟢';
-  return icons;
+function clusterAnchors() {
+  var anchors = {};
+  var radius = 360;
+  MODULE_ORDER.forEach(function (mod, i) {
+    var ang = -Math.PI / 2 + i * (Math.PI * 2 / 6);
+    anchors[mod] = { x: Math.cos(ang) * radius, y: Math.sin(ang) * radius };
+  });
+  return anchors;
 }
 
-const visNodes = new vis.DataSet(knowledgeNodes.map(n => {
-  const mc = MODULE_COLORS[n.module];
-  return {
+const ANCHORS = clusterAnchors();
+
+if (typeof vis === 'undefined') {
+  document.getElementById('graph-container').innerHTML =
+    '<p style="padding:48px;text-align:center;color:#6E5B41">图谱脚本未能加载，请刷新或检查网络。</p>';
+  throw new Error('vis-network missing');
+}
+
+const visNodes = new vis.DataSet([]);
+const visEdges = new vis.DataSet([]);
+
+MODULE_ORDER.forEach(function (mod) {
+  var mc = MODULE_COLORS[mod];
+  var a = ANCHORS[mod];
+  visNodes.add({
+    id: 'hub-' + mod,
+    label: mod,
+    title: mc.name + ' · ' + mc.weeks,
+    group: mod,
+    x: a.x, y: a.y,
+    fixed: { x: true, y: true },
+    size: 22,
+    shape: 'hexagon',
+    font: { color: '#F7EFDA', size: 16, face: 'Noto Serif SC, Kaiti SC, KaiTi, serif', vadjust: 0 },
+    color: { background: mc.bg, border: mc.border, highlight: { background: mc.highlight, border: '#F7EFDA' }, hover: { background: mc.highlight, border: '#F7EFDA' } },
+    borderWidth: 2,
+    mass: 4,
+    _hub: true,
+    _module: mod
+  });
+});
+
+knowledgeNodes.forEach(function (n, idxInAll) {
+  var mc = MODULE_COLORS[n.module];
+  var siblings = knowledgeNodes.filter(function (x) { return x.module === n.module; });
+  var j = siblings.indexOf(n);
+  var ang = (j / siblings.length) * Math.PI * 2 - Math.PI / 2;
+  var r = 148;
+  var a = ANCHORS[n.module];
+  visNodes.add({
     id: n.id,
-    label: `${n.id}\n${n.label}`,
-    title: `${n.label} ${buildTagIcons(n.tags)}`,
+    label: n.id + '\n' + n.label,
+    title: n.label + ' · ' + n.weeks,
     group: n.module,
+    x: a.x + Math.cos(ang) * r,
+    y: a.y + Math.sin(ang) * r,
+    fixed: { x: true, y: true },
     size: buildNodeSize(n),
-    font: { color: '#3A2E20', size: 12, face: 'Noto Sans SC, Microsoft YaHei, sans-serif', multi: true },
+    shape: 'dot',
+    font: { color: '#3A2E20', size: 13, face: 'Noto Serif SC, Kaiti SC, KaiTi, serif', multi: true, vadjust: 2 },
     color: {
       background: mc.bg,
       border: mc.border,
-      highlight: { background: mc.highlight, border: '#fff' },
-      hover: { background: mc.highlight, border: '#fff' }
+      highlight: { background: mc.highlight, border: '#F7EFDA' },
+      hover: { background: mc.highlight, border: '#F7EFDA' }
     },
     borderWidth: 2,
     borderWidthSelected: 3,
-    shadow: { enabled: true, color: mc.bg + '40', size: 15 },
-    chosen: true,
-    _data: n
-  };
-}));
+    mass: 1,
+    _hub: false,
+    _module: n.module
+  });
+  visEdges.add({
+    id: 'spoke-' + n.id,
+    from: 'hub-' + n.module,
+    to: n.id,
+    arrows: { to: { enabled: false } },
+    color: { color: mc.bg, opacity: 0.22 },
+    width: 1,
+    dashes: [3, 5],
+    smooth: false,
+    _spoke: true
+  });
+});
 
-const visEdges = new vis.DataSet(knowledgeEdges.map((e, i) => {
-  const isCross = e.type === 'cross';
-  return {
-    id: i,
+knowledgeEdges.forEach(function (e, i) {
+  var isCross = e.type === 'cross';
+  visEdges.add({
+    id: 'e-' + i,
     from: e.from,
     to: e.to,
     label: e.label,
-    arrows: { to: { enabled: true, scaleFactor: 0.6 } },
-    color: {
-      color: isCross ? '#B3A17C' : '#C7B189',
-      highlight: '#4E76A5',
-      hover: '#4E76A5',
-      opacity: isCross ? 0.4 : 0.6
-    },
-    dashes: isCross ? [8, 6] : false,
-    width: isCross ? 1 : 1.5,
-    font: { color: '#9C8964', size: 10, strokeWidth: 3, strokeColor: '#EFE4C6', face: 'Noto Sans SC, Microsoft YaHei, sans-serif' },
-    smooth: { type: 'curvedCW', roundness: 0.15 },
-    _data: e
-  };
-}));
+    arrows: { to: { enabled: true, scaleFactor: 0.55 } },
+    color: { color: isCross ? '#A2402F' : '#C7B189', highlight: '#33567C', hover: '#33567C', opacity: isCross ? 0.55 : 0.7 },
+    dashes: isCross ? [7, 5] : false,
+    width: isCross ? 1.4 : 1.6,
+    font: { color: '#6E5B41', size: 11, strokeWidth: 4, strokeColor: '#F0E6CF', face: 'Noto Serif SC, KaiTi, serif' },
+    smooth: { type: 'curvedCW', roundness: 0.18 },
+    _spoke: false
+  });
+});
 
 const container = document.getElementById('graph-container');
 const network = new vis.Network(container, { nodes: visNodes, edges: visEdges }, {
-  physics: {
-    enabled: true,
-    solver: 'forceAtlas2Based',
-    forceAtlas2Based: {
-      gravitationalConstant: -60,
-      centralGravity: 0.008,
-      springLength: 160,
-      springConstant: 0.06,
-      damping: 0.5
-    },
-    stabilization: { iterations: 200, fit: true }
-  },
-  interaction: {
-    hover: true,
-    tooltipDelay: 200,
-    zoomView: true,
-    dragView: true
-  },
-  layout: { improvedLayout: true },
-  nodes: { shape: 'dot' },
+  physics: { enabled: false },
+  interaction: { hover: true, tooltipDelay: 160, zoomView: true, dragView: true },
+  layout: { improvedLayout: false, randomSeed: 7 },
+  nodes: { chosen: true },
   edges: { selectionWidth: 2 }
 });
 
-// ════════════════════════════════════════
-//  DETAIL PANEL
-// ════════════════════════════════════════
-
-const TAG_NAMES = { key: '🔴 重点', diff: '🟡 难点', exam: '🔵 考点', sz: '🟢 思政' };
+const TAG_NAMES = { key: '重点', diff: '难点', exam: '考点', sz: '思政' };
 const TAG_CLASSES = { key: 'tag-key-detail', diff: 'tag-diff-detail', exam: 'tag-exam-detail', sz: 'tag-sz-detail' };
 
-function showNodeDetail(nodeId) {
-  const node = knowledgeNodes.find(n => n.id === nodeId);
-  if (!node) return;
-  const mc = MODULE_COLORS[node.module];
-
-  // Find related edges
-  const related = knowledgeEdges
-    .filter(e => e.from === nodeId || e.to === nodeId)
-    .map(e => {
-      const targetId = e.from === nodeId ? e.to : e.from;
-      const targetNode = knowledgeNodes.find(n => n.id === targetId);
-      const direction = e.from === nodeId ? '→' : '←';
-      return { id: targetId, name: targetNode.label, label: e.label, direction, type: e.type };
-    });
-
-  document.getElementById('panelPlaceholder').style.display = 'none';
-  const detail = document.getElementById('nodeDetail');
-  detail.style.display = 'block';
-
-  detail.innerHTML = `
-    <div class="node-id" style="background:${mc.bg}22; color:${mc.bg}">${node.id}</div>
-    <div class="node-name">${node.label}</div>
-    <div class="node-module-label">${mc.name} · ${mc.weeks}</div>
-    <div class="node-desc">${node.desc}</div>
-    <div class="meta-grid">
-      <div class="meta-item">
-        <div class="meta-label">Bloom层级</div>
-        <div class="meta-value">${BLOOM_LABELS[node.bloom]}</div>
-      </div>
-      <div class="meta-item">
-        <div class="meta-label">教学周次</div>
-        <div class="meta-value">${node.weeks}</div>
-      </div>
-    </div>
-    ${node.tags.length ? `
-    <div class="tags-section">
-      <div class="tags-title">教学标签</div>
-      <div class="tags-list">
-        ${node.tags.map(t => `<span class="tag ${TAG_CLASSES[t]}">${TAG_NAMES[t]}</span>`).join('')}
-      </div>
-    </div>` : ''}
-    ${related.length ? `
-    <div class="relations-section">
-      <div class="tags-title">关联知识点 (${related.length})</div>
-      ${related.map(r => `
-        <div class="relation-item" onclick="network.selectNodes(['${r.id}']); showNodeDetail('${r.id}')">
-          <span class="relation-arrow">${r.direction}</span>
-          <div>
-            <div class="relation-name">${r.id} ${r.name}</div>
-            <div class="relation-label">${r.label}${r.type === 'cross' ? ' (跨模块)' : ''}</div>
-          </div>
-        </div>
-      `).join('')}
-    </div>` : ''}
-    <div class="resource-section">
-      <div class="tags-title">关联资源</div>
-      <div class="resource-link">${node.resource}</div>
-    </div>
-  `;
+function openPanel() { document.body.classList.add('panel-open'); resizeGraph(); }
+function closePanel() {
+  document.body.classList.remove('panel-open');
+  document.getElementById('panelPlaceholder').hidden = false;
+  document.getElementById('nodeDetail').hidden = true;
+  document.getElementById('nodeDetail').innerHTML = '';
+  network.unselectAll();
+  resizeGraph();
 }
 
-network.on('click', function(params) {
-  if (params.nodes.length > 0) {
-    showNodeDetail(params.nodes[0]);
-  }
-});
-
-network.on('doubleClick', function(params) {
-  if (params.nodes.length > 0) {
-    network.focus(params.nodes[0], { scale: 1.5, animation: { duration: 600, easingFunction: 'easeInOutQuad' } });
-  }
-});
-
-// ════════════════════════════════════════
-//  MODULE FILTER
-// ════════════════════════════════════════
-
-document.querySelectorAll('.filter-btn').forEach(btn => {
-  btn.addEventListener('click', function() {
-    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-    this.classList.add('active');
-    const mod = this.dataset.module;
-    applyFilters();
+function resizeGraph() {
+  requestAnimationFrame(function () {
+    network.redraw();
+    network.setSize(container.clientWidth + 'px', container.clientHeight + 'px');
   });
-});
+}
 
-document.querySelectorAll('.tag-btn').forEach(btn => {
-  btn.addEventListener('click', function() {
-    this.classList.toggle('active');
-    applyFilters();
+function relatedOf(nodeId) {
+  return knowledgeEdges.filter(function (e) {
+    return e.from === nodeId || e.to === nodeId;
+  }).map(function (e) {
+    var targetId = e.from === nodeId ? e.to : e.from;
+    var targetNode = knowledgeNodes.find(function (n) { return n.id === targetId; });
+    return {
+      id: targetId,
+      name: targetNode ? targetNode.label : targetId,
+      label: e.label,
+      direction: e.from === nodeId ? '→' : '←',
+      type: e.type
+    };
   });
-});
+}
+
+function weekButtons(weeks) {
+  return weekIds(weeks).map(function (id) {
+    return '<a class="week-link" href="' + weekHref(id) + '">打开第 ' + parseInt(id, 10) + ' 周课文 →</a>';
+  }).join('');
+}
+
+function showNodeDetail(nodeId) {
+  var node = knowledgeNodes.find(function (n) { return n.id === nodeId; });
+  if (!node) return;
+  var mc = MODULE_COLORS[node.module];
+  var related = relatedOf(nodeId);
+  document.getElementById('panelPlaceholder').hidden = true;
+  var detail = document.getElementById('nodeDetail');
+  detail.hidden = false;
+  detail.innerHTML =
+    '<button type="button" class="drawer-close" id="drawerClose" aria-label="关闭">×</button>' +
+    '<div class="node-id" style="background:' + mc.bg + '22;color:' + mc.bg + '">' + escapeHtml(node.id) + '</div>' +
+    '<div class="node-name">' + escapeHtml(node.label) + '</div>' +
+    '<div class="node-module-label">' + escapeHtml(mc.name) + ' · ' + escapeHtml(mc.weeks) + '</div>' +
+    '<div class="node-desc">' + escapeHtml(node.desc) + '</div>' +
+    '<div class="meta-grid"><div class="meta-item"><div class="meta-label">Bloom 层级</div><div class="meta-value">' + BLOOM_LABELS[node.bloom] + '</div></div>' +
+    '<div class="meta-item"><div class="meta-label">教学周次</div><div class="meta-value">' + escapeHtml(node.weeks) + '</div></div></div>' +
+    (node.tags.length ? '<div class="tags-title">教学标签</div><div class="tags-list">' +
+      node.tags.map(function (t) { return '<span class="tag ' + TAG_CLASSES[t] + '">' + TAG_NAMES[t] + '</span>'; }).join('') +
+      '</div>' : '') +
+    (related.length ? '<div class="tags-title">关联知识点（' + related.length + '）</div>' +
+      related.map(function (r) {
+        return '<div class="relation-item" data-goto="' + escapeHtml(r.id) + '"><span class="relation-arrow">' + r.direction + '</span><div><div class="relation-name">' + escapeHtml(r.id + ' ' + r.name) + '</div><div class="relation-label">' + escapeHtml(r.label) + (r.type === 'cross' ? ' · 跨模块' : '') + '</div></div></div>';
+      }).join('') : '') +
+    '<div class="tags-title">课文入口</div>' + weekButtons(node.weeks) +
+    '<div class="resource-link" aria-hidden="true">' + escapeHtml(node.resource) + '</div>';
+  document.getElementById('drawerClose').onclick = closePanel;
+  detail.querySelectorAll('[data-goto]').forEach(function (el) {
+    el.addEventListener('click', function () {
+      var id = el.getAttribute('data-goto');
+      network.selectNodes([id]);
+      showNodeDetail(id);
+      emphasize(id);
+      network.focus(id, { scale: 1.25, animation: { duration: 420, easingFunction: 'easeInOutQuad' } });
+    });
+  });
+  openPanel();
+}
+
+function showModuleDetail(mod) {
+  var mc = MODULE_COLORS[mod];
+  var kids = knowledgeNodes.filter(function (n) { return n.module === mod; });
+  document.getElementById('panelPlaceholder').hidden = true;
+  var detail = document.getElementById('nodeDetail');
+  detail.hidden = false;
+  detail.innerHTML =
+    '<button type="button" class="drawer-close" id="drawerClose" aria-label="关闭">×</button>' +
+    '<div class="node-id" style="background:' + mc.bg + '22;color:' + mc.bg + '">' + mod + '</div>' +
+    '<div class="node-name">' + escapeHtml(mc.name) + '</div>' +
+    '<div class="node-module-label">' + escapeHtml(mc.weeks) + ' · ' + kids.length + ' 个知识点</div>' +
+    '<div class="node-desc">本簇按教学周聚集。点下方条目进入具体知识点，或继续在图上点选。</div>' +
+    kids.map(function (n) {
+      return '<div class="relation-item" data-goto="' + n.id + '"><span class="relation-arrow">→</span><div><div class="relation-name">' + escapeHtml(n.id + ' ' + n.label) + '</div><div class="relation-label">' + escapeHtml(n.weeks) + '</div></div></div>';
+    }).join('');
+  document.getElementById('drawerClose').onclick = closePanel;
+  detail.querySelectorAll('[data-goto]').forEach(function (el) {
+    el.addEventListener('click', function () {
+      var id = el.getAttribute('data-goto');
+      network.selectNodes([id]);
+      showNodeDetail(id);
+      emphasize(id);
+      network.focus(id, { scale: 1.25, animation: { duration: 420, easingFunction: 'easeInOutQuad' } });
+    });
+  });
+  openPanel();
+}
+
+function connectedSet(id) {
+  var set = {};
+  set[id] = true;
+  if (String(id).indexOf('hub-') === 0) {
+    var mod = id.slice(4);
+    set[id] = true;
+    knowledgeNodes.forEach(function (n) { if (n.module === mod) set[n.id] = true; });
+    return set;
+  }
+  var node = knowledgeNodes.find(function (n) { return n.id === id; });
+  if (node) set['hub-' + node.module] = true;
+  knowledgeEdges.forEach(function (e) {
+    if (e.from === id) set[e.to] = true;
+    if (e.to === id) set[e.from] = true;
+  });
+  return set;
+}
+
+function emphasize(id) {
+  var keep = connectedSet(id);
+  visNodes.forEach(function (n) {
+    visNodes.update({ id: n.id, opacity: keep[n.id] ? 1 : 0.16 });
+  });
+  visEdges.forEach(function (e) {
+    var on = keep[e.from] && keep[e.to];
+    visEdges.update({ id: e.id, hidden: !on && e._spoke ? true : false, color: Object.assign({}, e.color, { opacity: on ? (e._spoke ? 0.35 : 0.85) : 0.08 }) });
+  });
+}
+
+function clearEmphasis() {
+  visNodes.forEach(function (n) { visNodes.update({ id: n.id, opacity: 1 }); });
+  visEdges.forEach(function (e) {
+    visEdges.update({
+      id: e.id,
+      hidden: false,
+      color: Object.assign({}, e.color, { opacity: e._spoke ? 0.22 : (String(e.id).indexOf('e-') === 0 && knowledgeEdges[parseInt(e.id.slice(2), 10)] && knowledgeEdges[parseInt(e.id.slice(2), 10)].type === 'cross' ? 0.55 : 0.7) })
+    });
+  });
+}
+
+function nodeVisible(n) {
+  var activeMod = document.querySelector('.filter-btn.active').dataset.module;
+  var activeTags = Array.from(document.querySelectorAll('.tag-btn.active')).map(function (b) { return b.dataset.tag; });
+  var q = document.getElementById('kgSearch').value.trim().toLowerCase();
+  var modMatch = activeMod === 'all' || n.module === activeMod;
+  var tagMatch = activeTags.length === 0 || n.tags.some(function (t) { return activeTags.indexOf(t) >= 0; });
+  var text = (n.id + ' ' + n.label + ' ' + n.desc + ' ' + n.weeks).toLowerCase();
+  var qMatch = !q || text.indexOf(q) >= 0;
+  return modMatch && tagMatch && qMatch;
+}
 
 function applyFilters() {
-  const activeMod = document.querySelector('.filter-btn.active').dataset.module;
-  const activeTags = Array.from(document.querySelectorAll('.tag-btn.active')).map(b => b.dataset.tag);
-
-  knowledgeNodes.forEach(n => {
-    const modMatch = activeMod === 'all' || n.module === activeMod;
-    const tagMatch = activeTags.length === 0 || n.tags.some(t => activeTags.includes(t));
-    const visible = modMatch && tagMatch;
-
-    visNodes.update({ id: n.id, hidden: !visible });
+  var activeMod = document.querySelector('.filter-btn.active').dataset.module;
+  var visible = [];
+  knowledgeNodes.forEach(function (n) {
+    var show = nodeVisible(n);
+    visNodes.update({ id: n.id, hidden: !show, opacity: 1 });
+    visEdges.update({ id: 'spoke-' + n.id, hidden: !show });
+    if (show) visible.push(n);
   });
-
-  // Update stats
-  const visibleNodes = knowledgeNodes.filter(n => {
-    const modMatch = activeMod === 'all' || n.module === activeMod;
-    const tagMatch = activeTags.length === 0 || n.tags.some(t => activeTags.includes(t));
-    return modMatch && tagMatch;
+  MODULE_ORDER.forEach(function (mod) {
+    var showHub = activeMod === 'all' || activeMod === mod;
+    if (showHub) showHub = knowledgeNodes.some(function (n) { return n.module === mod && nodeVisible(n); });
+    visNodes.update({ id: 'hub-' + mod, hidden: !showHub, opacity: 1 });
   });
-  document.getElementById('statNodes').textContent = visibleNodes.length;
+  document.getElementById('statNodes').textContent = visible.length;
+  document.getElementById('statKey').textContent = visible.filter(function (n) { return n.tags.indexOf('key') >= 0; }).length;
+  document.getElementById('statDiff').textContent = visible.filter(function (n) { return n.tags.indexOf('diff') >= 0; }).length;
+  document.getElementById('statExam').textContent = visible.filter(function (n) { return n.tags.indexOf('exam') >= 0; }).length;
+  document.getElementById('statSz').textContent = visible.filter(function (n) { return n.tags.indexOf('sz') >= 0; }).length;
 }
 
-// Fit after stabilization
-network.on('stabilizationIterationsDone', function() {
-  network.fit({ animation: { duration: 800, easingFunction: 'easeInOutQuad' } });
+function resetView() {
+  document.getElementById('kgSearch').value = '';
+  document.querySelectorAll('.filter-btn').forEach(function (b) { b.classList.toggle('active', b.dataset.module === 'all'); });
+  document.querySelectorAll('.tag-btn').forEach(function (b) { b.classList.add('active'); });
+  closePanel();
+  applyFilters();
+  clearEmphasis();
+  network.fit({ animation: { duration: 500, easingFunction: 'easeInOutQuad' } });
+}
+
+document.querySelectorAll('.filter-btn').forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    document.querySelectorAll('.filter-btn').forEach(function (b) { b.classList.remove('active'); });
+    btn.classList.add('active');
+    applyFilters();
+    clearEmphasis();
+  });
 });
+document.querySelectorAll('.tag-btn').forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    btn.classList.toggle('active');
+    applyFilters();
+  });
+});
+document.getElementById('kgReset').addEventListener('click', resetView);
+document.getElementById('kgSearch').addEventListener('input', applyFilters);
+document.getElementById('kgSearch').addEventListener('keydown', function (e) {
+  if (e.key !== 'Enter') return;
+  var hit = knowledgeNodes.find(nodeVisible);
+  if (!hit) return;
+  network.selectNodes([hit.id]);
+  showNodeDetail(hit.id);
+  emphasize(hit.id);
+  network.focus(hit.id, { scale: 1.3, animation: { duration: 480, easingFunction: 'easeInOutQuad' } });
+});
+
+network.on('click', function (params) {
+  if (params.nodes.length) {
+    var id = params.nodes[0];
+    if (String(id).indexOf('hub-') === 0) {
+      showModuleDetail(id.slice(4));
+      emphasize(id);
+    } else {
+      showNodeDetail(id);
+      emphasize(id);
+    }
+    return;
+  }
+  closePanel();
+  clearEmphasis();
+});
+
+network.on('doubleClick', function (params) {
+  if (params.nodes.length) {
+    network.focus(params.nodes[0], { scale: 1.45, animation: { duration: 520, easingFunction: 'easeInOutQuad' } });
+  }
+});
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    closePanel();
+    clearEmphasis();
+  }
+  if (e.key === '/' && document.activeElement !== document.getElementById('kgSearch')) {
+    e.preventDefault();
+    document.getElementById('kgSearch').focus();
+  }
+});
+
+network.setOptions({ physics: { enabled: true, stabilization: { iterations: 1 } } });
+network.stabilize(8);
+network.setOptions({ physics: { enabled: false } });
+setTimeout(function () {
+  network.fit({ animation: false, padding: 40 });
+}, 40);
+
+window.addEventListener('resize', resizeGraph);
+document.getElementById('statEdges').textContent = String(knowledgeEdges.length);
+applyFilters();
 </script>
 </body>
 </html>
