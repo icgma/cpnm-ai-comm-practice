@@ -66,7 +66,7 @@
         <span>本地原文存档</span>
       </div>
       <div class="lib-actions">
-        <a id="local-lib" hidden href="../course-references/index.html" class="btn btn-seal">打开本地资料库 →</a>
+        <a id="local-lib" hidden data-href="../course-references/index.html" href="#" class="btn btn-seal">打开本地资料库 →</a>
         <a href="./syllabus.html" class="btn btn-plain">先看十六周大纲</a>
       </div>
     </div>
@@ -82,7 +82,7 @@
 fetch("../course-references/index.html", {method: "HEAD"}).then(function (r) {
   if (r.ok) {
     var el = document.getElementById("local-lib");
-    if (el) el.hidden = false;
+    if (el) { el.hidden = false; el.href = el.getAttribute('data-href'); }
   }
 }).catch(function () {});
 </script>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>📈 内容质量趋势 · AI Trends Quality Dashboard</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<style>
+  :root {
+    --bg: #0f172a; --bg2: #1e293b; --bg3: #334155;
+    --text: #f1f5f9; --text2: #94a3b8;
+    --border: #334155; --accent: #38bdf8;
+    --pass: #22c55e; --warn: #f59e0b; --fail: #ef4444;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: -apple-system, "Segoe UI", "PingFang SC", sans-serif;
+         background: var(--bg); color: var(--text); padding: 2rem 1rem; }
+  .wrap { max-width: 1200px; margin: 0 auto; }
+  h1 { font-size: 1.6rem; margin: 0 0 .5rem; }
+  .meta { color: var(--text2); font-size: .9rem; margin-bottom: 1.5rem; }
+  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+           gap: 1rem; margin-bottom: 1.5rem; }
+  .stat { background: var(--bg2); border: 1px solid var(--border); border-radius: 12px;
+          padding: 1rem 1.2rem; }
+  .stat-label { font-size: .82rem; color: var(--text2); margin-bottom: .35rem; }
+  .stat-value { font-size: 1.6rem; font-weight: 600; }
+  .stat-pass { color: var(--pass); }
+  .stat-warn { color: var(--warn); }
+  .stat-fail { color: var(--fail); }
+  .chart-card { background: var(--bg2); border: 1px solid var(--border); border-radius: 12px;
+                padding: 1.2rem; margin-bottom: 1.5rem; }
+  .chart-title { font-size: 1.05rem; margin: 0 0 .8rem; }
+  .chart-wrap { height: 320px; }
+  .empty { text-align: center; padding: 4rem 1rem; color: var(--text2); }
+  .back { display: inline-block; margin-top: 1rem; color: var(--accent); text-decoration: none; }
+  .back:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>📈 内容质量趋势</h1>
+  <div class="meta">基于 LLM-as-judge 的每日反向打分历史 · 生成于 2026-09-07 23:05</div>
+
+  <div class="chart-card empty">暂无质量数据。等到第一次 cron 跑完且通过 LLM 评分后，本页会自动出现折线图。</div>
+
+  
+
+  <a class="back" href="ai-trends.html">← 返回 AI Trends 主页</a>
+</div>
+
+<script>
+const HISTORY = [];
+
+if (HISTORY.length > 0) {
+  const labels = HISTORY.map(h => h.date);
+  const verdictColor = v => v === "PASS" ? "#22c55e" : v === "WARN" ? "#f59e0b" : "#ef4444";
+
+  // --- Total chart ---
+  new Chart(document.getElementById("totalChart"), {
+    type: "line",
+    data: {
+      labels: labels,
+      datasets: [{
+        label: "总分",
+        data: HISTORY.map(h => h.total),
+        borderColor: "#38bdf8",
+        backgroundColor: "rgba(56,189,248,0.15)",
+        fill: true,
+        tension: 0.3,
+        pointRadius: 5,
+        pointBackgroundColor: HISTORY.map(h => verdictColor(h.verdict)),
+        pointBorderColor: "#0f172a",
+        pointBorderWidth: 2,
+      }],
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      scales: {
+        y: { min: 0, max: 100, ticks: { color: "#94a3b8" }, grid: { color: "#334155" } },
+        x: { ticks: { color: "#94a3b8" }, grid: { color: "#334155" } },
+      },
+      plugins: {
+        legend: { labels: { color: "#f1f5f9" } },
+        tooltip: {
+          callbacks: {
+            afterLabel: ctx => "Verdict: " + HISTORY[ctx.dataIndex].verdict,
+          },
+        },
+      },
+    },
+  });
+
+  // --- Dimension chart ---
+  const dimNames = Array.from(new Set(HISTORY.flatMap(h => Object.keys(h.scores))));
+  const palette = ["#f472b6", "#a78bfa", "#34d399", "#fbbf24", "#60a5fa", "#fb7185"];
+  new Chart(document.getElementById("dimChart"), {
+    type: "line",
+    data: {
+      labels: labels,
+      datasets: dimNames.map((dim, i) => ({
+        label: dim,
+        data: HISTORY.map(h => h.scores[dim] ?? null),
+        borderColor: palette[i % palette.length],
+        backgroundColor: palette[i % palette.length] + "33",
+        tension: 0.3,
+        pointRadius: 3,
+        spanGaps: true,
+      })),
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      scales: {
+        y: { min: 0, ticks: { color: "#94a3b8" }, grid: { color: "#334155" } },
+        x: { ticks: { color: "#94a3b8" }, grid: { color: "#334155" } },
+      },
+      plugins: { legend: { labels: { color: "#f1f5f9" } } },
+    },
+  });
+}
+</script>
+</body>
+</html>
