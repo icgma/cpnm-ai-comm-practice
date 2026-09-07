@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect x='1.5' y='1.5' width='37' height='37' rx='9' fill='%23F7EFDA' stroke='%23A2402F' stroke-width='3'/%3E%3Cpath fill='%23A2402F' fill-rule='evenodd' %3Cg transform='translate(20 20) scale(0.74) translate(-20 -20)'%3E%3Cpath fill='none' stroke='%23A2402F' stroke-width='2.6' stroke-linejoin='round' stroke-linecap='round' d='M20 36.5 L11.2 16.5 C13.6 13 16.6 11.2 20 10.9 C23.4 11.2 26.4 13 28.8 16.5 Z'/%3E%3Cpath fill='%23A2402F' d='M20 13.6 L21.3 16.9 L24.6 18.2 L21.3 19.5 L20 22.8 L18.7 19.5 L15.4 18.2 L18.7 16.9 Z'/%3E%3Cpath d='M20 23.6 L20 33' stroke='%23A2402F' stroke-width='2.2' stroke-linecap='round' fill='none'/%3E%3C/g%3E/%3E%3C/svg%3E">
+<title>AI智能体矩阵 — AI驱动的传媒内容制作</title>
+<meta name="description" content="「一导四辅」全天候 AI 伴学矩阵：传媒AI导师主入口，提示词、写作、前沿、伦理四员辅学智能体。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,500;0,600;1,500&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./parchment.css">
+<style>
+.page-head{padding:130px 40px 10px;text-align:center;position:relative;z-index:1}
+.page-head .h-sec{font-size:40px}
+.page-head .sec-desc{margin:0 auto}
+/* ── 主导师 ── */
+.master-wrap{max-width:620px;margin:44px auto 0}
+.master{padding:38px 32px;text-align:center;position:relative}
+.master .seal{position:absolute;top:-16px;left:50%;transform:translateX(-50%) rotate(-4deg);
+  width:46px;height:46px;font-size:22px;border-radius:8px;background:var(--paper-hi)}
+.master-icon{font-size:44px;margin:14px 0 10px}
+.master-name{font-family:var(--kai);font-size:30px;font-weight:700;letter-spacing:3px;margin-bottom:8px}
+.master-role{font-family:var(--latin);font-size:12px;color:var(--gold);letter-spacing:3px;
+  text-transform:uppercase;margin-bottom:14px}
+.master-desc{font-size:14.5px;color:var(--ink-2);line-height:1.9}
+.master-tags{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+/* ── 四辅 ── */
+.aide-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:44px}
+.aide{padding:28px 18px;text-align:center}
+.aide-icon{width:54px;height:54px;margin:0 auto 12px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;font-size:24px;
+  border:1.5px solid;background:rgba(240,230,207,.6)}
+.aide-name{font-family:var(--kai);font-size:18px;font-weight:700;letter-spacing:2px;margin-bottom:6px}
+.aide-desc{font-size:13px;color:var(--ink-2);line-height:1.7}
+/* 四辅各自的印色 */
+.aide .ic-cinnabar{color:var(--cinnabar);border-color:rgba(162,64,47,.5)}
+.aide .ic-indigo{color:var(--indigo);border-color:rgba(51,86,124,.5)}
+.aide .ic-verdigris{color:var(--verdigris);border-color:rgba(81,114,75,.5)}
+.aide .ic-gold{color:var(--gold);border-color:rgba(140,106,47,.5)}
+.conn-note{text-align:center;margin-top:36px;font-size:13.5px;color:var(--ink-3);
+  display:flex;align-items:center;justify-content:center;gap:14px}
+.conn-note::before,.conn-note::after{content:'';width:80px;height:1px;background:var(--line-2)}
+@media(max-width:900px){.aide-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){
+  .page-head{padding:100px 20px 6px}
+  .page-head .h-sec{font-size:30px}
+  .aide-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<div class="vignette"></div>
+
+<!-- ── 导航 ── -->
+<nav class="pnav">
+  <div class="pnav-inner">
+    <a href="./index.html" class="pnav-brand">
+      <span class="seal"><svg class="seal-mark" viewBox="0 0 40 40" aria-hidden="true"><path fill="none" stroke="#A2402F" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round" d="M20 36.5 L11.2 16.5 C13.6 13 16.6 11.2 20 10.9 C23.4 11.2 26.4 13 28.8 16.5 Z"/><path fill="#A2402F" d="M20 13.6 L21.3 16.9 L24.6 18.2 L21.3 19.5 L20 22.8 L18.7 19.5 L15.4 18.2 L18.7 16.9 Z"/><path fill="none" stroke="#A2402F" stroke-width="2.2" stroke-linecap="round" d="M20 23.6 L20 33.4"/></svg></span>
+      <span><span class="pnav-title">AI驱动的传媒内容制作</span><span class="pnav-sub">AI-Driven Media Content Production</span></span>
+    </a>
+    <div class="pnav-links">
+      <a href="./index.html">首页</a>
+      <a href="./syllabus.html">教学大纲</a>
+      <a href="./tools.html">教学工具</a>
+      <a href="./agents.html" class="here">AI智能体</a>
+      <a href="./showcase.html">学生作品</a>
+      <a href="./ai-trends.html">前沿动态</a>
+      <a href="./course-kg/index.html">知识图谱</a>
+      <a href="../course-references/index.html">资料库</a>
+      <a href="https://github.com/icgma/cpnm-ai-comm-practice" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ── 页头 ── -->
+<header class="page-head">
+  <div class="eyebrow" style="justify-content:center">AI Agent Matrix · 一导四辅</div>
+  <h1 class="h-sec">智能体<span class="em">问答体系</span></h1>
+  <p class="sec-desc">基于大语言模型 API 搭建的全天候 AI 伴学矩阵，覆盖导学、提示词、写作、前沿与伦理五大维度。</p>
+</header>
+
+<!-- ── 阵式 ── -->
+<main class="section" style="padding-top:20px">
+<div class="container">
+
+  <div class="master-wrap">
+    <div class="master frame">
+      <i class="hero-corner hc-tl"></i><i class="hero-corner hc-tr"></i>
+      <i class="hero-corner hc-bl"></i><i class="hero-corner hc-br"></i>
+      <span class="seal">导</span>
+      <div class="master-icon">🎓</div>
+      <div class="master-name">传媒AI导师</div>
+      <div class="master-role">Chief Tutor · 主入口</div>
+      <p class="master-desc">课程智能体的总入口：理解学习意图，智能路由至四员辅学智能体，并追踪学情、汇总疑难点，形成个人学习档案。</p>
+      <div class="master-tags">
+        <span class="tag cinnabar">智能路由</span>
+        <span class="tag cinnabar">学情追踪</span>
+        <span class="tag cinnabar">全天候答疑</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="conn-note">四员辅学 · 各司一职</div>
+
+  <div class="aide-grid">
+    <div class="aide card">
+      <div class="aide-icon ic-cinnabar">✍️</div>
+      <div class="aide-name">提示词工坊</div>
+      <div class="aide-desc">CRISPE框架 · Few-Shot · CoT，逐句打磨你的提示词</div>
+    </div>
+    <div class="aide card">
+      <div class="aide-icon ic-indigo">📰</div>
+      <div class="aide-name">新闻写作助手</div>
+      <div class="aide-desc">摘要 · 提取 · 创意 · 写作，全流程稿件协作者</div>
+    </div>
+    <div class="aide card">
+      <div class="aide-icon ic-verdigris">🔭</div>
+      <div class="aide-name">传媒前沿观察</div>
+      <div class="aide-desc">行业动态 · 技术趋势 · 案例，每周为你盯住前沿</div>
+    </div>
+    <div class="aide card">
+      <div class="aide-icon ic-gold">⚖️</div>
+      <div class="aide-name">伦理守护者</div>
+      <div class="aide-desc">AI伦理 · 学术诚信 · 法规，用前先问一句该不该</div>
+    </div>
+  </div>
+
+</div>
+</main>
+
+<!-- ── 金句 ── -->
+<section class="quote-sec paper-band" style="padding:64px 40px">
+  <div class="container">
+    <p class="quote-text" style="font-size:24px">善问者，如攻坚木，先其易者，后其节目。</p>
+    <span class="quote-src">——《礼记 · 学记》</span>
+  </div>
+</section>
+
+<!-- ── 页脚 ── -->
+<footer class="pfooter">
+  <div class="foot-motto">从灵感到成稿 · 重新理解内容生产</div>
+  <p>© 2026 汕头大学 · 长江新闻与传播学院 · AI课程建设项目</p>
+  <p style="margin-top:8px"><a href="./index.html">返回首页</a> · <a href="./syllabus.html">教学大纲</a> · <a href="./ai-ethics-handbook.html">AI伦理手册</a></p>
+</footer>
+</body>
+</html>

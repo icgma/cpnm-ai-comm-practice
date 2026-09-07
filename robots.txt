@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://icgma.github.io/cpnm-ai-comm-practice/sitemap.xml

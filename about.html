@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>关于本站 · AI+传媒 前沿动态</title>
+<link rel="canonical" href="https://icgma.github.io/cpnm-ai-comm-practice/about.html">
+<style>
+  body{margin:0;font-family:-apple-system,"Segoe UI","PingFang SC",sans-serif;background:#0f172a;color:#f1f5f9;padding:2rem 1rem;line-height:1.8}
+  .wrap{max-width:760px;margin:0 auto}
+  h1{font-size:1.8rem;margin:0 0 .5rem}
+  h2{font-size:1.2rem;margin-top:2rem;color:#38bdf8}
+  .meta{color:#94a3b8;margin-bottom:2rem;font-size:.9rem}
+  .back{display:inline-block;margin-top:2rem;color:#38bdf8;text-decoration:none}
+  a{color:#38bdf8}
+  ul{padding-left:1.4em}
+  li{margin:.4em 0}
+  .stack{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:1rem}
+  .stack-card{background:#1e293b;border:1px solid #334155;border-radius:10px;padding:14px}
+  .stack-card-title{font-weight:600;color:#38bdf8;margin-bottom:4px}
+  .stack-card-desc{font-size:.85rem;color:#94a3b8}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>关于本站</h1>
+<div class="meta">一个由 AI 自动维护的传媒行业动态站点</div>
+
+<h2>它是什么？</h2>
+<p>每天凌晨，一组 GitHub Actions 自动跑完整条流水线：从 20+ 个 AI/传媒 RSS 源抓取最新文章 → 调用大语言模型整理为五大板块（技术 / 案例 / 政策 / 学术 / 课堂讨论）→ 第二个 LLM 反向打分把关质量 → 生成播客式 TTS 音频 → 推到 GitHub Pages。</p>
+
+<p>整个过程<strong>无人工干预</strong>，每天的内容都不一样。质量打分历史可见 <a href="quality-trend.html">📈 质量趋势</a>。</p>
+
+<h2>技术栈</h2>
+<div class="stack">
+  <div class="stack-card"><div class="stack-card-title">LongCat-2.0-Preview</div><div class="stack-card-desc">主力写作 LLM (美团)</div></div>
+  <div class="stack-card"><div class="stack-card-title">智谱 GLM-4 / 兜底</div><div class="stack-card-desc">备选 LLM</div></div>
+  <div class="stack-card"><div class="stack-card-title">小米 MiMo TTS</div><div class="stack-card-desc">语音合成</div></div>
+  <div class="stack-card"><div class="stack-card-title">GitHub Actions</div><div class="stack-card-desc">每日 cron 调度</div></div>
+  <div class="stack-card"><div class="stack-card-title">GitHub Pages</div><div class="stack-card-desc">静态站点托管</div></div>
+  <div class="stack-card"><div class="stack-card-title">Chart.js</div><div class="stack-card-desc">质量趋势图表</div></div>
+</div>
+
+<h2>为什么做？</h2>
+<p>给传媒方向的同学/老师一个无需付费、无需打开十几个网站、每天 5 分钟就能看完的"行业脉搏"。也是一个端到端 AI Pipeline 的开源样板，所有代码可见。</p>
+
+<h2>开源 & 复用</h2>
+<p>全部代码在 <a href="https://github.com/Yuuqq/AI-driven-media-content-production">GitHub</a>，MIT 协议。欢迎 fork 自建（您只需自己的 LLM API key）。</p>
+
+<a class="back" href="ai-trends.html">← 返回首页</a>
+</div>
+</body>
+</html>

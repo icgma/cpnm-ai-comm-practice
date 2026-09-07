@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect x='1.5' y='1.5' width='37' height='37' rx='9' fill='%23F7EFDA' stroke='%23A2402F' stroke-width='3'/%3E%3Cpath fill='%23A2402F' fill-rule='evenodd' %3Cg transform='translate(20 20) scale(0.74) translate(-20 -20)'%3E%3Cpath fill='none' stroke='%23A2402F' stroke-width='2.6' stroke-linejoin='round' stroke-linecap='round' d='M20 36.5 L11.2 16.5 C13.6 13 16.6 11.2 20 10.9 C23.4 11.2 26.4 13 28.8 16.5 Z'/%3E%3Cpath fill='%23A2402F' d='M20 13.6 L21.3 16.9 L24.6 18.2 L21.3 19.5 L20 22.8 L18.7 19.5 L15.4 18.2 L18.7 16.9 Z'/%3E%3Cpath d='M20 23.6 L20 33' stroke='%23A2402F' stroke-width='2.2' stroke-linecap='round' fill='none'/%3E%3C/g%3E/%3E%3C/svg%3E">
+<title>十六周教学大纲 — AI驱动的传媒内容制作</title>
+<meta name="description" content="「AI驱动的传媒内容制作」十六周教学大纲：从AI基础认知到完整项目交付，能力螺旋式递进。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,500;0,600;1,500&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./parchment.css">
+<style>
+/* ── 阶段分卷 ── */
+.stage{margin-top:52px}
+.stage-head{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap;
+  padding-bottom:12px;border-bottom:1px solid var(--line-2);margin-bottom:26px}
+.stage-seal{font-family:var(--kai);font-size:14px;font-weight:700;color:var(--paper-hi);
+  padding:4px 12px;border-radius:4px;letter-spacing:2px}
+.stage-name{font-family:var(--kai);font-size:24px;font-weight:700;letter-spacing:2px}
+.stage-range{font-family:var(--latin);font-size:13px;color:var(--ink-3);letter-spacing:2px}
+.stage-note{font-size:13.5px;color:var(--ink-2)}
+/* ── 周次行 ── */
+.week-row{display:flex;gap:22px;align-items:flex-start;padding:20px 18px;
+  border-bottom:1px dashed var(--line);color:var(--ink);transition:all .25s;position:relative}
+.week-row:hover{background:rgba(232,220,188,.6)}
+.week-row:hover .wk-arrow{transform:translateX(5px);color:var(--cinnabar)}
+.wk-no{flex-shrink:0;width:86px;text-align:center;padding-top:2px}
+.wk-no .cn{font-family:var(--kai);font-size:24px;font-weight:700;line-height:1.2;display:block}
+.wk-no .en{font-family:var(--latin);font-size:11px;color:var(--ink-3);letter-spacing:2px;display:block;margin-top:3px}
+.wk-body{flex:1;min-width:0}
+.wk-title{font-family:var(--kai);font-size:19px;font-weight:700;letter-spacing:1px;margin-bottom:4px}
+.wk-desc{font-size:14px;color:var(--ink-2);line-height:1.7}
+.wk-tags{display:flex;gap:6px;margin-top:8px;flex-wrap:wrap}
+.wk-arrow{flex-shrink:0;color:var(--ink-3);font-size:18px;padding-top:8px;transition:all .25s}
+/* ── 页头 ── */
+.page-head{padding:130px 40px 20px;text-align:center;position:relative;z-index:1}
+.page-head .h-sec{font-size:40px}
+.page-head .sec-desc{margin:0 auto}
+.back-top{margin-top:18px}
+@media(max-width:640px){
+  .page-head{padding:100px 20px 10px}
+  .page-head .h-sec{font-size:30px}
+  .week-row{gap:12px;padding:16px 10px}
+  .wk-no{width:64px}
+  .wk-no .cn{font-size:19px}
+}
+</style>
+</head>
+<body>
+<div class="vignette"></div>
+
+<!-- ── 导航 ── -->
+<nav class="pnav">
+  <div class="pnav-inner">
+    <a href="./index.html" class="pnav-brand">
+      <span class="seal"><svg class="seal-mark" viewBox="0 0 40 40" aria-hidden="true"><path fill="none" stroke="#A2402F" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round" d="M20 36.5 L11.2 16.5 C13.6 13 16.6 11.2 20 10.9 C23.4 11.2 26.4 13 28.8 16.5 Z"/><path fill="#A2402F" d="M20 13.6 L21.3 16.9 L24.6 18.2 L21.3 19.5 L20 22.8 L18.7 19.5 L15.4 18.2 L18.7 16.9 Z"/><path fill="none" stroke="#A2402F" stroke-width="2.2" stroke-linecap="round" d="M20 23.6 L20 33.4"/></svg></span>
+      <span><span class="pnav-title">AI驱动的传媒内容制作</span><span class="pnav-sub">AI-Driven Media Content Production</span></span>
+    </a>
+    <div class="pnav-links">
+      <a href="./index.html">首页</a>
+      <a href="./syllabus.html" class="here">教学大纲</a>
+      <a href="./tools.html">教学工具</a>
+      <a href="./agents.html">AI智能体</a>
+      <a href="./showcase.html">学生作品</a>
+      <a href="./ai-trends.html">前沿动态</a>
+      <a href="./course-kg/index.html">知识图谱</a>
+      <a href="../course-references/index.html">资料库</a>
+      <a href="https://github.com/icgma/cpnm-ai-comm-practice" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ── 页头 ── -->
+<header class="page-head">
+  <div class="eyebrow" style="justify-content:center">Course Syllabus · 十六讲</div>
+  <h1 class="h-sec">十六周<span class="em">教学大纲</span></h1>
+  <p class="sec-desc">从 AI 基础认知到完整项目交付，六阶段分卷，能力螺旋式递进。点击任一周次可进入该周详页。</p>
+</header>
+
+<!-- ── 大纲正文 ── -->
+<main class="section" style="padding-top:30px">
+<div class="container" style="max-width:980px">
+
+  <!-- 壹 · 基础认知 -->
+  <section class="stage">
+    <div class="stage-head">
+      <span class="stage-seal" style="background:var(--indigo)">第壹阶</span>
+      <span class="stage-name">基础认知</span>
+      <span class="stage-range">WEEK 01 – 02</span>
+      <span class="stage-note">建立 AI 技术认知框架，理解大模型工作原理</span>
+    </div>
+    <a href="./weeks/week-01.html" class="week-row">
+      <div class="wk-no"><span class="cn" style="color:var(--indigo)">第一周</span><span class="en">WEEK 01</span></div>
+      <div class="wk-body">
+        <div class="wk-title">课程导论与AI基础</div>
+        <div class="wk-desc">AI发展简史 · 机器学习三种类型 · 深度学习基本原理</div>
+        <div class="wk-tags"><span class="tag indigo">Bloom ②理解</span><span class="tag verdigris">思政 · 科技自信</span></div>
+      </div>
+      <span class="wk-arrow">→</span>
+    </a>
+    <a href="./weeks/week-02.html" class="week-row">
+      <div class="wk-no"><span class="cn" style="color:var(--indigo)">第二周</span><span class="en">WEEK 02</span></div>
+      <div class="wk-body">
+        <div class="wk-title">LLM工作原理与技术基础</div>
+        <div class="wk-desc">Transformer架构 · 自注意力机制 · 大语言模型的涌现能力与局限</div>
+        <div class="wk-tags"><span class="tag cinnabar">重点</span><span class="tag gold">难点</span></div>
+      </div>
+      <span class="wk-arrow">→</span>
+    </a>
+  </section>
+
+  <!-- 贰 · 提示词工程 -->
+  <section class="stage">
+    <div class="stage-head">
+      <span class="stage-seal" style="background:var(--cinnabar)">第贰阶</span>
+      <span class="stage-name">提示词工程</span>
+      <span class="stage-range">WEEK 03 – 04</span>
+      <span class="stage-note">掌握 CRISPE 框架与精确指令控制，打下人机协作根基</span>
+    </div>
+    <a href="./weeks/week-03.html" class="week-row">
+      <div class="wk-no"><span class="cn" style="color:var(--cinnabar)">第三周</span><span class="en">WEEK 03</span></div>
+      <div class="wk-body">
+        <div class="wk-title">提示词工程基础 — CRISPE框架</div>
+        <div class="wk-desc">角色 · 背景 · 指令 · 风格 · 实验 五要素系统化方法</div>
+        <div class="wk-tags"><span class="tag indigo">Bloom ③应用</span><span class="tag cinnabar">重点</span></div>
+      </div>
+      <span class="wk-arrow">→</span>
+    </a>
+    <a href="./weeks/week-04.html" class="week-row">
+      <div class="wk-no"><span class="cn" style="color:var(--cinnabar)">第四周</span><span class="en">WEEK 04</span></div>
+      <div class="wk-body">
+        <div class="wk-title">精确指令与格式控制</div>
+        <div class="wk-desc">动作动词 · 输出规范 · Markdown/JSON控制 · 约束条件组合</div>
+        <div class="wk-tags"><span class="tag verdigris">思政 · AI真实性</span></div>
+      </div>
+      <span class="wk-arrow">→</span>
+    </a>
+  </section>
+
+  <!-- 叁 · 智能信息获取 -->
+  <section class="stage">
+    <div class="stage-head">
+      <span class="stage-seal" style="background:var(--verdigris)">第叁阶</span>
+      <span class="stage-name">智能信息获取</span>
+      <span class="stage-range">WEEK 05 – 06</span>
+      <span class="stage-note">AI 辅助检索与深度研究，养成事实核查的职业本能</span>
+    </div>
+    <a href="./weeks/week-05.html" class="week-row">
+      <div class="wk-no"><span class="cn" style="color:var(--verdigris)">第五周</span><span class="en">WEEK 05</span></div>
+      <div class="wk-body">
+        <div class="wk-title">智能信息获取基础</div>
+        <div class="wk-desc">AI辅助检索 · 关键词优化 · 多轮迭代策略</div>
+      </div>
+      <span class="wk-arrow">→</span>
+    </a>
+    <a href="./weeks/week-06.html" class="week-row">
+      <div class="wk-no"><span class="cn" style="color:var(--verdigris)">第六周</span><span class="en">WEEK 06</span></div>
+      <div class="wk-body">
+        <div class="wk-title">Deep Research与事实核查</div>
+        <div class="wk-desc">四阶段深度研究流程 · 多源交叉验证 · 证据清单</div>
+        <div class="wk-tags"><span class="tag cinnabar">重点</span><span class="tag verdigris">思政 · 媒体责任</span></div>
+      </div>
+      <span class="wk-arrow">→</span>
+    </a>
+  </section>
+
+  <!-- 肆 · 内容创作 -->
+  <section class="stage">
+    <div class="stage-head">
+      <span class="stage-seal" style="background:var(--gold)">第肆阶</span>
+      <span class="stage-name">内容创作</span>
+      <span class="stage-range">WEEK 07 – 10</span>
+      <span class="stage-note">摘要、提取、创意、写作——内容生产全链条实练</span>
+    </div>
+    <a href="./weeks/week-07.html" class="week-row">
+      <div class="wk-no"><span class="cn" style="color:var(--gold)">第七周</span><span class="en">WEEK 07</span></div>
+      <div class="wk-body">
+        <div class="wk-title">文本摘要与提炼基础</div>
+        <div class="wk-desc">抽取式vs生成式摘要 · 新闻简报提炼</div>
+      </div>
+      <span class="wk-arrow">→</span>
+    </a>
+    <a href="./weeks/week-08.html" class="week-row">
+      <div class="wk-no"><span class="cn" style="color:var(--gold)">第八周</span><span class="en">WEEK 08</span></div>
+      <div class="wk-body">
+        <div class="wk-title">结构化提取与增强分析</div>
+        <div class="wk-desc">JSON/表格/实体提取 · 数据新闻应用</div>
+      </div>
+      <span class="wk-arrow">→</span>
+    </a>
+    <a href="./weeks/week-09.html" class="week-row">
+      <div class="wk-no"><span class="cn" style="color:var(--gold)">第九周</span><span class="en">WEEK 09</span></div>
+      <div class="wk-body">
+        <div class="wk-title">创意生成与选题策划</div>
+        <div class="wk-desc">SCAMPER技法 · 发散/收敛/系统思维 · AI辅助选题</div>
+        <div class="wk-tags"><span class="tag indigo">Bloom ⑥创造</span></div>
+      </div>
+      <span class="wk-arrow">→</span>
+    </a>
+    <a href="./weeks/week-10.html" class="week-row">
+      <div class="wk-no"><span class="cn" style="color:var(--gold)">第十周</span><span class="en">WEEK 10</span></div>
+      <div class="wk-body">
+        <div class="wk-title">AI辅助写作实践</div>
+        <div class="wk-desc">长文写作策略 · 人机协作流程 · 质量控制</div>
+        <div class="wk-tags"><span class="tag cinnabar">重点</span><span class="tag verdigris">思政 · 学术诚信</span></div>
+      </div>
+      <span class="wk-arrow">→</span>
+    </a>
+  </section>
+
+  <!-- 伍 · 高级技巧 -->
+  <section class="stage">
+    <div class="stage-head">
+      <span class="stage-seal" style="background:var(--indigo)">第伍阶</span>
+      <span class="stage-name">高级技巧</span>
+      <span class="stage-range">WEEK 11 – 13</span>
+      <span class="stage-note">Few-Shot、思维链与平台选型，进阶人机协作深处</span>
+    </div>
+    <a href="./weeks/week-11.html" class="week-row">
+      <div class="wk-no"><span class="cn" style="color:var(--indigo)">第十一周</span><span class="en">WEEK 11</span></div>
+      <div class="wk-body">
+        <div class="wk-title">Few-Shot与角色扮演</div>
+        <div class="wk-desc">少样本学习 · 写作风格克隆 · 专家角色模拟</div>
+      </div>
+      <span class="wk-arrow">→</span>
+    </a>
+    <a href="./weeks/week-12.html" class="week-row">
+      <div class="wk-no"><span class="cn" style="color:var(--indigo)">第十二周</span><span class="en">WEEK 12</span></div>
+      <div class="wk-body">
+        <div class="wk-title">思维链CoT技术</div>
+        <div class="wk-desc">链式推理 · 分步推理策略 · Tree-of-Thought</div>
+        <div class="wk-tags"><span class="tag gold">难点</span></div>
+      </div>
+      <span class="wk-arrow">→</span>
+    </a>
+    <a href="./weeks/week-13.html" class="week-row">
+      <div class="wk-no"><span class="cn" style="color:var(--indigo)">第十三周</span><span class="en">WEEK 13</span></div>
+      <div class="wk-body">
+        <div class="wk-title">主流LLM平台对比</div>
+        <div class="wk-desc">GPT/Claude/DeepSeek/通义/文心 能力评测与场景选型</div>
+      </div>
+      <span class="wk-arrow">→</span>
+    </a>
+  </section>
+
+  <!-- 陆 · 伦理与项目 -->
+  <section class="stage">
+    <div class="stage-head">
+      <span class="stage-seal" style="background:var(--cinnabar)">第陆阶</span>
+      <span class="stage-name">伦理与项目</span>
+      <span class="stage-range">WEEK 14 – 16</span>
+      <span class="stage-note">以伦理收束技术，以项目检验所学</span>
+    </div>
+    <a href="./weeks/week-14.html" class="week-row">
+      <div class="wk-no"><span class="cn" style="color:var(--cinnabar)">第十四周</span><span class="en">WEEK 14</span></div>
+      <div class="wk-body">
+        <div class="wk-title">AI辅助工具集成与伦理</div>
+        <div class="wk-desc">工作流设计 · AI伦理三原则 · 算法偏见</div>
+        <div class="wk-tags"><span class="tag verdigris">思政 · 公平包容</span></div>
+      </div>
+      <span class="wk-arrow">→</span>
+    </a>
+    <a href="./weeks/week-15.html" class="week-row">
+      <div class="wk-no"><span class="cn" style="color:var(--cinnabar)">第十五周</span><span class="en">WEEK 15</span></div>
+      <div class="wk-body">
+        <div class="wk-title">期末项目准备与指导</div>
+        <div class="wk-desc">PBL项目设计 · 团队协作 · 交付标准</div>
+        <div class="wk-tags"><span class="tag indigo">Bloom ⑥创造</span></div>
+      </div>
+      <span class="wk-arrow">→</span>
+    </a>
+    <a href="./weeks/week-16.html" class="week-row" style="border-bottom:none">
+      <div class="wk-no"><span class="cn" style="color:var(--cinnabar)">第十六周</span><span class="en">WEEK 16</span></div>
+      <div class="wk-body">
+        <div class="wk-title">项目展示与课程总结</div>
+        <div class="wk-desc">PBL项目答辩 · AI时代传媒人的使命反思</div>
+        <div class="wk-tags"><span class="tag verdigris">思政 · 使命担当</span></div>
+      </div>
+      <span class="wk-arrow">→</span>
+    </a>
+  </section>
+
+</div>
+</main>
+
+<!-- ── 页脚 ── -->
+<footer class="pfooter">
+  <div class="foot-motto">从灵感到成稿 · 重新理解内容生产</div>
+  <p>© 2026 汕头大学 · 长江新闻与传播学院 · AI课程建设项目</p>
+  <p style="margin-top:8px"><a href="./index.html">返回首页</a> · <a href="./ai-trends.html">前沿动态</a> · <a href="./course-kg/index.html">知识图谱</a></p>
+</footer>
+</body>
+</html>

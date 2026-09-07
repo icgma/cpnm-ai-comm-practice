@@ -3,34 +3,35 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>课程知识图谱 — 内容生产新方法：AI与传播实践</title>
-<meta name="description" content="汕头大学智慧课程「内容生产新方法：AI与传播实践」22个核心知识点交互式知识图谱可视化">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect x='1.5' y='1.5' width='37' height='37' rx='9' fill='%23F7EFDA' stroke='%23A2402F' stroke-width='3'/%3E%3Cpath fill='%23A2402F' fill-rule='evenodd' %3Cg transform='translate(20 20) scale(0.74) translate(-20 -20)'%3E%3Cpath fill='none' stroke='%23A2402F' stroke-width='2.6' stroke-linejoin='round' stroke-linecap='round' d='M20 36.5 L11.2 16.5 C13.6 13 16.6 11.2 20 10.9 C23.4 11.2 26.4 13 28.8 16.5 Z'/%3E%3Cpath fill='%23A2402F' d='M20 13.6 L21.3 16.9 L24.6 18.2 L21.3 19.5 L20 22.8 L18.7 19.5 L15.4 18.2 L18.7 16.9 Z'/%3E%3Cpath d='M20 23.6 L20 33' stroke='%23A2402F' stroke-width='2.2' stroke-linecap='round' fill='none'/%3E%3C/g%3E/%3E%3C/svg%3E">
+<title>课程知识图谱 — AI驱动的传媒内容制作</title>
+<meta name="description" content="汕头大学智慧课程「AI驱动的传媒内容制作」22个核心知识点交互式知识图谱可视化">
 <script src="https://unpkg.com/vis-network@9.1.6/standalone/umd/vis-network.min.js"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,500;0,600;1,500&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@600;900&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg-primary: #0a0e1a;
-    --bg-secondary: #111827;
-    --bg-card: #1a2236;
-    --bg-card-hover: #1f2a42;
-    --border: #2a3654;
-    --text-primary: #e8ecf4;
-    --text-secondary: #8b97b0;
-    --text-muted: #5c6a82;
-    --accent-blue: #3b82f6;
-    --accent-cyan: #06b6d4;
-    --accent-purple: #8b5cf6;
+    --bg-primary: #EFE4C6;
+    --bg-secondary: #F0E6CF;
+    --bg-card: #E8DCBC;
+    --bg-card-hover: #E2D4AE;
+    --border: #C7B189;
+    --text-primary: #3A2E20;
+    --text-secondary: #6E5B41;
+    --text-muted: #9C8964;
+    --accent-blue: #33567C;
+    --accent-cyan: #51724B;
+    --accent-purple: #A2402F;
     --accent-pink: #ec4899;
-    --accent-amber: #f59e0b;
-    --accent-green: #10b981;
-    --accent-red: #ef4444;
+    --accent-amber: #6E5B41;
+    --accent-green: #8C6A2F;
+    --accent-red: #3A2E20;
     --accent-orange: #f97316;
-    --glow-blue: rgba(59,130,246,0.15);
-    --glow-purple: rgba(139,92,246,0.15);
+    --glow-blue: rgba(162,64,47,0.10);
+    --glow-purple: rgba(140,106,47,0.10);
   }
   * { margin:0; padding:0; box-sizing:border-box; }
   body {
-    font-family: 'Inter', 'Noto Sans SC', system-ui, sans-serif;
+    font-family: 'Noto Sans SC', 'Microsoft YaHei', 'PingFang SC', sans-serif;
     background: var(--bg-primary);
     color: var(--text-primary);
     overflow: hidden;
@@ -40,7 +41,7 @@
   /* ── Header ── */
   .header {
     position: fixed; top:0; left:0; right:0; z-index:100;
-    background: linear-gradient(180deg, rgba(10,14,26,0.97) 0%, rgba(10,14,26,0.85) 100%);
+    background: linear-gradient(180deg, rgba(240,230,207,0.97) 0%, rgba(240,230,207,0.88) 100%);
     backdrop-filter: blur(20px);
     border-bottom: 1px solid var(--border);
     padding: 12px 24px;
@@ -48,12 +49,17 @@
   }
   .header-left { display:flex; align-items:center; gap:16px; }
   .header-logo {
-    width:36px; height:36px; border-radius:10px;
-    background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+    width:36px; height:36px; border-radius:6px;
+    background: rgba(162,64,47,.06);
+    border: 2px solid #A2402F;
+    box-shadow: inset 0 0 0 1px rgba(162,64,47,.25);
     display:flex; align-items:center; justify-content:center;
-    font-size:18px; font-weight:700; color:#fff;
+    font-family:'Kaiti SC','STKaiti','KaiTi','Noto Serif SC',serif;
+    font-size:19px; font-weight:700; color:#A2402F;
+    transform: rotate(-4deg);
   }
-  .header-title { font-size:16px; font-weight:600; letter-spacing:-0.3px; }
+  .header-logo svg{ width:64%; height:64%; display:block; }
+  .header-title { font-family:'Kaiti SC','STKaiti','KaiTi','Noto Serif SC',serif; font-size:17px; font-weight:700; letter-spacing:2px; }
   .header-subtitle { font-size:12px; color:var(--text-secondary); margin-top:1px; }
   .header-right { display:flex; align-items:center; gap:10px; }
 
@@ -67,8 +73,8 @@
     font-size: 12px; font-family: inherit; transition: all 0.2s;
     white-space: nowrap;
   }
-  .filter-btn:hover { border-color: var(--accent-blue); color: var(--text-primary); }
-  .filter-btn.active { background: var(--accent-blue); border-color: var(--accent-blue); color: #fff; }
+  .filter-btn:hover { border-color: var(--c, #A2402F); color: var(--text-primary); }
+  .filter-btn.active { background: var(--c, #A2402F); border-color: var(--c, #A2402F); color: #F7EFDA; }
 
   .tag-filters { display:flex; gap:6px; margin-left:12px; }
   .tag-btn {
@@ -77,10 +83,10 @@
     transition: all 0.2s; opacity: 0.5;
   }
   .tag-btn.active { opacity: 1; transform: scale(1.05); }
-  .tag-btn.tag-key { background: rgba(239,68,68,0.2); color: #fca5a5; }
-  .tag-btn.tag-diff { background: rgba(245,158,11,0.2); color: #fcd34d; }
-  .tag-btn.tag-exam { background: rgba(59,130,246,0.2); color: #93c5fd; }
-  .tag-btn.tag-sz { background: rgba(16,185,129,0.2); color: #6ee7b7; }
+  .tag-btn.tag-key { background: rgba(162,64,47,0.1); color: #A2402F; }
+  .tag-btn.tag-diff { background: rgba(140,106,47,0.12); color: #8C6A2F; }
+  .tag-btn.tag-exam { background: rgba(51,86,124,0.1); color: #33567C; }
+  .tag-btn.tag-sz { background: rgba(81,114,75,0.12); color: #51724B; }
 
   /* ── Graph Container ── */
   #graph-container {
@@ -113,7 +119,7 @@
     font-size: 12px; font-weight: 600; letter-spacing: 0.5px;
     margin-bottom: 8px;
   }
-  .node-name { font-size: 20px; font-weight: 700; margin-bottom: 6px; letter-spacing: -0.3px; }
+  .node-name { font-family:'Kaiti SC','STKaiti','KaiTi','Noto Serif SC',serif; font-size: 21px; font-weight: 700; margin-bottom: 6px; letter-spacing: 1px; }
   .node-module-label { font-size: 12px; color: var(--text-secondary); margin-bottom: 16px; }
 
   .node-desc {
@@ -139,10 +145,10 @@
   .tag {
     padding: 4px 12px; border-radius: 16px; font-size: 12px; font-weight: 500;
   }
-  .tag-key-detail { background: rgba(239,68,68,0.15); color: #fca5a5; }
-  .tag-diff-detail { background: rgba(245,158,11,0.15); color: #fcd34d; }
-  .tag-exam-detail { background: rgba(59,130,246,0.15); color: #93c5fd; }
-  .tag-sz-detail { background: rgba(16,185,129,0.15); color: #6ee7b7; }
+  .tag-key-detail { background: rgba(162,64,47,0.08); color: #A2402F; }
+  .tag-diff-detail { background: rgba(140,106,47,0.1); color: #8C6A2F; }
+  .tag-exam-detail { background: rgba(162,64,47,0.10); color: #33567C; }
+  .tag-sz-detail { background: rgba(81,114,75,0.1); color: #51724B; }
 
   .relations-section { margin-bottom: 20px; }
   .relation-item {
@@ -167,7 +173,7 @@
   /* ── Stats Bar ── */
   .stats-bar {
     position: fixed; bottom: 0; left: 0; right: 340px;
-    background: linear-gradient(0deg, rgba(10,14,26,0.95) 0%, rgba(10,14,26,0.7) 100%);
+    background: linear-gradient(0deg, rgba(232,220,188,0.96) 0%, rgba(232,220,188,0.85) 100%);
     backdrop-filter: blur(12px);
     padding: 10px 24px;
     display: flex; align-items: center; gap: 20px;
@@ -182,7 +188,7 @@
   .legend {
     position: fixed; bottom: 50px; left: 20px;
     background: var(--bg-card); border: 1px solid var(--border);
-    border-radius: 12px; padding: 14px 18px;
+    border-radius: 4px; padding: 14px 18px;
     font-size: 12px; z-index: 50;
   }
   .legend-title { font-weight: 600; margin-bottom: 8px; color: var(--text-secondary); }
@@ -202,21 +208,22 @@
 <!-- Header -->
 <div class="header">
   <div class="header-left">
-    <div class="header-logo">K</div>
+    <div class="header-logo"><svg class="seal-mark" viewBox="0 0 40 40" aria-hidden="true"><path fill="none" stroke="#A2402F" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round" d="M20 36.5 L11.2 16.5 C13.6 13 16.6 11.2 20 10.9 C23.4 11.2 26.4 13 28.8 16.5 Z"/><path fill="#A2402F" d="M20 13.6 L21.3 16.9 L24.6 18.2 L21.3 19.5 L20 22.8 L18.7 19.5 L15.4 18.2 L18.7 16.9 Z"/><path fill="none" stroke="#A2402F" stroke-width="2.2" stroke-linecap="round" d="M20 23.6 L20 33.4"/></svg></div>
     <div>
       <div class="header-title">课程知识图谱</div>
-      <div class="header-subtitle">内容生产新方法：AI与传播实践 · 22 知识点 · 6 模块</div>
+      <div class="header-subtitle">AI驱动的传媒内容制作 · 22 知识点 · 6 模块</div>
     </div>
   </div>
   <div class="header-right">
+    <a class="filter-btn" style="text-decoration:none" href="../index.html">← 返回门户</a>
     <div class="filter-bar">
       <button class="filter-btn active" data-module="all">全部</button>
-      <button class="filter-btn" data-module="B" style="--c:#3b82f6">B 基础</button>
-      <button class="filter-btn" data-module="C" style="--c:#8b5cf6">C 提示词</button>
-      <button class="filter-btn" data-module="D" style="--c:#06b6d4">D 信息</button>
-      <button class="filter-btn" data-module="E" style="--c:#10b981">E 创作</button>
-      <button class="filter-btn" data-module="F" style="--c:#f59e0b">F 高级</button>
-      <button class="filter-btn" data-module="G" style="--c:#ef4444">G 伦理</button>
+      <button class="filter-btn" data-module="B" style="--c:#33567C">B 基础</button>
+      <button class="filter-btn" data-module="C" style="--c:#A2402F">C 提示词</button>
+      <button class="filter-btn" data-module="D" style="--c:#51724B">D 信息</button>
+      <button class="filter-btn" data-module="E" style="--c:#8C6A2F">E 创作</button>
+      <button class="filter-btn" data-module="F" style="--c:#6E5B41">F 高级</button>
+      <button class="filter-btn" data-module="G" style="--c:#3A2E20">G 伦理</button>
     </div>
     <div class="tag-filters">
       <button class="tag-btn tag-key active" data-tag="key">🔴 重点</button>
@@ -244,12 +251,12 @@
 <!-- Legend -->
 <div class="legend">
   <div class="legend-title">模块图例</div>
-  <div class="legend-item"><div class="legend-dot" style="background:#3b82f6"></div> B · AI基础与发展</div>
-  <div class="legend-item"><div class="legend-dot" style="background:#8b5cf6"></div> C · 提示词工程</div>
-  <div class="legend-item"><div class="legend-dot" style="background:#06b6d4"></div> D · 智能信息获取</div>
-  <div class="legend-item"><div class="legend-dot" style="background:#10b981"></div> E · 内容创作</div>
-  <div class="legend-item"><div class="legend-dot" style="background:#f59e0b"></div> F · 高级技巧</div>
-  <div class="legend-item"><div class="legend-dot" style="background:#ef4444"></div> G · 工具与伦理</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#33567C"></div> B · AI基础与发展</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#A2402F"></div> C · 提示词工程</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#51724B"></div> D · 智能信息获取</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#8C6A2F"></div> E · 内容创作</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#6E5B41"></div> F · 高级技巧</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#3A2E20"></div> G · 工具与伦理</div>
 </div>
 
 <!-- Stats Bar -->
@@ -269,12 +276,12 @@
 // ════════════════════════════════════════
 
 const MODULE_COLORS = {
-  B: { bg: '#3b82f6', border: '#2563eb', highlight: '#60a5fa', name: 'AI基础与发展', weeks: 'W01–W02' },
-  C: { bg: '#8b5cf6', border: '#7c3aed', highlight: '#a78bfa', name: '提示词工程', weeks: 'W03–W04' },
-  D: { bg: '#06b6d4', border: '#0891b2', highlight: '#22d3ee', name: '智能信息获取', weeks: 'W05–W06' },
-  E: { bg: '#10b981', border: '#059669', highlight: '#34d399', name: '内容创作', weeks: 'W07–W10' },
-  F: { bg: '#f59e0b', border: '#d97706', highlight: '#fbbf24', name: '高级技巧', weeks: 'W11–W13' },
-  G: { bg: '#ef4444', border: '#dc2626', highlight: '#f87171', name: '工具与伦理', weeks: 'W14, W16' }
+  B: { bg: '#33567C', border: '#274563', highlight: '#4E76A5', name: 'AI基础与发展', weeks: 'W01–W02' },
+  C: { bg: '#A2402F', border: '#7C2F22', highlight: '#C05E4B', name: '提示词工程', weeks: 'W03–W04' },
+  D: { bg: '#51724B', border: '#3E5A39', highlight: '#6F9466', name: '智能信息获取', weeks: 'W05–W06' },
+  E: { bg: '#8C6A2F', border: '#6B511F', highlight: '#B08A46', name: '内容创作', weeks: 'W07–W10' },
+  F: { bg: '#6E5B41', border: '#55462F', highlight: '#907A58', name: '高级技巧', weeks: 'W11–W13' },
+  G: { bg: '#3A2E20', border: '#241C11', highlight: '#6E5B41', name: '工具与伦理', weeks: 'W14, W16' }
 };
 
 const BLOOM_LABELS = { 2: '②理解', 3: '③应用', 4: '④分析', 5: '⑤评价', 6: '⑥创造' };
@@ -401,7 +408,7 @@ const visNodes = new vis.DataSet(knowledgeNodes.map(n => {
     title: `${n.label} ${buildTagIcons(n.tags)}`,
     group: n.module,
     size: buildNodeSize(n),
-    font: { color: '#e8ecf4', size: 12, face: 'Inter, Noto Sans SC, sans-serif', multi: true },
+    font: { color: '#3A2E20', size: 12, face: 'Noto Sans SC, Microsoft YaHei, sans-serif', multi: true },
     color: {
       background: mc.bg,
       border: mc.border,
@@ -425,14 +432,14 @@ const visEdges = new vis.DataSet(knowledgeEdges.map((e, i) => {
     label: e.label,
     arrows: { to: { enabled: true, scaleFactor: 0.6 } },
     color: {
-      color: isCross ? '#4a5568' : '#3a4a6b',
-      highlight: '#60a5fa',
-      hover: '#60a5fa',
+      color: isCross ? '#B3A17C' : '#C7B189',
+      highlight: '#4E76A5',
+      hover: '#4E76A5',
       opacity: isCross ? 0.4 : 0.6
     },
     dashes: isCross ? [8, 6] : false,
     width: isCross ? 1 : 1.5,
-    font: { color: '#5c6a82', size: 10, strokeWidth: 3, strokeColor: '#0a0e1a', face: 'Inter, Noto Sans SC, sans-serif' },
+    font: { color: '#9C8964', size: 10, strokeWidth: 3, strokeColor: '#EFE4C6', face: 'Noto Sans SC, Microsoft YaHei, sans-serif' },
     smooth: { type: 'curvedCW', roundness: 0.15 },
     _data: e
   };

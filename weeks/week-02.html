@@ -3,17 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Week 02 · LLM工作原理与技术基础 — AI与传播实践</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect x='1.5' y='1.5' width='37' height='37' rx='9' fill='%23F7EFDA' stroke='%23A2402F' stroke-width='3'/%3E%3Cpath fill='%23A2402F' fill-rule='evenodd' %3Cg transform='translate(20 20) scale(0.74) translate(-20 -20)'%3E%3Cpath fill='none' stroke='%23A2402F' stroke-width='2.6' stroke-linejoin='round' stroke-linecap='round' d='M20 36.5 L11.2 16.5 C13.6 13 16.6 11.2 20 10.9 C23.4 11.2 26.4 13 28.8 16.5 Z'/%3E%3Cpath fill='%23A2402F' d='M20 13.6 L21.3 16.9 L24.6 18.2 L21.3 19.5 L20 22.8 L18.7 19.5 L15.4 18.2 L18.7 16.9 Z'/%3E%3Cpath d='M20 23.6 L20 33' stroke='%23A2402F' stroke-width='2.2' stroke-linecap='round' fill='none'/%3E%3C/g%3E/%3E%3C/svg%3E">
+<title>Week 02 · LLM工作原理与技术基础 — AI驱动的传媒内容制作</title>
 <meta name="description" content="第2周：深入理解Transformer架构、自注意力机制与大语言模型的涌现能力。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,500;0,600;1,500&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@600;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="week-common.css">
 <style>
-  .week-hero h1 span{background:linear-gradient(135deg,#3b82f6,#6366f1);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-  .module-icon.m1{background:rgba(59,130,246,.15);color:#60a5fa}
-  .module-icon.m2{background:rgba(139,92,246,.15);color:#a78bfa}
-  .module-icon.m3{background:rgba(236,72,153,.15);color:#f472b6}
-  .module-icon.m4{background:rgba(245,158,11,.15);color:#fbbf24}
+  .week-hero h1 span{color:var(--cinnabar)}
+  .module-icon.m1{background:rgba(51,86,124,.09);color:#33567C;border-color:rgba(51,86,124,.4)}
+  .module-icon.m2{background:rgba(162,64,47,.07);color:#A2402F;border-color:rgba(162,64,47,.4)}
+  .module-icon.m3{background:rgba(81,114,75,.1);color:#51724B;border-color:rgba(81,114,75,.4)}
+  .module-icon.m4{background:rgba(140,106,47,.1);color:#8C6A2F;border-color:rgba(140,106,47,.4)}
 </style>
 </head>
 <body>
@@ -25,7 +26,7 @@
 <div class="week-nav">
   <div class="week-nav-inner">
   <div class="week-nav-left">
-    <a href="../index.html" class="week-nav-home"><div class="week-nav-logo">AI</div> AI与传播实践</a>
+    <a href="../index.html" class="week-nav-home"><div class="week-nav-logo"><svg class="seal-mark" viewBox="0 0 40 40" aria-hidden="true"><path fill="none" stroke="#A2402F" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round" d="M20 36.5 L11.2 16.5 C13.6 13 16.6 11.2 20 10.9 C23.4 11.2 26.4 13 28.8 16.5 Z"/><path fill="#A2402F" d="M20 13.6 L21.3 16.9 L24.6 18.2 L21.3 19.5 L20 22.8 L18.7 19.5 L15.4 18.2 L18.7 16.9 Z"/><path fill="none" stroke="#A2402F" stroke-width="2.2" stroke-linecap="round" d="M20 23.6 L20 33.4"/></svg></div> AI驱动的传媒内容制作</a>
     <span class="week-nav-sep">/</span>
     <span class="week-nav-current">Week 02</span>
   </div>
@@ -42,8 +43,8 @@
     <h1>LLM工作原理与<span>技术基础</span></h1>
     <p class="week-hero-sub">深入Transformer核心架构，理解"注意力就是一切"的革命性突破，掌握大语言模型从训练到推理的完整链路</p>
     <div class="week-hero-tags">
-      <span class="hero-tag" style="background:rgba(239,68,68,.15);color:#fca5a5">🔴 重点</span>
-      <span class="hero-tag" style="background:rgba(245,158,11,.15);color:#fcd34d">🟡 难点</span>
+      <span class="hero-tag" style="background:rgba(162,64,47,.09);color:#A2402F">🔴 重点</span>
+      <span class="hero-tag" style="background:rgba(140,106,47,.1);color:#8C6A2F">🟡 难点</span>
     </div>
   </div>
 </div>

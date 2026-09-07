@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect x='1.5' y='1.5' width='37' height='37' rx='9' fill='%23F7EFDA' stroke='%23A2402F' stroke-width='3'/%3E%3Cpath fill='%23A2402F' fill-rule='evenodd' %3Cg transform='translate(20 20) scale(0.74) translate(-20 -20)'%3E%3Cpath fill='none' stroke='%23A2402F' stroke-width='2.6' stroke-linejoin='round' stroke-linecap='round' d='M20 36.5 L11.2 16.5 C13.6 13 16.6 11.2 20 10.9 C23.4 11.2 26.4 13 28.8 16.5 Z'/%3E%3Cpath fill='%23A2402F' d='M20 13.6 L21.3 16.9 L24.6 18.2 L21.3 19.5 L20 22.8 L18.7 19.5 L15.4 18.2 L18.7 16.9 Z'/%3E%3Cpath d='M20 23.6 L20 33' stroke='%23A2402F' stroke-width='2.2' stroke-linecap='round' fill='none'/%3E%3C/g%3E/%3E%3C/svg%3E">
+<title>教学工具矩阵 — AI驱动的传媒内容制作</title>
+<meta name="description" content="课程独立开发的六个在线教学辅助平台：知识图谱、提示词工程、媒体检索与AI编程。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,500;0,600;1,500&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./parchment.css">
+<style>
+.page-head{padding:130px 40px 10px;text-align:center;position:relative;z-index:1}
+.page-head .h-sec{font-size:40px}
+.page-head .sec-desc{margin:0 auto}
+/* ── 图版式工具卡 ── */
+.plate-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:24px;margin-top:44px}
+.plate{overflow:hidden;display:flex;flex-direction:column;color:var(--ink)}
+.plate:hover{color:var(--ink)}
+.plate-shot{position:relative;border-bottom:1px solid var(--line-2);background:#241B11}
+.plate-shot img{display:block;width:100%;height:200px;object-fit:cover;object-position:top;
+  opacity:.94;transition:transform .5s,opacity .3s}
+.plate:hover .plate-shot img{transform:scale(1.03);opacity:1}
+.plate-badge{position:absolute;top:10px;right:10px;padding:2px 10px;border-radius:3px;
+  font-size:12px;font-weight:600;background:rgba(240,230,207,.92);color:var(--ink-2);
+  border:1px solid var(--line-2)}
+.plate-body{padding:18px 20px 20px;flex:1;display:flex;flex-direction:column}
+.plate-no{font-family:var(--latin);font-size:11px;color:var(--gold);letter-spacing:3px;
+  text-transform:uppercase;margin-bottom:6px}
+.plate-title{font-family:var(--kai);font-size:20px;font-weight:700;letter-spacing:1.5px;margin-bottom:8px}
+.plate-desc{font-size:13.5px;color:var(--ink-2);line-height:1.75;flex:1}
+.plate-go{margin-top:14px;font-size:14px;color:var(--cinnabar);display:flex;align-items:center;gap:6px}
+.plate:hover .plate-go{gap:10px}
+@media(max-width:640px){
+  .page-head{padding:100px 20px 6px}
+  .page-head .h-sec{font-size:30px}
+}
+</style>
+</head>
+<body>
+<div class="vignette"></div>
+
+<!-- ── 导航 ── -->
+<nav class="pnav">
+  <div class="pnav-inner">
+    <a href="./index.html" class="pnav-brand">
+      <span class="seal"><svg class="seal-mark" viewBox="0 0 40 40" aria-hidden="true"><path fill="none" stroke="#A2402F" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round" d="M20 36.5 L11.2 16.5 C13.6 13 16.6 11.2 20 10.9 C23.4 11.2 26.4 13 28.8 16.5 Z"/><path fill="#A2402F" d="M20 13.6 L21.3 16.9 L24.6 18.2 L21.3 19.5 L20 22.8 L18.7 19.5 L15.4 18.2 L18.7 16.9 Z"/><path fill="none" stroke="#A2402F" stroke-width="2.2" stroke-linecap="round" d="M20 23.6 L20 33.4"/></svg></span>
+      <span><span class="pnav-title">AI驱动的传媒内容制作</span><span class="pnav-sub">AI-Driven Media Content Production</span></span>
+    </a>
+    <div class="pnav-links">
+      <a href="./index.html">首页</a>
+      <a href="./syllabus.html">教学大纲</a>
+      <a href="./tools.html" class="here">教学工具</a>
+      <a href="./agents.html">AI智能体</a>
+      <a href="./showcase.html">学生作品</a>
+      <a href="./ai-trends.html">前沿动态</a>
+      <a href="./course-kg/index.html">知识图谱</a>
+      <a href="../course-references/index.html">资料库</a>
+      <a href="https://github.com/icgma/cpnm-ai-comm-practice" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ── 页头 ── -->
+<header class="page-head">
+  <div class="eyebrow" style="justify-content:center">Teaching Platforms · 六座</div>
+  <h1 class="h-sec">自研教学<span class="em">工具矩阵</span></h1>
+  <p class="sec-desc">课程独立开发的六个在线教学辅助平台，覆盖知识图谱、提示词工程、媒体检索与 AI 编程。</p>
+</header>
+
+<!-- ── 图版 ── -->
+<main class="section" style="padding-top:36px">
+<div class="container">
+  <div class="plate-grid">
+
+    <a href="./course-kg/index.html" target="_blank" rel="noopener noreferrer" class="plate card">
+      <div class="plate-shot">
+        <img src="./images/tool_course_kg.png" alt="课程知识图谱" loading="lazy">
+        <span class="plate-badge">NEW · vis.js</span>
+      </div>
+      <div class="plate-body">
+        <div class="plate-no">Plate I</div>
+        <div class="plate-title">🧠 课程知识图谱</div>
+        <div class="plate-desc">22个知识点 × 6大模块的交互式力导向图，支持模块筛选、标签过滤与节点详情查看。</div>
+        <div class="plate-go">打开图谱 →</div>
+      </div>
+    </a>
+
+    <a href="https://newkg.netlify.app/" target="_blank" rel="noopener noreferrer" class="plate card">
+      <div class="plate-shot">
+        <img src="./images/tool_newkg.png" alt="新闻传播学知识图谱" loading="lazy">
+        <span class="plate-badge">vis.js · 学术</span>
+      </div>
+      <div class="plate-body">
+        <div class="plate-no">Plate II</div>
+        <div class="plate-title">📰 新闻传播学知识图谱</div>
+        <div class="plate-desc">交互式学术全景图，涵盖学者名录、历史时间轴、理论关系网络与核心概念检索。</div>
+        <div class="plate-go">访问平台 →</div>
+      </div>
+    </a>
+
+    <a href="http://thebigpromptlibrary.aisbest.eu.cc/" target="_blank" rel="noopener noreferrer" class="plate card">
+      <div class="plate-shot">
+        <img src="./images/tool_bigpromptlib.png" alt="The Big Prompt Library" loading="lazy">
+        <span class="plate-badge">190+ 提示词</span>
+      </div>
+      <div class="plate-body">
+        <div class="plate-no">Plate III</div>
+        <div class="plate-title">🧩 The Big Prompt Library</div>
+        <div class="plate-desc">190+ 系统提示词与 3300+ 自定义指令，覆盖 ChatGPT/Claude/Gemini 等主流 AI 系统。</div>
+        <div class="plate-go">浏览案例库 →</div>
+      </div>
+    </a>
+
+    <a href="http://notebooklm-prompts.aisbest.eu.cc/" target="_blank" rel="noopener noreferrer" class="plate card">
+      <div class="plate-shot">
+        <img src="./images/tool_notebooklm.png" alt="NotebookLM 提示词库" loading="lazy">
+        <span class="plate-badge">即用型</span>
+      </div>
+      <div class="plate-body">
+        <div class="plate-no">Plate IV</div>
+        <div class="plate-title">📝 幻灯片提示词库</div>
+        <div class="plate-desc">专业即用型提示词集合，助力用 NotebookLM 快速生成高质量演示文稿。</div>
+        <div class="plate-go">访问平台 →</div>
+      </div>
+    </a>
+
+    <a href="http://media-directory.aisbest.eu.cc/" target="_blank" rel="noopener noreferrer" class="plate card">
+      <div class="plate-shot">
+        <img src="./images/tool_media_directory.png" alt="全球媒体目录" loading="lazy">
+        <span class="plate-badge">90+ 媒体</span>
+      </div>
+      <div class="plate-body">
+        <div class="plate-no">Plate V</div>
+        <div class="plate-title">🌐 全球媒体目录</div>
+        <div class="plate-desc">收录约 90 家全球主要媒体机构，按地区与媒体类型双维度索引。</div>
+        <div class="plate-go">查看目录 →</div>
+      </div>
+    </a>
+
+    <a href="https://lingma.aisbest.eu.cc/" target="_blank" rel="noopener noreferrer" class="plate card">
+      <div class="plate-shot">
+        <img src="./images/tool_lingma.png" alt="Lingma IDE 入门指南" loading="lazy">
+        <span class="plate-badge">AI 编程</span>
+      </div>
+      <div class="plate-body">
+        <div class="plate-no">Plate VI</div>
+        <div class="plate-title">💻 Lingma IDE 入门指南</div>
+        <div class="plate-desc">面向零基础文科生的通义灵码 AI 编程环境教学手册，含 5 种 AI 编码模式。</div>
+        <div class="plate-go">阅读指南 →</div>
+      </div>
+    </a>
+
+  </div>
+</div>
+</main>
+
+<!-- ── 页脚 ── -->
+<footer class="pfooter">
+  <div class="foot-motto">工欲善其事 · 必先利其器</div>
+  <p>© 2026 汕头大学 · 长江新闻与传播学院 · AI课程建设项目</p>
+  <p style="margin-top:8px"><a href="./index.html">返回首页</a> · <a href="./syllabus.html">教学大纲</a> · <a href="./agents.html">AI智能体</a></p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect x='1.5' y='1.5' width='37' height='37' rx='9' fill='%23F7EFDA' stroke='%23A2402F' stroke-width='3'/%3E%3Cpath fill='%23A2402F' fill-rule='evenodd' %3Cg transform='translate(20 20) scale(0.74) translate(-20 -20)'%3E%3Cpath fill='none' stroke='%23A2402F' stroke-width='2.6' stroke-linejoin='round' stroke-linecap='round' d='M20 36.5 L11.2 16.5 C13.6 13 16.6 11.2 20 10.9 C23.4 11.2 26.4 13 28.8 16.5 Z'/%3E%3Cpath fill='%23A2402F' d='M20 13.6 L21.3 16.9 L24.6 18.2 L21.3 19.5 L20 22.8 L18.7 19.5 L15.4 18.2 L18.7 16.9 Z'/%3E%3Cpath d='M20 23.6 L20 33' stroke='%23A2402F' stroke-width='2.2' stroke-linecap='round' fill='none'/%3E%3C/g%3E/%3E%3C/svg%3E">
+<title>AI+传媒 前沿动态 — AI驱动的传媒内容制作</title>
+<meta name="description" content="AI与传媒行业前沿动态周报，涵盖技术趋势、行业变革、学术前沿、政策监管及课堂讨论。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,500;0,600;1,500&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@600;900&display=swap" rel="stylesheet">
+
+<style>
+/* ═══ 羊皮纸手稿风 · 趋势页 ═══ */
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#F0E6CF;--bg2:#EFE4C6;--bg3:#E8DCBC;--bg4:#E2D4AE;
+  --border:#D3C4A0;--border2:#C7B189;
+  --text:#3A2E20;--text2:#6E5B41;--text3:#9C8964;
+  --cinnabar:#A2402F;--indigo:#33567C;--verdigris:#51724B;--gold:#8C6A2F;
+  --blue:#33567C;--cyan:#8C6A2F;--purple:#A2402F;--green:#51724B;
+  --amber:#8C6A2F;--red:#A2402F;--grad1:#A2402F;--grad2:#33567C;
+  --kai:'Kaiti SC','STKaiti','KaiTi','Noto Serif SC','Songti SC','SimSun',serif;
+  --latin:'EB Garamond',Georgia,'Times New Roman',serif;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Noto Sans SC','Microsoft YaHei','PingFang SC',sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.8;overflow-x:hidden;font-size:15px}
+body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
+  background:
+    radial-gradient(6px 5px at 14% 20%, rgba(140,106,47,.10), transparent 70%),
+    radial-gradient(9px 7px at 80% 14%, rgba(107,90,68,.08), transparent 70%),
+    radial-gradient(8px 8px at 66% 70%, rgba(140,106,47,.07), transparent 70%),
+    radial-gradient(1000px 640px at 16% 6%, rgba(255,250,235,.55), transparent 60%),
+    radial-gradient(820px 560px at 88% 94%, rgba(156,137,100,.16), transparent 62%),
+    radial-gradient(660px 460px at 70% 26%, rgba(140,106,47,.06), transparent 56%)}
+body::after{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.5;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='p'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' seed='7'/%3E%3CfeColorMatrix values='0 0 0 0 0.36 0 0 0 0 0.29 0 0 0 0 0.18 0 0 0 0.05 0'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23p)'/%3E%3C/svg%3E")}
+.bg-grid,.bg-glow{display:none}
+::selection{background:rgba(162,64,47,.18)}
+a{color:var(--cinnabar);text-decoration:none;transition:color .2s}
+a:hover{color:#7C2F22}
+
+/* 导航 */
+.week-nav{position:fixed;top:0;left:0;right:0;z-index:1000;
+  background:rgba(240,230,207,.95);backdrop-filter:blur(12px);
+  border-bottom:3px double var(--border2);height:58px;
+  display:flex;align-items:center;justify-content:center}
+.week-nav-inner{max-width:1200px;width:100%;padding:0 32px;display:flex;align-items:center;justify-content:space-between}
+.week-nav-left{display:flex;align-items:center;gap:14px}
+.week-nav-home{display:inline-flex;align-items:center;gap:9px;color:var(--text2);
+  font-size:15px;font-family:var(--kai);font-weight:700;letter-spacing:1px;transition:color .2s}
+.week-nav-home:hover{color:var(--cinnabar)}
+.week-nav-logo{width:32px;height:32px;border-radius:6px;border:2px solid var(--cinnabar);
+  color:var(--cinnabar);background:rgba(162,64,47,.06);display:flex;align-items:center;
+  justify-content:center;font-family:var(--latin);font-size:13px;font-weight:600;
+  transform:rotate(-4deg);box-shadow:inset 0 0 0 1px rgba(162,64,47,.25)}
+.week-nav-sep{color:var(--text3)}
+.week-nav-current{font-family:var(--kai);font-size:16px;font-weight:700;letter-spacing:1px}
+.week-nav-right{display:flex;align-items:center;gap:8px}
+.week-nav-btn{padding:6px 15px;border-radius:4px;font-size:13.5px;font-weight:500;
+  color:var(--text2);background:var(--bg2);border:1px solid var(--border2);
+  transition:all .2s;display:inline-flex;align-items:center;gap:4px}
+.week-nav-btn:hover{border-color:var(--gold);color:var(--cinnabar);background:var(--bg3)}
+
+/* 卷首 */
+.week-hero{position:relative;z-index:1;padding:130px 32px 40px;text-align:center}
+.week-hero-inner{max-width:820px;margin:0 auto;position:relative;
+  background:linear-gradient(160deg,#F7EFDA,#EFE4C6);
+  border:1px solid rgba(162,64,47,.4);outline:1px solid rgba(199,177,137,.8);outline-offset:5px;
+  border-radius:3px;box-shadow:0 2px 14px rgba(107,90,68,.16);padding:42px 40px 36px}
+.week-hero-inner::before{content:'';position:absolute;top:10px;left:10px;right:10px;bottom:10px;
+  border:1px solid rgba(199,177,137,.45);pointer-events:none;border-radius:2px}
+.week-badge{display:inline-flex;align-items:center;gap:8px;padding:4px 16px;
+  border:1px solid var(--border2);border-radius:3px;background:var(--bg2);
+  font-size:13px;color:var(--text2);margin-bottom:18px;letter-spacing:1px}
+.week-badge-num{font-family:var(--latin);font-weight:600;color:var(--cinnabar);letter-spacing:2px}
+.week-hero h1{font-family:var(--kai);font-size:40px;font-weight:700;letter-spacing:3px;
+  line-height:1.3;margin-bottom:14px;color:var(--text)}
+.week-hero h1 span{color:var(--cinnabar)}
+.week-hero-sub{font-size:15px;color:var(--text2);max-width:620px;margin:0 auto;line-height:1.9}
+.week-content{position:relative;z-index:1;max-width:1080px;margin:0 auto;padding:26px 32px 60px}
+
+/* 数据栏 */
+.stats-bar{display:flex;gap:24px;flex-wrap:wrap;margin:26px 0;padding:22px;
+  background:var(--bg2);border-radius:4px;border:1px solid var(--border2)}
+.stat-item{text-align:center;flex:1;min-width:120px}
+.stat-num{font-family:var(--kai);font-size:30px;font-weight:700;color:var(--cinnabar)}
+.stat-label{font-size:13px;color:var(--text3);margin-top:4px;letter-spacing:1px}
+
+/* 简报分节 */
+.briefing-section{margin-top:44px}
+.briefing-section h2{font-family:var(--kai);font-size:24px;font-weight:700;letter-spacing:2px;
+  margin-bottom:8px;display:flex;align-items:center;gap:10px}
+.briefing-section h2 .emoji{font-size:22px}
+.briefing-desc{font-size:14px;color:var(--text2);margin-bottom:20px;line-height:1.7}
+.section-divider{height:1px;border-bottom:1px dashed var(--border2);margin:44px 0}
+
+/* 趋势卡 */
+.trend-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:18px;margin-top:24px}
+.trend-card{background:var(--bg3);border:1px solid var(--border2);border-radius:4px;
+  padding:24px;transition:all .3s;position:relative;overflow:hidden;box-shadow:0 2px 10px rgba(107,90,68,.12)}
+.trend-card:hover{border-color:var(--gold);transform:translateY(-3px);box-shadow:0 10px 24px rgba(107,90,68,.2)}
+.trend-tag{display:inline-block;padding:3px 12px;border-radius:3px;font-size:12px;
+  font-weight:600;margin-bottom:12px;border:1px solid}
+.trend-tag.tech{background:rgba(51,86,124,.08);color:#33567C;border-color:rgba(51,86,124,.35)}
+.trend-tag.industry{background:rgba(140,106,47,.09);color:#8C6A2F;border-color:rgba(140,106,47,.35)}
+.trend-tag.academic{background:rgba(81,114,75,.09);color:#51724B;border-color:rgba(81,114,75,.38)}
+.trend-tag.policy{background:rgba(162,64,47,.08);color:#A2402F;border-color:rgba(162,64,47,.35)}
+.trend-tag.tool{background:rgba(110,91,65,.09);color:#6E5B41;border-color:rgba(110,91,65,.38)}
+.trend-card h3{font-family:var(--kai);font-size:17.5px;font-weight:700;letter-spacing:.5px;
+  margin-bottom:10px;line-height:1.5}
+.trend-card p{font-size:14px;color:var(--text2);line-height:1.75}
+.trend-source{margin-top:14px;font-size:12px;color:var(--text3);display:flex;align-items:center;gap:6px;
+  border-top:1px dashed var(--border);padding-top:10px}
+
+/* 案例卡 */
+.case-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px;margin-top:20px}
+.case-card{background:var(--bg3);border:1px solid var(--border2);border-radius:4px;
+  padding:22px;transition:all .3s;box-shadow:0 2px 10px rgba(107,90,68,.1)}
+.case-card:hover{border-color:var(--gold);transform:translateY(-2px)}
+.case-org{font-family:var(--latin);font-size:13px;font-weight:600;color:var(--gold);
+  margin-bottom:8px;text-transform:uppercase;letter-spacing:2px}
+.case-card h3{font-family:var(--kai);font-size:16.5px;font-weight:700;margin-bottom:10px;letter-spacing:.5px}
+.case-card p{font-size:14px;color:var(--text2);line-height:1.75}
+.case-tools{margin-top:14px;display:flex;flex-wrap:wrap;gap:6px}
+.case-tool{padding:2px 10px;border-radius:3px;font-size:11px;background:var(--bg2);
+  color:var(--text2);border:1px solid var(--border)}
+
+/* 对照表 */
+.trends-table{width:100%;border-collapse:separate;border-spacing:0;border-radius:4px;
+  overflow:hidden;border:1px solid var(--border2);font-size:14px;margin-top:16px;background:var(--bg2)}
+.trends-table th{background:var(--bg4);padding:12px 16px;font-weight:700;font-family:var(--kai);
+  font-size:14.5px;letter-spacing:1px;text-align:left;color:var(--text);border-bottom:1px solid var(--border2)}
+.trends-table td{padding:12px 16px;border-bottom:1px solid var(--border);color:var(--text2)}
+.trends-table tr:last-child td{border-bottom:none}
+.trends-table tr:hover td{background:rgba(232,220,188,.8)}
+
+/* 讨论题 */
+.discussion-list{list-style:none;counter-reset:q;padding:0}
+.discussion-list li{counter-increment:q;padding:20px 24px;background:var(--bg3);
+  border:1px solid var(--border2);border-radius:4px;margin-bottom:12px;font-size:15px;
+  line-height:1.8;position:relative;padding-left:60px;transition:border-color .3s}
+.discussion-list li:hover{border-color:var(--gold)}
+.discussion-list li::before{content:counter(q);position:absolute;left:18px;top:19px;
+  width:29px;height:29px;border:1.5px solid var(--cinnabar);border-radius:4px;
+  color:var(--cinnabar);display:flex;align-items:center;justify-content:center;
+  font-family:var(--kai);font-size:14px;font-weight:700;transform:rotate(-3deg);
+  background:rgba(162,64,47,.05)}
+
+/* 存档 */
+.archive-list{display:grid;gap:8px;margin-top:16px}
+.archive-item{display:flex;align-items:center;gap:16px;padding:13px 20px;
+  background:var(--bg3);border:1px solid var(--border);border-radius:4px;
+  color:var(--text);transition:all .2s}
+.archive-item:hover{border-color:var(--gold);transform:translateX(4px)}
+.archive-date{font-family:var(--latin);font-size:14px;font-weight:600;letter-spacing:1px;
+  color:var(--cinnabar);min-width:110px}
+.archive-label{font-size:14px;color:var(--text2)}
+
+@media(max-width:700px){
+  .week-hero{padding:104px 14px 30px}
+  .week-hero-inner{padding:30px 16px 26px}
+  .week-hero h1{font-size:27px;letter-spacing:1.5px}
+  .week-nav-inner{padding:0 8px}
+  .week-nav-home span{display:none}
+  .week-content{padding:20px 14px 46px}
+  .trend-grid,.case-grid{grid-template-columns:1fr}
+  .stats-bar{flex-direction:column;gap:14px}
+}
+</style>
+</head>
+<body>
+
+<!-- Nav -->
+<div class="week-nav">
+  <div class="week-nav-inner">
+  <div class="week-nav-left">
+    <a href="../index.html" class="week-nav-home"><div class="week-nav-logo"><svg class="seal-mark" viewBox="0 0 40 40" aria-hidden="true"><path fill="none" stroke="#A2402F" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round" d="M20 36.5 L11.2 16.5 C13.6 13 16.6 11.2 20 10.9 C23.4 11.2 26.4 13 28.8 16.5 Z"/><path fill="#A2402F" d="M20 13.6 L21.3 16.9 L24.6 18.2 L21.3 19.5 L20 22.8 L18.7 19.5 L15.4 18.2 L18.7 16.9 Z"/><path fill="none" stroke="#A2402F" stroke-width="2.2" stroke-linecap="round" d="M20 23.6 L20 33.4"/></svg></div> AI驱动的传媒内容制作</a>
+    <span class="week-nav-sep">/</span>
+    <span class="week-nav-current">📡 前沿动态</span>
+  </div>
+  <div class="week-nav-right">
+    <a href="../ai-trends.html" class="week-nav-btn">← 课程首页</a>
+  </div>
+  </div>
+</div>
+
+<!-- Hero -->
+<div class="week-hero">
+  <div class="week-hero-inner">
+    <div class="week-badge"><span class="week-badge-num">ARCHIVED · 2026-06-21</span></div>
+    <h1>AI + 传媒 <span>前沿动态</span></h1>
+    <p class="week-hero-sub">
+      追踪 AI 技术与新闻传播行业的交叉前沿，每周更新。<br>涵盖技术趋势、行业变革、学术前沿、政策监管与课堂讨论。
+    </p>
+  </div>
+</div>
+
+<!-- Content -->
+<div class="week-content">
+
+<!-- Stats -->
+<div class="stats-bar">
+  <div class="stat-item"><div class="stat-num">6</div><div class="stat-label">RSS 数据源</div></div>
+  <div class="stat-item"><div class="stat-num">73++</div><div class="stat-label">抓取条目</div></div>
+  <div class="stat-item"><div class="stat-num">5</div><div class="stat-label">趋势维度</div></div>
+  <div class="stat-item"><div class="stat-num">12</div><div class="stat-label">落地案例</div></div>
+  <div class="stat-item"><div class="stat-num">5</div><div class="stat-label">讨论问题</div></div>
+</div>
+
+<!-- ════════════ Section 1: 技术趋势 ════════════ -->
+<div class="briefing-section">
+  <h2><span class="emoji">🔬</span> 技术趋势</h2>
+  <p class="briefing-desc">本周与传媒相关的 AI 技术进展与产品动态</p>
+
+  <div class="trend-grid" id="trend-cards-area">
+<div class="trend-card">
+  <div class="trend-tag tech">技术</div>
+  <h3>AI工作流闭环系统实践</h3>
+  <p>通过Agent闭环实现100% Vibe Coding完成Game Jam游戏开发</p>
+  <div class="trend-source">📅 2026-06-21 · 来源</div>
+</div>
+<div class="trend-card">
+  <div class="trend-tag tech">技术</div>
+  <h3>AI医疗诊断系统突破</h3>
+  <p>OpenAI模型辅助识别18种罕见儿童遗传病</p>
+  <div class="trend-source">📅 2026-06-21 · 来源</div>
+</div>
+<div class="trend-card">
+  <div class="trend-tag tool">工具</div>
+  <h3>跨平台AI协作工具</h3>
+  <p>Nivroo和Moduna实现60秒建站与AI数据分析</p>
+  <div class="trend-source">📅 2026-06-21 · 来源</div>
+</div>
+<div class="trend-card">
+  <div class="trend-tag industry">行业</div>
+  <h3>动态应用网格技术</h3>
+  <p>watchOS 27引入AI驱动的界面自适应系统</p>
+  <div class="trend-source">📅 2026-06-21 · 来源</div>
+</div>
+</div>
+</div>
+
+<div class="section-divider"></div>
+
+<!-- ════════════ Section 2: 行业案例 ════════════ -->
+<div class="briefing-section">
+  <h2><span class="emoji">🏢</span> 行业变革 · 落地案例</h2>
+  <p class="briefing-desc">全球新闻媒体机构的 AI 应用实战案例</p>
+
+  <div class="case-grid" id="case-cards-area">
+<div class="case-card">
+  <div class="case-org">京东京造</div>
+  <h3>泰坦A5升降电竞桌</h3>
+  <p>三形态桌板+AI供电系统，支持国补后849元</p>
+  <div class="case-tools"><span class="case-tool">硬件</span><span class="case-tool">AI</span></div>
+</div>
+<div class="case-card">
+  <div class="case-org">字节跳动Pico</div>
+  <h3>Project Swan头显</h3>
+  <p>融合Vision Pro与Galaxy XR设计语言</p>
+  <div class="case-tools"><span class="case-tool">硬件</span><span class="case-tool">AI</span></div>
+</div>
+<div class="case-card">
+  <div class="case-org">OpenAI</div>
+  <h3>LifeSciBench基准测试</h3>
+  <p>医药领域AI系统评估标准发布</p>
+  <div class="case-tools"><span class="case-tool">学术</span><span class="case-tool">工具</span></div>
+</div>
+</div>
+</div>
+
+<div class="section-divider"></div>
+
+<!-- ════════════ Section 3: 政策监管 ════════════ -->
+<div class="briefing-section">
+  <h2><span class="emoji">⚖️</span> 政策监管</h2>
+  <p class="briefing-desc">全球 AI 内容监管与版权最新法规动态</p>
+
+  <div class="trend-grid" id="policy-cards-area">
+<div class="trend-card">
+  <div class="trend-tag policy">法规</div>
+  <h3>OpenAI合作伙伴网络</h3>
+  <p>150亿美元投入全球企业AI合规建设</p>
+  <div class="trend-source">📅 2026-06-21 · 来源</div>
+</div>
+<div class="trend-card">
+  <div class="trend-tag policy">法规</div>
+  <h3>NASA太空AI监管</h3>
+  <p>史无前例太空救援行动合规框架</p>
+  <div class="trend-source">📅 2026-06-21 · 来源</div>
+</div>
+</div>
+</div>
+
+<div class="section-divider"></div>
+
+<!-- ════════════ Section 4: 课堂连接 ════════════ -->
+<div class="briefing-section">
+  <h2><span class="emoji">🎓</span> 课堂连接</h2>
+  <p class="briefing-desc">本期趋势与课程教学周次的关联映射</p>
+
+  <div style="overflow-x:auto">
+  <table class="trends-table">
+    <thead>
+      <tr>
+        <th>本周趋势</th>
+        <th>关联周次</th>
+        <th>思考方向</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Agent 范式转移</td><td><a href="../weeks/week-05.html">W05-W06</a></td><td>Agent 与传统搜索引擎的本质区别</td></tr>
+      <tr><td>GPT-5.4 轻量化</td><td><a href="../weeks/week-08.html">W07-W08</a></td><td>地方媒体如何用得起高性能 AI</td></tr>
+      <tr><td>Sora 关停</td><td><a href="../weeks/week-09.html">W09-W10</a></td><td>AI 工具的生命周期与平台依赖风险</td></tr>
+      <tr><td>路透社 AI 调查报道</td><td><a href="../weeks/week-06.html">W05-W06</a></td><td>数据新闻中的 AI 应用边界</td></tr>
+      <tr><td>工会 AI 条款</td><td><a href="../weeks/week-14.html">W14</a></td><td>记者在 AI 时代的权利保障</td></tr>
+      <tr><td>EU AI Act 强制标注</td><td><a href="../weeks/week-14.html">W14</a></td><td>内容标注义务与新闻自由的平衡</td></tr>
+      <tr><td>九大创新场景</td><td><a href="../weeks/week-13.html">W13</a></td><td>哪些场景已在国内实际落地？</td></tr>
+    </tbody>
+  </table>
+  </div>
+</div>
+
+<div class="section-divider"></div>
+
+<!-- ════════════ Section 5: 讨论问题 ════════════ -->
+<div class="briefing-section">
+  <h2><span class="emoji">💬</span> 课堂讨论问题</h2>
+  <p class="briefing-desc">基于本期动态的深度思考题，适用于小组讨论或书面反思</p>
+
+  <ol class="discussion-list" id="discussion-area">
+<li><strong>问题标题：</strong>AI工作流闭环系统如何平衡创作自由与效率提升？</li>
+<li><strong>问题标题：</strong>跨平台AI协作工具面临的最大技术瓶颈是什么？</li>
+<li><strong>问题标题：</strong>医药领域AI系统评估标准将如何影响行业规范？</li>
+</ol>
+</div>
+
+
+
+<!-- Footer -->
+<div class="section-divider"></div>
+<div style="text-align:center;padding:32px 0;color:var(--text3);font-size:13px">
+  <p>数据来源：RSS 自动抓取 (sspai / IT之家 / 阮一峰 / OpenAI / Hacker News) + Web 搜索 + 智谱 GLM-4.7</p>
+  <p style="margin-top:8px">生成脚本：<code>mcp_services/servers/news_fetch/server.py</code> · <code>mcp_services/servers/media_trends/server.py</code></p>
+  <p style="margin-top:8px"><a href="../index.html" style="color:var(--cyan)">← 返回课程首页</a></p>
+</div>
+
+</div><!-- /week-content -->
+
+<div class="week-footer">© 2026 汕头大学 · 长江新闻与传播学院 · AI课程建设项目</div>
+</body>
+</html>

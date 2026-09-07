@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect x='1.5' y='1.5' width='37' height='37' rx='9' fill='%23F7EFDA' stroke='%23A2402F' stroke-width='3'/%3E%3Cpath fill='%23A2402F' fill-rule='evenodd' %3Cg transform='translate(20 20) scale(0.74) translate(-20 -20)'%3E%3Cpath fill='none' stroke='%23A2402F' stroke-width='2.6' stroke-linejoin='round' stroke-linecap='round' d='M20 36.5 L11.2 16.5 C13.6 13 16.6 11.2 20 10.9 C23.4 11.2 26.4 13 28.8 16.5 Z'/%3E%3Cpath fill='%23A2402F' d='M20 13.6 L21.3 16.9 L24.6 18.2 L21.3 19.5 L20 22.8 L18.7 19.5 L15.4 18.2 L18.7 16.9 Z'/%3E%3Cpath d='M20 23.6 L20 33' stroke='%23A2402F' stroke-width='2.2' stroke-linecap='round' fill='none'/%3E%3C/g%3E/%3E%3C/svg%3E">
+<title>学生作品精选 — AI驱动的传媒内容制作</title>
+<meta name="description" content="2025-2026学年期末项目产出20件AI驱动的传媒作品：互动体验、AI视频、播客音乐与数据新闻。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,500;0,600;1,500&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./parchment.css">
+<style>
+.page-head{padding:130px 40px 10px;text-align:center;position:relative;z-index:1}
+.page-head .h-sec{font-size:40px}
+.page-head .sec-desc{margin:0 auto}
+.work-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:44px}
+.work{padding:22px 20px;display:flex;flex-direction:column;color:var(--ink)}
+.work:hover{color:var(--ink)}
+.work-cat{font-size:12px;font-weight:600;letter-spacing:1px;margin-bottom:10px}
+.cat-net .work-cat,.cat-net .work-title::before{}
+.work-title{font-family:var(--kai);font-size:18px;font-weight:700;letter-spacing:1px;margin-bottom:6px;line-height:1.5}
+.work-author{font-size:13px;color:var(--ink-3);flex:1}
+.work-go{margin-top:14px;font-size:13px;color:var(--cinnabar)}
+.work:hover .work-go{letter-spacing:1px}
+.cat-net{border-top:3px solid var(--indigo)}
+.cat-video{border-top:3px solid var(--cinnabar)}
+.cat-audio{border-top:3px solid var(--gold)}
+.cat-data{border-top:3px solid var(--verdigris)}
+.more-wrap{text-align:center;margin-top:40px}
+@media(max-width:980px){.work-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){
+  .page-head{padding:100px 20px 6px}
+  .page-head .h-sec{font-size:30px}
+  .work-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<div class="vignette"></div>
+
+<!-- ── 导航 ── -->
+<nav class="pnav">
+  <div class="pnav-inner">
+    <a href="./index.html" class="pnav-brand">
+      <span class="seal"><svg class="seal-mark" viewBox="0 0 40 40" aria-hidden="true"><path fill="none" stroke="#A2402F" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round" d="M20 36.5 L11.2 16.5 C13.6 13 16.6 11.2 20 10.9 C23.4 11.2 26.4 13 28.8 16.5 Z"/><path fill="#A2402F" d="M20 13.6 L21.3 16.9 L24.6 18.2 L21.3 19.5 L20 22.8 L18.7 19.5 L15.4 18.2 L18.7 16.9 Z"/><path fill="none" stroke="#A2402F" stroke-width="2.2" stroke-linecap="round" d="M20 23.6 L20 33.4"/></svg></span>
+      <span><span class="pnav-title">AI驱动的传媒内容制作</span><span class="pnav-sub">AI-Driven Media Content Production</span></span>
+    </a>
+    <div class="pnav-links">
+      <a href="./index.html">首页</a>
+      <a href="./syllabus.html">教学大纲</a>
+      <a href="./tools.html">教学工具</a>
+      <a href="./agents.html">AI智能体</a>
+      <a href="./showcase.html" class="here">学生作品</a>
+      <a href="./ai-trends.html">前沿动态</a>
+      <a href="./course-kg/index.html">知识图谱</a>
+      <a href="../course-references/index.html">资料库</a>
+      <a href="https://github.com/icgma/cpnm-ai-comm-practice" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ── 页头 ── -->
+<header class="page-head">
+  <div class="eyebrow" style="justify-content:center">Student Showcase · 2025–2026</div>
+  <h1 class="h-sec">学生作品<span class="em">精选</span></h1>
+  <p class="sec-desc">2025–2026 学年期末项目产出 20 件 AI 驱动的传媒作品，覆盖互动体验、视频动画、播客音乐与数据新闻。</p>
+</header>
+
+<!-- ── 展堂 ── -->
+<main class="section" style="padding-top:30px">
+<div class="container">
+  <div class="work-grid">
+
+    <a href="https://jou2327a.netlify.app/yingge/" target="_blank" rel="noopener noreferrer" class="work card cat-net">
+      <div class="work-cat" style="color:var(--indigo)">🌐 互动体验</div>
+      <div class="work-title">英歌舞角色匹配测试</div>
+      <div class="work-author">第三组 · 潮汕非遗×性格测试</div>
+      <div class="work-go">观展 →</div>
+    </a>
+    <a href="https://xinlizicha.netlify.app/" target="_blank" rel="noopener noreferrer" class="work card cat-net">
+      <div class="work-cat" style="color:var(--indigo)">🌐 互动体验</div>
+      <div class="work-title">MindCheck 心理自查</div>
+      <div class="work-author">第一组 · 四维度心理评估</div>
+      <div class="work-go">观展 →</div>
+    </a>
+    <a href="https://jou2327a.netlify.app/yangyuxuan/game/" target="_blank" rel="noopener noreferrer" class="work card cat-net">
+      <div class="work-cat" style="color:var(--indigo)">🎮 互动体验</div>
+      <div class="work-title">最后的人类编辑</div>
+      <div class="work-author">杨宇轩 · 赛博朋克RPG</div>
+      <div class="work-go">观展 →</div>
+    </a>
+    <a href="https://jou2327a.netlify.app/group4/" target="_blank" rel="noopener noreferrer" class="work card cat-net">
+      <div class="work-cat" style="color:var(--indigo)">🌐 互动体验</div>
+      <div class="work-title">甄嬛传人物谱系</div>
+      <div class="work-author">第四组 · 36角色交互图谱</div>
+      <div class="work-go">观展 →</div>
+    </a>
+
+    <a href="https://jou2327a.netlify.app/group2/" target="_blank" rel="noopener noreferrer" class="work card cat-video">
+      <div class="work-cat" style="color:var(--cinnabar)">🎬 AI视频</div>
+      <div class="work-title">三只小猪AI动画</div>
+      <div class="work-author">第二组 · AI图生视频</div>
+      <div class="work-go">观展 →</div>
+    </a>
+    <a href="https://jou2327a.netlify.app/yangjiajun/" target="_blank" rel="noopener noreferrer" class="work card cat-video">
+      <div class="work-cat" style="color:var(--cinnabar)">🎬 AI视频</div>
+      <div class="work-title">生发可乐品牌全案</div>
+      <div class="work-author">杨家俊 · 一人4A公司</div>
+      <div class="work-go">观展 →</div>
+    </a>
+
+    <a href="https://jou2327a.netlify.app/group5/" target="_blank" rel="noopener noreferrer" class="work card cat-audio">
+      <div class="work-cat" style="color:var(--gold)">🎧 播客</div>
+      <div class="work-title">粤语体育老师</div>
+      <div class="work-author">第五组 · 双人粤语播客</div>
+      <div class="work-go">观展 →</div>
+    </a>
+
+    <a href="https://jou2327a.netlify.app/linhx/" target="_blank" rel="noopener noreferrer" class="work card cat-data">
+      <div class="work-cat" style="color:var(--verdigris)">📊 数据报告</div>
+      <div class="work-title">青年情绪消费图鉴</div>
+      <div class="work-author">林海欣 · 300份问卷+14图表</div>
+      <div class="work-go">观展 →</div>
+    </a>
+
+  </div>
+
+  <div class="more-wrap">
+    <a href="https://jou2327a.netlify.app/" target="_blank" rel="noopener noreferrer" class="btn btn-seal">观全部二十件作品 →</a>
+  </div>
+</div>
+</main>
+
+<!-- ── 页脚 ── -->
+<footer class="pfooter">
+  <div class="foot-motto">纸上得来终觉浅 · 绝知此事要躬行</div>
+  <p>© 2026 汕头大学 · 长江新闻与传播学院 · AI课程建设项目</p>
+  <p style="margin-top:8px"><a href="./index.html">返回首页</a> · <a href="./syllabus.html">教学大纲</a> · <a href="./agents.html">AI智能体</a></p>
+</footer>
+</body>
+</html>
