@@ -191,10 +191,13 @@ html[lang="en"] .pnav-title{font-family:var(--latin);letter-spacing:.04em}
 
 /* ── 特色四事 ── */
 .feat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:40px}
-.feat-card{padding:26px 20px;text-align:center}
+.feat-card{display:flex;flex-direction:column;padding:26px 20px;text-align:center;color:var(--ink)}
+.feat-card:hover{color:var(--ink)}
 .feat-icon{font-size:32px;margin-bottom:12px}
 .feat-name{font-family:var(--kai);font-size:18px;font-weight:700;letter-spacing:1.5px;margin-bottom:6px}
-.feat-desc{font-size:13px;color:var(--ink-2);line-height:1.7}
+.feat-desc{font-size:13px;color:var(--ink-2);line-height:1.7;flex:1}
+.feat-go{margin-top:16px;font-size:13px;color:var(--cinnabar);display:flex;align-items:center;justify-content:center;gap:6px}
+.feat-card:hover .feat-go{gap:10px}
 
 /* ── 金句 ── */
 .quote-sec{padding:90px 40px;text-align:center;position:relative;z-index:1}
