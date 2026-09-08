@@ -93,16 +93,18 @@ a:hover{color:#7C2F22}
   border-bottom:1px solid transparent}
 .module.open .module-header{border-bottom-color:var(--border)}
 .module-header:hover{background:rgba(232,220,188,.7)}
-.module-header-left{display:flex;align-items:center;gap:14px}
+.module-header-left{display:flex;align-items:center;gap:14px;min-width:0}
+.module-header-left > div{min-width:0}
 .module-icon{width:42px;height:42px;border-radius:6px;display:flex;align-items:center;
   justify-content:center;font-size:20px;flex-shrink:0;border:1px solid rgba(199,177,137,.55);
   background:rgba(240,230,207,.6)}
 .module-num{font-family:var(--latin);font-size:11px;font-weight:600;color:var(--gold);
   letter-spacing:2.5px;text-transform:uppercase}
-.module-title{font-family:var(--kai);font-size:19px;font-weight:700;letter-spacing:1px}
+.module-title{font-family:var(--kai);font-size:19px;font-weight:700;letter-spacing:1px;word-break:break-word}
 .module-chevron{font-size:13px;color:var(--text3);transition:transform .3s;flex-shrink:0}
 .module.open .module-chevron{transform:rotate(180deg)}
-.module-body{display:none;padding:20px 22px 22px;animation:fadeSlide .3s ease}
+.module-body{display:none;padding:20px 22px 22px;animation:fadeSlide .3s ease;
+  overflow-x:auto;-webkit-overflow-scrolling:touch}
 .module.open .module-body{display:block}
 @keyframes fadeSlide{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:translateY(0)}}
 
@@ -136,7 +138,10 @@ a:hover{color:#7C2F22}
 .flow-step-title{font-family:var(--kai);font-size:15px;font-weight:700;letter-spacing:.5px;margin-bottom:2px}
 .flow-step-desc{font-size:13.5px;color:var(--text2);line-height:1.7}
 
-/* 对照表 */
+/* 对照表：宽表在折页 overflow:hidden 里会被裁切，容器内横滑 */
+.compare-table-wrap,
+.content-block:has(> table.compare-table){
+  overflow-x:auto;max-width:100%;-webkit-overflow-scrolling:touch}
 .compare-table{width:100%;border-collapse:separate;border-spacing:0;border-radius:4px;
   overflow:hidden;border:1px solid var(--border2);font-size:14px;background:var(--bg2)}
 .compare-table th{background:var(--bg4);padding:10px 14px;font-weight:700;font-family:var(--kai);
@@ -206,4 +211,8 @@ a:hover{color:#7C2F22}
   .week-bottom-nav{flex-direction:column}
   .bottom-nav-card.next{text-align:left;align-items:flex-start}
   .stat-grid{grid-template-columns:repeat(2,1fr)}
+  .compare-table{font-size:13px}
+  .compare-table th,.compare-table td{padding:8px 10px}
+  .week-nav-btn{padding:6px 10px;font-size:12.5px}
+  .week-nav-right{gap:4px;flex-shrink:0}
 }
