@@ -123,6 +123,19 @@ a:hover{color:#7C2F22}
 .key-point-title{font-family:var(--kai);font-size:15px;font-weight:700;letter-spacing:.5px;margin-bottom:2px}
 .key-point-desc{font-size:13.5px;color:var(--text2);line-height:1.7}
 
+/* 步骤条（关键词三层、工作流等） */
+.flow-list{display:flex;flex-direction:column;gap:10px}
+.flow-step{display:flex;align-items:flex-start;gap:12px;padding:13px 16px;
+  border-radius:4px;background:var(--bg3);border:1px solid var(--border)}
+.flow-step:hover{border-color:var(--gold)}
+.flow-step-num{width:28px;height:28px;border-radius:6px;flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;
+  background:rgba(162,64,47,.1);color:var(--cinnabar);border:1px solid rgba(162,64,47,.35);
+  font-family:var(--latin);font-size:14px;font-weight:700;line-height:1}
+.flow-step-content{flex:1;min-width:0}
+.flow-step-title{font-family:var(--kai);font-size:15px;font-weight:700;letter-spacing:.5px;margin-bottom:2px}
+.flow-step-desc{font-size:13.5px;color:var(--text2);line-height:1.7}
+
 /* 对照表 */
 .compare-table{width:100%;border-collapse:separate;border-spacing:0;border-radius:4px;
   overflow:hidden;border:1px solid var(--border2);font-size:14px;background:var(--bg2)}
