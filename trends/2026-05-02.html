@@ -427,14 +427,14 @@ a.trend-card:hover,a.case-card:hover{color:inherit}
 <div class="week-footer">© 2026 汕头大学 · 长江新闻与传播学院 · AI课程建设项目</div>
 <script>
   // ── Theme Toggle ──
-  const saved = localStorage.getItem('theme') || 'dark';
+  let saved = 'dark'; try { saved = localStorage.getItem('theme') || 'dark'; } catch (e) {}
   document.documentElement.setAttribute('data-theme', saved);
   document.getElementById('themeIcon').textContent = saved === 'dark' ? '🌙' : '☀️';
   document.getElementById('themeToggle').addEventListener('click', () => {
     const cur = document.documentElement.getAttribute('data-theme');
     const next = cur === 'dark' ? 'light' : 'dark';
     document.documentElement.setAttribute('data-theme', next);
-    localStorage.setItem('theme', next);
+    try { localStorage.setItem('theme', next); } catch (e) {}
     document.getElementById('themeIcon').textContent = next === 'dark' ? '🌙' : '☀️';
   });
 
