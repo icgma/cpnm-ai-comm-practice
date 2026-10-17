@@ -1,0 +1,19 @@
+/* 周挑战页专用。共用底色来自 doc-common.css，这里只补本页结构。 */
+html { scroll-behavior: auto; }
+body { padding-bottom: 100vh; }
+.week-index{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.week-index a{display:inline-block;padding:4px 10px;border:1px solid var(--border2);
+  border-radius:3px;background:var(--bg3);color:var(--text);font-size:14px}
+.week-index a:hover{color:var(--cinnabar)}
+.challenge{scroll-margin-top:112px}
+.stem-label{margin-top:14px;font-size:13px;letter-spacing:1px;color:var(--text3)}
+.stem{margin:8px 0 0;padding:14px 16px;border-left:3px solid var(--cinnabar);
+  background:var(--bg3);color:var(--text);font-size:17px;line-height:1.85}
+.field{margin-top:12px;color:var(--text2)}
+.field strong{color:var(--text)}
+.judgment{margin-top:14px;padding:14px 16px;border:1px solid rgba(162,64,47,.35);
+  background:rgba(162,64,47,.05);color:var(--text)}
+.judgment p{margin-top:6px}
+.rubric{margin-top:4px}
+.related{margin-top:14px;font-size:14px;color:var(--text2)}
+.related a{margin-right:12px}

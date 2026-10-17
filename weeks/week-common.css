@@ -37,7 +37,8 @@ a{color:var(--cinnabar);text-decoration:none;transition:color .2s}
 a:hover{color:#7C2F22}
 
 /* ── 顶部导航（纸栏）── */
-.week-nav{position:fixed;top:0;left:0;right:0;z-index:1000;
+.week-chrome{position:sticky;top:0;z-index:1000}
+.week-nav{position:relative;z-index:1000;
   background:rgba(240,230,207,.95);backdrop-filter:blur(12px);
   border-bottom:3px double var(--border2);height:58px;
   display:flex;align-items:center;justify-content:center}
@@ -62,7 +63,7 @@ a:hover{color:#7C2F22}
 .week-nav-btn:hover{border-color:var(--gold);color:var(--cinnabar);background:var(--bg3)}
 
 /* ── 卷首（周次扉页）── */
-.week-hero{position:relative;z-index:1;padding:130px 32px 48px;text-align:center}
+.week-hero{position:relative;z-index:1;padding:48px 32px 48px;text-align:center}
 .week-hero-inner{max-width:820px;margin:0 auto;position:relative;
   background:linear-gradient(160deg,#F7EFDA,#EFE4C6);
   border:1px solid rgba(162,64,47,.4);outline:1px solid rgba(199,177,137,.8);outline-offset:5px;
@@ -83,6 +84,17 @@ a:hover{color:#7C2F22}
 
 /* ── 正文 ── */
 .week-content{position:relative;z-index:1;max-width:920px;margin:0 auto;padding:26px 32px 70px}
+
+/* 本周去向：课文之前的出口，不改课文正文 */
+.week-path{margin:0 0 22px;padding:16px 18px 14px;border:1px solid var(--border2);
+  border-left:3px solid var(--cinnabar);background:var(--bg2);border-radius:4px}
+.week-path-title{font-family:var(--kai);font-size:18px;font-weight:700;letter-spacing:1px;margin-bottom:4px}
+.week-path-stage{font-size:13.5px;color:var(--text2);margin-bottom:10px}
+.week-path-links{display:flex;flex-wrap:wrap;gap:8px;list-style:none}
+.week-path-links a{display:inline-block;padding:6px 12px;border:1px solid var(--border2);
+  border-radius:4px;background:var(--bg3);font-size:13.5px;color:var(--cinnabar)}
+.week-path-links a:hover{border-color:var(--gold);background:var(--bg4)}
+.week-path-note{font-size:13.5px;color:var(--text2);line-height:1.7;margin-top:8px}
 
 /* ── 模块（折页）── */
 .module{margin-bottom:26px;border-radius:4px;border:1px solid var(--border2);
@@ -200,7 +212,7 @@ a:hover{color:#7C2F22}
 
 /* ── 响应式 ── */
 @media(max-width:700px){
-  .week-hero{padding:104px 14px 34px}
+  .week-hero{padding:28px 14px 34px}
   .week-hero-inner{padding:32px 18px 28px}
   .week-hero h1{font-size:29px;letter-spacing:1.5px}
   .week-nav{padding:0 12px}

@@ -39,7 +39,8 @@ a{color:var(--cinnabar);text-decoration:none;transition:color .2s}
 a:hover{color:#7C2F22}
 code{font-family:'JetBrains Mono','Fira Code','SFMono-Regular',Consolas,monospace}
 
-/* ── 顶部纸栏 ── */
+/* ── 顶部纸栏 ──
+   关于、隐私已改挂 site-nav.js。下面的 .doc-nav 仍留给尚未换挂载点的文档页。 */
 .doc-nav{position:sticky;top:0;z-index:1000;background:var(--nav-bg);
   backdrop-filter:blur(12px);border-bottom:3px double var(--border2)}
 .doc-nav-inner{max-width:1200px;margin:0 auto;padding:11px 32px;display:flex;align-items:center;justify-content:space-between;gap:16px}

@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect x='1.5' y='1.5' width='37' height='37' rx='9' fill='%23F7EFDA' stroke='%23A2402F' stroke-width='3'/%3E%3Cg transform='translate(20 20) scale(0.74) translate(-20 -20)'%3E%3Cpath fill='none' stroke='%23A2402F' stroke-width='2.6' stroke-linejoin='round' stroke-linecap='round' d='M20 36.5 L11.2 16.5 C13.6 13 16.6 11.2 20 10.9 C23.4 11.2 26.4 13 28.8 16.5 Z'/%3E%3Cpath fill='%23A2402F' d='M20 13.6 L21.3 16.9 L24.6 18.2 L21.3 19.5 L20 22.8 L18.7 19.5 L15.4 18.2 L18.7 16.9 Z'/%3E%3Cpath d='M20 23.6 L20 33' stroke='%23A2402F' stroke-width='2.2' stroke-linecap='round' fill='none'/%3E%3C/g%3E%3C/svg%3E">
 <title>教学工具矩阵 — AI驱动的传媒内容制作</title>
-<meta name="description" content="课程独立开发的六个在线教学辅助平台：知识图谱、提示词工程、媒体检索与AI编程。">
+<meta name="description" content="五座打得开的教学工具，以及暂不可用的提示词库外站。提示词练习改去第三周课文和周挑战。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,500;0,600;1,500&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@600;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="./parchment.css">
@@ -31,6 +31,10 @@
 .plate-desc{font-size:13.5px;color:var(--ink-2);line-height:1.75;flex:1}
 .plate-go{margin-top:14px;font-size:14px;color:var(--cinnabar);display:flex;align-items:center;gap:6px}
 .plate:hover .plate-go{gap:10px}
+.plate-links{flex-wrap:wrap;gap:8px 16px}
+.plate-links a{color:var(--cinnabar)}
+.plate-note{cursor:default}
+.plate-note:hover{transform:none}
 @media(max-width:640px){
   .page-head{padding:100px 20px 6px}
   .page-head .h-sec{font-size:30px}
@@ -41,32 +45,14 @@
 <body>
 <div class="vignette"></div>
 
-<!-- ── 导航 ── -->
-<nav class="pnav">
-  <div class="pnav-inner">
-    <a href="./index.html" class="pnav-brand">
-      <span class="seal"><svg class="seal-mark" viewBox="0 0 40 40" aria-hidden="true"><path fill="none" stroke="#A2402F" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round" d="M20 36.5 L11.2 16.5 C13.6 13 16.6 11.2 20 10.9 C23.4 11.2 26.4 13 28.8 16.5 Z"/><path fill="#A2402F" d="M20 13.6 L21.3 16.9 L24.6 18.2 L21.3 19.5 L20 22.8 L18.7 19.5 L15.4 18.2 L18.7 16.9 Z"/><path fill="none" stroke="#A2402F" stroke-width="2.2" stroke-linecap="round" d="M20 23.6 L20 33.4"/></svg></span>
-      <span><span class="pnav-title">AI驱动的传媒内容制作</span><span class="pnav-sub">AI-Driven Media Content Production</span></span>
-    </a>
-    <div class="pnav-links">
-      <a href="./index.html">首页</a>
-      <a href="./syllabus.html">教学大纲</a>
-      <a href="./tools.html" class="here">教学工具</a>
-      <a href="./agents.html">AI智能体</a>
-      <a href="./showcase.html">学生作品</a>
-      <a href="./ai-trends.html">前沿动态</a>
-      <a href="./course-kg/index.html">知识图谱</a>
-      <a href="./library.html">资料库</a>
-      <a href="https://github.com/icgma/cpnm-ai-comm-practice" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
-    </div>
-  </div>
-</nav>
+<div id="site-nav" data-current="tools" data-root="./"></div>
+<script src="./site-nav.js" defer></script>
 
 <!-- ── 页头 ── -->
 <header class="page-head">
-  <div class="eyebrow" style="justify-content:center">Teaching Platforms · 六座</div>
-  <h1 class="h-sec">自研教学<span class="em">工具矩阵</span></h1>
-  <p class="sec-desc">课程独立开发的六个在线教学辅助平台，覆盖知识图谱、提示词工程、媒体检索与 AI 编程。</p>
+  <div class="eyebrow" style="justify-content:center">Teaching Platforms · 五座</div>
+  <h1 class="h-sec">打得开的<span class="em">教学工具</span></h1>
+  <p class="sec-desc">五座站点可以打开：课程知识图谱、新闻传播学知识图谱、幻灯片提示词库、全球媒体目录、Lingma 入门。提示词大库外站暂不可用，练习改去第三周课文和当周挑战。</p>
 </header>
 
 <!-- ── 图版 ── -->
@@ -100,18 +86,21 @@
       </div>
     </a>
 
-    <a href="http://thebigpromptlibrary.aisbest.eu.cc/" target="_blank" rel="noopener noreferrer" class="plate card">
+    <article class="plate card plate-note">
       <div class="plate-shot">
-        <img src="./images/tool_bigpromptlib.png" alt="The Big Prompt Library" loading="lazy">
-        <span class="plate-badge">190+ 提示词</span>
+        <img src="./images/tool_bigpromptlib.png" alt="" loading="lazy">
+        <span class="plate-badge">外站暂不可用</span>
       </div>
       <div class="plate-body">
         <div class="plate-no">Plate III</div>
-        <div class="plate-title">🧩 The Big Prompt Library</div>
-        <div class="plate-desc">190+ 系统提示词与 3300+ 自定义指令，覆盖 ChatGPT/Claude/Gemini 等主流 AI 系统。</div>
-        <div class="plate-go">浏览案例库 →</div>
+        <div class="plate-title">🧩 提示词库</div>
+        <div class="plate-desc">原提示词库外站暂不可用，本页不再链过去。提示词练习读第三周课文，并做当周挑战。</div>
+        <div class="plate-go plate-links">
+          <a href="./weeks/week-03.html">第三周课文 →</a>
+          <a href="./assess/index.html#w03">第三周挑战 →</a>
+        </div>
       </div>
-    </a>
+    </article>
 
     <a href="http://notebooklm-prompts.aisbest.eu.cc/" target="_blank" rel="noopener noreferrer" class="plate card">
       <div class="plate-shot">
@@ -160,7 +149,7 @@
 <footer class="pfooter">
   <div class="foot-motto">工欲善其事 · 必先利其器</div>
   <p>© 2026 汕头大学 · 长江新闻与传播学院 · AI课程建设项目</p>
-  <p style="margin-top:8px"><a href="./index.html">返回首页</a> · <a href="./syllabus.html">教学大纲</a> · <a href="./agents.html">AI智能体</a></p>
+  <p style="margin-top:8px"><a href="./index.html">返回首页</a> · <a href="./syllabus.html">教学大纲</a> · <a href="./agents.html">AI智能体</a> · <a href="./privacy.html">隐私政策</a></p>
 </footer>
 </body>
 </html>

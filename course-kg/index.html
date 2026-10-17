@@ -71,6 +71,7 @@
     min-height: 100%; display: flex; flex-direction: column;
     justify-content: center; color: var(--ink-3); text-align: center;
   }
+  .panel-placeholder[hidden], .node-detail[hidden] { display: none; }
   .panel-placeholder p { font-size: 14px; line-height: 1.7; }
   .drawer-close {
     position: sticky; top: 10px; float: right;
@@ -139,6 +140,15 @@
   .stat-value { font-weight: 700; color: var(--ink-2); font-variant-numeric: tabular-nums; }
   .stats-bar .tail { margin-left: auto; }
 
+  .kg-empty {
+    position: absolute; inset: 0; z-index: 5;
+    display: flex; align-items: center; justify-content: center;
+    pointer-events: none;
+    font-family: var(--kai); font-size: 28px; letter-spacing: 4px;
+    color: var(--ink-2);
+  }
+  .kg-empty[hidden] { display: none; }
+
   @media (max-width: 860px) {
     .kg-reset { margin-left: 0; }
     body.panel-open #graph-container { right: 0; bottom: 48%; }
@@ -196,6 +206,7 @@
 
 <div class="kg-stage">
   <div id="graph-container"></div>
+  <div id="kgEmpty" class="kg-empty" hidden>无结果</div>
   <aside class="kg-drawer" id="sidePanel" aria-live="polite">
     <div class="panel-placeholder" id="panelPlaceholder">
       <p>点选知识点看定义与课文。拖节点时全图会跟着动，拖空白平移，滚轮缩放。<br>双击拉近；复位全图重新力导向；Esc 关闭侧栏。</p>
@@ -413,6 +424,7 @@ function closePanel() {
   document.getElementById('panelPlaceholder').hidden = false;
   document.getElementById('nodeDetail').hidden = true;
   document.getElementById('nodeDetail').innerHTML = '';
+  forgetNodeHash();
   network.unselectAll();
   resizeGraph();
 }
@@ -446,6 +458,12 @@ function weekButtons(weeks) {
   }).join('');
 }
 
+function assessButtons(weeks) {
+  return weekIds(weeks).map(function (id) {
+    return '<a class="week-link" href="../assess/index.html#w' + id + '">第 ' + parseInt(id, 10) + ' 周挑战 →</a>';
+  }).join('');
+}
+
 function showNodeDetail(nodeId) {
   var node = knowledgeNodes.find(function (n) { return n.id === nodeId; });
   if (!node) return;
@@ -470,11 +488,13 @@ function showNodeDetail(nodeId) {
         return '<div class="relation-item" data-goto="' + escapeHtml(r.id) + '"><span class="relation-arrow">' + r.direction + '</span><div><div class="relation-name">' + escapeHtml(r.id + ' ' + r.name) + '</div><div class="relation-label">' + escapeHtml(r.label) + (r.type === 'cross' ? ' · 跨模块' : '') + '</div></div></div>';
       }).join('') : '') +
     '<div class="tags-title">课文入口</div>' + weekButtons(node.weeks) +
+    '<div class="tags-title">周挑战</div>' + assessButtons(node.weeks) +
     '<div class="resource-link" aria-hidden="true">' + escapeHtml(node.resource) + '</div>';
   document.getElementById('drawerClose').onclick = closePanel;
   detail.querySelectorAll('[data-goto]').forEach(function (el) {
     el.addEventListener('click', function () {
       var id = el.getAttribute('data-goto');
+      rememberNode(id);
       network.selectNodes([id]);
       showNodeDetail(id);
       emphasize(id);
@@ -523,7 +543,7 @@ function nodeVisible(n) {
   var activeTags = Array.from(document.querySelectorAll('.tag-btn.active')).map(function (b) { return b.dataset.tag; });
   var q = document.getElementById('kgSearch').value.trim().toLowerCase();
   var modMatch = activeMod === 'all' || n.module === activeMod;
-  var tagMatch = activeTags.length === 0 || n.tags.some(function (t) { return activeTags.indexOf(t) >= 0; });
+  var tagMatch = activeTags.length > 0 && n.tags.some(function (t) { return activeTags.indexOf(t) >= 0; });
   var text = (n.id + ' ' + n.label + ' ' + n.desc + ' ' + n.weeks).toLowerCase();
   var qMatch = !q || text.indexOf(q) >= 0;
   return modMatch && tagMatch && qMatch;
@@ -531,16 +551,56 @@ function nodeVisible(n) {
 
 function applyFilters() {
   var visible = [];
+  var ids = {};
   knowledgeNodes.forEach(function (n) {
     var show = nodeVisible(n);
     visNodes.update({ id: n.id, hidden: !show, opacity: 1 });
-    if (show) visible.push(n);
+    if (show) {
+      visible.push(n);
+      ids[n.id] = true;
+    }
   });
-  document.getElementById('statNodes').textContent = visible.length;
-  document.getElementById('statKey').textContent = visible.filter(function (n) { return n.tags.indexOf('key') >= 0; }).length;
-  document.getElementById('statDiff').textContent = visible.filter(function (n) { return n.tags.indexOf('diff') >= 0; }).length;
-  document.getElementById('statExam').textContent = visible.filter(function (n) { return n.tags.indexOf('exam') >= 0; }).length;
-  document.getElementById('statSz').textContent = visible.filter(function (n) { return n.tags.indexOf('sz') >= 0; }).length;
+  knowledgeEdges.forEach(function (e, i) {
+    visEdges.update({ id: 'e-' + i, hidden: !(ids[e.from] && ids[e.to]) });
+  });
+  document.getElementById('statNodes').textContent = String(visible.length);
+  document.getElementById('statEdges').textContent = String(knowledgeEdges.filter(function (e) {
+    return ids[e.from] && ids[e.to];
+  }).length);
+  document.getElementById('statKey').textContent = String(visible.filter(function (n) { return n.tags.indexOf('key') >= 0; }).length);
+  document.getElementById('statDiff').textContent = String(visible.filter(function (n) { return n.tags.indexOf('diff') >= 0; }).length);
+  document.getElementById('statExam').textContent = String(visible.filter(function (n) { return n.tags.indexOf('exam') >= 0; }).length);
+  document.getElementById('statSz').textContent = String(visible.filter(function (n) { return n.tags.indexOf('sz') >= 0; }).length);
+  document.getElementById('kgEmpty').hidden = visible.length !== 0;
+  clearEmphasis();
+}
+
+function nodeIdFromHash() {
+  var raw = '';
+  try { raw = decodeURIComponent(location.hash.replace(/^#/, '')).trim(); }
+  catch (err) { raw = location.hash.replace(/^#/, '').trim(); }
+  if (!raw) return '';
+  return knowledgeNodes.some(function (n) { return n.id === raw; }) ? raw : '';
+}
+
+function rememberNode(id) {
+  var next = '#' + id;
+  if (location.hash === next) return;
+  history.replaceState(null, '', next);
+}
+
+function forgetNodeHash() {
+  if (!nodeIdFromHash()) return;
+  history.replaceState(null, '', location.pathname + location.search);
+}
+
+function openHashedNode() {
+  var id = nodeIdFromHash();
+  if (!id) return;
+  network.selectNodes([id]);
+  showNodeDetail(id);
+  emphasize(id);
+  network.focus(id, { scale: 1.25, animation: { duration: 420, easingFunction: 'easeInOutQuad' } });
 }
 
 function resetView() {
@@ -549,7 +609,6 @@ function resetView() {
   document.querySelectorAll('.tag-btn').forEach(function (b) { b.classList.add('active'); });
   closePanel();
   applyFilters();
-  clearEmphasis();
   network.setOptions({ physics: { enabled: true } });
   network.stabilize(120);
   network.fit({ animation: { duration: 600, easingFunction: 'easeInOutQuad' } });
@@ -575,20 +634,31 @@ document.getElementById('kgSearch').addEventListener('keydown', function (e) {
   if (e.key !== 'Enter') return;
   var hit = knowledgeNodes.find(nodeVisible);
   if (!hit) return;
+  rememberNode(hit.id);
   network.selectNodes([hit.id]);
   showNodeDetail(hit.id);
   emphasize(hit.id);
   network.focus(hit.id, { scale: 1.3, animation: { duration: 480, easingFunction: 'easeInOutQuad' } });
 });
 
+function showClickedNode(id) {
+  rememberNode(id);
+  showNodeDetail(id);
+  emphasize(id);
+}
+
 network.on('click', function (params) {
   if (params.nodes.length) {
-    showNodeDetail(params.nodes[0]);
-    emphasize(params.nodes[0]);
+    showClickedNode(params.nodes[0]);
     return;
   }
   closePanel();
   clearEmphasis();
+});
+
+network.on('selectNode', function (params) {
+  if (!params.nodes || !params.nodes.length) return;
+  showClickedNode(params.nodes[0]);
 });
 
 network.on('doubleClick', function (params) {
@@ -609,12 +679,28 @@ document.addEventListener('keydown', function (e) {
 });
 
 network.on('stabilizationIterationsDone', function () {
+  var hashed = nodeIdFromHash();
+  if (hashed) {
+    network.focus(hashed, { scale: 1.25, animation: { duration: 420, easingFunction: 'easeInOutQuad' } });
+    return;
+  }
   network.fit({ animation: { duration: 800, easingFunction: 'easeInOutQuad' } });
 });
 
+window.addEventListener('hashchange', function () {
+  if (!nodeIdFromHash()) {
+    if (document.body.classList.contains('panel-open')) {
+      closePanel();
+      clearEmphasis();
+    }
+    return;
+  }
+  openHashedNode();
+});
+
 window.addEventListener('resize', resizeGraph);
-document.getElementById('statEdges').textContent = String(knowledgeEdges.length);
 applyFilters();
+openHashedNode();
 </script>
 </body>
 </html>

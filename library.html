@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect x='1.5' y='1.5' width='37' height='37' rx='9' fill='%23F7EFDA' stroke='%23A2402F' stroke-width='3'/%3E%3Cg transform='translate(20 20) scale(0.74) translate(-20 -20)'%3E%3Cpath fill='none' stroke='%23A2402F' stroke-width='2.6' stroke-linejoin='round' stroke-linecap='round' d='M20 36.5 L11.2 16.5 C13.6 13 16.6 11.2 20 10.9 C23.4 11.2 26.4 13 28.8 16.5 Z'/%3E%3Cpath fill='%23A2402F' d='M20 13.6 L21.3 16.9 L24.6 18.2 L21.3 19.5 L20 22.8 L18.7 19.5 L15.4 18.2 L18.7 16.9 Z'/%3E%3Cpath d='M20 23.6 L20 33' stroke='%23A2402F' stroke-width='2.2' stroke-linecap='round' fill='none'/%3E%3C/g%3E%3C/svg%3E">
 <title>课程资料库 — AI驱动的传媒内容制作</title>
-<meta name="description" content="JOU2327A 十六周教学参考资料库说明。完整原文随课程仓库本地发放，未挂到线上门户。">
+<meta name="description" content="JOU2327A 十六周阅读说明。原文在课程仓库 course-references/，线上不提供文件。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,500;0,600;1,500&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@600;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="./parchment.css">
@@ -19,6 +19,15 @@
 .lib-meta span{font-size:12.5px;letter-spacing:.04em;color:var(--gold);
   border:1px solid var(--line-2);padding:3px 10px;border-radius:3px}
 .lib-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+.lib-jump{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:28px}
+.lib-jump a{font-family:var(--latin);font-size:13px;letter-spacing:1px;color:var(--ink-2);
+  border:1px solid var(--line-2);border-radius:3px;padding:4px 8px;background:var(--paper-3)}
+.lib-jump a:hover{color:var(--cinnabar);border-color:rgba(162,64,47,.4)}
+.lib-week{scroll-margin-top:76px;padding:22px 26px;margin-top:14px}
+.lib-week h2{font-family:var(--kai);font-size:22px;letter-spacing:1px;margin-bottom:8px}
+.lib-week p{font-size:15px;color:var(--ink-2);line-height:1.85;margin:0}
+.lib-week p + p{margin-top:8px}
+.lib-week code{font-size:.92em}
 @media(max-width:640px){
   .page-head{padding:100px 20px 6px}
   .page-head .h-sec{font-size:30px}
@@ -29,25 +38,8 @@
 <body>
 <div class="vignette"></div>
 
-<nav class="pnav">
-  <div class="pnav-inner">
-    <a href="./index.html" class="pnav-brand">
-      <span class="seal"><svg class="seal-mark" viewBox="0 0 40 40" aria-hidden="true"><path fill="none" stroke="#A2402F" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round" d="M20 36.5 L11.2 16.5 C13.6 13 16.6 11.2 20 10.9 C23.4 11.2 26.4 13 28.8 16.5 Z"/><path fill="#A2402F" d="M20 13.6 L21.3 16.9 L24.6 18.2 L21.3 19.5 L20 22.8 L18.7 19.5 L15.4 18.2 L18.7 16.9 Z"/><path fill="none" stroke="#A2402F" stroke-width="2.2" stroke-linecap="round" d="M20 23.6 L20 33.4"/></svg></span>
-      <span><span class="pnav-title">AI驱动的传媒内容制作</span><span class="pnav-sub">AI-Driven Media Content Production</span></span>
-    </a>
-    <div class="pnav-links">
-      <a href="./index.html">首页</a>
-      <a href="./syllabus.html">教学大纲</a>
-      <a href="./tools.html">教学工具</a>
-      <a href="./agents.html">AI智能体</a>
-      <a href="./showcase.html">学生作品</a>
-      <a href="./ai-trends.html">前沿动态</a>
-      <a href="./course-kg/index.html">知识图谱</a>
-      <a href="./library.html" class="here">资料库</a>
-      <a href="https://github.com/icgma/cpnm-ai-comm-practice" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
-    </div>
-  </div>
-</nav>
+<div id="site-nav" data-current="library" data-root="./"></div>
+<script src="./site-nav.js" defer></script>
 
 <header class="page-head">
   <div class="eyebrow" style="justify-content:center">Course Library · 十六周</div>
@@ -70,13 +62,101 @@
         <a href="./syllabus.html" class="btn btn-plain">先看十六周大纲</a>
       </div>
     </div>
+
+    <nav class="lib-jump" aria-label="按周跳转">
+      <a href="#w01">W01</a><a href="#w02">W02</a><a href="#w03">W03</a><a href="#w04">W04</a>
+      <a href="#w05">W05</a><a href="#w06">W06</a><a href="#w07">W07</a><a href="#w08">W08</a>
+      <a href="#w09">W09</a><a href="#w10">W10</a><a href="#w11">W11</a><a href="#w12">W12</a>
+      <a href="#w13">W13</a><a href="#w14">W14</a><a href="#w15">W15</a><a href="#w16">W16</a>
+    </nav>
+
+    <article class="lib-week card" id="w01">
+      <h2>第一周 · 课程导论与AI基础</h2>
+      <p>读 AI 发展简史、机器学习的三种类型，以及深度学习在做什么。课文在 <a href="./weeks/week-01.html">第一周</a>。</p>
+      <p>原文在课程仓库 <code>course-references/</code>，线上不提供这些文件。</p>
+    </article>
+    <article class="lib-week card" id="w02">
+      <h2>第二周 · LLM工作原理与技术基础</h2>
+      <p>读 Transformer、自注意力，以及大语言模型会涌现什么、局限在哪里。课文在 <a href="./weeks/week-02.html">第二周</a>。</p>
+      <p>原文在课程仓库 <code>course-references/</code>，线上不提供这些文件。</p>
+    </article>
+    <article class="lib-week card" id="w03">
+      <h2>第三周 · 提示词工程基础</h2>
+      <p>读 CRISPE 的五件事：角色、背景、指令、风格、实验。课文在 <a href="./weeks/week-03.html">第三周</a>。</p>
+      <p>原文在课程仓库 <code>course-references/</code>，线上不提供这些文件。</p>
+    </article>
+    <article class="lib-week card" id="w04">
+      <h2>第四周 · 精确指令与格式控制</h2>
+      <p>读动作动词、输出规范、Markdown 与 JSON 控制，以及约束条件怎么叠在一起。课文在 <a href="./weeks/week-04.html">第四周</a>。</p>
+      <p>原文在课程仓库 <code>course-references/</code>，线上不提供这些文件。</p>
+    </article>
+    <article class="lib-week card" id="w05">
+      <h2>第五周 · 智能信息获取基础</h2>
+      <p>读 AI 辅助检索、关键词怎么改、检索怎样一轮轮收窄。课文在 <a href="./weeks/week-05.html">第五周</a>。</p>
+      <p>原文在课程仓库 <code>course-references/</code>，线上不提供这些文件。</p>
+    </article>
+    <article class="lib-week card" id="w06">
+      <h2>第六周 · Deep Research与事实核查</h2>
+      <p>读深度研究的四个阶段、多源交叉验证，以及证据清单怎么列。课文在 <a href="./weeks/week-06.html">第六周</a>。</p>
+      <p>原文在课程仓库 <code>course-references/</code>，线上不提供这些文件。</p>
+    </article>
+    <article class="lib-week card" id="w07">
+      <h2>第七周 · 文本摘要与提炼基础</h2>
+      <p>读抽取式摘要和生成式摘要的差别，以及新闻简报怎么提炼。课文在 <a href="./weeks/week-07.html">第七周</a>。</p>
+      <p>原文在课程仓库 <code>course-references/</code>，线上不提供这些文件。</p>
+    </article>
+    <article class="lib-week card" id="w08">
+      <h2>第八周 · 结构化提取与增强分析</h2>
+      <p>读 JSON、表格和实体提取，以及这些结果怎样进数据新闻。课文在 <a href="./weeks/week-08.html">第八周</a>。</p>
+      <p>原文在课程仓库 <code>course-references/</code>，线上不提供这些文件。</p>
+    </article>
+    <article class="lib-week card" id="w09">
+      <h2>第九周 · 创意生成与选题策划</h2>
+      <p>读 SCAMPER、发散和收敛，以及选题怎样从一堆想法里定下来。课文在 <a href="./weeks/week-09.html">第九周</a>。</p>
+      <p>原文在课程仓库 <code>course-references/</code>，线上不提供这些文件。</p>
+    </article>
+    <article class="lib-week card" id="w10">
+      <h2>第十周 · AI辅助写作实践</h2>
+      <p>读长文怎么拆、人和模型怎样交接、成稿怎样核对。课文在 <a href="./weeks/week-10.html">第十周</a>。</p>
+      <p>原文在课程仓库 <code>course-references/</code>，线上不提供这些文件。</p>
+    </article>
+    <article class="lib-week card" id="w11">
+      <h2>第十一周 · Few-Shot与角色扮演</h2>
+      <p>读少样本示例、写作风格怎样仿、专家角色怎样写进提示词。课文在 <a href="./weeks/week-11.html">第十一周</a>。</p>
+      <p>原文在课程仓库 <code>course-references/</code>，线上不提供这些文件。</p>
+    </article>
+    <article class="lib-week card" id="w12">
+      <h2>第十二周 · 思维链CoT技术</h2>
+      <p>读链式推理、分步推理，以及 Tree-of-Thought 和单链的差别。课文在 <a href="./weeks/week-12.html">第十二周</a>。</p>
+      <p>原文在课程仓库 <code>course-references/</code>，线上不提供这些文件。</p>
+    </article>
+    <article class="lib-week card" id="w13">
+      <h2>第十三周 · 主流LLM平台对比</h2>
+      <p>读 GPT、Claude、DeepSeek、通义、文心各自适合哪类稿。课文在 <a href="./weeks/week-13.html">第十三周</a>。</p>
+      <p>原文在课程仓库 <code>course-references/</code>，线上不提供这些文件。</p>
+    </article>
+    <article class="lib-week card" id="w14">
+      <h2>第十四周 · AI辅助工具集成与伦理</h2>
+      <p>读工作流怎么串、伦理三原则，以及算法偏见出在哪一步。课文在 <a href="./weeks/week-14.html">第十四周</a>。</p>
+      <p>原文在课程仓库 <code>course-references/</code>，线上不提供这些文件。</p>
+    </article>
+    <article class="lib-week card" id="w15">
+      <h2>第十五周 · 期末项目准备与指导</h2>
+      <p>读项目怎么定范围、小组怎样分工、交什么才算完成。课文在 <a href="./weeks/week-15.html">第十五周</a>。</p>
+      <p>原文在课程仓库 <code>course-references/</code>，线上不提供这些文件。</p>
+    </article>
+    <article class="lib-week card" id="w16">
+      <h2>第十六周 · 项目展示与课程总结</h2>
+      <p>读答辩时讲什么，以及这门课要学生带走的职业判断。课文在 <a href="./weeks/week-16.html">第十六周</a>。</p>
+      <p>原文在课程仓库 <code>course-references/</code>，线上不提供这些文件。</p>
+    </article>
   </div>
 </main>
 
 <footer class="pfooter">
   <div class="foot-motto">读原篇 · 再下笔</div>
   <p>© 2026 汕头大学 · 长江新闻与传播学院 · AI课程建设项目</p>
-  <p style="margin-top:8px"><a href="./index.html">返回首页</a> · <a href="./syllabus.html">教学大纲</a> · <a href="./ai-trends.html">前沿动态</a></p>
+  <p style="margin-top:8px"><a href="./index.html">返回首页</a> · <a href="./syllabus.html">教学大纲</a> · <a href="./ai-trends.html">前沿动态</a> · <a href="./privacy.html">隐私政策</a></p>
 </footer>
 <script>
 fetch("../course-references/index.html", {method: "HEAD"}).then(function (r) {

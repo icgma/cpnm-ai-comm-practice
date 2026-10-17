@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect x='1.5' y='1.5' width='37' height='37' rx='9' fill='%23F7EFDA' stroke='%23A2402F' stroke-width='3'/%3E%3Cg transform='translate(20 20) scale(0.74) translate(-20 -20)'%3E%3Cpath fill='none' stroke='%23A2402F' stroke-width='2.6' stroke-linejoin='round' stroke-linecap='round' d='M20 36.5 L11.2 16.5 C13.6 13 16.6 11.2 20 10.9 C23.4 11.2 26.4 13 28.8 16.5 Z'/%3E%3Cpath fill='%23A2402F' d='M20 13.6 L21.3 16.9 L24.6 18.2 L21.3 19.5 L20 22.8 L18.7 19.5 L15.4 18.2 L18.7 16.9 Z'/%3E%3Cpath d='M20 23.6 L20 33' stroke='%23A2402F' stroke-width='2.2' stroke-linecap='round' fill='none'/%3E%3C/g%3E%3C/svg%3E">
 <title>AI智能体矩阵 — AI驱动的传媒内容制作</title>
-<meta name="description" content="「一导四辅」全天候 AI 伴学矩阵：传媒AI导师主入口，提示词、写作、前沿、伦理四员辅学智能体。">
+<meta name="description" content="五个腾讯元器智能体入口。对话不在本站保存。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,500;0,600;1,500&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@600;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="./parchment.css">
@@ -56,32 +56,14 @@ a.aide:hover{transform:translateY(-3px)}
 <body>
 <div class="vignette"></div>
 
-<!-- ── 导航 ── -->
-<nav class="pnav">
-  <div class="pnav-inner">
-    <a href="./index.html" class="pnav-brand">
-      <span class="seal"><svg class="seal-mark" viewBox="0 0 40 40" aria-hidden="true"><path fill="none" stroke="#A2402F" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round" d="M20 36.5 L11.2 16.5 C13.6 13 16.6 11.2 20 10.9 C23.4 11.2 26.4 13 28.8 16.5 Z"/><path fill="#A2402F" d="M20 13.6 L21.3 16.9 L24.6 18.2 L21.3 19.5 L20 22.8 L18.7 19.5 L15.4 18.2 L18.7 16.9 Z"/><path fill="none" stroke="#A2402F" stroke-width="2.2" stroke-linecap="round" d="M20 23.6 L20 33.4"/></svg></span>
-      <span><span class="pnav-title">AI驱动的传媒内容制作</span><span class="pnav-sub">AI-Driven Media Content Production</span></span>
-    </a>
-    <div class="pnav-links">
-      <a href="./index.html">首页</a>
-      <a href="./syllabus.html">教学大纲</a>
-      <a href="./tools.html">教学工具</a>
-      <a href="./agents.html" class="here">AI智能体</a>
-      <a href="./showcase.html">学生作品</a>
-      <a href="./ai-trends.html">前沿动态</a>
-      <a href="./course-kg/index.html">知识图谱</a>
-      <a href="./library.html">资料库</a>
-      <a href="https://github.com/icgma/cpnm-ai-comm-practice" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
-    </div>
-  </div>
-</nav>
+<div id="site-nav" data-current="agents" data-root="./"></div>
+<script src="./site-nav.js" defer></script>
 
 <!-- ── 页头 ── -->
 <header class="page-head">
   <div class="eyebrow" style="justify-content:center">AI Agent Matrix · 一导四辅</div>
   <h1 class="h-sec">智能体<span class="em">问答体系</span></h1>
-  <p class="sec-desc">基于大语言模型 API 搭建的全天候 AI 伴学矩阵，覆盖导学、提示词、写作、前沿与伦理五大维度。</p>
+  <p class="sec-desc">五名智能体都在腾讯元器：导学、提示词、写作、前沿、伦理。对话在那边进行，本站不登录，也不保存记录。</p>
 </header>
 
 <!-- ── 阵式 ── -->
@@ -96,10 +78,10 @@ a.aide:hover{transform:translateY(-3px)}
       <div class="master-icon">🎓</div>
       <div class="master-name">传媒AI导师</div>
       <div class="master-role">Chief Tutor · 主入口</div>
-      <p class="master-desc">课程智能体的总入口：理解学习意图，智能路由至四员辅学智能体，并追踪学情、汇总疑难点，形成个人学习档案。</p>
+      <p class="master-desc">总入口。它把问题分到下面四名辅学智能体。点开会离开本站，对话留在腾讯元器。</p>
       <div class="master-tags">
         <span class="tag cinnabar">智能路由</span>
-        <span class="tag cinnabar">学情追踪</span>
+        <span class="tag cinnabar">外链答疑</span>
         <span class="tag cinnabar">全天候答疑</span>
       </div>
     </a>
@@ -145,7 +127,7 @@ a.aide:hover{transform:translateY(-3px)}
 <footer class="pfooter">
   <div class="foot-motto">从灵感到成稿 · 重新理解内容生产</div>
   <p>© 2026 汕头大学 · 长江新闻与传播学院 · AI课程建设项目</p>
-  <p style="margin-top:8px"><a href="./index.html">返回首页</a> · <a href="./syllabus.html">教学大纲</a> · <a href="./ai-ethics-handbook.html">AI伦理手册</a></p>
+  <p style="margin-top:8px"><a href="./index.html">返回首页</a> · <a href="./syllabus.html">教学大纲</a> · <a href="./ai-ethics-handbook.html">AI伦理手册</a> · <a href="./privacy.html">隐私政策</a></p>
 </footer>
 </body>
 </html>

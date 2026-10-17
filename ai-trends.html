@@ -5,7 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect x='1.5' y='1.5' width='37' height='37' rx='9' fill='%23F7EFDA' stroke='%23A2402F' stroke-width='3'/%3E%3Cg transform='translate(20 20) scale(0.74) translate(-20 -20)'%3E%3Cpath fill='none' stroke='%23A2402F' stroke-width='2.6' stroke-linejoin='round' stroke-linecap='round' d='M20 36.5 L11.2 16.5 C13.6 13 16.6 11.2 20 10.9 C23.4 11.2 26.4 13 28.8 16.5 Z'/%3E%3Cpath fill='%23A2402F' d='M20 13.6 L21.3 16.9 L24.6 18.2 L21.3 19.5 L20 22.8 L18.7 19.5 L15.4 18.2 L18.7 16.9 Z'/%3E%3Cpath d='M20 23.6 L20 33' stroke='%23A2402F' stroke-width='2.2' stroke-linecap='round' fill='none'/%3E%3C/g%3E%3C/svg%3E">
 <title>AI+传媒 前沿动态 — AI驱动的传媒内容制作</title>
-<meta name="description" content="AI与传媒行业前沿动态周报，涵盖技术趋势、行业变革、学术前沿、政策监管及课堂讨论。">
+<meta name="description" content="AI与传媒行业前沿动态，每日更新。涵盖技术趋势、行业案例、政策监管与课堂讨论。">
+<meta property="og:title" content="AI+传媒 前沿动态">
+<meta property="og:url" content="https://jou2327a.aisbest.eu.cc/ai-trends.html">
+<meta property="og:image" content="https://jou2327a.aisbest.eu.cc/og-card.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,500;0,600;1,500&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@600;900&display=swap" rel="stylesheet">
 
@@ -86,6 +89,13 @@ a:hover{color:#7C2F22}
 .stat-item{text-align:center;flex:1;min-width:120px}
 .stat-num{font-family:var(--kai);font-size:30px;font-weight:700;color:var(--cinnabar)}
 .stat-label{font-size:13px;color:var(--text3);margin-top:4px;letter-spacing:1px}
+.stats-note{font-size:13px;color:var(--text2);margin:-8px 0 8px}
+.trend-search{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin:8px 0 4px}
+.trend-search label{font-family:var(--kai);font-weight:700;letter-spacing:1px}
+.trend-search input{flex:1;min-width:220px;padding:8px 12px;border:1px solid var(--border2);
+  border-radius:4px;background:var(--bg2);color:var(--text);font:inherit}
+.trend-search input:focus{outline:2px solid var(--cinnabar);outline-offset:1px}
+.trend-search-status{flex-basis:100%;font-size:13px;color:var(--text2);margin:0}
 
 /* 简报分节 */
 .briefing-section{margin-top:44px}
@@ -103,7 +113,6 @@ a:hover{color:#7C2F22}
 a.trend-card,a.case-card{display:block;color:inherit;text-decoration:none;cursor:pointer}
 a.trend-card:hover,a.case-card:hover{color:inherit}
 .trend-go{margin-left:auto;color:var(--cinnabar);font-size:12px;font-weight:600;letter-spacing:.5px}
-.update-banner,.filter-bar,.theme-toggle{display:none}
 .trend-tag{display:inline-block;padding:3px 12px;border-radius:3px;font-size:12px;
   font-weight:600;margin-bottom:12px;border:1px solid}
 .trend-tag.tech{background:rgba(51,86,124,.08);color:#33567C;border-color:rgba(51,86,124,.35)}
@@ -177,26 +186,16 @@ a.trend-card:hover,a.case-card:hover{color:inherit}
 <body>
 
 <!-- Nav -->
-<div class="week-nav">
-  <div class="week-nav-inner">
-  <div class="week-nav-left">
-    <a href="index.html" class="week-nav-home"><div class="week-nav-logo"><svg class="seal-mark" viewBox="0 0 40 40" aria-hidden="true"><path fill="none" stroke="#A2402F" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round" d="M20 36.5 L11.2 16.5 C13.6 13 16.6 11.2 20 10.9 C23.4 11.2 26.4 13 28.8 16.5 Z"/><path fill="#A2402F" d="M20 13.6 L21.3 16.9 L24.6 18.2 L21.3 19.5 L20 22.8 L18.7 19.5 L15.4 18.2 L18.7 16.9 Z"/><path fill="none" stroke="#A2402F" stroke-width="2.2" stroke-linecap="round" d="M20 23.6 L20 33.4"/></svg></div> AI驱动的传媒内容制作</a>
-    <span class="week-nav-sep">/</span>
-    <span class="week-nav-current">📡 前沿动态</span>
-  </div>
-  <div class="week-nav-right">
-    <a href="index.html" class="week-nav-btn">← 课程首页</a>
-  </div>
-  </div>
-</div>
+<div id="site-nav" data-current="trends" data-root="./"></div>
+<script src="./site-nav.js" defer></script>
 
 <!-- Hero -->
 <div class="week-hero">
   <div class="week-hero-inner">
-    <div class="week-badge"><span class="week-badge-num">WEEKLY BRIEFING · 2026-10-16</span></div>
+    <div class="week-badge"><span class="week-badge-num">DAILY BRIEFING · 2026-10-17</span></div>
     <h1>AI + 传媒 <span>前沿动态</span></h1>
     <p class="week-hero-sub">
-      追踪 AI 技术与新闻传播行业的交叉前沿，每周更新。<br>涵盖技术趋势、行业变革、学术前沿、政策监管与课堂讨论。
+      追踪 AI 技术与新闻传播行业的交叉前沿，每日更新。<br>涵盖技术趋势、行业案例、政策监管与课堂讨论。
     </p>
   </div>
 </div>
@@ -206,11 +205,17 @@ a.trend-card:hover,a.case-card:hover{color:inherit}
 
 <!-- Stats -->
 <div class="stats-bar">
-  <div class="stat-item"><div class="stat-num">6</div><div class="stat-label">RSS 数据源</div></div>
-  <div class="stat-item"><div class="stat-num">73++</div><div class="stat-label">抓取条目</div></div>
-  <div class="stat-item"><div class="stat-num">5</div><div class="stat-label">趋势维度</div></div>
-  <div class="stat-item"><div class="stat-num">12</div><div class="stat-label">落地案例</div></div>
-  <div class="stat-item"><div class="stat-num">5</div><div class="stat-label">讨论问题</div></div>
+  <div class="stat-item"><div class="stat-num">4</div><div class="stat-label">来源</div></div>
+  <div class="stat-item"><div class="stat-num">8</div><div class="stat-label">条目</div></div>
+  <div class="stat-item"><div class="stat-num">2</div><div class="stat-label">案例</div></div>
+  <div class="stat-item"><div class="stat-num">2</div><div class="stat-label">政策</div></div>
+  <div class="stat-item"><div class="stat-num">3</div><div class="stat-label">讨论</div></div>
+</div>
+<p class="stats-note">来源按技术卡计，条目是技术、案例、政策三块的合计。每日更新。</p>
+<div class="trend-search">
+  <label for="trend-search">搜索本期</label>
+  <input id="trend-search" type="search" placeholder="输入页面上的词" autocomplete="off">
+  <p id="trend-search-status" class="trend-search-status" hidden></p>
 </div>
 
 <!-- ════════════ Section 1: 技术趋势 ════════════ -->
@@ -219,29 +224,29 @@ a.trend-card:hover,a.case-card:hover{color:inherit}
   <p class="briefing-desc">本周与传媒相关的 AI 技术进展与产品动态</p>
 
   <div class="trend-grid" id="trend-cards-area">
-<a class="trend-card" href="https://sspai.com/post/116355" target="_blank" rel="noopener noreferrer">
+<a class="trend-card" href="https://arxiv.org/abs/2610.20780" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag tech">技术</div>
-  <h3>SpaceXAI 发布 Grok Voice 3.0 语音模型</h3>
-  <p>提升智能语音合成与自动化制作效率</p>
-  <div class="trend-source">📅 2026-10-16 · 来源 <span class="trend-go">阅读原文 →</span></div>
+  <h3>ARIA: 多智能体系统运行时纠错机制</h3>
+  <p>设计多智能体系统运行时纠错机制，适用于传媒协作生产中的错误传播控制</p>
+  <div class="trend-source">📅 2026-10-17 · 来源 <span class="trend-go">阅读原文 →</span></div>
 </a>
-<a class="trend-card" href="https://openai.com/index/higgsfield-longer-videos-voice" target="_blank" rel="noopener noreferrer">
+<a class="trend-card" href="https://arxiv.org/abs/2610.20685" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag tech">技术</div>
-  <h3>Higgsfield 实现AI视频创作突破</h3>
-  <p>支持10分钟以上AI视频生成与语音电影路径探索</p>
-  <div class="trend-source">📅 2026-10-16 · 来源 <span class="trend-go">阅读原文 →</span></div>
+  <h3>L2G-SR: LLM符号回归指导框架</h3>
+  <p>开发LLM符号回归指导框架，提升数据解释与传媒内容生成模型的可解释性</p>
+  <div class="trend-source">📅 2026-10-17 · 来源 <span class="trend-go">阅读原文 →</span></div>
 </a>
-<a class="trend-card" href="https://openai.com/index/amp-beyond-coding" target="_blank" rel="noopener noreferrer">
-  <div class="trend-tag tech">技术</div>
-  <h3>Amp扩展AI agents能力边界</h3>
-  <p>突破传统编程限制提升内容生成效率</p>
-  <div class="trend-source">📅 2026-10-16 · 来源 <span class="trend-go">阅读原文 →</span></div>
+<a class="trend-card" href="https://www.theverge.com/tech/1012846/meta-business-terms-scrape-news-publishers" target="_blank" rel="noopener noreferrer">
+  <div class="trend-tag industry">行业</div>
+  <h3>Meta允许免费训练AI使用新闻网站内容</h3>
+  <p>Meta新条款允许爬取新闻出版商内容用于AI训练，引发版权争议</p>
+  <div class="trend-source">📅 2026-10-17 · 来源 <span class="trend-go">阅读原文 →</span></div>
 </a>
-<a class="trend-card" href="https://blog.cloudflare.com/cloudflare-openai-discovery-agentic-web/" target="_blank" rel="noopener noreferrer">
-  <div class="trend-tag tech">技术</div>
-  <h3>Cloudflare与OpenAI合作优化AI发现</h3>
-  <p>推动AI在传媒领域的应用创新</p>
-  <div class="trend-source">📅 2026-10-16 · 来源 <span class="trend-go">阅读原文 →</span></div>
+<a class="trend-card" href="https://www.bbc.co.uk/news/articles/c1wxdjx27ypo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">
+  <div class="trend-tag industry">行业</div>
+  <h3>AI翻译中人类角色不可替代性研究</h3>
+  <p>指出高风险场景仍需人类参与，AI与人工协作成未来趋势</p>
+  <div class="trend-source">📅 2026-10-14 · 来源 <span class="trend-go">阅读原文 →</span></div>
 </a>
 </div>
 </div>
@@ -254,29 +259,17 @@ a.trend-card:hover,a.case-card:hover{color:inherit}
   <p class="briefing-desc">全球新闻媒体机构的 AI 应用实战案例</p>
 
   <div class="case-grid" id="case-cards-area">
-<a class="case-card" href="https://www.theverge.com/games/1012512/sega-total-war-shogun-2-remaster-pulled" target="_blank" rel="noopener noreferrer">
-  <div class="case-org">Sega</div>
-  <h3>AI生成画面问题致《Total War: Shogun 2》紧急下架</h3>
-  <p>暴露AI内容质量控制难题</p>
-  <div class="case-tools"><span class="case-tool">游戏</span><span class="case-tool">AI伦理</span></div>
-  <div class="trend-source"><span class="trend-go">阅读原文 →</span></div></a>
 <a class="case-card" href="https://www.theverge.com/policy/1012445/donald-trump-ai-photo-white-house-rennovation-column" target="_blank" rel="noopener noreferrer">
-  <div class="case-org">特朗普团队</div>
-  <h3>AI修图遭Google检测引发政治宣传信任危机</h3>
-  <p>AI政治内容审核挑战</p>
+  <div class="case-org">Truth Social</div>
+  <h3>特朗普AI修图宣传白宫修缮</h3>
+  <p>Google AI检测异常，凸显政治传播中的伦理问题</p>
   <div class="case-tools"><span class="case-tool">政治传播</span><span class="case-tool">AI检测</span></div>
   <div class="trend-source"><span class="trend-go">阅读原文 →</span></div></a>
-<a class="case-card" href="https://www.theverge.com/tech/1012374/bluesky-ai-attie-small-social-games-apps" target="_blank" rel="noopener noreferrer">
-  <div class="case-org">Bluesky</div>
-  <h3>Attie AI工具降低社交应用开发门槛</h3>
-  <p>支持快速生成含游戏功能的独立应用</p>
-  <div class="case-tools"><span class="case-tool">工具</span><span class="case-tool">社交</span></div>
-  <div class="trend-source"><span class="trend-go">阅读原文 →</span></div></a>
-<a class="case-card" href="https://www.nytimes.com/2026/10/14/technology/chinese-ai-agents-rogue.html" target="_blank" rel="noopener noreferrer">
-  <div class="case-org">NYT调查</div>
-  <h3>中国 rogue AI代理突破安全控制主动联系</h3>
-  <p>揭示AI与人类互动潜在风险</p>
-  <div class="case-tools"><span class="case-tool">安全</span><span class="case-tool">合规</span></div>
+<a class="case-card" href="https://www.theregister.com/ai-and-ml/2026/09/30/show-colleagues-how-much-you-care-by-sending-an-ai-avatar-to-your-google-meet-call/5300205" target="_blank" rel="noopener noreferrer">
+  <div class="case-org">MeetTwins</div>
+  <h3>AI虚拟形象在Google Meet应用</h3>
+  <p>测试阶段已减少无效会议时间，拓展协作工具潜力</p>
+  <div class="case-tools"><span class="case-tool">协作工具</span><span class="case-tool">虚拟形象</span></div>
   <div class="trend-source"><span class="trend-go">阅读原文 →</span></div></a>
 </div>
 </div>
@@ -289,23 +282,17 @@ a.trend-card:hover,a.case-card:hover{color:inherit}
   <p class="briefing-desc">全球 AI 内容监管与版权最新法规动态</p>
 
   <div class="trend-grid" id="policy-cards-area">
-<a class="trend-card" href="https://www.theverge.com/ai-artificial-intelligence/997706/the-ai-regulation-smackdown-isnt-over" target="_blank" rel="noopener noreferrer">
+<a class="trend-card" href="https://www.theverge.com/tech/1012846/meta-business-terms-scrape-news-publishers" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
-  <h3>全球AI监管持续博弈</h3>
-  <p>传媒行业合规挑战加剧</p>
-  <div class="trend-source">📅 2026-10-16 · 来源 <span class="trend-go">阅读原文 →</span></div>
+  <h3>Meta新闻内容爬取条款争议</h3>
+  <p>允许AI训练爬取新闻出版商内容，引发版权合规争议</p>
+  <div class="trend-source">📅 2026-10-17 · 来源 <span class="trend-go">阅读原文 →</span></div>
 </a>
-<a class="trend-card" href="https://www.thefai.org/posts/the-frontier-act-is-congress-s-best-ai-bill-yet" target="_blank" rel="noopener noreferrer">
+<a class="trend-card" href="https://japannews.yomiuri.co.jp/science-nature/technology/20261014-353599/" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
-  <h3>《前沿法案》成国会最佳AI监管法案</h3>
-  <p>传媒领域合规框架待完善</p>
-  <div class="trend-source">📅 2026-10-16 · 来源 <span class="trend-go">阅读原文 →</span></div>
-</a>
-<a class="trend-card" href="https://www.technologyreview.com/2026/10/13/1146366/open-models-have-real-benefits-do-they-outweigh-the-risks/" target="_blank" rel="noopener noreferrer">
-  <div class="trend-tag policy">法规</div>
-  <h3>开源模型安全风险与传媒合规</h3>
-  <p>GLM-5.3等模型引发伦理争议</p>
-  <div class="trend-source">📅 2026-10-16 · 来源 <span class="trend-go">阅读原文 →</span></div>
+  <h3>Nippan数据授权争议</h3>
+  <p>日本出版社因未经授权销售书籍训练AI受损，担忧数据合法性</p>
+  <div class="trend-source">📅 2026-10-14 · 来源 <span class="trend-go">阅读原文 →</span></div>
 </a>
 </div>
 </div>
@@ -326,15 +313,16 @@ a.trend-card:hover,a.case-card:hover{color:inherit}
         <th>思考方向</th>
       </tr>
     </thead>
-    <tbody>
-      <tr><td>Agent 范式转移</td><td><a href="weeks/week-05.html">W05-W06</a></td><td>Agent 与传统搜索引擎的本质区别</td></tr>
-      <tr><td>GPT-5.4 轻量化</td><td><a href="weeks/week-08.html">W07-W08</a></td><td>地方媒体如何用得起高性能 AI</td></tr>
-      <tr><td>Sora 关停</td><td><a href="weeks/week-09.html">W09-W10</a></td><td>AI 工具的生命周期与平台依赖风险</td></tr>
-      <tr><td>路透社 AI 调查报道</td><td><a href="weeks/week-06.html">W05-W06</a></td><td>数据新闻中的 AI 应用边界</td></tr>
-      <tr><td>工会 AI 条款</td><td><a href="weeks/week-14.html">W14</a></td><td>记者在 AI 时代的权利保障</td></tr>
-      <tr><td>EU AI Act 强制标注</td><td><a href="weeks/week-14.html">W14</a></td><td>内容标注义务与新闻自由的平衡</td></tr>
-      <tr><td>九大创新场景</td><td><a href="weeks/week-13.html">W13</a></td><td>哪些场景已在国内实际落地？</td></tr>
-    </tbody>
+    <tbody id="classroom-body">
+<tr><td>ARIA: 多智能体系统运行时纠错机制</td><td><a href="weeks/week-13.html">W13</a></td><td>换一个平台，这件事还成立吗？</td></tr>
+<tr><td>L2G-SR: LLM符号回归指导框架</td><td><a href="weeks/week-14.html">W14</a></td><td>标注、引用、能不能交出去，你卡在哪一条？</td></tr>
+<tr><td>Meta允许免费训练AI使用新闻网站内容</td><td><a href="weeks/week-14.html">W14</a></td><td>标注、引用、能不能交出去，你卡在哪一条？</td></tr>
+<tr><td>AI翻译中人类角色不可替代性研究</td><td><a href="weeks/week-14.html">W14</a></td><td>标注、引用、能不能交出去，你卡在哪一条？</td></tr>
+<tr><td>特朗普AI修图宣传白宫修缮</td><td><a href="weeks/week-06.html">W06</a></td><td>这条材料你信不信，准备拿哪两个来源对一下？</td></tr>
+<tr><td>AI虚拟形象在Google Meet应用</td><td><a href="weeks/week-14.html">W14</a></td><td>标注、引用、能不能交出去，你卡在哪一条？</td></tr>
+<tr><td>Meta新闻内容爬取条款争议</td><td><a href="weeks/week-14.html">W14</a></td><td>标注、引用、能不能交出去，你卡在哪一条？</td></tr>
+<tr><td>Nippan数据授权争议</td><td><a href="weeks/week-14.html">W14</a></td><td>标注、引用、能不能交出去，你卡在哪一条？</td></tr>
+</tbody>
   </table>
   </div>
 </div>
@@ -347,10 +335,9 @@ a.trend-card:hover,a.case-card:hover{color:inherit}
   <p class="briefing-desc">基于本期动态的深度思考题，适用于小组讨论或书面反思</p>
 
   <ol class="discussion-list" id="discussion-area">
-<li><strong>问题标题：</strong>AI生成内容的质量控制如何平衡效率与伦理？</li>
-<li><strong>问题标题：</strong>AI政治宣传的检测机制应如何构建？</li>
-<li><strong>问题标题：</strong>开源模型在传媒内容生成中的合规边界在哪里？</li>
-<li><strong>问题标题：</strong>AI agents突破安全控制对行业生态有何潜在影响？</li>
+<li>AI训练使用新闻网站内容是否应强制标注数据来源？</li>
+<li>Meta允许爬取新闻出版商内容是否符合国际版权法规？</li>
+<li>AI虚拟形象在协作工具中的应用如何平衡效率与伦理风险？</li>
 </ol>
 </div>
 
@@ -362,6 +349,7 @@ a.trend-card:hover,a.case-card:hover{color:inherit}
   <p class="briefing-desc">过往 AI+传媒动态 Briefing 归档，永久保留</p>
 
   <div class="archive-list" id="archive-list-area">
+<a href="trends/2026-10-17.html" class="archive-item"><span class="archive-date">2026-10-17</span><span class="archive-label">AI+传媒前沿动态</span></a>
 <a href="trends/2026-10-16.html" class="archive-item"><span class="archive-date">2026-10-16</span><span class="archive-label">AI+传媒前沿动态</span></a>
 <a href="trends/2026-10-15.html" class="archive-item"><span class="archive-date">2026-10-15</span><span class="archive-label">AI+传媒前沿动态</span></a>
 <a href="trends/2026-10-14.html" class="archive-item"><span class="archive-date">2026-10-14</span><span class="archive-label">AI+传媒前沿动态</span></a>
@@ -521,5 +509,31 @@ a.trend-card:hover,a.case-card:hover{color:inherit}
 </div><!-- /week-content -->
 
 <div class="week-footer">© 2026 汕头大学 · 长江新闻与传播学院 · AI课程建设项目</div>
+<script>
+(function () {
+  var input = document.getElementById("trend-search");
+  if (!input) return;
+  var nodes = document.querySelectorAll(
+    "#trend-cards-area .trend-card, #case-cards-area .case-card, #policy-cards-area .trend-card, #discussion-area li, #classroom-body tr"
+  );
+  var status = document.getElementById("trend-search-status");
+  input.addEventListener("input", function () {
+    var q = input.value.trim().toLowerCase();
+    var shown = 0;
+    nodes.forEach(function (el) {
+      var ok = !q || el.textContent.toLowerCase().indexOf(q) !== -1;
+      el.style.display = ok ? "" : "none";
+      if (ok) shown += 1;
+    });
+    if (!q) {
+      status.hidden = true;
+      status.textContent = "";
+      return;
+    }
+    status.hidden = false;
+    status.textContent = shown ? ("筛出 " + shown + " 条") : "没有匹配的条目";
+  });
+})();
+</script>
 </body>
 </html>

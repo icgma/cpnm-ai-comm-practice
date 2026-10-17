@@ -9,22 +9,15 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,500;0,600;1,500&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@600;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="./doc-common.css">
+<style>
+  #portal-tasks .doc-table th { white-space: nowrap; }
+</style>
 <script src="analytics.js" defer></script>
 </head>
 <body>
 
-<nav class="doc-nav">
-  <div class="doc-nav-inner">
-    <a href="./index.html" class="doc-brand">
-      <div class="doc-logo"><svg class="seal-mark" viewBox="0 0 40 40" aria-hidden="true"><path fill="none" stroke="#A2402F" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round" d="M20 36.5 L11.2 16.5 C13.6 13 16.6 11.2 20 10.9 C23.4 11.2 26.4 13 28.8 16.5 Z"/><path fill="#A2402F" d="M20 13.6 L21.3 16.9 L24.6 18.2 L21.3 19.5 L20 22.8 L18.7 19.5 L15.4 18.2 L18.7 16.9 Z"/><path fill="none" stroke="#A2402F" stroke-width="2.2" stroke-linecap="round" d="M20 23.6 L20 33.4"/></svg></div>
-      <div class="doc-brand-text">返回课程门户</div>
-    </a>
-    <div class="doc-actions">
-      <a href="./ai-trends.html" class="btn btn-outline" title="AI+传媒每日前沿动态">📡 前沿动态</a>
-      <a href="./课程目标矩阵_OBE对标表.md" class="btn btn-outline">Markdown 原文</a>
-    </div>
-  </div>
-</nav>
+<div id="site-nav" data-current="obe" data-root="./"></div>
+<script src="./site-nav.js" defer></script>
 
 <main class="doc-shell">
   <header class="doc-header">
@@ -92,6 +85,71 @@
       </div>
     </section>
 
+    <section class="card" id="portal-tasks">
+      <h2>在门户上能做的事</h2>
+      <div class="callout amber">
+        线上读门户，练习在周挑战，提交和记分在课堂。达成度要等课堂成绩，本页不填百分比。七个课程目标的结果都留空。
+      </div>
+      <div class="table-wrap">
+        <table class="doc-table">
+          <thead>
+            <tr><th>课程目标</th><th>在门户上做的事</th><th>课文</th><th>周挑战</th><th>本学期达成度</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>CO1</td>
+              <td>用一条新闻任务区分监督学习和无监督学习；用编辑审稿的类比讲清自注意力，并说明类比在哪一步失效。</td>
+              <td><a href="./weeks/week-01.html">第1周</a>、<a href="./weeks/week-02.html">第2周</a></td>
+              <td><a href="./assess/index.html#w01">第1周</a>、<a href="./assess/index.html#w02">第2周</a></td>
+              <td>留空</td>
+            </tr>
+            <tr>
+              <td>CO2</td>
+              <td>按 CRISPE 为三种体裁写提示词；给国际简报加约束并核对输出；用 Few-Shot 模仿一篇评论；用思维链拆一条谣言。</td>
+              <td><a href="./weeks/week-03.html">第3周</a>、<a href="./weeks/week-04.html">第4周</a>、<a href="./weeks/week-11.html">第11周</a>、<a href="./weeks/week-12.html">第12周</a></td>
+              <td><a href="./assess/index.html#w03">第3周</a>、<a href="./assess/index.html#w04">第4周</a>、<a href="./assess/index.html#w11">第11周</a>、<a href="./assess/index.html#w12">第12周</a></td>
+              <td>留空</td>
+            </tr>
+            <tr>
+              <td>CO3</td>
+              <td>用三家检索工具做同一话题并比较质量；对一条正在传播的信息做核查，写明信不信。</td>
+              <td><a href="./weeks/week-05.html">第5周</a>、<a href="./weeks/week-06.html">第6周</a></td>
+              <td><a href="./assess/index.html#w05">第5周</a>、<a href="./assess/index.html#w06">第6周</a></td>
+              <td>留空</td>
+            </tr>
+            <tr>
+              <td>CO4</td>
+              <td>比较三种长度的摘要丢掉了什么；从发布会实录抽出结构；用发散和 SCAMPER 各做一版选题；写评论并标出生成与人工修改。</td>
+              <td><a href="./weeks/week-07.html">第7周</a>、<a href="./weeks/week-08.html">第8周</a>、<a href="./weeks/week-09.html">第9周</a>、<a href="./weeks/week-10.html">第10周</a></td>
+              <td><a href="./assess/index.html#w07">第7周</a>、<a href="./assess/index.html#w08">第8周</a>、<a href="./assess/index.html#w09">第9周</a>、<a href="./assess/index.html#w10">第10周</a></td>
+              <td>留空</td>
+            </tr>
+            <tr>
+              <td>CO5</td>
+              <td>把同一条改写交给三个大模型，按准确性、流畅度和风格适配做表，并选定这则任务用哪一个。</td>
+              <td><a href="./weeks/week-13.html">第13周</a></td>
+              <td><a href="./assess/index.html#w13">第13周</a></td>
+              <td>留空</td>
+            </tr>
+            <tr>
+              <td>CO6</td>
+              <td>为地方新闻机构画从选题到发稿的工作流；做校园新闻编辑室方案；写学期使用反思。作品和答辩在课堂交。</td>
+              <td><a href="./weeks/week-14.html">第14周</a>、<a href="./weeks/week-15.html">第15周</a>、<a href="./weeks/week-16.html">第16周</a></td>
+              <td><a href="./assess/index.html#w14">第14周</a>、<a href="./assess/index.html#w15">第15周</a>、<a href="./assess/index.html#w16">第16周</a></td>
+              <td>留空</td>
+            </tr>
+            <tr>
+              <td>CO7</td>
+              <td>第4、6、10、14周的挑战里各做一个判断：要不要标注、信不信这条材料、未改的稿能不能交。第16周的反思要能对上这些判断。说明见伦理手册对应小节。</td>
+              <td><a href="./weeks/week-04.html">第4周</a>、<a href="./weeks/week-06.html">第6周</a>、<a href="./weeks/week-10.html">第10周</a>、<a href="./weeks/week-14.html">第14周</a>、<a href="./weeks/week-16.html">第16周</a></td>
+              <td><a href="./assess/index.html#w04">第4周</a>、<a href="./assess/index.html#w06">第6周</a>、<a href="./assess/index.html#w10">第10周</a>、<a href="./assess/index.html#w14">第14周</a>、<a href="./assess/index.html#w16">第16周</a>；伦理：<a href="./ai-ethics-handbook.html#w04">第4周</a>、<a href="./ai-ethics-handbook.html#w06">第6周</a>、<a href="./ai-ethics-handbook.html#w10">第10周</a>、<a href="./ai-ethics-handbook.html#w14">第14周</a></td>
+              <td>留空</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
     <section class="card">
       <h2>三、课程目标 × 教学内容 × 教学活动 × 评价方式</h2>
       <div class="table-wrap">
@@ -151,6 +209,9 @@
     <section class="card">
       <h2>五、课程目标达成度评估方法</h2>
       <div class="formula"><code>课程目标达成度 = 该目标相关环节的加权平均分 / 该目标的满分 × 100%</code></div>
+      <div class="callout amber">
+        百分比等课堂成绩。本页不填达成度。下表的合格线是算法里的门槛，不是本学期已经算出的结果。
+      </div>
 
       <h3>5.1 直接评估</h3>
       <div class="table-wrap">
@@ -191,7 +252,7 @@
 
 <footer class="doc-footer">
   <p>© 2026 汕头大学 · 长江新闻与传播学院 · AI课程建设项目</p>
-  <p style="margin-top:8px"><a href="./index.html">返回课程门户</a> · <a href="./课程目标矩阵_OBE对标表.md">查看 Markdown 原文</a></p>
+  <p style="margin-top:8px"><a href="./index.html">返回课程门户</a> · <a href="./assess/index.html">周挑战</a> · <a href="./课程目标矩阵_OBE对标表.md">查看 Markdown 原文</a></p>
 </footer>
 </body>
 </html>

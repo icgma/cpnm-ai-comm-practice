@@ -9,22 +9,17 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,500;0,600;1,500&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@600;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="./doc-common.css">
+<style>
+  html { scroll-behavior: auto; }
+  body { padding-bottom: 100vh; }
+  #w01, #w04, #w06, #w10, #w14 { scroll-margin-top: 112px; }
+</style>
 <script src="analytics.js" defer></script>
 </head>
 <body>
 
-<nav class="doc-nav">
-  <div class="doc-nav-inner">
-    <a href="./index.html" class="doc-brand">
-      <div class="doc-logo"><svg class="seal-mark" viewBox="0 0 40 40" aria-hidden="true"><path fill="none" stroke="#A2402F" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round" d="M20 36.5 L11.2 16.5 C13.6 13 16.6 11.2 20 10.9 C23.4 11.2 26.4 13 28.8 16.5 Z"/><path fill="#A2402F" d="M20 13.6 L21.3 16.9 L24.6 18.2 L21.3 19.5 L20 22.8 L18.7 19.5 L15.4 18.2 L18.7 16.9 Z"/><path fill="none" stroke="#A2402F" stroke-width="2.2" stroke-linecap="round" d="M20 23.6 L20 33.4"/></svg></div>
-      <div class="doc-brand-text">返回课程门户</div>
-    </a>
-    <div class="doc-actions">
-      <a href="./ai-trends.html" class="btn btn-outline" title="AI+传媒每日前沿动态">📡 前沿动态</a>
-      <a href="./AI使用伦理规范_学生手册.md" class="btn btn-outline">Markdown 原文</a>
-    </div>
-  </div>
-</nav>
+<div id="site-nav" data-current="ethics" data-root="./"></div>
+<script src="./site-nav.js" defer></script>
 
 <main class="doc-shell">
   <header class="doc-header">
@@ -34,7 +29,7 @@
     <div class="doc-meta">
       <span class="doc-chip">适用对象：本课程全体选课学生</span>
       <span class="doc-chip">法规依据：生成式人工智能服务管理暂行办法（2023）</span>
-      <span class="doc-chip">最后更新：2026年3月</span>
+      <span class="doc-chip">最后更新：2026年10月</span>
     </div>
   </header>
 
@@ -49,6 +44,7 @@
         <li><strong>必须标注</strong>：凡是 AI 参与了作业生成、改写、分析或设计，都要说明参与方式。</li>
         <li><strong>禁止作假</strong>：不能让 AI 替你完成思考、伪造材料或掩盖来源。</li>
       </ol>
+      <p>第1、4、6、10、14周各有一小节，写该周要做的判断：要不要标注、信不信这条材料、未改的生成稿能不能交。判断写进<a href="./assess/index.html">周挑战</a>，不另交一段感想。</p>
     </section>
 
     <section class="card">
@@ -213,12 +209,37 @@
         <span class="tag red">禁止造假</span>
       </div>
     </section>
+
+    <section class="card">
+      <h2>八、按周要做的判断</h2>
+      <p>下面五周，规则要落成一个当场做的决定。决定写进该周挑战，不另交一段感想。</p>
+
+      <h3 id="w01">第1周 · 未改的生成稿能不能交</h3>
+      <p>模型可以帮你把术语讲明白。讲明白之后，作业里的例子和表述必须是你自己的。模型生成的段落不能原样交。模型对技术阶段的说法，对不上课文或你查过的来源，就不要信，也不要抄进导图。</p>
+      <p><a href="./weeks/week-01.html">第1周课文</a> · <a href="./assess/index.html#w01">去做第1周挑战</a></p>
+
+      <h3 id="w04">第4周 · 格式对了，事实信不信</h3>
+      <p>格式对齐不等于事实对齐。模型按约束写出的国际简报，数字、地名、引语你没有核对过，这条材料就不能当新闻用，未改的生成稿也不能交。用了生成，就在稿旁注明工具和提示词。</p>
+      <p><a href="./weeks/week-04.html">第4周课文</a> · <a href="./assess/index.html#w04">去做第4周挑战</a></p>
+
+      <h3 id="w06">第6周 · 这条材料你信不信</h3>
+      <p>交核查报告前，先写明你信不信这条正在传的材料，或者哪一句不能用。模型的核查摘要只是线索。没有你自己打开的来源，也没有这个判断，就不算核查。</p>
+      <p><a href="./weeks/week-06.html">第6周课文</a> · <a href="./assess/index.html#w06">去做第6周挑战</a></p>
+
+      <h3 id="w10">第10周 · 未改的稿能不能交，生成的句子标不标</h3>
+      <p>评论可以让模型出初稿。未改的生成稿不能交。交稿时标出哪些句子是模型写的、哪些是你改的、为什么改。不标注，按直接提交且不作标注处理。全文没有你自己的判断，同样不算你的稿。</p>
+      <p><a href="./weeks/week-10.html">第10周课文</a> · <a href="./assess/index.html#w10">去做第10周挑战</a></p>
+
+      <h3 id="w14">第14周 · 哪一环人没看过就不能发</h3>
+      <p>生成初稿可以交给工具。过审、署名和发出去，不能交给一份没人改过的生成稿。方案里要写明：哪一环必须标注 AI 参与，哪一环人没看过就不能发。</p>
+      <p><a href="./weeks/week-14.html">第14周课文</a> · <a href="./assess/index.html#w14">去做第14周挑战</a></p>
+    </section>
   </div>
 </main>
 
 <footer class="doc-footer">
   <p>© 2026 汕头大学 · 长江新闻与传播学院 · AI课程建设项目</p>
-  <p style="margin-top:8px"><a href="./index.html">返回课程门户</a> · <a href="./AI使用伦理规范_学生手册.md">查看 Markdown 原文</a></p>
+  <p style="margin-top:8px"><a href="./index.html">返回课程门户</a> · <a href="./assess/index.html">周挑战</a> · <a href="./AI使用伦理规范_学生手册.md">查看 Markdown 原文</a></p>
 </footer>
 </body>
 </html>

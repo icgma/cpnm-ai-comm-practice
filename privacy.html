@@ -22,18 +22,8 @@
 <body>
 <div class="vignette"></div>
 
-<nav class="doc-nav">
-  <div class="doc-nav-inner">
-    <a href="./index.html" class="doc-brand">
-      <div class="doc-logo"><svg class="seal-mark" viewBox="0 0 40 40" aria-hidden="true"><path fill="none" stroke="#A2402F" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round" d="M20 36.5 L11.2 16.5 C13.6 13 16.6 11.2 20 10.9 C23.4 11.2 26.4 13 28.8 16.5 Z"/><path fill="#A2402F" d="M20 13.6 L21.3 16.9 L24.6 18.2 L21.3 19.5 L20 22.8 L18.7 19.5 L15.4 18.2 L18.7 16.9 Z"/><path fill="none" stroke="#A2402F" stroke-width="2.2" stroke-linecap="round" d="M20 23.6 L20 33.4"/></svg></div>
-      <div class="doc-brand-text">返回课程门户</div>
-    </a>
-    <div class="doc-actions">
-      <a href="./ai-trends.html" class="btn btn-outline">📡 前沿动态</a>
-      <a href="./index.html" class="btn btn-outline">课程首页</a>
-    </div>
-  </div>
-</nav>
+<div id="site-nav" data-root="./"></div>
+<script src="./site-nav.js" defer></script>
 
 <main class="doc-shell">
   <header class="doc-header">
@@ -43,14 +33,16 @@
     <div class="doc-meta">
       <span class="doc-chip">托管：GitHub Pages</span>
       <span class="doc-chip">统计：百度统计</span>
-      <span class="doc-chip">最后更新：2026-09-07</span>
+      <span class="doc-chip">最后更新：2026-10-16</span>
     </div>
   </header>
 
   <div class="doc-main">
     <section class="card">
       <h2>本站收集什么信息？</h2>
-      <p>本站是托管在 GitHub Pages 上的纯静态页面，没有用户账号、没有评论系统、没有表单提交，<strong>不收集姓名、学号、邮箱等个人信息</strong>。全站使用百度统计记录匿名访问（页面、来源、设备类型），仅用于了解课程门户使用情况。</p>
+      <p>本站是纯静态页面，没有用户账号、没有评论、没有表单。<strong>不收集姓名、学号、邮箱</strong>。</p>
+      <p>部分页面加载 <code>analytics.js</code>。这个文件不读姓名或学号。它向页面插入百度统计脚本 <code>https://hm.baidu.com/hm.js?959465d4f30700d97fc79ce460247967</code>。百度统计记下匿名访问：打开了哪一页、从哪来、设备类型，并可能写入 Cookie。这些记录不和作业、成绩放在一起。</p>
+      <p>在浏览器里拦截 <code>hm.baidu.com</code>，这段统计就不会运行。</p>
     </section>
 
     <section class="card">
@@ -63,7 +55,7 @@
       <h2>第三方资源</h2>
       <p>本页面会从以下第三方域加载资源（这些域可能记录访问 IP 等基础日志）：</p>
       <ul class="doc-list">
-        <li><strong>百度统计</strong>（<code>hm.baidu.com</code>）— 全站访问量与来源统计</li>
+        <li><strong>百度统计</strong>（<code>hm.baidu.com</code>）— 由 <code>analytics.js</code> 插入，记录匿名访问</li>
         <li><strong>Google Fonts</strong>（<code>fonts.googleapis.com</code>）— 加载中文字体</li>
         <li><strong>jsDelivr CDN</strong>（<code>cdn.jsdelivr.net</code>）— 加载 Chart.js 图表库（仅趋势页）</li>
       </ul>
@@ -77,14 +69,14 @@
 
     <section class="card">
       <h2>联系</h2>
-      <p>问题请到 <a href="https://github.com/Yuuqq/AI-driven-media-content-production/issues">GitHub Issues</a> 反馈。</p>
+      <p>问题请到公开仓库 <a href="https://github.com/icgma/cpnm-ai-comm-practice/issues">GitHub Issues</a> 反馈。</p>
     </section>
   </div>
 </main>
 
 <footer class="doc-footer">
   <p>© 2026 汕头大学 · 长江新闻与传播学院 · AI课程建设项目</p>
-  <p style="margin-top:8px"><a href="./index.html">返回课程门户</a> · <a href="./ai-trends.html">前沿动态</a></p>
+  <p style="margin-top:8px"><a href="./index.html">返回课程门户</a> · <a href="./ai-trends.html">前沿动态</a> · <a href="./privacy.html">隐私政策</a></p>
 </footer>
 </body>
 </html>

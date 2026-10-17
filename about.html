@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect x='1.5' y='1.5' width='37' height='37' rx='9' fill='%23F7EFDA' stroke='%23A2402F' stroke-width='3'/%3E%3Cg transform='translate(20 20) scale(0.74) translate(-20 -20)'%3E%3Cpath fill='none' stroke='%23A2402F' stroke-width='2.6' stroke-linejoin='round' stroke-linecap='round' d='M20 36.5 L11.2 16.5 C13.6 13 16.6 11.2 20 10.9 C23.4 11.2 26.4 13 28.8 16.5 Z'/%3E%3Cpath fill='%23A2402F' d='M20 13.6 L21.3 16.9 L24.6 18.2 L21.3 19.5 L20 22.8 L18.7 19.5 L15.4 18.2 L18.7 16.9 Z'/%3E%3Cpath d='M20 23.6 L20 33' stroke='%23A2402F' stroke-width='2.2' stroke-linecap='round' fill='none'/%3E%3C/g%3E%3C/svg%3E">
 <title>关于本站 — AI驱动的传媒内容制作</title>
-<meta name="description" content="汕头大学课程门户「AI驱动的传媒内容制作」关于本站：每日自动抓取、整理与发布的 AI+传媒前沿动态。">
+<meta name="description" content="前沿动态每天更新四块：技术、案例、政策、课堂讨论。没有播客。质量曲线依赖已提交的分数摘要。">
 <link rel="canonical" href="https://icgma.github.io/cpnm-ai-comm-practice/about.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,500;0,600;1,500&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@600;900&display=swap" rel="stylesheet">
@@ -20,47 +20,38 @@
 <body>
 <div class="vignette"></div>
 
-<nav class="doc-nav">
-  <div class="doc-nav-inner">
-    <a href="./index.html" class="doc-brand">
-      <div class="doc-logo"><svg class="seal-mark" viewBox="0 0 40 40" aria-hidden="true"><path fill="none" stroke="#A2402F" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round" d="M20 36.5 L11.2 16.5 C13.6 13 16.6 11.2 20 10.9 C23.4 11.2 26.4 13 28.8 16.5 Z"/><path fill="#A2402F" d="M20 13.6 L21.3 16.9 L24.6 18.2 L21.3 19.5 L20 22.8 L18.7 19.5 L15.4 18.2 L18.7 16.9 Z"/><path fill="none" stroke="#A2402F" stroke-width="2.2" stroke-linecap="round" d="M20 23.6 L20 33.4"/></svg></div>
-      <div class="doc-brand-text">返回课程门户</div>
-    </a>
-    <div class="doc-actions">
-      <a href="./ai-trends.html" class="btn btn-outline">📡 前沿动态</a>
-      <a href="./privacy.html" class="btn btn-outline">隐私政策</a>
-    </div>
-  </div>
-</nav>
+<div id="site-nav" data-root="./"></div>
+<script src="./site-nav.js" defer></script>
 
 <main class="doc-shell">
   <header class="doc-header">
     <div class="doc-kicker">About</div>
     <h1 class="doc-title">关于<span>本站</span></h1>
-    <p class="doc-desc">一个由 AI 自动维护的传媒行业动态站点，挂在本课程门户里，每天更新技术、案例、政策与课堂讨论。</p>
+    <p class="doc-desc">挂在课程门户里的每日简报。当天页有技术、案例、政策、课堂讨论四块，课堂连接随当天内容更换。</p>
     <div class="doc-meta">
-      <span class="doc-chip">每日自动更新</span>
-      <span class="doc-chip">无人工干预</span>
-      <span class="doc-chip">开源可复用</span>
+      <span class="doc-chip">每日更新</span>
+      <span class="doc-chip">四块正文</span>
+      <span class="doc-chip">公开仓库</span>
     </div>
   </header>
 
   <div class="doc-main">
     <section class="card">
       <h2>它是什么？</h2>
-      <p>每天凌晨，一组 GitHub Actions 自动跑完整条流水线：从 20+ 个 AI/传媒 RSS 源抓取最新文章 → 调用大语言模型整理为五大板块（技术 / 案例 / 政策 / 学术 / 课堂讨论）→ 第二个 LLM 反向打分把关质量 → 生成播客式 TTS 音频 → 推到 GitHub Pages。</p>
-      <p>整个过程<strong>无人工干预</strong>，每天的内容都不一样。质量打分历史可见 <a href="quality-trend.html">📈 质量趋势</a>。</p>
+      <p>GitHub Actions 每天跑流水线：从公开 RSS 抓取，整理成四块写进当天的前沿动态——技术、案例、政策、课堂讨论。课堂连接表用当天的条目，并链到对应周次。</p>
+      <p>流水线不生成播客，页面上也没有音频。</p>
+      <p>质量曲线在 <a href="quality-trend.html">质量趋势</a>。图依赖仓库里已提交的分数摘要；没有摘要时，该页写明暂无已保存的分数。</p>
     </section>
 
     <section class="card">
       <h2>技术栈</h2>
       <div class="stat-grid">
         <div class="stack-card"><div class="stack-card-title">LongCat-2.0-Preview</div><div class="stack-card-desc">主力写作 LLM（美团）</div></div>
-        <div class="stack-card"><div class="stack-card-title">智谱 GLM-4 / 兜底</div><div class="stack-card-desc">备选 LLM</div></div>
-        <div class="stack-card"><div class="stack-card-title">小米 MiMo TTS</div><div class="stack-card-desc">语音合成</div></div>
-        <div class="stack-card"><div class="stack-card-title">GitHub Actions</div><div class="stack-card-desc">每日 cron 调度</div></div>
-        <div class="stack-card"><div class="stack-card-title">GitHub Pages</div><div class="stack-card-desc">静态站点托管</div></div>
-        <div class="stack-card"><div class="stack-card-title">Chart.js</div><div class="stack-card-desc">质量趋势图表</div></div>
+        <div class="stack-card"><div class="stack-card-title">智谱 GLM-4.7</div><div class="stack-card-desc">LongCat 不可用时接上</div></div>
+        <div class="stack-card"><div class="stack-card-title">GitHub Actions</div><div class="stack-card-desc">每日定时跑流水线</div></div>
+        <div class="stack-card"><div class="stack-card-title">GitHub Pages</div><div class="stack-card-desc">静态页面托管</div></div>
+        <div class="stack-card"><div class="stack-card-title">四块正文</div><div class="stack-card-desc">技术、案例、政策、课堂讨论</div></div>
+        <div class="stack-card"><div class="stack-card-title">分数摘要</div><div class="stack-card-desc">有摘要才画质量曲线</div></div>
       </div>
     </section>
 
@@ -71,14 +62,14 @@
 
     <section class="card">
       <h2>开源与复用</h2>
-      <p>全部代码在 <a href="https://github.com/Yuuqq/AI-driven-media-content-production">GitHub</a>，MIT 协议。欢迎 fork 自建（您只需自己的 LLM API key）。</p>
+      <p>代码在公开仓库 <a href="https://github.com/icgma/cpnm-ai-comm-practice">icgma/cpnm-ai-comm-practice</a>。自建需要自己的语言模型密钥。</p>
     </section>
   </div>
 </main>
 
 <footer class="doc-footer">
   <p>© 2026 汕头大学 · 长江新闻与传播学院 · AI课程建设项目</p>
-  <p style="margin-top:8px"><a href="./index.html">返回课程门户</a> · <a href="./ai-trends.html">前沿动态</a> · <a href="./privacy.html">隐私政策</a></p>
+  <p style="margin-top:8px"><a href="./index.html">返回课程门户</a> · <a href="./ai-trends.html">前沿动态</a> · <a href="https://github.com/icgma/cpnm-ai-comm-practice" target="_blank" rel="noopener noreferrer">GitHub</a> · <a href="./privacy.html">隐私政策</a></p>
 </footer>
 </body>
 </html>

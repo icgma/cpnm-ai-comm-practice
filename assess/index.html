@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect x='1.5' y='1.5' width='37' height='37' rx='9' fill='%23F7EFDA' stroke='%23A2402F' stroke-width='3'/%3E%3Cg transform='translate(20 20) scale(0.74) translate(-20 -20)'%3E%3Cpath fill='none' stroke='%23A2402F' stroke-width='2.6' stroke-linejoin='round' stroke-linecap='round' d='M20 36.5 L11.2 16.5 C13.6 13 16.6 11.2 20 10.9 C23.4 11.2 26.4 13 28.8 16.5 Z'/%3E%3Cpath fill='%23A2402F' d='M20 13.6 L21.3 16.9 L24.6 18.2 L21.3 19.5 L20 22.8 L18.7 19.5 L15.4 18.2 L18.7 16.9 Z'/%3E%3Cpath d='M20 23.6 L20 33' stroke='%23A2402F' stroke-width='2.2' stroke-linecap='round' fill='none'/%3E%3C/g%3E%3C/svg%3E">
+<title>周挑战 — AI驱动的传媒内容制作</title>
+<meta name="description" content="十六周各一道公开练习。题干来自简答与实操，提交和记分在课堂。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,500;0,600;1,500&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../doc-common.css">
+<link rel="stylesheet" href="./assess.css">
+<script src="../analytics.js" defer></script>
+</head>
+<body>
+
+<div id="site-nav" data-current="assess" data-root="../"></div>
+<script src="../site-nav.js" defer></script>
+
+<main class="doc-shell">
+  <header class="doc-header">
+    <div class="doc-kicker">Weekly Challenges</div>
+    <h1 class="doc-title">十六周<span>挑战</span></h1>
+    <p class="doc-desc">每周一道。题干摘自课程简答和实操，本页不公布解答。评分要点看你能不能拿一份真实材料做出判断，而不是复述定义。练习在这里，提交和记分在课堂。</p>
+    <div class="doc-meta">
+      <span class="doc-chip">十六道，对应第1周到第16周</span>
+      <span class="doc-chip">课堂收取，本站不登录、不打分</span>
+    </div>
+    <nav class="week-index" aria-label="各周挑战">
+      <a href="#w01">第1周</a>
+      <a href="#w02">第2周</a>
+      <a href="#w03">第3周</a>
+      <a href="#w04">第4周</a>
+      <a href="#w05">第5周</a>
+      <a href="#w06">第6周</a>
+      <a href="#w07">第7周</a>
+      <a href="#w08">第8周</a>
+      <a href="#w09">第9周</a>
+      <a href="#w10">第10周</a>
+      <a href="#w11">第11周</a>
+      <a href="#w12">第12周</a>
+      <a href="#w13">第13周</a>
+      <a href="#w14">第14周</a>
+      <a href="#w15">第15周</a>
+      <a href="#w16">第16周</a>
+    </nav>
+  </header>
+
+  <div class="doc-main">
+
+    <section class="card challenge" id="w01">
+      <h2>第1周 · 课程导论与AI基础</h2>
+      <p class="field"><strong>课程目标：</strong>CO1</p>
+      <p class="field"><strong>阶段：</strong>第壹阶 · 基础认知</p>
+      <p class="stem-label">题干 · JD-B-02</p>
+      <blockquote class="stem">用一个新闻传播领域的例子，分别解释监督学习和无监督学习的区别。</blockquote>
+      <div class="judgment">
+        <strong>要你做出的判断</strong>
+        <p>模型可以先帮你把两个术语讲明白。讲完之后，未改的生成稿不能交。例子和表述换成你自己的。模型讲的阶段或定义，对不上课文或你查过的来源，就不要采用。</p>
+      </div>
+      <p class="field"><strong>提交去向：</strong>课堂收取。本站不登录、不打分。</p>
+      <h3>评分要点</h3>
+      <ul class="doc-list rubric">
+        <li>例子是一条具体的新闻生产任务，写清输入是什么、输出是什么。</li>
+        <li>同一条任务上，两种学习各做哪一步、差在哪里，能让没上过这门课的同学复述。</li>
+        <li>指出你改写了模型的哪一句，以及哪一句你不采用。</li>
+      </ul>
+      <p class="related"><a href="../weeks/week-01.html">第1周课文</a><a href="../ai-ethics-handbook.html#w01">本周判断</a><a href="#w02">下一周</a></p>
+    </section>
+
+    <section class="card challenge" id="w02">
+      <h2>第2周 · LLM工作原理与技术基础</h2>
+      <p class="field"><strong>课程目标：</strong>CO1</p>
+      <p class="field"><strong>阶段：</strong>第壹阶 · 基础认知</p>
+      <p class="stem-label">题干 · JD-B-03</p>
+      <blockquote class="stem">请用「编辑审稿」的类比，向一位非技术背景的新闻系同学解释Transformer的「自注意力机制」。</blockquote>
+      <p class="field"><strong>提交去向：</strong>课堂收取。本站不登录、不打分。</p>
+      <h3>评分要点</h3>
+      <ul class="doc-list rubric">
+        <li>类比要走到「编辑同时看各段，再决定哪段相关」，不能只把术语换成编辑室里的名词。</li>
+        <li>写明类比在哪一步失效。</li>
+        <li>用这个失效点说明：自注意力不能替记者决定哪句话可以见报。</li>
+      </ul>
+      <p class="related"><a href="../weeks/week-02.html">第2周课文</a><a href="#w01">上一周</a><a href="#w03">下一周</a></p>
+    </section>
+
+    <section class="card challenge" id="w03">
+      <h2>第3周 · 提示词工程基础</h2>
+      <p class="field"><strong>课程目标：</strong>CO2</p>
+      <p class="field"><strong>阶段：</strong>第贰阶 · 提示词工程</p>
+      <p class="stem-label">题干 · SC-C-01</p>
+      <blockquote class="stem">使用CRISPE框架，分别为以下三个场景各设计一个提示词：①突发新闻消息稿 ②人物专访策划 ③社交媒体短视频脚本。提交三组提示词并标注各要素。</blockquote>
+      <p class="field"><strong>提交去向：</strong>课堂收取。本站不登录、不打分。</p>
+      <h3>评分要点</h3>
+      <ul class="doc-list rubric">
+        <li>三组提示词都标出 CRISPE 的五项。某一项若省略，写明这个场景为什么可以省。</li>
+        <li>突发消息、人物专访、短视频脚本的指令不能互相替换。</li>
+        <li>至少改过一轮：写出你改了哪一句，输出因此变了什么。</li>
+      </ul>
+      <p class="related"><a href="../weeks/week-03.html">第3周课文</a><a href="#w02">上一周</a><a href="#w04">下一周</a></p>
+    </section>
+
+    <section class="card challenge" id="w04">
+      <h2>第4周 · 精确指令与格式控制</h2>
+      <p class="field"><strong>课程目标：</strong>CO2、CO7</p>
+      <p class="field"><strong>阶段：</strong>第贰阶 · 提示词工程</p>
+      <p class="stem-label">题干 · SC-C-05</p>
+      <blockquote class="stem">设计一个包含至少3个约束条件的提示词，要求LLM以AP Stylebook规范撰写一条国际新闻简报。检查输出是否符合全部约束。</blockquote>
+      <div class="judgment">
+        <strong>要你做出的判断</strong>
+        <p>格式对齐不等于事实对齐。简报里的数字、地名、引语，你没核对过的，写明你不信哪一句。这份未改的生成稿能不能交，你要明确写出来。用了生成，就写清标注放在稿的什么位置。</p>
+      </div>
+      <p class="field"><strong>提交去向：</strong>课堂收取。本站不登录、不打分。</p>
+      <h3>评分要点</h3>
+      <ul class="doc-list rubric">
+        <li>至少三条约束同时写进提示词，其中一条管事实，例如不得编造数字。</li>
+        <li>对照输出逐条指出哪条约束没被遵守，不要只写大体符合。</li>
+        <li>写明你信不信稿中的事实，未改的生成稿能不能交，标注写在哪里。</li>
+      </ul>
+      <p class="related"><a href="../weeks/week-04.html">第4周课文</a><a href="../ai-ethics-handbook.html#w04">本周判断</a><a href="#w03">上一周</a><a href="#w05">下一周</a></p>
+    </section>
+
+    <section class="card challenge" id="w05">
+      <h2>第5周 · 智能信息获取基础</h2>
+      <p class="field"><strong>课程目标：</strong>CO3</p>
+      <p class="field"><strong>阶段：</strong>第叁阶 · 智能信息获取</p>
+      <p class="stem-label">题干 · SC-D-04</p>
+      <blockquote class="stem">分别使用「秘塔搜索」「豆包」和「通义千问」对同一新闻话题进行深度检索，对比三者的检索质量并撰写评测报告。</blockquote>
+      <p class="field"><strong>提交去向：</strong>课堂收取。本站不登录、不打分。</p>
+      <h3>评分要点</h3>
+      <ul class="doc-list rubric">
+        <li>同一话题、同一轮检索，三家工具各留下一条你实际看到的结果。</li>
+        <li>比较覆盖、来源能不能打开、有没有编造，不能只写谁更详细。</li>
+        <li>给出下一轮要改的检索词，并说明上一轮缺了什么。</li>
+      </ul>
+      <p class="related"><a href="../weeks/week-05.html">第5周课文</a><a href="#w04">上一周</a><a href="#w06">下一周</a></p>
+    </section>
+
+    <section class="card challenge" id="w06">
+      <h2>第6周 · Deep Research与事实核查</h2>
+      <p class="field"><strong>课程目标：</strong>CO3、CO7</p>
+      <p class="field"><strong>阶段：</strong>第叁阶 · 智能信息获取</p>
+      <p class="stem-label">题干 · SC-D-02</p>
+      <blockquote class="stem">选择一条近期在社交媒体广泛传播的信息，使用AI工具辅助进行事实核查，记录核查过程并撰写200字核查报告。</blockquote>
+      <div class="judgment">
+        <strong>要你做出的判断</strong>
+        <p>报告结尾写明你信不信这条材料。信的部分指出证据，不信的部分指出不能用的那一句。只复述模型的核查结论，不算核查。</p>
+      </div>
+      <p class="field"><strong>提交去向：</strong>课堂收取。本站不登录、不打分。</p>
+      <h3>评分要点</h3>
+      <ul class="doc-list rubric">
+        <li>材料是一条近期真在传播的信息，写清你在哪里看到它。</li>
+        <li>核查留下你自己打开的来源，模型摘要不能代替来源。</li>
+        <li>明确写你信不信这条材料；不信的，指出不能用的那一句。</li>
+      </ul>
+      <p class="related"><a href="../weeks/week-06.html">第6周课文</a><a href="../ai-ethics-handbook.html#w06">本周判断</a><a href="#w05">上一周</a><a href="#w07">下一周</a></p>
+    </section>
+
+    <section class="card challenge" id="w07">
+      <h2>第7周 · 文本摘要与提炼基础</h2>
+      <p class="field"><strong>课程目标：</strong>CO4</p>
+      <p class="field"><strong>阶段：</strong>第肆阶 · 内容创作</p>
+      <p class="stem-label">题干 · SC-E-01</p>
+      <blockquote class="stem">选取任意一篇3000字以上的深度报道，使用AI分别生成100字、300字、500字三种长度的摘要，对比信息保留度。</blockquote>
+      <p class="field"><strong>提交去向：</strong>课堂收取。本站不登录、不打分。</p>
+      <h3>评分要点</h3>
+      <ul class="doc-list rubric">
+        <li>原文是你选的三千字以上报道，三种长度都从这一篇来。</li>
+        <li>对照原文，指出每种长度丢掉的一条不能丢的事实。</li>
+        <li>说明你会把哪一版交给编辑，为什么不是更短的那一版。</li>
+      </ul>
+      <p class="related"><a href="../weeks/week-07.html">第7周课文</a><a href="#w06">上一周</a><a href="#w08">下一周</a></p>
+    </section>
+
+    <section class="card challenge" id="w08">
+      <h2>第8周 · 结构化提取与增强分析</h2>
+      <p class="field"><strong>课程目标：</strong>CO4</p>
+      <p class="field"><strong>阶段：</strong>第肆阶 · 内容创作</p>
+      <p class="stem-label">题干 · SC-E-04</p>
+      <blockquote class="stem">从任一新闻发布会的官方文字实录中，使用AI提取：①发言人及其职务 ②关键数字（金额/人数/日期）③政策要点 ④记者提问焦点。输出为结构化表格。</blockquote>
+      <p class="field"><strong>提交去向：</strong>课堂收取。本站不登录、不打分。</p>
+      <h3>评分要点</h3>
+      <ul class="doc-list rubric">
+        <li>四列都在。实录里没有的格子写「实录里没有」，不要补模型编的内容。</li>
+        <li>至少两个数字能指回实录原句。</li>
+        <li>指出一处模型提错或提漏的地方，写出你怎么改的。</li>
+      </ul>
+      <p class="related"><a href="../weeks/week-08.html">第8周课文</a><a href="#w07">上一周</a><a href="#w09">下一周</a></p>
+    </section>
+
+    <section class="card challenge" id="w09">
+      <h2>第9周 · 创意生成与选题策划</h2>
+      <p class="field"><strong>课程目标：</strong>CO4</p>
+      <p class="field"><strong>阶段：</strong>第肆阶 · 内容创作</p>
+      <p class="stem-label">题干 · SC-ZH-04</p>
+      <blockquote class="stem">为一个你感兴趣的传媒选题，分别用发散思维（头脑风暴）和收敛思维（SCAMPER）两种AI辅助方法生成创意，对比两种方法的产出差异。</blockquote>
+      <p class="field"><strong>提交去向：</strong>课堂收取。本站不登录、不打分。</p>
+      <h3>评分要点</h3>
+      <ul class="doc-list rubric">
+        <li>同一选题走发散和 SCAMPER 两条路，各留下实际产出，不要只解释两个名词。</li>
+        <li>写出两条路分别多出来的一个想法，以及你砍掉的一个，理由要具体。</li>
+        <li>最后只留一个你这周愿意开做的题，说明它为什么更能做。</li>
+      </ul>
+      <p class="related"><a href="../weeks/week-09.html">第9周课文</a><a href="#w08">上一周</a><a href="#w10">下一周</a></p>
+    </section>
+
+    <section class="card challenge" id="w10">
+      <h2>第10周 · AI辅助写作实践</h2>
+      <p class="field"><strong>课程目标：</strong>CO4、CO7</p>
+      <p class="field"><strong>阶段：</strong>第肆阶 · 内容创作</p>
+      <p class="stem-label">题干 · SC-E-03</p>
+      <blockquote class="stem">AI辅助完成一篇800字的传媒话题评论文章。要求：①记录使用的全部提示词 ②标注哪些内容是AI生成、哪些是人工修改 ③附200字反思。</blockquote>
+      <div class="judgment">
+        <strong>要你做出的判断</strong>
+        <p>未改的生成稿不能作为这篇评论提交。正文里标出哪些句子是模型写的、哪些是你改的。没有你自己判断的段落，删掉或重写，不要留在稿里充字数。</p>
+      </div>
+      <p class="field"><strong>提交去向：</strong>课堂收取。本站不登录、不打分。</p>
+      <h3>评分要点</h3>
+      <ul class="doc-list rubric">
+        <li>八百字里能看出哪些判断是你的，不是模型的态度。</li>
+        <li>提示词全文附上。模型写的句子和你改过的句子分开标。未改的生成稿不能当正文交。</li>
+        <li>两百字反思写一件模型做砸了、被你改回来的事。</li>
+      </ul>
+      <p class="related"><a href="../weeks/week-10.html">第10周课文</a><a href="../ai-ethics-handbook.html#w10">本周判断</a><a href="#w09">上一周</a><a href="#w11">下一周</a></p>
+    </section>
+
+    <section class="card challenge" id="w11">
+      <h2>第11周 · Few-Shot与角色扮演</h2>
+      <p class="field"><strong>课程目标：</strong>CO2</p>
+      <p class="field"><strong>阶段：</strong>第伍阶 · 高级技巧</p>
+      <p class="stem-label">题干 · SC-F-01</p>
+      <blockquote class="stem">选取一位你喜欢的新闻评论员或公众号作者，收集其3篇文章，提取写作特征，设计一组Few-Shot示例让AI模仿其风格写一篇新评论。</blockquote>
+      <p class="field"><strong>提交去向：</strong>课堂收取。本站不登录、不打分。</p>
+      <h3>评分要点</h3>
+      <ul class="doc-list rubric">
+        <li>三条写作特征都能指回例文原句，不要用「语言生动」这类空话。</li>
+        <li>Few-Shot 提示词、示例和模仿文一起交。</li>
+        <li>指出模仿文里一处学不像的地方，并改一版示例或指令。</li>
+      </ul>
+      <p class="related"><a href="../weeks/week-11.html">第11周课文</a><a href="#w10">上一周</a><a href="#w12">下一周</a></p>
+    </section>
+
+    <section class="card challenge" id="w12">
+      <h2>第12周 · 思维链CoT技术</h2>
+      <p class="field"><strong>课程目标：</strong>CO2</p>
+      <p class="field"><strong>阶段：</strong>第伍阶 · 高级技巧</p>
+      <p class="stem-label">题干 · SC-F-03</p>
+      <blockquote class="stem">使用CoT方法，分析一条互联网谣言的传播路径：先拆解谣言内容→分析传播节点→识别易感人群→设计辟谣策略。记录完整的推理链。</blockquote>
+      <p class="field"><strong>提交去向：</strong>课堂收取。本站不登录、不打分。</p>
+      <h3>评分要点</h3>
+      <ul class="doc-list rubric">
+        <li>四步前后相接，后一步用到前一步的结果。</li>
+        <li>辟谣策略针对你写出的易感人群，不要停在「提高媒介素养」。</li>
+        <li>标出链上哪一步证据不足，你因此不采信模型的哪一句。</li>
+      </ul>
+      <p class="related"><a href="../weeks/week-12.html">第12周课文</a><a href="#w11">上一周</a><a href="#w13">下一周</a></p>
+    </section>
+
+    <section class="card challenge" id="w13">
+      <h2>第13周 · 主流LLM平台对比</h2>
+      <p class="field"><strong>课程目标：</strong>CO5</p>
+      <p class="field"><strong>阶段：</strong>第伍阶 · 高级技巧</p>
+      <p class="stem-label">题干 · SC-F-04</p>
+      <blockquote class="stem">将同一条新闻改写任务分别提交给3个不同的LLM平台，从准确性、流畅度、风格适配三个维度评分(1-5分)，制作评测对比表。</blockquote>
+      <p class="field"><strong>提交去向：</strong>课堂收取。本站不登录、不打分。</p>
+      <h3>评分要点</h3>
+      <ul class="doc-list rubric">
+        <li>三个平台改的是同一条新闻。三个维度都有分数，并各举一句输出说明这个分数。</li>
+        <li>至少一个维度你给了低分，写明如果拿去发稿你会改哪一句。</li>
+        <li>结论是这则任务你选哪个平台。理由不能是它更有名。</li>
+      </ul>
+      <p class="related"><a href="../weeks/week-13.html">第13周课文</a><a href="#w12">上一周</a><a href="#w14">下一周</a></p>
+    </section>
+
+    <section class="card challenge" id="w14">
+      <h2>第14周 · AI辅助工具集成与伦理</h2>
+      <p class="field"><strong>课程目标：</strong>CO6、CO7</p>
+      <p class="field"><strong>阶段：</strong>第陆阶 · 伦理与项目</p>
+      <p class="stem-label">题干 · JD-G-04</p>
+      <blockquote class="stem">请为一家50人规模的地方新闻机构设计一个AI辅助工作流框架（从选题到发稿），标注哪些环节适合AI自动化、哪些必须保留人工。</blockquote>
+      <div class="judgment">
+        <strong>要你做出的判断</strong>
+        <p>生成初稿可以交给工具。未改的生成稿能不能过审、能不能发出去，方案里要写死。发出去的稿子要不要标注 AI 参与，也要写死。人没看过的那一环，不能发。</p>
+      </div>
+      <p class="field"><strong>提交去向：</strong>课堂收取。本站不登录、不打分。</p>
+      <h3>评分要点</h3>
+      <ul class="doc-list rubric">
+        <li>从选题到发稿的环节写全。每环标明交给工具还是留给人，不能整条链都写「AI 辅助」。</li>
+        <li>至少两环说明为什么这家机构不能交给模型，风险要具体到它的稿件。</li>
+        <li>写明未改的生成稿能不能过审、能不能发，以及哪一环必须标注之后才能发。</li>
+      </ul>
+      <p class="related"><a href="../weeks/week-14.html">第14周课文</a><a href="../ai-ethics-handbook.html#w14">本周判断</a><a href="#w13">上一周</a><a href="#w15">下一周</a></p>
+    </section>
+
+    <section class="card challenge" id="w15">
+      <h2>第15周 · 期末项目准备与指导</h2>
+      <p class="field"><strong>课程目标：</strong>CO6</p>
+      <p class="field"><strong>阶段：</strong>第陆阶 · 伦理与项目</p>
+      <p class="stem-label">题干 · SC-QM-01</p>
+      <blockquote class="stem">设计并实现一个「AI辅助校园新闻编辑室」方案：包含选题、采编、审核、发布四个环节的AI工具选型和工作流设计。</blockquote>
+      <p class="field"><strong>提交去向：</strong>课堂收取。本站不登录、不打分。</p>
+      <h3>评分要点</h3>
+      <ul class="doc-list rubric">
+        <li>选题、采编、审核、发布四环都有工具，并写出它在校园编辑室里具体干什么。</li>
+        <li>审核环写明人看什么，不能只写工具名。</li>
+        <li>写出一件你这学期还做不到、要在项目里补上的事。</li>
+      </ul>
+      <p class="related"><a href="../weeks/week-15.html">第15周课文</a><a href="#w14">上一周</a><a href="#w16">下一周</a></p>
+    </section>
+
+    <section class="card challenge" id="w16">
+      <h2>第16周 · 项目展示与课程总结</h2>
+      <p class="field"><strong>课程目标：</strong>CO6、CO7</p>
+      <p class="field"><strong>阶段：</strong>第陆阶 · 伦理与项目</p>
+      <p class="stem-label">题干 · SC-QM-11</p>
+      <blockquote class="stem">个人学期AI使用反思报告（1000字）：回顾本学期使用AI的全部经历，分析收获和困惑，展望未来职业中的人机协作。</blockquote>
+      <p class="field"><strong>提交去向：</strong>课堂收取。本站不登录、不打分。作品和答辩也在课堂，不在本页提交。</p>
+      <h3>评分要点</h3>
+      <ul class="doc-list rubric">
+        <li>一千字里至少两次真实使用：工具、当时的任务、你最后采纳还是改掉。</li>
+        <li>写出一件你仍不交给模型的新闻工作。理由落到你要负的责任，不要只写技术还不成熟。</li>
+        <li>反思对得上本学期一次具体作业，不要写成与课程无关的感想。</li>
+      </ul>
+      <p class="related"><a href="../weeks/week-16.html">第16周课文</a><a href="#w15">上一周</a><a href="../obe-matrix.html">评价与OBE</a></p>
+    </section>
+
+  </div>
+</main>
+
+<footer class="doc-footer">
+  <p>© 2026 汕头大学 · 长江新闻与传播学院 · AI课程建设项目</p>
+  <p style="margin-top:8px"><a href="../index.html">返回课程门户</a> · <a href="../obe-matrix.html">评价与OBE</a> · <a href="../ai-ethics-handbook.html">伦理手册</a> · <a href="../privacy.html">隐私</a></p>
+</footer>
+</body>
+</html>
