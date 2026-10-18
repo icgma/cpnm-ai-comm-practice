@@ -5,12 +5,20 @@
   <link rel="self" type="application/atom+xml" href="https://jou2327a.aisbest.eu.cc/feed.xml"/>
   <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/ai-trends.html"/>
   <id>https://jou2327a.aisbest.eu.cc/</id>
-  <updated>2026-10-17T02:46:13Z</updated>
+  <updated>2026-10-18T02:47:56Z</updated>
   <generator uri="https://jou2327a.aisbest.eu.cc">LongCat Daily Pipeline</generator>
   <entry>
-    <title>AI+传媒 前沿动态 · 2026-10-17</title>
+    <title>AI+传媒 前沿动态 · 2026-10-18</title>
     <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/ai-trends.html"/>
-    <id>https://jou2327a.aisbest.eu.cc/ai-trends.html#2026-10-17</id>
+    <id>https://jou2327a.aisbest.eu.cc/ai-trends.html#2026-10-18</id>
+    <updated>2026-10-18T12:00:00Z</updated>
+    <published>2026-10-18T12:00:00Z</published>
+    <summary type="text">SpaceXAI发布Grok Voice 3.0语音模型 · 巴西Itaú银行应用生成式AI服务 · RealtimeBench评估实时环境代理 · Meta移除新闻网站抓取条款 · Bluesky升级Attie AI工具 · AI模仿争议取消公开演示 · Meta移除新闻抓取条款 · 澳大利亚内容过滤功能</summary>
+  </entry>
+  <entry>
+    <title>AI+传媒 前沿动态 · 2026-10-17</title>
+    <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/trends/2026-10-17.html"/>
+    <id>https://jou2327a.aisbest.eu.cc/trends/2026-10-17.html</id>
     <updated>2026-10-17T12:00:00Z</updated>
     <published>2026-10-17T12:00:00Z</published>
     <summary type="text">ARIA: 多智能体系统运行时纠错机制 · L2G-SR: LLM符号回归指导框架 · Meta允许免费训练AI使用新闻网站内容 · AI翻译中人类角色不可替代性研究 · 特朗普AI修图宣传白宫修缮 · AI虚拟形象在Google Meet应用 · Meta新闻内容爬取条款争议 · Nippan数据授权争议</summary>
@@ -238,13 +246,5 @@
     <updated>2026-09-19T12:00:00Z</updated>
     <published>2026-09-19T12:00:00Z</published>
     <summary type="text">伊朗与中国创建首个自主AI影响运动 · OpenAI革新广告行业 · 虚拟化基础模型操作系统层 · 新闻文章开发AI系统的版权争议 · Claude Code云项目支持多AI代理协同 · 加州发布AI安全行政命令 · 英国禁止物化女性AI广告</summary>
-  </entry>
-  <entry>
-    <title>AI+传媒 前沿动态 · 2026-09-18</title>
-    <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/trends/2026-09-18.html"/>
-    <id>https://jou2327a.aisbest.eu.cc/trends/2026-09-18.html</id>
-    <updated>2026-09-18T12:00:00Z</updated>
-    <published>2026-09-18T12:00:00Z</published>
-    <summary type="text">《Frontier法案》作为美国国会最佳AI监管法案 · OpenAI重塑AI驱动广告新体验 · NeMo Data Designer多模态合成数据框架 · AI生成《奥德赛》电影遭差评 · Specs Intelligence AI助手上线 · 英国禁用物化女性AI广告 · 科技巨头涉足时尚领域</summary>
   </entry>
 </feed>
