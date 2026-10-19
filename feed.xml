@@ -5,12 +5,20 @@
   <link rel="self" type="application/atom+xml" href="https://jou2327a.aisbest.eu.cc/feed.xml"/>
   <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/ai-trends.html"/>
   <id>https://jou2327a.aisbest.eu.cc/</id>
-  <updated>2026-10-18T02:47:56Z</updated>
+  <updated>2026-10-19T03:01:22Z</updated>
   <generator uri="https://jou2327a.aisbest.eu.cc">LongCat Daily Pipeline</generator>
   <entry>
-    <title>AI+传媒 前沿动态 · 2026-10-18</title>
+    <title>AI+传媒 前沿动态 · 2026-10-19</title>
     <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/ai-trends.html"/>
-    <id>https://jou2327a.aisbest.eu.cc/ai-trends.html#2026-10-18</id>
+    <id>https://jou2327a.aisbest.eu.cc/ai-trends.html#2026-10-19</id>
+    <updated>2026-10-19T12:00:00Z</updated>
+    <published>2026-10-19T12:00:00Z</published>
+    <summary type="text">Meta Claude工具触发安全机制误封账号 · 九部门推进科技兴商加速AI技术应用 · Itaú构建面向客户和员工的生成式AI · Meta移除新闻抓取条款 · 特朗普AI修图遭社交媒体疯传 · Bluesky Attie工具革新社交创作 · Anthropic将AI监管作为商业模式 · Hybro开源AI代理互操作引擎</summary>
+  </entry>
+  <entry>
+    <title>AI+传媒 前沿动态 · 2026-10-18</title>
+    <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/trends/2026-10-18.html"/>
+    <id>https://jou2327a.aisbest.eu.cc/trends/2026-10-18.html</id>
     <updated>2026-10-18T12:00:00Z</updated>
     <published>2026-10-18T12:00:00Z</published>
     <summary type="text">SpaceXAI发布Grok Voice 3.0语音模型 · 巴西Itaú银行应用生成式AI服务 · RealtimeBench评估实时环境代理 · Meta移除新闻网站抓取条款 · Bluesky升级Attie AI工具 · AI模仿争议取消公开演示 · Meta移除新闻抓取条款 · 澳大利亚内容过滤功能</summary>
@@ -238,13 +246,5 @@
     <updated>2026-09-20T12:00:00Z</updated>
     <published>2026-09-20T12:00:00Z</published>
     <summary type="text">Valve开源Steam Frame安卓兼容层Lepton · 华为奕境X9首发鸿蒙座舱HarmonySpace 6 · AI重构广告新体验 · 开源AI友好型meme生成器 · 首个自主AI舆论运动 · Gemini模型网络安全漏洞 · AI十件重大事件 · 波兰机器人抗议AI监管</summary>
-  </entry>
-  <entry>
-    <title>AI+传媒 前沿动态 · 2026-09-19</title>
-    <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/trends/2026-09-19.html"/>
-    <id>https://jou2327a.aisbest.eu.cc/trends/2026-09-19.html</id>
-    <updated>2026-09-19T12:00:00Z</updated>
-    <published>2026-09-19T12:00:00Z</published>
-    <summary type="text">伊朗与中国创建首个自主AI影响运动 · OpenAI革新广告行业 · 虚拟化基础模型操作系统层 · 新闻文章开发AI系统的版权争议 · Claude Code云项目支持多AI代理协同 · 加州发布AI安全行政命令 · 英国禁止物化女性AI广告</summary>
   </entry>
 </feed>
