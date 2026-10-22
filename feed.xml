@@ -5,12 +5,20 @@
   <link rel="self" type="application/atom+xml" href="https://jou2327a.aisbest.eu.cc/feed.xml"/>
   <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/ai-trends.html"/>
   <id>https://jou2327a.aisbest.eu.cc/</id>
-  <updated>2026-10-20T03:10:55Z</updated>
+  <updated>2026-10-22T03:05:34Z</updated>
   <generator uri="https://jou2327a.aisbest.eu.cc">LongCat Daily Pipeline</generator>
   <entry>
-    <title>AI+传媒 前沿动态 · 2026-10-20</title>
+    <title>AI+传媒 前沿动态 · 2026-10-22</title>
     <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/ai-trends.html"/>
-    <id>https://jou2327a.aisbest.eu.cc/ai-trends.html#2026-10-20</id>
+    <id>https://jou2327a.aisbest.eu.cc/ai-trends.html#2026-10-22</id>
+    <updated>2026-10-22T12:00:00Z</updated>
+    <published>2026-10-22T12:00:00Z</published>
+    <summary type="text">ChatGPT广告扩展至26国 · Navalia协作代理 · MedPAO-Assist · Meta AI支出增长 · AI图像新闻报道 · AI生成歌曲清理 · Muse功能暂停 · Meta AI责任条款</summary>
+  </entry>
+  <entry>
+    <title>AI+传媒 前沿动态 · 2026-10-20</title>
+    <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/trends/2026-10-20.html"/>
+    <id>https://jou2327a.aisbest.eu.cc/trends/2026-10-20.html</id>
     <updated>2026-10-20T12:00:00Z</updated>
     <published>2026-10-20T12:00:00Z</published>
     <summary type="text">Itaú应用生成式AI于客户服务 · Amp扩展AI代理应用边界 · AI Discovery Index行业趋势分析 · 美国禁用中国AI公司DeepSeek政府系统 · 防范AI诈骗：克隆和虚假网站成新威胁 · Meta新条款或允许免费训练AI使用新闻内容 · AI研究人员被困Claude虚拟荒岛 · 美国禁用中国AI公司DeepSeek政府系统</summary>
@@ -238,13 +246,5 @@
     <updated>2026-09-22T12:00:00Z</updated>
     <published>2026-09-22T12:00:00Z</published>
     <summary type="text">RBS-Attention优化长上下文大模型推理 · 大语言模型幻觉检测方法 · 中国智能体市场规模预测 · 国产AI芯片真武V900发布 · Hy Image3.5 preview发布 · AI交互模式重构提案 · 边境死亡地图AI追踪 · 加州AI安全行政命令</summary>
-  </entry>
-  <entry>
-    <title>AI+传媒 前沿动态 · 2026-09-21</title>
-    <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/trends/2026-09-21.html"/>
-    <id>https://jou2327a.aisbest.eu.cc/trends/2026-09-21.html</id>
-    <updated>2026-09-21T12:00:00Z</updated>
-    <published>2026-09-21T12:00:00Z</published>
-    <summary type="text">AI在舆论引导中的虚假民意制造 · 全球AI聊天机器人安全法规博弈 · 自主AI网络操纵运动兴起 · Meta AI助手隐私争议 · 开源AI代理网络行动 · 内容创作&quot; doom loop&quot;危机 · 加州AI安全行政命令 · AI反垄断豁免争议</summary>
   </entry>
 </feed>
