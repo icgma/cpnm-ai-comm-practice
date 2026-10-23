@@ -5,12 +5,20 @@
   <link rel="self" type="application/atom+xml" href="https://jou2327a.aisbest.eu.cc/feed.xml"/>
   <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/ai-trends.html"/>
   <id>https://jou2327a.aisbest.eu.cc/</id>
-  <updated>2026-10-22T03:05:34Z</updated>
+  <updated>2026-10-23T03:09:54Z</updated>
   <generator uri="https://jou2327a.aisbest.eu.cc">LongCat Daily Pipeline</generator>
   <entry>
-    <title>AI+传媒 前沿动态 · 2026-10-22</title>
+    <title>AI+传媒 前沿动态 · 2026-10-23</title>
     <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/ai-trends.html"/>
-    <id>https://jou2327a.aisbest.eu.cc/ai-trends.html#2026-10-22</id>
+    <id>https://jou2327a.aisbest.eu.cc/ai-trends.html#2026-10-23</id>
+    <updated>2026-10-23T12:00:00Z</updated>
+    <published>2026-10-23T12:00:00Z</published>
+    <summary type="text">Jev 决策模型优化传媒精准运营 · 谷歌ACE服务优化AI智能体计算 · Canva Craft自主训练图像生成模型 · 优化RAG系统查询澄清机制 · Muse 2.0社交代理网络升级 · Meta华尔街AI资本布局 · 上下文感知AI在传媒应用 · Meta新闻内容AI训练条款争议</summary>
+  </entry>
+  <entry>
+    <title>AI+传媒 前沿动态 · 2026-10-22</title>
+    <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/trends/2026-10-22.html"/>
+    <id>https://jou2327a.aisbest.eu.cc/trends/2026-10-22.html</id>
     <updated>2026-10-22T12:00:00Z</updated>
     <published>2026-10-22T12:00:00Z</published>
     <summary type="text">ChatGPT广告扩展至26国 · Navalia协作代理 · MedPAO-Assist · Meta AI支出增长 · AI图像新闻报道 · AI生成歌曲清理 · Muse功能暂停 · Meta AI责任条款</summary>
@@ -238,13 +246,5 @@
     <updated>2026-09-23T12:00:00Z</updated>
     <published>2026-09-23T12:00:00Z</published>
     <summary type="text">Parallel cut research time and cost in half with GPT-6 Astra · Building standards for the next phase of AI · Claude Opus 5.5 与 GPT-6 Sol/Luna 发布 · Not all AI workers think the tech could kill everyone · AI信心陷阱与传媒认知偏差 · Higgsfield AI ships new video features in a day with GPT-6 Astra · Mac mini 在 AI 时代的家庭传媒场景应用 · EN World 被AI僵尸攻击</summary>
-  </entry>
-  <entry>
-    <title>AI+传媒 前沿动态 · 2026-09-22</title>
-    <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/trends/2026-09-22.html"/>
-    <id>https://jou2327a.aisbest.eu.cc/trends/2026-09-22.html</id>
-    <updated>2026-09-22T12:00:00Z</updated>
-    <published>2026-09-22T12:00:00Z</published>
-    <summary type="text">RBS-Attention优化长上下文大模型推理 · 大语言模型幻觉检测方法 · 中国智能体市场规模预测 · 国产AI芯片真武V900发布 · Hy Image3.5 preview发布 · AI交互模式重构提案 · 边境死亡地图AI追踪 · 加州AI安全行政命令</summary>
   </entry>
 </feed>
