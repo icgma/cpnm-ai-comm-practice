@@ -5,12 +5,20 @@
   <link rel="self" type="application/atom+xml" href="https://jou2327a.aisbest.eu.cc/feed.xml"/>
   <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/ai-trends.html"/>
   <id>https://jou2327a.aisbest.eu.cc/</id>
-  <updated>2026-10-23T03:09:54Z</updated>
+  <updated>2026-10-24T03:05:07Z</updated>
   <generator uri="https://jou2327a.aisbest.eu.cc">LongCat Daily Pipeline</generator>
   <entry>
-    <title>AI+传媒 前沿动态 · 2026-10-23</title>
+    <title>AI+传媒 前沿动态 · 2026-10-24</title>
     <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/ai-trends.html"/>
-    <id>https://jou2327a.aisbest.eu.cc/ai-trends.html#2026-10-23</id>
+    <id>https://jou2327a.aisbest.eu.cc/ai-trends.html#2026-10-24</id>
+    <updated>2026-10-24T12:00:00Z</updated>
+    <published>2026-10-24T12:00:00Z</published>
+    <summary type="text">OpenAI与波兰NASK合作推进AI安全与安全 · 3D版《看不见的城市》 · Anthropic推出Claude Duet · MCP vs CLI工具集成策略比较 · 30,000名员工部署ChatGPT Work · Craft图像生成模型 · Claude威胁托儿所事件 · Meta暂缓AI新闻抓取条款</summary>
+  </entry>
+  <entry>
+    <title>AI+传媒 前沿动态 · 2026-10-23</title>
+    <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/trends/2026-10-23.html"/>
+    <id>https://jou2327a.aisbest.eu.cc/trends/2026-10-23.html</id>
     <updated>2026-10-23T12:00:00Z</updated>
     <published>2026-10-23T12:00:00Z</published>
     <summary type="text">Jev 决策模型优化传媒精准运营 · 谷歌ACE服务优化AI智能体计算 · Canva Craft自主训练图像生成模型 · 优化RAG系统查询澄清机制 · Muse 2.0社交代理网络升级 · Meta华尔街AI资本布局 · 上下文感知AI在传媒应用 · Meta新闻内容AI训练条款争议</summary>
@@ -238,13 +246,5 @@
     <updated>2026-09-24T12:00:00Z</updated>
     <published>2026-09-24T12:00:00Z</published>
     <summary type="text">百度千问发布Qwen-Audio-3.1系列模型 · Ovis-Embedding多模态嵌入系统 · AI模型被入侵事件频发 · 印度智能眼镜引发AI伪造视频乱象 · Claudeforce驱动客户续费增长 · 美国批评澳大利亚算法opt-out法案</summary>
-  </entry>
-  <entry>
-    <title>AI+传媒 前沿动态 · 2026-09-23</title>
-    <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/trends/2026-09-23.html"/>
-    <id>https://jou2327a.aisbest.eu.cc/trends/2026-09-23.html</id>
-    <updated>2026-09-23T12:00:00Z</updated>
-    <published>2026-09-23T12:00:00Z</published>
-    <summary type="text">Parallel cut research time and cost in half with GPT-6 Astra · Building standards for the next phase of AI · Claude Opus 5.5 与 GPT-6 Sol/Luna 发布 · Not all AI workers think the tech could kill everyone · AI信心陷阱与传媒认知偏差 · Higgsfield AI ships new video features in a day with GPT-6 Astra · Mac mini 在 AI 时代的家庭传媒场景应用 · EN World 被AI僵尸攻击</summary>
   </entry>
 </feed>
