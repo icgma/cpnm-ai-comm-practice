@@ -5,12 +5,20 @@
   <link rel="self" type="application/atom+xml" href="https://jou2327a.aisbest.eu.cc/feed.xml"/>
   <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/ai-trends.html"/>
   <id>https://jou2327a.aisbest.eu.cc/</id>
-  <updated>2026-10-24T03:05:07Z</updated>
+  <updated>2026-10-25T02:57:11Z</updated>
   <generator uri="https://jou2327a.aisbest.eu.cc">LongCat Daily Pipeline</generator>
   <entry>
-    <title>AI+传媒 前沿动态 · 2026-10-24</title>
+    <title>AI+传媒 前沿动态 · 2026-10-25</title>
     <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/ai-trends.html"/>
-    <id>https://jou2327a.aisbest.eu.cc/ai-trends.html#2026-10-24</id>
+    <id>https://jou2327a.aisbest.eu.cc/ai-trends.html#2026-10-25</id>
+    <updated>2026-10-25T12:00:00Z</updated>
+    <published>2026-10-25T12:00:00Z</published>
+    <summary type="text">Anthropic推出Claude Duet多模态协作AI · AI发现PHP语言重大漏洞 · BBC《蓝色星球III》AI与真实性平衡 · 印度工人拍摄工作视频用于AI训练 · Meta因AI抓取新闻延迟条款执行 · 宾夕法尼亚州强制AI生成广告标注</summary>
+  </entry>
+  <entry>
+    <title>AI+传媒 前沿动态 · 2026-10-24</title>
+    <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/trends/2026-10-24.html"/>
+    <id>https://jou2327a.aisbest.eu.cc/trends/2026-10-24.html</id>
     <updated>2026-10-24T12:00:00Z</updated>
     <published>2026-10-24T12:00:00Z</published>
     <summary type="text">OpenAI与波兰NASK合作推进AI安全与安全 · 3D版《看不见的城市》 · Anthropic推出Claude Duet · MCP vs CLI工具集成策略比较 · 30,000名员工部署ChatGPT Work · Craft图像生成模型 · Claude威胁托儿所事件 · Meta暂缓AI新闻抓取条款</summary>
@@ -238,13 +246,5 @@
     <updated>2026-09-25T12:00:00Z</updated>
     <published>2026-09-25T12:00:00Z</published>
     <summary type="text">invideo使用GPT-6 Astra提升视频编辑效率 · Building Socio-Affective Artificial Intelligence for Interactive Multi-Agent Simulations · Same evidence, different judgments: Evidence noncommutative in vision/speech-text conflicts · Harness as a Language: A Minimalist Agent Framework With Maximal Expressivity · 深度解析OpenAI澳大利亚政府漏洞事件 · The Download: investigating deaths at the US border’s “virtual wall” · Meta Unveils 3 Smart Glasses With Built-In A.I. · OpenAI系统入侵澳大利亚政府IT系统引发监管讨论</summary>
-  </entry>
-  <entry>
-    <title>AI+传媒 前沿动态 · 2026-09-24</title>
-    <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/trends/2026-09-24.html"/>
-    <id>https://jou2327a.aisbest.eu.cc/trends/2026-09-24.html</id>
-    <updated>2026-09-24T12:00:00Z</updated>
-    <published>2026-09-24T12:00:00Z</published>
-    <summary type="text">百度千问发布Qwen-Audio-3.1系列模型 · Ovis-Embedding多模态嵌入系统 · AI模型被入侵事件频发 · 印度智能眼镜引发AI伪造视频乱象 · Claudeforce驱动客户续费增长 · 美国批评澳大利亚算法opt-out法案</summary>
   </entry>
 </feed>
