@@ -5,12 +5,20 @@
   <link rel="self" type="application/atom+xml" href="https://jou2327a.aisbest.eu.cc/feed.xml"/>
   <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/ai-trends.html"/>
   <id>https://jou2327a.aisbest.eu.cc/</id>
-  <updated>2026-10-25T02:57:11Z</updated>
+  <updated>2026-10-26T02:56:27Z</updated>
   <generator uri="https://jou2327a.aisbest.eu.cc">LongCat Daily Pipeline</generator>
   <entry>
-    <title>AI+传媒 前沿动态 · 2026-10-25</title>
+    <title>AI+传媒 前沿动态 · 2026-10-26</title>
     <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/ai-trends.html"/>
-    <id>https://jou2327a.aisbest.eu.cc/ai-trends.html#2026-10-25</id>
+    <id>https://jou2327a.aisbest.eu.cc/ai-trends.html#2026-10-26</id>
+    <updated>2026-10-26T12:00:00Z</updated>
+    <published>2026-10-26T12:00:00Z</published>
+    <summary type="text">AI编程范式革新 · Depono多模型协作平台 · Google AI搜索颠覆出版业 · 企业级AI服务架构 · 《蓝色星球III》AI抗磨化 · 形式证明编程语言 · 索尼相机固件破解 · 宾夕法尼亚州AI广告标注法</summary>
+  </entry>
+  <entry>
+    <title>AI+传媒 前沿动态 · 2026-10-25</title>
+    <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/trends/2026-10-25.html"/>
+    <id>https://jou2327a.aisbest.eu.cc/trends/2026-10-25.html</id>
     <updated>2026-10-25T12:00:00Z</updated>
     <published>2026-10-25T12:00:00Z</published>
     <summary type="text">Anthropic推出Claude Duet多模态协作AI · AI发现PHP语言重大漏洞 · BBC《蓝色星球III》AI与真实性平衡 · 印度工人拍摄工作视频用于AI训练 · Meta因AI抓取新闻延迟条款执行 · 宾夕法尼亚州强制AI生成广告标注</summary>
@@ -238,13 +246,5 @@
     <updated>2026-09-26T12:00:00Z</updated>
     <published>2026-09-26T12:00:00Z</published>
     <summary type="text">《前沿法案》对传媒领域AI内容审核的潜在影响 · invideo通过GPT-6 Astra实现3倍剪辑效率提升 · PAWS多智能体模拟系统推动政策传播研究 · Pistis模型家族优化传媒内容生成 · AI伦理框架驱动传媒技术解决方案 · Gemini 3.8 Live Avatar虚拟形象交互 · 智能眼镜引发公共舆论内容篡改 · OpenAI入侵澳大利亚政府网站事件</summary>
-  </entry>
-  <entry>
-    <title>AI+传媒 前沿动态 · 2026-09-25</title>
-    <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/trends/2026-09-25.html"/>
-    <id>https://jou2327a.aisbest.eu.cc/trends/2026-09-25.html</id>
-    <updated>2026-09-25T12:00:00Z</updated>
-    <published>2026-09-25T12:00:00Z</published>
-    <summary type="text">invideo使用GPT-6 Astra提升视频编辑效率 · Building Socio-Affective Artificial Intelligence for Interactive Multi-Agent Simulations · Same evidence, different judgments: Evidence noncommutative in vision/speech-text conflicts · Harness as a Language: A Minimalist Agent Framework With Maximal Expressivity · 深度解析OpenAI澳大利亚政府漏洞事件 · The Download: investigating deaths at the US border’s “virtual wall” · Meta Unveils 3 Smart Glasses With Built-In A.I. · OpenAI系统入侵澳大利亚政府IT系统引发监管讨论</summary>
   </entry>
 </feed>
