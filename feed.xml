@@ -5,12 +5,20 @@
   <link rel="self" type="application/atom+xml" href="https://jou2327a.aisbest.eu.cc/feed.xml"/>
   <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/ai-trends.html"/>
   <id>https://jou2327a.aisbest.eu.cc/</id>
-  <updated>2026-10-26T02:56:27Z</updated>
+  <updated>2026-10-27T03:29:17Z</updated>
   <generator uri="https://jou2327a.aisbest.eu.cc">LongCat Daily Pipeline</generator>
   <entry>
-    <title>AI+传媒 前沿动态 · 2026-10-26</title>
+    <title>AI+传媒 前沿动态 · 2026-10-27</title>
     <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/ai-trends.html"/>
-    <id>https://jou2327a.aisbest.eu.cc/ai-trends.html#2026-10-26</id>
+    <id>https://jou2327a.aisbest.eu.cc/ai-trends.html#2026-10-27</id>
+    <updated>2026-10-27T12:00:00Z</updated>
+    <published>2026-10-27T12:00:00Z</published>
+    <summary type="text">Patronizing and Condescending Language Detection in English and Mandarin · Put Your A.I. Agents to Work with These 5 Killer Tasks · Anthropic首次AI公司上市，警告人类面临「灾难性风险」 · Making the case for context-aware AI · How Fanatics and OpenAI streamline the fan experience · The RealReal防止AI抢购设计师服装 · 印度工人拍摄工作以训练AI · What to do if you discover AI models trained using your copyrighted book?</summary>
+  </entry>
+  <entry>
+    <title>AI+传媒 前沿动态 · 2026-10-26</title>
+    <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/trends/2026-10-26.html"/>
+    <id>https://jou2327a.aisbest.eu.cc/trends/2026-10-26.html</id>
     <updated>2026-10-26T12:00:00Z</updated>
     <published>2026-10-26T12:00:00Z</published>
     <summary type="text">AI编程范式革新 · Depono多模型协作平台 · Google AI搜索颠覆出版业 · 企业级AI服务架构 · 《蓝色星球III》AI抗磨化 · 形式证明编程语言 · 索尼相机固件破解 · 宾夕法尼亚州AI广告标注法</summary>
@@ -238,13 +246,5 @@
     <updated>2026-09-27T12:00:00Z</updated>
     <published>2026-09-27T12:00:00Z</published>
     <summary type="text">Minicut AI：AI驱动的影视制作工具 · GitHub AI内容过载争议 · FinderySearch：AI智能搜索引擎 · invideo提升视频制作效率 · 《三星堆：未来往事》AI动画电影 · AI商业化模式争议 · OpenAI系统入侵澳大利亚健康系统 · OpenAI在联合国揭露系统漏洞</summary>
-  </entry>
-  <entry>
-    <title>AI+传媒 前沿动态 · 2026-09-26</title>
-    <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/trends/2026-09-26.html"/>
-    <id>https://jou2327a.aisbest.eu.cc/trends/2026-09-26.html</id>
-    <updated>2026-09-26T12:00:00Z</updated>
-    <published>2026-09-26T12:00:00Z</published>
-    <summary type="text">《前沿法案》对传媒领域AI内容审核的潜在影响 · invideo通过GPT-6 Astra实现3倍剪辑效率提升 · PAWS多智能体模拟系统推动政策传播研究 · Pistis模型家族优化传媒内容生成 · AI伦理框架驱动传媒技术解决方案 · Gemini 3.8 Live Avatar虚拟形象交互 · 智能眼镜引发公共舆论内容篡改 · OpenAI入侵澳大利亚政府网站事件</summary>
   </entry>
 </feed>
