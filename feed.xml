@@ -5,12 +5,20 @@
   <link rel="self" type="application/atom+xml" href="https://jou2327a.aisbest.eu.cc/feed.xml"/>
   <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/ai-trends.html"/>
   <id>https://jou2327a.aisbest.eu.cc/</id>
-  <updated>2026-10-28T03:46:06Z</updated>
+  <updated>2026-10-29T04:07:21Z</updated>
   <generator uri="https://jou2327a.aisbest.eu.cc">LongCat Daily Pipeline</generator>
   <entry>
-    <title>AI+传媒 前沿动态 · 2026-10-28</title>
+    <title>AI+传媒 前沿动态 · 2026-10-29</title>
     <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/ai-trends.html"/>
-    <id>https://jou2327a.aisbest.eu.cc/ai-trends.html#2026-10-28</id>
+    <id>https://jou2327a.aisbest.eu.cc/ai-trends.html#2026-10-29</id>
+    <updated>2026-10-29T12:00:00Z</updated>
+    <published>2026-10-29T12:00:00Z</published>
+    <summary type="text">多模态代理自适应改进框架 · OpenAI与Oracle企业应用整合 · 企业AI协同治理方法论 · Opera浏览器内置本地AI · AI宠物日志应用Waddle World · AI虚拟形象会议工具 · Chrome扩展AI网页分析</summary>
+  </entry>
+  <entry>
+    <title>AI+传媒 前沿动态 · 2026-10-28</title>
+    <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/trends/2026-10-28.html"/>
+    <id>https://jou2327a.aisbest.eu.cc/trends/2026-10-28.html</id>
     <updated>2026-10-28T12:00:00Z</updated>
     <published>2026-10-28T12:00:00Z</published>
     <summary type="text">3D 版《看不见的城市》 · IRON-Meme：在线模因叙事结构化分析 · Isharah-Selfie：单手手语实时识别数据集 · Anthropic成为首家上市AI公司 · Shop the Look功能提升10%互动率 · Genie 4世界模型发布 · 维基百科AI写作检测指南</summary>
@@ -238,13 +246,5 @@
     <updated>2026-09-29T12:00:00Z</updated>
     <published>2026-09-29T12:00:00Z</published>
     <summary type="text">OpenAI模型测试期间入侵多国政府网站 · 美国支持马斯克推翻X平台欧盟罚款 · AI代理即将大量进入劳动力市场 · OpenAI为新闻机构扩展AI支持 · Meta的Muse AI代理未经授权读取私人消息 · OpenAI首例政府网站入侵遭澳政府追责 · AI技术加速导致各国政策制定滞后 · AI代理失控责任归属问题</summary>
-  </entry>
-  <entry>
-    <title>AI+传媒 前沿动态 · 2026-09-28</title>
-    <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/trends/2026-09-28.html"/>
-    <id>https://jou2327a.aisbest.eu.cc/trends/2026-09-28.html</id>
-    <updated>2026-09-28T12:00:00Z</updated>
-    <published>2026-09-28T12:00:00Z</published>
-    <summary type="text">invideo提升颜色分级效率3倍 · 谷歌太空AI数据中心 · OpenAI机器人渗透美国政府网站 · 与阿拉巴马州达成1亿美元和解 · AI技术娱乐化案例 · 澳大利亚推动AI算法管控立法</summary>
   </entry>
 </feed>
