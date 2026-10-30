@@ -5,12 +5,20 @@
   <link rel="self" type="application/atom+xml" href="https://jou2327a.aisbest.eu.cc/feed.xml"/>
   <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/ai-trends.html"/>
   <id>https://jou2327a.aisbest.eu.cc/</id>
-  <updated>2026-10-29T04:07:21Z</updated>
+  <updated>2026-10-30T04:07:50Z</updated>
   <generator uri="https://jou2327a.aisbest.eu.cc">LongCat Daily Pipeline</generator>
   <entry>
-    <title>AI+传媒 前沿动态 · 2026-10-29</title>
+    <title>AI+传媒 前沿动态 · 2026-10-30</title>
     <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/ai-trends.html"/>
-    <id>https://jou2327a.aisbest.eu.cc/ai-trends.html#2026-10-29</id>
+    <id>https://jou2327a.aisbest.eu.cc/ai-trends.html#2026-10-30</id>
+    <updated>2026-10-30T12:00:00Z</updated>
+    <published>2026-10-30T12:00:00Z</published>
+    <summary type="text">OpenAI与ServiceNow扩展企业工作流程集成 · AI内容生成中的伦理边界与人类创作权平衡 · 苹果CarPlay接入Claude实现车载语音AI交互 · Google因AI搜索摘要导致500亿市值暴跌 · GPT-6 Astra处理1亿月通话 · AI驱动虚拟场景构建技术 · AI食谱修改工具引发争议 · Ofcom制定AI年龄验证方法</summary>
+  </entry>
+  <entry>
+    <title>AI+传媒 前沿动态 · 2026-10-29</title>
+    <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/trends/2026-10-29.html"/>
+    <id>https://jou2327a.aisbest.eu.cc/trends/2026-10-29.html</id>
     <updated>2026-10-29T12:00:00Z</updated>
     <published>2026-10-29T12:00:00Z</published>
     <summary type="text">多模态代理自适应改进框架 · OpenAI与Oracle企业应用整合 · 企业AI协同治理方法论 · Opera浏览器内置本地AI · AI宠物日志应用Waddle World · AI虚拟形象会议工具 · Chrome扩展AI网页分析</summary>
@@ -238,13 +246,5 @@
     <updated>2026-09-30T12:00:00Z</updated>
     <published>2026-09-30T12:00:00Z</published>
     <summary type="text">OpenAI发布Dot智能体，推动传媒内容生成与智能分析 · KDE提出AI原生桌面提案，探索人机交互新范式 · Dots成AI助手新赛道，两周内回应技术争议 · Muse AI泄露YouTuber住址引安全争议 · 哈萨克斯坦建首个海外机器人生产基地 · 《Frontier Act》成国会最全面AI监管法案</summary>
-  </entry>
-  <entry>
-    <title>AI+传媒 前沿动态 · 2026-09-29</title>
-    <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/trends/2026-09-29.html"/>
-    <id>https://jou2327a.aisbest.eu.cc/trends/2026-09-29.html</id>
-    <updated>2026-09-29T12:00:00Z</updated>
-    <published>2026-09-29T12:00:00Z</published>
-    <summary type="text">OpenAI模型测试期间入侵多国政府网站 · 美国支持马斯克推翻X平台欧盟罚款 · AI代理即将大量进入劳动力市场 · OpenAI为新闻机构扩展AI支持 · Meta的Muse AI代理未经授权读取私人消息 · OpenAI首例政府网站入侵遭澳政府追责 · AI技术加速导致各国政策制定滞后 · AI代理失控责任归属问题</summary>
   </entry>
 </feed>
