@@ -5,12 +5,20 @@
   <link rel="self" type="application/atom+xml" href="https://jou2327a.aisbest.eu.cc/feed.xml"/>
   <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/ai-trends.html"/>
   <id>https://jou2327a.aisbest.eu.cc/</id>
-  <updated>2026-10-30T04:07:50Z</updated>
+  <updated>2026-10-31T03:53:53Z</updated>
   <generator uri="https://jou2327a.aisbest.eu.cc">LongCat Daily Pipeline</generator>
   <entry>
-    <title>AI+传媒 前沿动态 · 2026-10-30</title>
+    <title>AI+传媒 前沿动态 · 2026-10-31</title>
     <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/ai-trends.html"/>
-    <id>https://jou2327a.aisbest.eu.cc/ai-trends.html#2026-10-30</id>
+    <id>https://jou2327a.aisbest.eu.cc/ai-trends.html#2026-10-31</id>
+    <updated>2026-10-31T12:00:00Z</updated>
+    <published>2026-10-31T12:00:00Z</published>
+    <summary type="text">WebAnything: 可扩展代理训练环境 · LLM代理知识图谱验证 · OpenAI与ServiceNow企业级合作 · 国会批评司法部支持OpenAI · 维基百科呼吁AI版权中间立场 · 企业服务流程集成案例 · 谷歌AI竞争危机分析 · 生成式AI版权法影响评估</summary>
+  </entry>
+  <entry>
+    <title>AI+传媒 前沿动态 · 2026-10-30</title>
+    <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/trends/2026-10-30.html"/>
+    <id>https://jou2327a.aisbest.eu.cc/trends/2026-10-30.html</id>
     <updated>2026-10-30T12:00:00Z</updated>
     <published>2026-10-30T12:00:00Z</published>
     <summary type="text">OpenAI与ServiceNow扩展企业工作流程集成 · AI内容生成中的伦理边界与人类创作权平衡 · 苹果CarPlay接入Claude实现车载语音AI交互 · Google因AI搜索摘要导致500亿市值暴跌 · GPT-6 Astra处理1亿月通话 · AI驱动虚拟场景构建技术 · AI食谱修改工具引发争议 · Ofcom制定AI年龄验证方法</summary>
@@ -238,13 +246,5 @@
     <updated>2026-10-01T12:00:00Z</updated>
     <published>2026-10-01T12:00:00Z</published>
     <summary type="text">Is Human-Readable Text Necessary for Effective LLM Fine-Tuning? · Grab a Coffee: Future-Aware Guidance for Discrete Diffusion · Introducing GPT-6.1 Sol · Google测试向内容创作者付费以支持AI搜索功能 · Beyond Symmetric Agents: Cognitive Diversity and Multi-Agent Debate · Basis税务表格处理效率提升2倍 · Muse AI代理整合用户服务 · 超级智能峰会AI监管讨论</summary>
-  </entry>
-  <entry>
-    <title>AI+传媒 前沿动态 · 2026-09-30</title>
-    <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/trends/2026-09-30.html"/>
-    <id>https://jou2327a.aisbest.eu.cc/trends/2026-09-30.html</id>
-    <updated>2026-09-30T12:00:00Z</updated>
-    <published>2026-09-30T12:00:00Z</published>
-    <summary type="text">OpenAI发布Dot智能体，推动传媒内容生成与智能分析 · KDE提出AI原生桌面提案，探索人机交互新范式 · Dots成AI助手新赛道，两周内回应技术争议 · Muse AI泄露YouTuber住址引安全争议 · 哈萨克斯坦建首个海外机器人生产基地 · 《Frontier Act》成国会最全面AI监管法案</summary>
   </entry>
 </feed>
