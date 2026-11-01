@@ -5,12 +5,20 @@
   <link rel="self" type="application/atom+xml" href="https://jou2327a.aisbest.eu.cc/feed.xml"/>
   <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/ai-trends.html"/>
   <id>https://jou2327a.aisbest.eu.cc/</id>
-  <updated>2026-10-31T03:53:53Z</updated>
+  <updated>2026-11-01T04:02:03Z</updated>
   <generator uri="https://jou2327a.aisbest.eu.cc">LongCat Daily Pipeline</generator>
   <entry>
-    <title>AI+传媒 前沿动态 · 2026-10-31</title>
+    <title>AI+传媒 前沿动态 · 2026-11-01</title>
     <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/ai-trends.html"/>
-    <id>https://jou2327a.aisbest.eu.cc/ai-trends.html#2026-10-31</id>
+    <id>https://jou2327a.aisbest.eu.cc/ai-trends.html#2026-11-01</id>
+    <updated>2026-11-01T12:00:00Z</updated>
+    <published>2026-11-01T12:00:00Z</published>
+    <summary type="text">LRMoE模型优化训练效率 · AI训练偏好标准化协议 · 数据中心债务与AI算力成本 · 中美AI竞赛经济影响分析 · U盘硬件加密漏洞事件 · AI监管隐喻研究</summary>
+  </entry>
+  <entry>
+    <title>AI+传媒 前沿动态 · 2026-10-31</title>
+    <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/trends/2026-10-31.html"/>
+    <id>https://jou2327a.aisbest.eu.cc/trends/2026-10-31.html</id>
     <updated>2026-10-31T12:00:00Z</updated>
     <published>2026-10-31T12:00:00Z</published>
     <summary type="text">WebAnything: 可扩展代理训练环境 · LLM代理知识图谱验证 · OpenAI与ServiceNow企业级合作 · 国会批评司法部支持OpenAI · 维基百科呼吁AI版权中间立场 · 企业服务流程集成案例 · 谷歌AI竞争危机分析 · 生成式AI版权法影响评估</summary>
@@ -238,13 +246,5 @@
     <updated>2026-10-02T12:00:00Z</updated>
     <published>2026-10-02T12:00:00Z</published>
     <summary type="text">OpenAI通报逾百家第三方机构，自家智能体存在失控风险 · DeepSeek模型在核灾难伦理测试中保持性别中立 · Albertsons Companies重构零售业 · OpenAI DevDay 2026发布GPT-6 Astra · 瑞典公司使用Greta Garbo AI形象广告 · AI硬件争夺战升级 · 对齐数据可能引发模型行为偏移 · AI监管应先做风险控制</summary>
-  </entry>
-  <entry>
-    <title>AI+传媒 前沿动态 · 2026-10-01</title>
-    <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/trends/2026-10-01.html"/>
-    <id>https://jou2327a.aisbest.eu.cc/trends/2026-10-01.html</id>
-    <updated>2026-10-01T12:00:00Z</updated>
-    <published>2026-10-01T12:00:00Z</published>
-    <summary type="text">Is Human-Readable Text Necessary for Effective LLM Fine-Tuning? · Grab a Coffee: Future-Aware Guidance for Discrete Diffusion · Introducing GPT-6.1 Sol · Google测试向内容创作者付费以支持AI搜索功能 · Beyond Symmetric Agents: Cognitive Diversity and Multi-Agent Debate · Basis税务表格处理效率提升2倍 · Muse AI代理整合用户服务 · 超级智能峰会AI监管讨论</summary>
   </entry>
 </feed>
