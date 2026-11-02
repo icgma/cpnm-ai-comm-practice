@@ -5,12 +5,20 @@
   <link rel="self" type="application/atom+xml" href="https://jou2327a.aisbest.eu.cc/feed.xml"/>
   <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/ai-trends.html"/>
   <id>https://jou2327a.aisbest.eu.cc/</id>
-  <updated>2026-11-01T04:02:03Z</updated>
+  <updated>2026-11-02T04:04:45Z</updated>
   <generator uri="https://jou2327a.aisbest.eu.cc">LongCat Daily Pipeline</generator>
   <entry>
-    <title>AI+传媒 前沿动态 · 2026-11-01</title>
+    <title>AI+传媒 前沿动态 · 2026-11-02</title>
     <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/ai-trends.html"/>
-    <id>https://jou2327a.aisbest.eu.cc/ai-trends.html#2026-11-01</id>
+    <id>https://jou2327a.aisbest.eu.cc/ai-trends.html#2026-11-02</id>
+    <updated>2026-11-02T12:00:00Z</updated>
+    <published>2026-11-02T12:00:00Z</published>
+    <summary type="text">AI训练偏好标准化协议 · AI编程抽象层革新 · 苹果智能服务中国版 · AI Tamagotchi硬件原型 · 争议营销事件 · 儿童数字社交管控</summary>
+  </entry>
+  <entry>
+    <title>AI+传媒 前沿动态 · 2026-11-01</title>
+    <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/trends/2026-11-01.html"/>
+    <id>https://jou2327a.aisbest.eu.cc/trends/2026-11-01.html</id>
     <updated>2026-11-01T12:00:00Z</updated>
     <published>2026-11-01T12:00:00Z</published>
     <summary type="text">LRMoE模型优化训练效率 · AI训练偏好标准化协议 · 数据中心债务与AI算力成本 · 中美AI竞赛经济影响分析 · U盘硬件加密漏洞事件 · AI监管隐喻研究</summary>
@@ -238,13 +246,5 @@
     <updated>2026-10-03T12:00:00Z</updated>
     <published>2026-10-03T12:00:00Z</published>
     <summary type="text">GPT-6 Astra 开发更新 · OpenAI发布Dot智能体 · 英格兰银行警告AI繁荣引发市场震荡 · ChatGPT优化零售协作 · AI复活格蕾丝·凯莉广告 · AI虚拟形象功能 · 英格兰银行AI监管框架警示 · Google AI搜索反垄断诉讼驳回</summary>
-  </entry>
-  <entry>
-    <title>AI+传媒 前沿动态 · 2026-10-02</title>
-    <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/trends/2026-10-02.html"/>
-    <id>https://jou2327a.aisbest.eu.cc/trends/2026-10-02.html</id>
-    <updated>2026-10-02T12:00:00Z</updated>
-    <published>2026-10-02T12:00:00Z</published>
-    <summary type="text">OpenAI通报逾百家第三方机构，自家智能体存在失控风险 · DeepSeek模型在核灾难伦理测试中保持性别中立 · Albertsons Companies重构零售业 · OpenAI DevDay 2026发布GPT-6 Astra · 瑞典公司使用Greta Garbo AI形象广告 · AI硬件争夺战升级 · 对齐数据可能引发模型行为偏移 · AI监管应先做风险控制</summary>
   </entry>
 </feed>
