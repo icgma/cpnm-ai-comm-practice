@@ -5,12 +5,20 @@
   <link rel="self" type="application/atom+xml" href="https://jou2327a.aisbest.eu.cc/feed.xml"/>
   <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/ai-trends.html"/>
   <id>https://jou2327a.aisbest.eu.cc/</id>
-  <updated>2026-11-02T04:04:45Z</updated>
+  <updated>2026-11-03T05:06:15Z</updated>
   <generator uri="https://jou2327a.aisbest.eu.cc">LongCat Daily Pipeline</generator>
   <entry>
-    <title>AI+传媒 前沿动态 · 2026-11-02</title>
+    <title>AI+传媒 前沿动态 · 2026-11-03</title>
     <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/ai-trends.html"/>
-    <id>https://jou2327a.aisbest.eu.cc/ai-trends.html#2026-11-02</id>
+    <id>https://jou2327a.aisbest.eu.cc/ai-trends.html#2026-11-03</id>
+    <updated>2026-11-03T12:00:00Z</updated>
+    <published>2026-11-03T12:00:00Z</published>
+    <summary type="text">3D版《看不见的城市》 · Apple智能随iOS 27.3登陆中国 · AI微目标选民精准推送 · AI训练偏好robots.txt机制 · SenseNova6.8Flash模型升级 · AI搜索冲击广告收入 · 移民者重生记录计划 · 纽约时报起诉BraveAI抓取</summary>
+  </entry>
+  <entry>
+    <title>AI+传媒 前沿动态 · 2026-11-02</title>
+    <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/trends/2026-11-02.html"/>
+    <id>https://jou2327a.aisbest.eu.cc/trends/2026-11-02.html</id>
     <updated>2026-11-02T12:00:00Z</updated>
     <published>2026-11-02T12:00:00Z</published>
     <summary type="text">AI训练偏好标准化协议 · AI编程抽象层革新 · 苹果智能服务中国版 · AI Tamagotchi硬件原型 · 争议营销事件 · 儿童数字社交管控</summary>
@@ -238,13 +246,5 @@
     <updated>2026-10-04T12:00:00Z</updated>
     <published>2026-10-04T12:00:00Z</published>
     <summary type="text">OpenAI宣布GPT-6 Astra、ChatGPT、Codex等开发者工具 · 卡普空筹备AI协作开发游戏 · 音乐平台Splice CEO批判AI邮件侵蚀创作对话 · 自主AI重构企业智能 · 脑扫描驱动的AI图像重构工具 · AI品牌重塑导致斯洛文尼亚网站名称需求激增 · 短格式视频AI字幕/片段/缩略图生成 · 人类VS AI音乐创作实验</summary>
-  </entry>
-  <entry>
-    <title>AI+传媒 前沿动态 · 2026-10-03</title>
-    <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/trends/2026-10-03.html"/>
-    <id>https://jou2327a.aisbest.eu.cc/trends/2026-10-03.html</id>
-    <updated>2026-10-03T12:00:00Z</updated>
-    <published>2026-10-03T12:00:00Z</published>
-    <summary type="text">GPT-6 Astra 开发更新 · OpenAI发布Dot智能体 · 英格兰银行警告AI繁荣引发市场震荡 · ChatGPT优化零售协作 · AI复活格蕾丝·凯莉广告 · AI虚拟形象功能 · 英格兰银行AI监管框架警示 · Google AI搜索反垄断诉讼驳回</summary>
   </entry>
 </feed>
