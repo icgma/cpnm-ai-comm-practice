@@ -5,12 +5,20 @@
   <link rel="self" type="application/atom+xml" href="https://jou2327a.aisbest.eu.cc/feed.xml"/>
   <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/ai-trends.html"/>
   <id>https://jou2327a.aisbest.eu.cc/</id>
-  <updated>2026-11-03T05:06:15Z</updated>
+  <updated>2026-11-04T04:38:33Z</updated>
   <generator uri="https://jou2327a.aisbest.eu.cc">LongCat Daily Pipeline</generator>
   <entry>
-    <title>AI+传媒 前沿动态 · 2026-11-03</title>
+    <title>AI+传媒 前沿动态 · 2026-11-04</title>
     <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/ai-trends.html"/>
-    <id>https://jou2327a.aisbest.eu.cc/ai-trends.html#2026-11-03</id>
+    <id>https://jou2327a.aisbest.eu.cc/ai-trends.html#2026-11-04</id>
+    <updated>2026-11-04T12:00:00Z</updated>
+    <published>2026-11-04T12:00:00Z</published>
+    <summary type="text">美团发布 LongCat-2.5 AI模型 · 3D 版《看不见的城市》 · Anthropic AI支出分析工具 · MemU-Bench交互优化 · AI改造欧洲房产管理 · 选举信息战AI指挥中心 · 本地化AI数据架构 · AI虚拟形象讽刺无效会议</summary>
+  </entry>
+  <entry>
+    <title>AI+传媒 前沿动态 · 2026-11-03</title>
+    <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/trends/2026-11-03.html"/>
+    <id>https://jou2327a.aisbest.eu.cc/trends/2026-11-03.html</id>
     <updated>2026-11-03T12:00:00Z</updated>
     <published>2026-11-03T12:00:00Z</published>
     <summary type="text">3D版《看不见的城市》 · Apple智能随iOS 27.3登陆中国 · AI微目标选民精准推送 · AI训练偏好robots.txt机制 · SenseNova6.8Flash模型升级 · AI搜索冲击广告收入 · 移民者重生记录计划 · 纽约时报起诉BraveAI抓取</summary>
@@ -238,13 +246,5 @@
     <updated>2026-10-05T12:00:00Z</updated>
     <published>2026-10-05T12:00:00Z</published>
     <summary type="text">大语言模型推理能力缺陷分析 · AI &#x27;读心&#x27;工具通过脑扫描重构视觉图像 · OpenAI发布AI助手dots但新模型延期 · 大语言模型推理能力缺陷分析 · 英格兰银行警告AI繁荣引发市场震荡 · AI重构零售流程 · REX项目AI游戏开发 · 员工违规数据泄露事件</summary>
-  </entry>
-  <entry>
-    <title>AI+传媒 前沿动态 · 2026-10-04</title>
-    <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/trends/2026-10-04.html"/>
-    <id>https://jou2327a.aisbest.eu.cc/trends/2026-10-04.html</id>
-    <updated>2026-10-04T12:00:00Z</updated>
-    <published>2026-10-04T12:00:00Z</published>
-    <summary type="text">OpenAI宣布GPT-6 Astra、ChatGPT、Codex等开发者工具 · 卡普空筹备AI协作开发游戏 · 音乐平台Splice CEO批判AI邮件侵蚀创作对话 · 自主AI重构企业智能 · 脑扫描驱动的AI图像重构工具 · AI品牌重塑导致斯洛文尼亚网站名称需求激增 · 短格式视频AI字幕/片段/缩略图生成 · 人类VS AI音乐创作实验</summary>
   </entry>
 </feed>
