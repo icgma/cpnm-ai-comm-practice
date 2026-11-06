@@ -5,12 +5,20 @@
   <link rel="self" type="application/atom+xml" href="https://jou2327a.aisbest.eu.cc/feed.xml"/>
   <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/ai-trends.html"/>
   <id>https://jou2327a.aisbest.eu.cc/</id>
-  <updated>2026-11-05T04:54:35Z</updated>
+  <updated>2026-11-06T04:53:37Z</updated>
   <generator uri="https://jou2327a.aisbest.eu.cc">LongCat Daily Pipeline</generator>
   <entry>
-    <title>AI+传媒 前沿动态 · 2026-11-05</title>
+    <title>AI+传媒 前沿动态 · 2026-11-06</title>
     <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/ai-trends.html"/>
-    <id>https://jou2327a.aisbest.eu.cc/ai-trends.html#2026-11-05</id>
+    <id>https://jou2327a.aisbest.eu.cc/ai-trends.html#2026-11-06</id>
+    <updated>2026-11-06T12:00:00Z</updated>
+    <published>2026-11-06T12:00:00Z</published>
+    <summary type="text">广电总局重申扶持真人微短剧规范AI微短剧 · 单次推理实现整页排名技术 · LLM审查机构中的证据门控机制 · OpenAI技术赋能产品与商业工具 · Grimes参演首部院映AI科幻片 · Meta Muse升级实时语音交互 · Kindle Colorsoft推动电子书复兴 · Google等起诉加州儿童AI功能禁令</summary>
+  </entry>
+  <entry>
+    <title>AI+传媒 前沿动态 · 2026-11-05</title>
+    <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/trends/2026-11-05.html"/>
+    <id>https://jou2327a.aisbest.eu.cc/trends/2026-11-05.html</id>
     <updated>2026-11-05T12:00:00Z</updated>
     <published>2026-11-05T12:00:00Z</published>
     <summary type="text">不要让 AI 代表你 · Images 2.6 · MCPGuard · AI改造欧洲房地产管理 · AI生成电视节目 · 纽约时报起诉Brave浏览器AI抓取绕过付费墙</summary>
@@ -238,13 +246,5 @@
     <updated>2026-10-07T12:00:00Z</updated>
     <published>2026-10-07T12:00:00Z</published>
     <summary type="text">OpenAI推出新视觉广告格式与测量工具 · 代理日志概率审计黑箱LLM · 意大利总理申请保护声音免受AI滥用 · AI硬件重新定义“录制”边界 · 韩国银行数据泄露或涉AI攻击 · 英国Ofcom调查Meta Instants功能 · 美国《前沿法案》AI监管提案</summary>
-  </entry>
-  <entry>
-    <title>AI+传媒 前沿动态 · 2026-10-06</title>
-    <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/trends/2026-10-06.html"/>
-    <id>https://jou2327a.aisbest.eu.cc/trends/2026-10-06.html</id>
-    <updated>2026-10-06T12:00:00Z</updated>
-    <published>2026-10-06T12:00:00Z</published>
-    <summary type="text">快手可灵AI筹备赴港IPO · 月之暗面估值500亿美元 · OpenAI为ChatGPT添加文本水印 · AI重塑传媒生态 · AI生成图像引发摄影比赛争议 · AI重构零售体验 · A.I.视频推翻谋杀定罪 · 欧盟AI法案文本水印实施</summary>
   </entry>
 </feed>
