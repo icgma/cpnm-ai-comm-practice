@@ -5,12 +5,20 @@
   <link rel="self" type="application/atom+xml" href="https://jou2327a.aisbest.eu.cc/feed.xml"/>
   <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/ai-trends.html"/>
   <id>https://jou2327a.aisbest.eu.cc/</id>
-  <updated>2026-11-06T04:53:37Z</updated>
+  <updated>2026-11-07T04:22:56Z</updated>
   <generator uri="https://jou2327a.aisbest.eu.cc">LongCat Daily Pipeline</generator>
   <entry>
-    <title>AI+传媒 前沿动态 · 2026-11-06</title>
+    <title>AI+传媒 前沿动态 · 2026-11-07</title>
     <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/ai-trends.html"/>
-    <id>https://jou2327a.aisbest.eu.cc/ai-trends.html#2026-11-06</id>
+    <id>https://jou2327a.aisbest.eu.cc/ai-trends.html#2026-11-07</id>
+    <updated>2026-11-07T12:00:00Z</updated>
+    <published>2026-11-07T12:00:00Z</published>
+    <summary type="text">澳大利亚大学培养AI原生毕业生 · Merge利用OpenAI技术构建产品与营销工具 · KDASO：知识-数据双驱动自动优化技能 · Meta的Muse AI可创建定制化‘空间’应用 · OpenAI取消数据中心项目NDAs限制 · Flipsnack通过ChatGPT广告优化用户注册 · AI博彩应用被指盗用LeBron肖像权遭起诉 · Google因AI在学童Chromebook中的安全风险被起诉</summary>
+  </entry>
+  <entry>
+    <title>AI+传媒 前沿动态 · 2026-11-06</title>
+    <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/trends/2026-11-06.html"/>
+    <id>https://jou2327a.aisbest.eu.cc/trends/2026-11-06.html</id>
     <updated>2026-11-06T12:00:00Z</updated>
     <published>2026-11-06T12:00:00Z</published>
     <summary type="text">广电总局重申扶持真人微短剧规范AI微短剧 · 单次推理实现整页排名技术 · LLM审查机构中的证据门控机制 · OpenAI技术赋能产品与商业工具 · Grimes参演首部院映AI科幻片 · Meta Muse升级实时语音交互 · Kindle Colorsoft推动电子书复兴 · Google等起诉加州儿童AI功能禁令</summary>
@@ -238,13 +246,5 @@
     <updated>2026-10-08T12:00:00Z</updated>
     <published>2026-10-08T12:00:00Z</published>
     <summary type="text">AI重构Adobe三件套开源版 · AI音乐欺诈案司法判决 · 英国通信管理局调查Meta Instants功能 · 佛罗里达州起诉Meta强化青少年保护</summary>
-  </entry>
-  <entry>
-    <title>AI+传媒 前沿动态 · 2026-10-07</title>
-    <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/trends/2026-10-07.html"/>
-    <id>https://jou2327a.aisbest.eu.cc/trends/2026-10-07.html</id>
-    <updated>2026-10-07T12:00:00Z</updated>
-    <published>2026-10-07T12:00:00Z</published>
-    <summary type="text">OpenAI推出新视觉广告格式与测量工具 · 代理日志概率审计黑箱LLM · 意大利总理申请保护声音免受AI滥用 · AI硬件重新定义“录制”边界 · 韩国银行数据泄露或涉AI攻击 · 英国Ofcom调查Meta Instants功能 · 美国《前沿法案》AI监管提案</summary>
   </entry>
 </feed>
