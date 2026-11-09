@@ -5,12 +5,20 @@
   <link rel="self" type="application/atom+xml" href="https://jou2327a.aisbest.eu.cc/feed.xml"/>
   <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/ai-trends.html"/>
   <id>https://jou2327a.aisbest.eu.cc/</id>
-  <updated>2026-11-08T04:05:23Z</updated>
+  <updated>2026-11-09T04:21:36Z</updated>
   <generator uri="https://jou2327a.aisbest.eu.cc">LongCat Daily Pipeline</generator>
   <entry>
-    <title>AI+传媒 前沿动态 · 2026-11-08</title>
+    <title>AI+传媒 前沿动态 · 2026-11-09</title>
     <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/ai-trends.html"/>
-    <id>https://jou2327a.aisbest.eu.cc/ai-trends.html#2026-11-08</id>
+    <id>https://jou2327a.aisbest.eu.cc/ai-trends.html#2026-11-09</id>
+    <updated>2026-11-09T12:00:00Z</updated>
+    <published>2026-11-09T12:00:00Z</published>
+    <summary type="text">编程已经面目全非 · OpenAI推出Images 2.6模型 · 生成式AI抵制运动兴起 · Everything I know about AI regulation I learned from music videos · Merge用OpenAI技术整合产品与商业工具 · Flipsnack通过AI广告优化获客成本 · TikTok内容创作者优化视频结尾 · AI音乐公司Suno因模仿Elvis和Eminem遭版权诉讼</summary>
+  </entry>
+  <entry>
+    <title>AI+传媒 前沿动态 · 2026-11-08</title>
+    <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/trends/2026-11-08.html"/>
+    <id>https://jou2327a.aisbest.eu.cc/trends/2026-11-08.html</id>
     <updated>2026-11-08T12:00:00Z</updated>
     <published>2026-11-08T12:00:00Z</published>
     <summary type="text">企业运营优化：Merge整合OpenAI技术 · AI驱动的3D城市Reges Town · NYT Cooking AI助手 · Anthropic CEO的AI伦理思考 · AI广告优化提升转化率 · Muse AI「空间」社交功能 · AI虚拟形象讽刺无效会议 · 全球AI监管框架分类（2025）</summary>
@@ -238,13 +246,5 @@
     <updated>2026-10-10T12:00:00Z</updated>
     <published>2026-10-10T12:00:00Z</published>
     <summary type="text">英伟达RTX Spark新品与AI模型动态 · 人类中心AI的传媒内容标注困境 · 代理选择性遗忘优化上下文管理 · AI创意广告生产全流程 · AI误报悬案暴露公共安全风险 · OpenAI打击AI虚假宣传 · AnthropicAI触发白宫监管</summary>
-  </entry>
-  <entry>
-    <title>AI+传媒 前沿动态 · 2026-10-09</title>
-    <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/trends/2026-10-09.html"/>
-    <id>https://jou2327a.aisbest.eu.cc/trends/2026-10-09.html</id>
-    <updated>2026-10-09T12:00:00Z</updated>
-    <published>2026-10-09T12:00:00Z</published>
-    <summary type="text">OpenAI发布GPT-6及智能UI · OpenAI打击AI虚假宣传 · AI代理失控风险解析 · USA Today起诉OpenAI侵犯版权 · LLM代理合规自进化机制 · AI协助澳政府安全预警 · AI音乐版税欺诈案 · AI与权力关系探讨</summary>
   </entry>
 </feed>
