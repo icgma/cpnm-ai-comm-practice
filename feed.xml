@@ -5,12 +5,20 @@
   <link rel="self" type="application/atom+xml" href="https://jou2327a.aisbest.eu.cc/feed.xml"/>
   <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/ai-trends.html"/>
   <id>https://jou2327a.aisbest.eu.cc/</id>
-  <updated>2026-11-10T05:47:01Z</updated>
+  <updated>2026-11-11T04:25:56Z</updated>
   <generator uri="https://jou2327a.aisbest.eu.cc">LongCat Daily Pipeline</generator>
   <entry>
-    <title>AI+传媒 前沿动态 · 2026-11-10</title>
+    <title>AI+传媒 前沿动态 · 2026-11-11</title>
     <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/ai-trends.html"/>
-    <id>https://jou2327a.aisbest.eu.cc/ai-trends.html#2026-11-10</id>
+    <id>https://jou2327a.aisbest.eu.cc/ai-trends.html#2026-11-11</id>
+    <updated>2026-11-11T12:00:00Z</updated>
+    <published>2026-11-11T12:00:00Z</published>
+    <summary type="text">阿里 Qwen Code 1.0 发布：Qoder 与 Qwen Code Harness 融合开源 · 华为麒麟 9050 系列芯片官宣搭载新一代达芬奇架构 NPU · Don&#x27;t Blame The Preferences: Examining The Emergence of Sycophancy in LLM Training · 使用 FSD 破解版进行智驾测试、被特斯拉发函后，第一电动网 CEO 庞义成回应称‘不可能撤稿’ · 特斯拉FSD破解测试引发合规争议 · Adobe全面投入代理式AI创作工具 · AI虚拟形象参与Google Meet会议 · A Taxonomy for Navigating the Global Landscape of AI Regulation (2025)</summary>
+  </entry>
+  <entry>
+    <title>AI+传媒 前沿动态 · 2026-11-10</title>
+    <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/trends/2026-11-10.html"/>
+    <id>https://jou2327a.aisbest.eu.cc/trends/2026-11-10.html</id>
     <updated>2026-11-10T12:00:00Z</updated>
     <published>2026-11-10T12:00:00Z</published>
     <summary type="text">FLEY AI-Voce - a voice AI assistant that can control PC and phone · Instagram推出AI滤镜生成器Effect Builder · Merge builds product and business tools with OpenAI technology · The climate case for AI has not been made · 合作开发AI生成工具 · AI虚拟形象插件 · Nancy Pelosi的继任者准备监管AI · 印度推出本地化AI发展策略</summary>
@@ -238,13 +246,5 @@
     <updated>2026-10-12T12:00:00Z</updated>
     <published>2026-10-12T12:00:00Z</published>
     <summary type="text">松下与谷歌合作开发AI家庭安防解决方案 · 基于进化生成空间的闭环学习数据合成 · 本田中国深化AI+智能汽车合作 · Pollo AI将创意转化为广告活动 · Meta推迟AI代理应用Muse发布 · 尼康确认获奖图像为AI生成 · AI生成北印第安新闻 correspondents · 微软CEO呼吁全球AI监管规则</summary>
-  </entry>
-  <entry>
-    <title>AI+传媒 前沿动态 · 2026-10-11</title>
-    <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/trends/2026-10-11.html"/>
-    <id>https://jou2327a.aisbest.eu.cc/trends/2026-10-11.html</id>
-    <updated>2026-10-11T12:00:00Z</updated>
-    <published>2026-10-11T12:00:00Z</published>
-    <summary type="text">GPT-6与智能UI全球发布 · 生成式视觉AI模型突破 · 扩散语言模型代理规划 · 人类中心AI的模糊性接纳 · AI生成图像引发摄影竞赛争议 · AI代理伪造签证信息提交 · AI声纹克隆实施电信诈骗 · 打击AI驱动的虚假宣传</summary>
   </entry>
 </feed>
