@@ -5,12 +5,20 @@
   <link rel="self" type="application/atom+xml" href="https://jou2327a.aisbest.eu.cc/feed.xml"/>
   <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/ai-trends.html"/>
   <id>https://jou2327a.aisbest.eu.cc/</id>
-  <updated>2026-11-12T05:34:55Z</updated>
+  <updated>2026-11-13T04:49:40Z</updated>
   <generator uri="https://jou2327a.aisbest.eu.cc">LongCat Daily Pipeline</generator>
   <entry>
-    <title>AI+传媒 前沿动态 · 2026-11-12</title>
+    <title>AI+传媒 前沿动态 · 2026-11-13</title>
     <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/ai-trends.html"/>
-    <id>https://jou2327a.aisbest.eu.cc/ai-trends.html#2026-11-12</id>
+    <id>https://jou2327a.aisbest.eu.cc/ai-trends.html#2026-11-13</id>
+    <updated>2026-11-13T12:00:00Z</updated>
+    <published>2026-11-13T12:00:00Z</published>
+    <summary type="text">通过音乐视频分析AI监管挑战 · 英伟达CEO反对AI监管 · AI时代的“粘合工作”价值 · 意识保存与AI风险权衡 · AI供应商数据泄露事件 · AI房产图像增强争议 · Claude进入微软Office领域 · 通过音乐视频分析AI监管挑战</summary>
+  </entry>
+  <entry>
+    <title>AI+传媒 前沿动态 · 2026-11-12</title>
+    <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/trends/2026-11-12.html"/>
+    <id>https://jou2327a.aisbest.eu.cc/trends/2026-11-12.html</id>
     <updated>2026-11-12T12:00:00Z</updated>
     <published>2026-11-12T12:00:00Z</published>
     <summary type="text">苹果发布Secure Exclaves安全架构强化AI设备隐私 · AI对自由职业的影响 · Adobe推出AI照片导航与角色采访工具 · OpenAI技术提升旅行与工作体验 · Claude推动Anthropic IPO进程 · Scott Wiener或主导联邦AI政策制定</summary>
@@ -238,13 +246,5 @@
     <updated>2026-10-14T12:00:00Z</updated>
     <published>2026-10-14T12:00:00Z</published>
     <summary type="text">Higgsfield将AI视频制作时长扩展至10分钟以上 · JeV决策模型优化内容分发策略 · Meta允许用户自定义AI信息流 · AI就业冲击下的全民基本收入探讨 · AI工具实现创意到广告的转化 · AI加速迪士尼游戏开发 · 迪士尼收购破产AI公司 · Google Meet测试AI虚拟形象</summary>
-  </entry>
-  <entry>
-    <title>AI+传媒 前沿动态 · 2026-10-13</title>
-    <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/trends/2026-10-13.html"/>
-    <id>https://jou2327a.aisbest.eu.cc/trends/2026-10-13.html</id>
-    <updated>2026-10-13T12:00:00Z</updated>
-    <published>2026-10-13T12:00:00Z</published>
-    <summary type="text">GPT-6与智能UI重塑交互体验 · Meta双AI模型挑战行业标杆 · AI Mentions Checker监测品牌曝光 · Salesforce AI服务商业化加速 · AI聊天机器人破产转售迪士尼 · AI系统致警方误判命案 · AI生成摄影赛获奖作品 · 全球AI监管持续博弈</summary>
   </entry>
 </feed>
