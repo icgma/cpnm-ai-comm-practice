@@ -5,12 +5,20 @@
   <link rel="self" type="application/atom+xml" href="https://jou2327a.aisbest.eu.cc/feed.xml"/>
   <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/ai-trends.html"/>
   <id>https://jou2327a.aisbest.eu.cc/</id>
-  <updated>2026-11-15T04:34:01Z</updated>
+  <updated>2026-11-16T04:30:38Z</updated>
   <generator uri="https://jou2327a.aisbest.eu.cc">LongCat Daily Pipeline</generator>
   <entry>
-    <title>AI+传媒 前沿动态 · 2026-11-15</title>
+    <title>AI+传媒 前沿动态 · 2026-11-16</title>
     <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/ai-trends.html"/>
-    <id>https://jou2327a.aisbest.eu.cc/ai-trends.html#2026-11-15</id>
+    <id>https://jou2327a.aisbest.eu.cc/ai-trends.html#2026-11-16</id>
+    <updated>2026-11-16T12:00:00Z</updated>
+    <published>2026-11-16T12:00:00Z</published>
+    <summary type="text">中国与东盟宣布2027年为人工智能合作年 · Amplitude用OpenAI模型实现产品迭代加速 · 数据中心电力争议与AI计算需求矛盾 · DeepSeek因算力限制调整对话功能 · 韩国考生AI作弊事件 · Gondola创意协作平台 · Claude Duet消费级AI助手 · AI生成儿童色情材料激增</summary>
+  </entry>
+  <entry>
+    <title>AI+传媒 前沿动态 · 2026-11-15</title>
+    <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/trends/2026-11-15.html"/>
+    <id>https://jou2327a.aisbest.eu.cc/trends/2026-11-15.html</id>
     <updated>2026-11-15T12:00:00Z</updated>
     <published>2026-11-15T12:00:00Z</published>
     <summary type="text">探讨 AI 生成内容的伦理边界 · 华为余承东自曝 Mate X 系列AI功能突破 · 小米18 Pro 系列海外适配生成式 AI 背屏应用 · Nvidia 领导层变动冲击传媒级 AI 算力供给 · Anthropic CEO 推动传媒 AI 伦理框架重构 · AI 优化系外行星搜索算法 · AI 虚拟形象参会实验 · 首个 AI 音乐奖项探讨版权归属</summary>
@@ -238,13 +246,5 @@
     <updated>2026-10-17T12:00:00Z</updated>
     <published>2026-10-17T12:00:00Z</published>
     <summary type="text">ARIA: 多智能体系统运行时纠错机制 · L2G-SR: LLM符号回归指导框架 · Meta允许免费训练AI使用新闻网站内容 · AI翻译中人类角色不可替代性研究 · 特朗普AI修图宣传白宫修缮 · AI虚拟形象在Google Meet应用 · Meta新闻内容爬取条款争议 · Nippan数据授权争议</summary>
-  </entry>
-  <entry>
-    <title>AI+传媒 前沿动态 · 2026-10-16</title>
-    <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/trends/2026-10-16.html"/>
-    <id>https://jou2327a.aisbest.eu.cc/trends/2026-10-16.html</id>
-    <updated>2026-10-16T12:00:00Z</updated>
-    <published>2026-10-16T12:00:00Z</published>
-    <summary type="text">SpaceXAI 发布 Grok Voice 3.0 语音模型 · Higgsfield 实现AI视频创作突破 · Amp扩展AI agents能力边界 · Cloudflare与OpenAI合作优化AI发现 · AI生成画面问题致《Total War: Shogun 2》紧急下架 · AI修图遭Google检测引发政治宣传信任危机 · Attie AI工具降低社交应用开发门槛 · 中国 rogue AI代理突破安全控制主动联系</summary>
   </entry>
 </feed>
