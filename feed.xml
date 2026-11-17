@@ -5,12 +5,20 @@
   <link rel="self" type="application/atom+xml" href="https://jou2327a.aisbest.eu.cc/feed.xml"/>
   <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/ai-trends.html"/>
   <id>https://jou2327a.aisbest.eu.cc/</id>
-  <updated>2026-11-16T04:30:38Z</updated>
+  <updated>2026-11-17T06:16:17Z</updated>
   <generator uri="https://jou2327a.aisbest.eu.cc">LongCat Daily Pipeline</generator>
   <entry>
-    <title>AI+传媒 前沿动态 · 2026-11-16</title>
+    <title>AI+传媒 前沿动态 · 2026-11-17</title>
     <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/ai-trends.html"/>
-    <id>https://jou2327a.aisbest.eu.cc/ai-trends.html#2026-11-16</id>
+    <id>https://jou2327a.aisbest.eu.cc/ai-trends.html#2026-11-17</id>
+    <updated>2026-11-17T12:00:00Z</updated>
+    <published>2026-11-17T12:00:00Z</published>
+    <summary type="text">不要让 AI 代表你 | 探讨 AI 在内容生成与决策中的角色边界 · 微缩格式量化技术提升推荐模型推理吞吐量 · 小模型幻觉检测器实践审计方法 · 企业级AI代理整合与数据孤岛治理 · 本土化法律与医疗AI解决方案 · 儿童性侵内容AI检测工具 · Google Meet AI虚拟形象应用 · 加州起诉OpenAI因Hugging Face攻击</summary>
+  </entry>
+  <entry>
+    <title>AI+传媒 前沿动态 · 2026-11-16</title>
+    <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/trends/2026-11-16.html"/>
+    <id>https://jou2327a.aisbest.eu.cc/trends/2026-11-16.html</id>
     <updated>2026-11-16T12:00:00Z</updated>
     <published>2026-11-16T12:00:00Z</published>
     <summary type="text">中国与东盟宣布2027年为人工智能合作年 · Amplitude用OpenAI模型实现产品迭代加速 · 数据中心电力争议与AI计算需求矛盾 · DeepSeek因算力限制调整对话功能 · 韩国考生AI作弊事件 · Gondola创意协作平台 · Claude Duet消费级AI助手 · AI生成儿童色情材料激增</summary>
@@ -238,13 +246,5 @@
     <updated>2026-10-18T12:00:00Z</updated>
     <published>2026-10-18T12:00:00Z</published>
     <summary type="text">SpaceXAI发布Grok Voice 3.0语音模型 · 巴西Itaú银行应用生成式AI服务 · RealtimeBench评估实时环境代理 · Meta移除新闻网站抓取条款 · Bluesky升级Attie AI工具 · AI模仿争议取消公开演示 · Meta移除新闻抓取条款 · 澳大利亚内容过滤功能</summary>
-  </entry>
-  <entry>
-    <title>AI+传媒 前沿动态 · 2026-10-17</title>
-    <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/trends/2026-10-17.html"/>
-    <id>https://jou2327a.aisbest.eu.cc/trends/2026-10-17.html</id>
-    <updated>2026-10-17T12:00:00Z</updated>
-    <published>2026-10-17T12:00:00Z</published>
-    <summary type="text">ARIA: 多智能体系统运行时纠错机制 · L2G-SR: LLM符号回归指导框架 · Meta允许免费训练AI使用新闻网站内容 · AI翻译中人类角色不可替代性研究 · 特朗普AI修图宣传白宫修缮 · AI虚拟形象在Google Meet应用 · Meta新闻内容爬取条款争议 · Nippan数据授权争议</summary>
   </entry>
 </feed>
