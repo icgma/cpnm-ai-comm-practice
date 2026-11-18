@@ -5,12 +5,20 @@
   <link rel="self" type="application/atom+xml" href="https://jou2327a.aisbest.eu.cc/feed.xml"/>
   <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/ai-trends.html"/>
   <id>https://jou2327a.aisbest.eu.cc/</id>
-  <updated>2026-11-17T06:16:17Z</updated>
+  <updated>2026-11-18T05:44:30Z</updated>
   <generator uri="https://jou2327a.aisbest.eu.cc">LongCat Daily Pipeline</generator>
   <entry>
-    <title>AI+传媒 前沿动态 · 2026-11-17</title>
+    <title>AI+传媒 前沿动态 · 2026-11-18</title>
     <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/ai-trends.html"/>
-    <id>https://jou2327a.aisbest.eu.cc/ai-trends.html#2026-11-17</id>
+    <id>https://jou2327a.aisbest.eu.cc/ai-trends.html#2026-11-18</id>
+    <updated>2026-11-18T12:00:00Z</updated>
+    <published>2026-11-18T12:00:00Z</published>
+    <summary type="text">Reflections on Trusting AI: A Virus Inside an LLM · Security flaw found in Java... · Introducing GPT-6.2 Astra and Sol · Howler will have AI answer your questions, then burn the chat · Meta高管在Instagram使用AI深度伪造 · Howler will have AI answer your questions, then burn the chat · MeetTwins发送AI虚拟形象到Google Meet · Honest Brokers in AI Regulation</summary>
+  </entry>
+  <entry>
+    <title>AI+传媒 前沿动态 · 2026-11-17</title>
+    <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/trends/2026-11-17.html"/>
+    <id>https://jou2327a.aisbest.eu.cc/trends/2026-11-17.html</id>
     <updated>2026-11-17T12:00:00Z</updated>
     <published>2026-11-17T12:00:00Z</published>
     <summary type="text">不要让 AI 代表你 | 探讨 AI 在内容生成与决策中的角色边界 · 微缩格式量化技术提升推荐模型推理吞吐量 · 小模型幻觉检测器实践审计方法 · 企业级AI代理整合与数据孤岛治理 · 本土化法律与医疗AI解决方案 · 儿童性侵内容AI检测工具 · Google Meet AI虚拟形象应用 · 加州起诉OpenAI因Hugging Face攻击</summary>
@@ -238,13 +246,5 @@
     <updated>2026-10-19T12:00:00Z</updated>
     <published>2026-10-19T12:00:00Z</published>
     <summary type="text">Meta Claude工具触发安全机制误封账号 · 九部门推进科技兴商加速AI技术应用 · Itaú构建面向客户和员工的生成式AI · Meta移除新闻抓取条款 · 特朗普AI修图遭社交媒体疯传 · Bluesky Attie工具革新社交创作 · Anthropic将AI监管作为商业模式 · Hybro开源AI代理互操作引擎</summary>
-  </entry>
-  <entry>
-    <title>AI+传媒 前沿动态 · 2026-10-18</title>
-    <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/trends/2026-10-18.html"/>
-    <id>https://jou2327a.aisbest.eu.cc/trends/2026-10-18.html</id>
-    <updated>2026-10-18T12:00:00Z</updated>
-    <published>2026-10-18T12:00:00Z</published>
-    <summary type="text">SpaceXAI发布Grok Voice 3.0语音模型 · 巴西Itaú银行应用生成式AI服务 · RealtimeBench评估实时环境代理 · Meta移除新闻网站抓取条款 · Bluesky升级Attie AI工具 · AI模仿争议取消公开演示 · Meta移除新闻抓取条款 · 澳大利亚内容过滤功能</summary>
   </entry>
 </feed>
