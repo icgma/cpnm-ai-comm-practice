@@ -5,12 +5,20 @@
   <link rel="self" type="application/atom+xml" href="https://jou2327a.aisbest.eu.cc/feed.xml"/>
   <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/ai-trends.html"/>
   <id>https://jou2327a.aisbest.eu.cc/</id>
-  <updated>2026-11-19T05:42:51Z</updated>
+  <updated>2026-11-20T05:31:26Z</updated>
   <generator uri="https://jou2327a.aisbest.eu.cc">LongCat Daily Pipeline</generator>
   <entry>
-    <title>AI+传媒 前沿动态 · 2026-11-19</title>
+    <title>AI+传媒 前沿动态 · 2026-11-20</title>
     <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/ai-trends.html"/>
-    <id>https://jou2327a.aisbest.eu.cc/ai-trends.html#2026-11-19</id>
+    <id>https://jou2327a.aisbest.eu.cc/ai-trends.html#2026-11-20</id>
+    <updated>2026-11-20T12:00:00Z</updated>
+    <published>2026-11-20T12:00:00Z</published>
+    <summary type="text">Google 推出 Gemini 4 Neon 模型 · AMD 更新虚幻引擎 FSR 插件 · CoMPASS: 测量LLM强化Para社交行为的基准测试 · EverydayBench: 评估实时数字任务完成度 · Canva新增AI功能关闭按钮 · Sumitomo Life uses ChatGPT Enterprise · Meta的Muse Charm定价300美元 · Zeus – Claude Code for AI voice agents</summary>
+  </entry>
+  <entry>
+    <title>AI+传媒 前沿动态 · 2026-11-19</title>
+    <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/trends/2026-11-19.html"/>
+    <id>https://jou2327a.aisbest.eu.cc/trends/2026-11-19.html</id>
     <updated>2026-11-19T12:00:00Z</updated>
     <published>2026-11-19T12:00:00Z</published>
     <summary type="text">AI内容生成与决策的边界探讨 · 反思性监督提升AI生成可控性 · OpenAI进军手机领域 · 单图生成告别视频 · AI星战机器人互动 · 音乐视频中的AI监管启示</summary>
@@ -238,13 +246,5 @@
     <updated>2026-10-22T12:00:00Z</updated>
     <published>2026-10-22T12:00:00Z</published>
     <summary type="text">ChatGPT广告扩展至26国 · Navalia协作代理 · MedPAO-Assist · Meta AI支出增长 · AI图像新闻报道 · AI生成歌曲清理 · Muse功能暂停 · Meta AI责任条款</summary>
-  </entry>
-  <entry>
-    <title>AI+传媒 前沿动态 · 2026-10-20</title>
-    <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/trends/2026-10-20.html"/>
-    <id>https://jou2327a.aisbest.eu.cc/trends/2026-10-20.html</id>
-    <updated>2026-10-20T12:00:00Z</updated>
-    <published>2026-10-20T12:00:00Z</published>
-    <summary type="text">Itaú应用生成式AI于客户服务 · Amp扩展AI代理应用边界 · AI Discovery Index行业趋势分析 · 美国禁用中国AI公司DeepSeek政府系统 · 防范AI诈骗：克隆和虚假网站成新威胁 · Meta新条款或允许免费训练AI使用新闻内容 · AI研究人员被困Claude虚拟荒岛 · 美国禁用中国AI公司DeepSeek政府系统</summary>
   </entry>
 </feed>
