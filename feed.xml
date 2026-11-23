@@ -5,12 +5,20 @@
   <link rel="self" type="application/atom+xml" href="https://jou2327a.aisbest.eu.cc/feed.xml"/>
   <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/ai-trends.html"/>
   <id>https://jou2327a.aisbest.eu.cc/</id>
-  <updated>2026-11-22T04:50:12Z</updated>
+  <updated>2026-11-23T05:28:02Z</updated>
   <generator uri="https://jou2327a.aisbest.eu.cc">LongCat Daily Pipeline</generator>
   <entry>
-    <title>AI+传媒 前沿动态 · 2026-11-22</title>
+    <title>AI+传媒 前沿动态 · 2026-11-23</title>
     <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/ai-trends.html"/>
-    <id>https://jou2327a.aisbest.eu.cc/ai-trends.html#2026-11-22</id>
+    <id>https://jou2327a.aisbest.eu.cc/ai-trends.html#2026-11-23</id>
+    <updated>2026-11-23T12:00:00Z</updated>
+    <published>2026-11-23T12:00:00Z</published>
+    <summary type="text">GPT-6 Astra在金融研究中的落地 · Anthropic上市引发传媒行业震动 · AI生成音乐版权争议</summary>
+  </entry>
+  <entry>
+    <title>AI+传媒 前沿动态 · 2026-11-22</title>
+    <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/trends/2026-11-22.html"/>
+    <id>https://jou2327a.aisbest.eu.cc/trends/2026-11-22.html</id>
     <updated>2026-11-22T12:00:00Z</updated>
     <published>2026-11-22T12:00:00Z</published>
     <summary type="text">AI助手对话中品牌形象监测 · 对抗蒸馏防护 · 特斯拉FSD v15实景视图 · AI贸易生态重构 · Together.ai提示泄露事件 · 提示泄露安全事件 · MS Office功能整合 · AI内容推荐突破</summary>
@@ -238,13 +246,5 @@
     <updated>2026-10-25T12:00:00Z</updated>
     <published>2026-10-25T12:00:00Z</published>
     <summary type="text">Anthropic推出Claude Duet多模态协作AI · AI发现PHP语言重大漏洞 · BBC《蓝色星球III》AI与真实性平衡 · 印度工人拍摄工作视频用于AI训练 · Meta因AI抓取新闻延迟条款执行 · 宾夕法尼亚州强制AI生成广告标注</summary>
-  </entry>
-  <entry>
-    <title>AI+传媒 前沿动态 · 2026-10-24</title>
-    <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/trends/2026-10-24.html"/>
-    <id>https://jou2327a.aisbest.eu.cc/trends/2026-10-24.html</id>
-    <updated>2026-10-24T12:00:00Z</updated>
-    <published>2026-10-24T12:00:00Z</published>
-    <summary type="text">OpenAI与波兰NASK合作推进AI安全与安全 · 3D版《看不见的城市》 · Anthropic推出Claude Duet · MCP vs CLI工具集成策略比较 · 30,000名员工部署ChatGPT Work · Craft图像生成模型 · Claude威胁托儿所事件 · Meta暂缓AI新闻抓取条款</summary>
   </entry>
 </feed>

@@ -192,7 +192,7 @@ a.trend-card:hover,a.case-card:hover{color:inherit}
 <!-- Hero -->
 <div class="week-hero">
   <div class="week-hero-inner">
-    <div class="week-badge"><span class="week-badge-num">DAILY BRIEFING · 2026-11-22</span></div>
+    <div class="week-badge"><span class="week-badge-num">DAILY BRIEFING · 2026-11-23</span></div>
     <h1>AI + 传媒 <span>前沿动态</span></h1>
     <p class="week-hero-sub">
       追踪 AI 技术与新闻传播行业的交叉前沿，每日更新。<br>涵盖技术趋势、行业案例、政策监管与课堂讨论。
@@ -205,11 +205,11 @@ a.trend-card:hover,a.case-card:hover{color:inherit}
 
 <!-- Stats -->
 <div class="stats-bar">
-  <div class="stat-item"><div class="stat-num">5</div><div class="stat-label">来源</div></div>
-  <div class="stat-item"><div class="stat-num">9</div><div class="stat-label">条目</div></div>
-  <div class="stat-item"><div class="stat-num">3</div><div class="stat-label">案例</div></div>
+  <div class="stat-item"><div class="stat-num">0</div><div class="stat-label">来源</div></div>
+  <div class="stat-item"><div class="stat-num">3</div><div class="stat-label">条目</div></div>
+  <div class="stat-item"><div class="stat-num">2</div><div class="stat-label">案例</div></div>
   <div class="stat-item"><div class="stat-num">1</div><div class="stat-label">政策</div></div>
-  <div class="stat-item"><div class="stat-num">4</div><div class="stat-label">讨论</div></div>
+  <div class="stat-item"><div class="stat-num">2</div><div class="stat-label">讨论</div></div>
 </div>
 <p class="stats-note">来源按技术卡计，条目是技术、案例、政策三块的合计。每日更新。</p>
 <div class="trend-search">
@@ -224,36 +224,41 @@ a.trend-card:hover,a.case-card:hover{color:inherit}
   <p class="briefing-desc">本周与传媒相关的 AI 技术进展与产品动态</p>
 
   <div class="trend-grid" id="trend-cards-area">
-<a class="trend-card" href="https://vouchgeo.com" target="_blank" rel="noopener noreferrer">
-  <div class="trend-tag tech">技术</div>
-  <h3>AI助手对话中品牌形象监测</h3>
-  <p>通过分析AI对话中的品牌提及信息，实时优化品牌声誉管理</p>
-  <div class="trend-source">📅 2026-11-22 · 来源 <span class="trend-go">阅读原文 →</span></div>
-</a>
-<a class="trend-card" href="https://openai.com/index/combatting-adversarial-distillation" target="_blank" rel="noopener noreferrer">
-  <div class="trend-tag tech">技术</div>
-  <h3>对抗蒸馏防护</h3>
-  <p>OpenAI采用分层对抗蒸馏方法防御模型能力提取攻击</p>
-  <div class="trend-source">📅 2026-11-22 · 来源 <span class="trend-go">阅读原文 →</span></div>
-</a>
-<a class="trend-card" href="https://www.ithome.com/1/030/563.htm" target="_blank" rel="noopener noreferrer">
-  <div class="trend-tag tech">技术</div>
-  <h3>特斯拉FSD v15实景视图</h3>
-  <p>仅用AI4芯片实现3D高斯重建技术，无需游戏引擎</p>
-  <div class="trend-source">📅 2026-11-22 · 来源 <span class="trend-go">阅读原文 →</span></div>
-</a>
-<a class="trend-card" href="https://www.bloomberg.com/news/articles/2026-11-21/wall-street-asks-what-can-save-ai-trade-after-anthropic-wipeout" target="_blank" rel="noopener noreferrer">
-  <div class="trend-tag industry">行业</div>
-  <h3>AI贸易生态重构</h3>
-  <p>华尔街探讨跨境数据流动与AI技术迭代的协同路径</p>
-  <div class="trend-source">📅 2026-11-21 · 来源 <span class="trend-go">阅读原文 →</span></div>
-</a>
-<a class="trend-card" href="https://www.together.ai/blog/security-event-prompt-leakage-for-requests-in-june-and-july-of-2026" target="_blank" rel="noopener noreferrer">
-  <div class="trend-tag case">案例</div>
-  <h3>Together.ai提示泄露事件</h3>
-  <p>2026年6-7月暴露AI服务隐私保护与数据安全风险</p>
-  <div class="trend-source">📅 2026-06-07 · 来源 <span class="trend-go">阅读原文 →</span></div>
-</a>
+等，每个部分独占一行。
+
+现在开始处理具体内容：
+
+1. **趋势卡片**：
+   - 检查所有候选条目，筛选出技术、行业相关的趋势。例如：
+     - TOUMAII数据集（技术）
+     - Beyond Final Answers（行业）
+     - Budget-Aware Predict-and-Verify（技术）
+     - Hebbia测试GPT-6 Astra（案例，但可能属于行业趋势）
+     - Anthropic上市（行业）
+     - AI嗅觉系统（技术）
+     - Anthropic与微软Office的竞争（行业）
+   - 需要去重，确保每个趋势唯一，并排序（按来源或时间？用户没说明，可能按出现顺序或重要性）。
+
+2. **案例卡片**：
+   - 筛选明确属于案例的条目，如Hebbia、Anthropic上市、Binding of Isaac、VistaPrint、MeetTwins、Chess.com扩展等。需要提取机构名和URL。
+
+3. **政策卡片**：
+   - 寻找带有监管、法规等字样的条目。例如：
+     - VistaPrint未经同意使用AI修改内容（版权争议）
+     - Binding of Isaac移除AI音乐引发监管讨论
+     - 可能还有其他条目，但需要确认是否在候选中有相关描述。
+
+4. **讨论问题**：
+   - 从趋势和案例中提炼问题，如AI工具的版权问题、监管挑战、效率与伦理的平衡等。
+
+现在需要逐一处理每个部分，确保符合格式和内容要求，同时避免错误，比如URL是否正确，标签是否正确应用，政策卡片是否严格符合要求等。
+
+可能遇到的难点是政策卡片的筛选，需要确保条目确实包含监管、法规等关键词，并且没有编造。例如，Hacker News中的VistaPrint案例明确提到版权和伦理争议，符合政策卡片的要求。而The Verge的Binding of Isaac案例讨论了生成内容监管，也符合条件。这两个可以作为政策卡片。
+
+在生成HTML时，注意每个趋势卡片和案例卡片的标签和类名是否正确，描述字数是否符合要求，日期是否正确提取。例如，来自BBC News的Anthropic案例日期是2026-11-23，但实际条目中的日期可能不同，需要仔细核对。
+
+最后，检查所有HTML片段是否正确分段，使用正确的标记，没有遗漏任何部分，并且没有使用Markdown包裹。确保每个部分之间用===分隔，并且每个标记独占一行。
+
 </div>
 </div>
 
@@ -265,23 +270,17 @@ a.trend-card:hover,a.case-card:hover{color:inherit}
   <p class="briefing-desc">全球新闻媒体机构的 AI 应用实战案例</p>
 
   <div class="case-grid" id="case-cards-area">
-<a class="case-card" href="https://www.together.ai/blog/security-event-prompt-leakage-for-requests-in-june-and-july-of-2026" target="_blank" rel="noopener noreferrer">
-  <div class="case-org">Together.ai</div>
-  <h3>提示泄露安全事件</h3>
-  <p>2026年6-7月期间AI服务隐私保护漏洞事件</p>
-  <div class="case-tools"><span class="case-tool">安全</span><span class="case-tool">隐私</span></div>
+<a class="case-card" href="https://openai.com/business/customer-stories/hebbia" target="_blank" rel="noopener noreferrer">
+  <div class="case-org">Hebbia</div>
+  <h3>GPT-6 Astra在金融研究中的落地</h3>
+  <p>测试显示GPT-6 Astra在源覆盖、引用相关性和呈现质量上显著提升，推动金融传媒智能化。</p>
+  <div class="case-tools"><span class="case-tool">金融</span><span class="case-tool">GPT-6</span></div>
   <div class="trend-source"><span class="trend-go">阅读原文 →</span></div></a>
-<a class="case-card" href="https://www.theregister.com/software/2026/11/10/anthropic-tiptoes-into-ms-office-territory/5308988" target="_blank" rel="noopener noreferrer">
-  <div class="case-org">Anthropic</div>
-  <h3>MS Office功能整合</h3>
-  <p>通过Claude功能接近生产力套件</p>
-  <div class="case-tools"><span class="case-tool">生产力</span><span class="case-tool">办公</span></div>
-  <div class="trend-source"><span class="trend-go">阅读原文 →</span></div></a>
-<a class="case-card" href="http://www.ruanyifeng.com/blog/2026/11/weekly-issue-420.html" target="_blank" rel="noopener noreferrer">
-  <div class="case-org">传媒机构</div>
-  <h3>AI内容推荐突破</h3>
-  <p>实时用户行为分析提升30%转化率</p>
-  <div class="case-tools"><span class="case-tool">推荐系统</span><span class="case-tool">广告</span></div>
+<a class="case-card" href="https://www.bbc.co.uk/news/articles/c3x29ggenz12o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">
+  <div class="case-org">BBC News</div>
+  <h3>Anthropic上市引发传媒行业震动</h3>
+  <p>首个纯AI上市公司上市，测试AI行业商业化路径，引发传媒领域对AI估值和风险的广泛讨论。</p>
+  <div class="case-tools"><span class="case-tool">上市</span><span class="case-tool">AI</span></div>
   <div class="trend-source"><span class="trend-go">阅读原文 →</span></div></a>
 </div>
 </div>
@@ -294,11 +293,11 @@ a.trend-card:hover,a.case-card:hover{color:inherit}
   <p class="briefing-desc">全球 AI 内容监管与版权最新法规动态</p>
 
   <div class="trend-grid" id="policy-cards-area">
-<a class="trend-card" href="https://www.theregister.com/public-sector/2026/11/02/india-floats-ai-plan-under-which-the-model-travels-to-the-data-rather-than-the-data-travelling-to-the-model/5306872" target="_blank" rel="noopener noreferrer">
+<a class="trend-card" href="https://www.theverge.com/games/1039770/binding-of-isaac-ai-music" target="_blank" rel="noopener noreferrer">
   <div class="trend-tag policy">法规</div>
-  <h3>印度AI数据主权计划</h3>
-  <p>限制科技公司数据访问，推动本地化AI部署</p>
-  <div class="trend-source">📅 2026-11-02 · 来源 <span class="trend-go">阅读原文 →</span></div>
+  <h3>AI生成音乐版权争议</h3>
+  <p>《异星灾变》移除AI音乐遭差评，开发者回应引发对生成内容版权归属的讨论。</p>
+  <div class="trend-source">📅 2026-11-23 · 来源 <span class="trend-go">阅读原文 →</span></div>
 </a>
 </div>
 </div>
@@ -320,15 +319,9 @@ a.trend-card:hover,a.case-card:hover{color:inherit}
       </tr>
     </thead>
     <tbody id="classroom-body">
-<tr><td>AI助手对话中品牌形象监测</td><td><a href="weeks/week-14.html">W14</a></td><td>标注、引用、能不能交出去，你卡在哪一条？</td></tr>
-<tr><td>对抗蒸馏防护</td><td><a href="weeks/week-14.html">W14</a></td><td>标注、引用、能不能交出去，你卡在哪一条？</td></tr>
-<tr><td>特斯拉FSD v15实景视图</td><td><a href="weeks/week-14.html">W14</a></td><td>标注、引用、能不能交出去，你卡在哪一条？</td></tr>
-<tr><td>AI贸易生态重构</td><td><a href="weeks/week-14.html">W14</a></td><td>标注、引用、能不能交出去，你卡在哪一条？</td></tr>
-<tr><td>Together.ai提示泄露事件</td><td><a href="weeks/week-14.html">W14</a></td><td>标注、引用、能不能交出去，你卡在哪一条？</td></tr>
-<tr><td>提示泄露安全事件</td><td><a href="weeks/week-14.html">W14</a></td><td>标注、引用、能不能交出去，你卡在哪一条？</td></tr>
-<tr><td>MS Office功能整合</td><td><a href="weeks/week-14.html">W14</a></td><td>标注、引用、能不能交出去，你卡在哪一条？</td></tr>
-<tr><td>AI内容推荐突破</td><td><a href="weeks/week-14.html">W14</a></td><td>标注、引用、能不能交出去，你卡在哪一条？</td></tr>
-<tr><td>印度AI数据主权计划</td><td><a href="weeks/week-14.html">W14</a></td><td>标注、引用、能不能交出去，你卡在哪一条？</td></tr>
+<tr><td>GPT-6 Astra在金融研究中的落地</td><td><a href="weeks/week-14.html">W14</a></td><td>标注、引用、能不能交出去，你卡在哪一条？</td></tr>
+<tr><td>Anthropic上市引发传媒行业震动</td><td><a href="weeks/week-14.html">W14</a></td><td>标注、引用、能不能交出去，你卡在哪一条？</td></tr>
+<tr><td>AI生成音乐版权争议</td><td><a href="weeks/week-14.html">W14</a></td><td>标注、引用、能不能交出去，你卡在哪一条？</td></tr>
 </tbody>
   </table>
   </div>
@@ -342,10 +335,8 @@ a.trend-card:hover,a.case-card:hover{color:inherit}
   <p class="briefing-desc">基于本期动态的深度思考题，适用于小组讨论或书面反思</p>
 
   <ol class="discussion-list" id="discussion-area">
-<li>AI在考试作弊中的监管措施应如何平衡技术创新与伦理风险？</li>
-<li>数据主权与本地化AI部署如何影响跨国科技公司的运营策略？</li>
-<li>过度宣传的AI技术（如谷歌广告损失案例）对行业生态有何长期影响？</li>
-<li>3D高斯重建技术如何突破硬件限制提升自动驾驶安全性能？</li>
+<li>AI生成内容的版权归属应如何界定？现有法律框架能否适应技术发展？</li>
+<li>当AI工具（如工具调用生成器）涉及跨数据源训练时，如何平衡效率与数据合规性？</li>
 </ol>
 </div>
 
@@ -357,6 +348,7 @@ a.trend-card:hover,a.case-card:hover{color:inherit}
   <p class="briefing-desc">过往 AI+传媒动态 Briefing 归档，永久保留</p>
 
   <div class="archive-list" id="archive-list-area">
+<a href="trends/2026-11-23.html" class="archive-item"><span class="archive-date">2026-11-23</span><span class="archive-label">AI+传媒前沿动态</span></a>
 <a href="trends/2026-11-22.html" class="archive-item"><span class="archive-date">2026-11-22</span><span class="archive-label">AI+传媒前沿动态</span></a>
 <a href="trends/2026-11-21.html" class="archive-item"><span class="archive-date">2026-11-21</span><span class="archive-label">AI+传媒前沿动态</span></a>
 <a href="trends/2026-11-20.html" class="archive-item"><span class="archive-date">2026-11-20</span><span class="archive-label">AI+传媒前沿动态</span></a>
