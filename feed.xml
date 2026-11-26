@@ -5,12 +5,20 @@
   <link rel="self" type="application/atom+xml" href="https://jou2327a.aisbest.eu.cc/feed.xml"/>
   <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/ai-trends.html"/>
   <id>https://jou2327a.aisbest.eu.cc/</id>
-  <updated>2026-11-25T06:44:47Z</updated>
+  <updated>2026-11-26T06:36:13Z</updated>
   <generator uri="https://jou2327a.aisbest.eu.cc">LongCat Daily Pipeline</generator>
   <entry>
-    <title>AI+传媒 前沿动态 · 2026-11-25</title>
+    <title>AI+传媒 前沿动态 · 2026-11-26</title>
     <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/ai-trends.html"/>
-    <id>https://jou2327a.aisbest.eu.cc/ai-trends.html#2026-11-25</id>
+    <id>https://jou2327a.aisbest.eu.cc/ai-trends.html#2026-11-26</id>
+    <updated>2026-11-26T12:00:00Z</updated>
+    <published>2026-11-26T12:00:00Z</published>
+    <summary type="text">Precisely.ai Catalog – AI Studio Catalog of App, Agent, Skill and Server · Hush – AI代理硬件级加速方案 · Tidal拒AI音乐生成引发版权争议 · 结构化有害内容评估框架 · AI加剧公开记录系统过载 · AI代理专用软件搜索引擎 · 封禁2900万首AI生成音乐 · 《FIFA 27》AI生成球员形象</summary>
+  </entry>
+  <entry>
+    <title>AI+传媒 前沿动态 · 2026-11-25</title>
+    <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/trends/2026-11-25.html"/>
+    <id>https://jou2327a.aisbest.eu.cc/trends/2026-11-25.html</id>
     <updated>2026-11-25T12:00:00Z</updated>
     <published>2026-11-25T12:00:00Z</published>
     <summary type="text">亚马逊发布基于Gemma 4的决策模型 · 谷歌开源AI评测框架gBench · MOZAIC音频视频深度伪造检测基准 · 动态图表到代码生成基准 · Claud插件助力销售团队 · 客服自动化30天50%效率提升 · 获批AI电视频道专利 · 荷兰禁购AI摄像头眼镜</summary>
@@ -238,13 +246,5 @@
     <updated>2026-10-28T12:00:00Z</updated>
     <published>2026-10-28T12:00:00Z</published>
     <summary type="text">3D 版《看不见的城市》 · IRON-Meme：在线模因叙事结构化分析 · Isharah-Selfie：单手手语实时识别数据集 · Anthropic成为首家上市AI公司 · Shop the Look功能提升10%互动率 · Genie 4世界模型发布 · 维基百科AI写作检测指南</summary>
-  </entry>
-  <entry>
-    <title>AI+传媒 前沿动态 · 2026-10-27</title>
-    <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/trends/2026-10-27.html"/>
-    <id>https://jou2327a.aisbest.eu.cc/trends/2026-10-27.html</id>
-    <updated>2026-10-27T12:00:00Z</updated>
-    <published>2026-10-27T12:00:00Z</published>
-    <summary type="text">Patronizing and Condescending Language Detection in English and Mandarin · Put Your A.I. Agents to Work with These 5 Killer Tasks · Anthropic首次AI公司上市，警告人类面临「灾难性风险」 · Making the case for context-aware AI · How Fanatics and OpenAI streamline the fan experience · The RealReal防止AI抢购设计师服装 · 印度工人拍摄工作以训练AI · What to do if you discover AI models trained using your copyrighted book?</summary>
   </entry>
 </feed>
