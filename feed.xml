@@ -5,12 +5,20 @@
   <link rel="self" type="application/atom+xml" href="https://jou2327a.aisbest.eu.cc/feed.xml"/>
   <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/ai-trends.html"/>
   <id>https://jou2327a.aisbest.eu.cc/</id>
-  <updated>2026-11-26T06:36:13Z</updated>
+  <updated>2026-11-27T06:26:20Z</updated>
   <generator uri="https://jou2327a.aisbest.eu.cc">LongCat Daily Pipeline</generator>
   <entry>
-    <title>AI+传媒 前沿动态 · 2026-11-26</title>
+    <title>AI+传媒 前沿动态 · 2026-11-27</title>
     <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/ai-trends.html"/>
-    <id>https://jou2327a.aisbest.eu.cc/ai-trends.html#2026-11-26</id>
+    <id>https://jou2327a.aisbest.eu.cc/ai-trends.html#2026-11-27</id>
+    <updated>2026-11-27T12:00:00Z</updated>
+    <published>2026-11-27T12:00:00Z</published>
+    <summary type="text">What, Who, and When: Structured Harm Assessment for Mental Health Safety via Short Reasoning · AI 的疯狂造富 · Google’s专利 for custom AI视频 feeds · AI is straining America’s open records systems · AI生成动态历史地图 · AI生成体育内容 · Muse AI助手上线 · AI加剧公共记录系统压力</summary>
+  </entry>
+  <entry>
+    <title>AI+传媒 前沿动态 · 2026-11-26</title>
+    <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/trends/2026-11-26.html"/>
+    <id>https://jou2327a.aisbest.eu.cc/trends/2026-11-26.html</id>
     <updated>2026-11-26T12:00:00Z</updated>
     <published>2026-11-26T12:00:00Z</published>
     <summary type="text">Precisely.ai Catalog – AI Studio Catalog of App, Agent, Skill and Server · Hush – AI代理硬件级加速方案 · Tidal拒AI音乐生成引发版权争议 · 结构化有害内容评估框架 · AI加剧公开记录系统过载 · AI代理专用软件搜索引擎 · 封禁2900万首AI生成音乐 · 《FIFA 27》AI生成球员形象</summary>
@@ -238,13 +246,5 @@
     <updated>2026-10-29T12:00:00Z</updated>
     <published>2026-10-29T12:00:00Z</published>
     <summary type="text">多模态代理自适应改进框架 · OpenAI与Oracle企业应用整合 · 企业AI协同治理方法论 · Opera浏览器内置本地AI · AI宠物日志应用Waddle World · AI虚拟形象会议工具 · Chrome扩展AI网页分析</summary>
-  </entry>
-  <entry>
-    <title>AI+传媒 前沿动态 · 2026-10-28</title>
-    <link rel="alternate" type="text/html" href="https://jou2327a.aisbest.eu.cc/trends/2026-10-28.html"/>
-    <id>https://jou2327a.aisbest.eu.cc/trends/2026-10-28.html</id>
-    <updated>2026-10-28T12:00:00Z</updated>
-    <published>2026-10-28T12:00:00Z</published>
-    <summary type="text">3D 版《看不见的城市》 · IRON-Meme：在线模因叙事结构化分析 · Isharah-Selfie：单手手语实时识别数据集 · Anthropic成为首家上市AI公司 · Shop the Look功能提升10%互动率 · Genie 4世界模型发布 · 维基百科AI写作检测指南</summary>
   </entry>
 </feed>
